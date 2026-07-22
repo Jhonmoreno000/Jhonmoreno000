@@ -29,8 +29,8 @@
 
 <br>
 
-<a href="https://linkedin.com/in/tu-perfil"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"></a>
-<a href="mailto:tu@email.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"></a>
+<a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"></a>
+<a href="morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"></a>
 <a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"></a>
 <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&color=22d3ee&style=for-the-badge&label=VISITAS&labelColor=0d1117" alt="Visitas">
 
