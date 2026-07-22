@@ -24,9 +24,6 @@
 
 <br>
 
-<h1>
-  <code style="color: #22d3ee; font-size: 1.8em;">Jhon Anderson Moreno</code>
-</h1>
 <p><em>Desarrollador de Software | Backend & Bases de Datos</em></p>
 <p><code>Medellin, Antioquia, Colombia</code></p>
 
