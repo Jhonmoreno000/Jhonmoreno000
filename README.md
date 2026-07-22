@@ -17,124 +17,159 @@
 ║     ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████╗██║ ╚████║╚██████╔╝    ║
 ║     ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝     ║
 ║                                                                  ║
-║                  BACKEND  |  DATABASES  |  AI                    ║
+║            DESARROLLADOR DE SOFTWARE  |  BACKEND                ║
+║            JAVA  |  PYTHON  |  MYSQL  |  SPRING                 ║
 ╚══════════════════════════════════════════════════════════════════╝
 </pre>
 
 <br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=22D3EE&center=true&vCenter=true&width=600&lines=Jhon+Anderson+Moreno;Software+Developer;Backend+%26+Databases;Java+%7C+Python+%7C+MySQL;Building+the+future%2C+one+commit+at+a+time)](https://git.io/typing-svg)
+<h1>
+  <code style="color: #22d3ee; font-size: 1.8em;">Jhon Anderson Moreno</code>
+</h1>
+<p><em>Desarrollador de Software | Backend & Bases de Datos</em></p>
+<p><code>Medellin, Antioquia, Colombia</code></p>
 
 <br>
 
-<a href="https://linkedin.com/in/tu-perfil"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"></a>
-<a href="mailto:tu@email.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"></a>
-<a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"></a>
-<img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&color=22d3ee&style=for-the-badge&label=PROFILE+VISITS&labelColor=0d1117" alt="Profile Views">
-
-<br><br>
-
-<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake animation">
+<a href="https://linkedin.com/in/tu-perfil"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"></a>
+<a href="mailto:tu@email.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"></a>
+<a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"></a>
+<img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&color=22d3ee&style=for-the-badge&label=VISITAS&labelColor=0d1117" alt="Visitas">
 
 </div>
 
 ---
 
-## SYSTEM STATUS
+## TABLERO DE CONTROL
 
 <pre style="background: #0d1117; color: #8b949e; padding: 16px; border-radius: 8px; border: 1px solid #30363d;">
-  NAME:         Jhon Anderson Moreno
-  LOCATION:     Medellin, Antioquia, Colombia
-  ROLE:         Software Developer
-  FOCUS:        Backend & Databases
-  STACK:        Java, Python, MySQL, Spring Boot, React
-  JOINED:       2024-09-03
-  REPOS:        4 public repositories
-  STATUS:       ACTIVE
+  +------------------------------------------------------------+
+  |  NOMBRE       |  Jhon Anderson Moreno                      |
+  |  UBICACION    |  Medellin, Antioquia, Colombia             |
+  |  ROL          |  Desarrollador de Software                  |
+  |  ESPECIALIDAD |  Backend & Bases de Datos                   |
+  |  STACK        |  Java, Python, MySQL, Spring Boot, React   |
+  |  REPOS        |  4 publicos                                |
+  |  INICIO       |  Septiembre 2024                           |
+  |  ESTADO       |  ACTIVO                                    |
+  +------------------------------------------------------------+
 </pre>
 
 ---
 
-## SKILL MATRIX
+## ARQUITECTURA DE CONOCIMIENTOS
 
 <div align="center">
 
 ### Backend
 
-<img src="https://skillicons.dev/icons?i=java,python,nodejs,spring,fastapi&perline=10&theme=dark" alt="Backend Skills">
+<table>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="48" height="48"/><br><b>Java</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="48" height="48"/><br><b>Spring Boot</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" height="48"/><br><b>Python</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="48" height="48"/><br><b>Node.js</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="48" height="48"/><br><b>FastAPI</b></td>
+  </tr>
+</table>
 
 ### Frontend
 
-<img src="https://skillicons.dev/icons?i=react,javascript,tailwind,html,css&perline=10&theme=dark" alt="Frontend Skills">
+<table>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48"/><br><b>React</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" height="48"/><br><b>JavaScript</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="48" height="48"/><br><b>TypeScript</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="48" height="48"/><br><b>Tailwind</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="48" height="48"/><br><b>HTML5</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="48" height="48"/><br><b>CSS3</b></td>
+  </tr>
+</table>
 
-### Databases & Infrastructure
+### Bases de Datos e Infraestructura
 
-<img src="https://skillicons.dev/icons?i=mysql,postgres,docker,git,linux,bash&perline=10&theme=dark" alt="Infrastructure Skills">
+<table>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="48" height="48"/><br><b>MySQL</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="48" height="48"/><br><b>PostgreSQL</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="48" height="48"/><br><b>Docker</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="48" height="48"/><br><b>Git</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="48" height="48"/><br><b>Linux</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="48" height="48"/><br><b>Nginx</b></td>
+  </tr>
+</table>
 
-### Tools & Environment
+### Herramientas
 
-<img src="https://skillicons.dev/icons?i=idea,vscode,github,nginx&perline=10&theme=dark" alt="Tools">
+<table>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="48" height="48"/><br><b>IntelliJ</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="48" height="48"/><br><b>VS Code</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="48" height="48"/><br><b>GitHub</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="48" height="48"/><br><b>Bash</b></td>
+  </tr>
+</table>
 
 </div>
 
 ---
 
-## PROJECT PORTFOLIO
+## PORTAFOLIO DE PROYECTOS
 
 <div align="center">
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">StudyAI CLI</h3>
-      <div align="center">
-        <img src="https://skillicons.dev/icons?i=typescript,nodejs,react,docker&theme=dark" width="120" alt="Tech Stack">
-      </div>
+      <h3 align="center">CHATBOT</h3>
+      <div align="center"><em>Ecosistema AI multiplataforma</em></div>
       <p align="center">
-        Multi-agent AI development assistant with terminal TUI, token tracking, RAG pipeline, and orchestration engine. Features auto-correction, worker threads, and local LLM support via Ollama.
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js">
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
       </p>
       <p align="center">
-        <a href="https://github.com/Jhonmoreno000/studyai-cli"><img src="https://img.shields.io/badge/VIEW_REPO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="View Repo"></a>
-        <img src="https://img.shields.io/github/stars/Jhonmoreno000/studyai-cli?style=for-the-badge&logo=star&labelColor=0d1117&color=ffd700" alt="Stars">
+        Plataforma web (Next.js + FastAPI) combinada con CLI multi-agente. RAG, voz, agentes ReAct, pipeline RAG -> Coder -> QA con auto-correccion y tracking de tokens.
+      </p>
+      <p align="center">
+        <a href="https://github.com/Jhonmoreno000/CHATBOT"><img src="https://img.shields.io/badge/REPOSITORIO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repositorio"></a>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center">E-Commerce Textil</h3>
-      <div align="center">
-        <img src="https://skillicons.dev/icons?i=java,spring,mysql,react&theme=dark" width="120" alt="Tech Stack">
-      </div>
+      <div align="center"><em>Plataforma de comercio electronico</em></div>
       <p align="center">
-        Full-stack e-commerce platform for the textile sector built with Spring Boot and React. Scalable architecture with MySQL database, REST API, and responsive frontend.
+        <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+        <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
       </p>
       <p align="center">
-        <a href="https://github.com/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-"><img src="https://img.shields.io/badge/VIEW_REPO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="View Repo"></a>
-        <img src="https://img.shields.io/github/stars/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-?style=for-the-badge&logo=star&labelColor=0d1117&color=ffd700" alt="Stars">
+        Aplicacion full-stack para el sector textil con Spring Boot + React + MySQL. Arquitectura escalable, API REST, diseno responsivo y autenticacion JWT.
+      </p>
+      <p align="center">
+        <a href="https://github.com/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-"><img src="https://img.shields.io/badge/REPOSITORIO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="Repositorio"></a>
+        <img src="https://img.shields.io/github/stars/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-?style=flat-square&logo=star&labelColor=0d1117&color=ffd700" alt="Stars">
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">Python Projects</h3>
-      <div align="center">
-        <img src="https://skillicons.dev/icons?i=python&theme=dark" width="40" alt="Tech Stack">
-      </div>
+      <h3 align="center">Red Social</h3>
+      <div align="center"><em>Proximamente</em></div>
       <p align="center">
-        Python development workspace covering automation scripts, data processing, and backend services. Exploring AI integration and API development.
+        <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+        <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
       </p>
       <p align="center">
-        <a href="https://github.com/Jhonmoreno000/I-work-in-python"><img src="https://img.shields.io/badge/VIEW_REPO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="View Repo"></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3 align="center">CHATBOT Platform</h3>
-      <div align="center">
-        <img src="https://skillicons.dev/icons?i=nextjs,fastapi,python,typescript,docker&theme=dark" width="140" alt="Tech Stack">
-      </div>
-      <p align="center">
-        AI-powered development ecosystem combining a web chat platform (Next.js + FastAPI) with a multi-agent CLI terminal. RAG, voice input, ReAct agents, and Docker orchestration.
+        Red social en desarrollo con arquitectura backend robusta. Gestion de usuarios, publicaciones, interacciones y feeds personalizados.
       </p>
       <p align="center">
-        <a href="https://github.com/Jhonmoreno000/CHATBOT"><img src="https://img.shields.io/badge/VIEW_REPO-22d3ee?style=for-the-badge&logo=github&labelColor=0d1117" alt="View Repo"></a>
+        <code style="color: #8b949e;">[ EN DESARROLLO ]</code>
       </p>
     </td>
   </tr>
@@ -144,66 +179,82 @@
 
 ---
 
-## PERFORMANCE METRICS
+## CERTIFICACIONES Y LOGROS
+
+<div align="center">
+
+| Certificacion | Estado | Tecnologia |
+|:-------------|:------:|:----------|
+| Cloud Computing Fundamentals | <code style="color: #22d3ee;">EN PROCESO</code> | AWS / Azure |
+| Artificial Intelligence Essentials | <code style="color: #22d3ee;">EN PROCESO</code> | AI / ML |
+| Analisis y Desarrollo de Software (ADSO) | <code style="color: #22c55e;">ACTIVO</code> | SENA |
+| Linux Administration | <code style="color: #22d3ee;">EN PROCESO</code> | Fedora / CachyOS |
+
+</div>
+
+---
+
+## METRICAS DE RENDIMIENTO
 
 <div align="center">
 
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0d1117&include_all_commits=true&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9" width="100%" alt="GitHub Stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0d1117&include_all_commits=true&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9" width="100%" alt="Estadisticas">
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8&title_color=22d3ee&text_color=c9d1d9" width="100%" alt="Top Languages">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8&title_color=22d3ee&text_color=c9d1d9" width="100%" alt="Lenguajes">
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0d1117&stroke=22d3ee&ring=22d3ee&fire=22d3ee&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=22d3ee&sideLabels=c9d1d9&dates=8b949e" width="100%" alt="GitHub Streak">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0d1117&stroke=22d3ee&ring=22d3ee&fire=22d3ee&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=22d3ee&sideLabels=c9d1d9&dates=8b949e" width="100%" alt="Racha">
     </td>
   </tr>
 </table>
 
 <br>
 
-<img src="https://github-profile-trophy.vercel.app/?username=Jhonmoreno000&theme=onedark&column=7&no-frame=true&margin-w=15&margin-h=15&row=1" width="100%" alt="GitHub Trophies">
+<img src="https://github-profile-trophy.vercel.app/?username=Jhonmoreno000&theme=onedark&column=7&no-frame=true&margin-w=15&margin-h=15" width="100%" alt="Trofeos">
 
 <br><br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=0d1117&color=22d3ee&line=22d3ee&point=22d3ee&area=true&hide_border=true&radius=8" width="100%" alt="Activity Graph">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=0d1117&color=22d3ee&line=22d3ee&point=22d3ee&area=true&hide_border=true&radius=8" width="100%" alt="Grafico de actividad">
 
 </div>
 
 ---
 
-## CURRENT OBJECTIVES
+## OBJETIVOS ACTUALES
 
 <pre style="background: #0d1117; color: #8b949e; padding: 16px; border-radius: 8px; border: 1px solid #30363d;">
   +------------------------------------------------------------------+
-  |  TASK                          STATUS        PROGRESS             |
+  |  OBJETIVO                        ESTADO          PROGRESO        |
   +------------------------------------------------------------------+
-  |  E-commerce Textile Platform   ACTIVE        [##########........] |
-  |  Cloud & AI Certifications     IN PROGRESS   [#####...............] |
-  |  Linux Environment Mastery     ONGOING       [########............] |
-  |  Clean Architecture Projects   PLANNING      [###.................] |
+  |  E-commerce Textil               ACTIVO          [##########....] |
+  |  Red Social                      EN PLANEACION   [###............] |
+  |  Certificaciones Cloud & AI      EN CURSO        [#####..........] |
+  |  Maestria en Linux               PERMANENTE      [########.......] |
+  |  Arquitectura Limpia             APRENDIZAJE     [#####..........] |
   +------------------------------------------------------------------+
 </pre>
 
 ---
 
-## WEEKLY CONTRIBUTION MAP
+## LINEA DE TIEMPO
 
-<pre style="background: #0d1117; color: #8b949e; padding: 12px; border-radius: 8px; border: 1px solid #30363d;">
-                         MON  TUE  WED  THU  FRI  SAT  SUN
-    Week 29 Jul          [##] [####] [#####] [###] [##] [ ] [ ]
-    Week 28 Jul          [###] [##] [####] [#####] [###] [##] [ ]
-    Week 27 Jul          [####] [#####] [###] [##] [####] [###] [#]
-    Week 26 Jun          [##] [###] [####] [#####] [###] [##] [ ]
+<pre style="background: #0d1117; color: #8b949e; padding: 16px; border-radius: 8px; border: 1px solid #30363d;">
+  2024-Q3  |  Inicio en GitHub  |  Creacion del perfil y primeros repos
+  2024-Q4  |  E-commerce Textil |  Desarrollo full-stack con Spring Boot + React
+  2025-Q1  |  CHATBOT Platform  |  Integracion de IA web + CLI multi-agente
+  2025-Q2  |  EstudioAI CLI     |  Pipeline multi-agente con TUI y tracking
+  2025-Q3  |  Red Social        |  Desarrollo backend de plataforma social
 </pre>
 
 ---
 
-## CONNECT
+## CONEXION
 
 <div align="center">
 
@@ -214,8 +265,12 @@
 <br>
 
 <pre style="color: #22d3ee; font-family: 'Fira Code', monospace;">
-> "First, solve the problem. Then, write the code."
+> "Primero resuelve el problema. Luego escribe el codigo."
 > -- John Johnson
 </pre>
+
+<br>
+
+<p><sub>Perfil actualizado — Julio 2026</sub></p>
 
 </div>
