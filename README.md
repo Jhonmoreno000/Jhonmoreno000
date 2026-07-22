@@ -200,29 +200,66 @@
 
 <table>
   <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0d1117&include_all_commits=true&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9" width="100%" alt="Estadisticas">
-    </td>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8&title_color=22d3ee&text_color=c9d1d9" width="100%" alt="Lenguajes">
+    <td colspan="2">
+      <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0d1117&include_all_commits=true&title_color=22d3ee&icon_color=22d3ee&text_color=c9d1d9" width="100%" alt="Estadisticas generales">
     </td>
   </tr>
   <tr>
-    <td colspan="2">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0d1117&stroke=22d3ee&ring=22d3ee&fire=22d3ee&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=22d3ee&sideLabels=c9d1d9&dates=8b949e" width="100%" alt="Racha">
+    <td>
+      <img src="https://github-readme-stats-anuraghazra.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8&title_color=22d3ee&text_color=c9d1d9" width="100%" alt="Lenguajes mas usados">
+    </td>
+    <td>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0d1117&stroke=22d3ee&ring=22d3ee&fire=22d3ee&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=22d3ee&sideLabels=c9d1d9&dates=8b949e" width="100%" alt="Racha de contribuciones">
     </td>
   </tr>
 </table>
 
 <br>
 
-<img src="https://github-profile-trophy.vercel.app/?username=Jhonmoreno000&theme=onedark&column=7&no-frame=true&margin-w=15&margin-h=15" width="100%" alt="Trofeos">
+<table>
+  <tr>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Jhonmoreno000&theme=tokyonight" width="100%" alt="Resumen del perfil">
+    </td>
+  </tr>
+</table>
 
-<br><br>
+<br>
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Jhonmoreno000&theme=tokyonight" width="100%" alt="Repos por lenguaje">
+    </td>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Jhonmoreno000&theme=tokyonight" width="100%" alt="Commits por lenguaje">
+    </td>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Jhonmoreno000&theme=tokyonight&utcOffset=-5" width="100%" alt="Horario productivo">
+    </td>
+  </tr>
+</table>
+
+<br>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=0d1117&color=22d3ee&line=22d3ee&point=22d3ee&area=true&hide_border=true&radius=8" width="100%" alt="Grafico de actividad">
 
 </div>
+
+### Resumen de metrica
+
+<pre style="background: #0d1117; color: #8b949e; padding: 16px; border-radius: 8px; border: 1px solid #30363d;">
+  +------------------------------------------------------------------+
+  |  METRICA                      VALOR          DETALLE             |
+  +------------------------------------------------------------------+
+  |  Repositorios                 4              2 activos, 1 fork   |
+  |  Estrellas                    1              1 en textil         |
+  |  Commits                      Varios         Principalmente Java |
+  |  Lenguaje principal           Java           Spring Boot + MySQL |
+  |  Horario productivo           Nocturno       Segun zona -05:00   |
+  |  Tipo de contribuciones       Codigo         Backend y DB        |
+  +------------------------------------------------------------------+
+</pre>
 
 ---
 
