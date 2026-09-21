@@ -121,7 +121,7 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🛡️ AI Security Orchestrator</h3>
+      <h3 align="center"> AI Security Orchestrator</h3>
       <div align="center"><em>Plataforma DevSecOps & Auditoría de Seguridad Autónoma con IA</em></div>
       <br>
       <p align="center">
@@ -140,7 +140,7 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🕹️ Architect Tower Defense</h3>
+      <h3 align="center"> Architect Tower Defense</h3>
       <div align="center"><em>Simulador Interactivo de Arquitectura de Software & DevOps</em></div>
       <br>
       <p align="center">
@@ -161,7 +161,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">⚡ NEXUS</h3>
+      <h3 align="center"> NEXUS</h3>
       <div align="center"><em>Database Engineering Simulator ("Don't study SQL. Use it.")</em></div>
       <br>
       <p align="center">
@@ -179,7 +179,7 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🧵 D&D Textil — E-Commerce & ERP</h3>
+      <h3 align="center"> D&D Textil — E-Commerce & ERP</h3>
       <div align="center"><em>Ecosistema Tecnológico Empresarial para la Industria Textil</em></div>
       <br>
       <p align="center">
@@ -200,7 +200,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">📋 TODO API Microservice</h3>
+      <h3 align="center"> TODO API Microservice</h3>
       <div align="center"><em>API REST Modular con Orquestación en Docker & MongoDB</em></div>
       <br>
       <p align="center">
@@ -218,7 +218,7 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🐍 Python Core & Algoritmia</h3>
+      <h3 align="center"> Python Core & Algoritmia</h3>
       <div align="center"><em>Lógica Computacional, Estructuras de Datos y Clean Code</em></div>
       <br>
       <p align="center">
