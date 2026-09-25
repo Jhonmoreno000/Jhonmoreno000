@@ -24,7 +24,7 @@
 
 <br>
 
-<p><em>Desarrollador de Software | Backend Engineering, DevSecOps & Bases de Datos</em></p>
+<p><em>Desarrollador de Software | Backend  & Bases de Datos</em></p>
 <p><code>Medellin, Antioquia, Colombia (UTC-5)</code></p>
 
 <br>
