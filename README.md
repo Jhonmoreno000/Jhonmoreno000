@@ -40,7 +40,7 @@
   /_/      \_\    STATUS: ACTIVE // Available for High-Impact Engineering Roles
 
   [ENGINEERING SPECIFICATIONS]
-  Ingeniero de Software enfocado en Backend Engineering, Arquitectura Distribuida
+  tenologo de Software enfocado en Backend Engineering, Arquitectura Distribuida
   y DevSecOps. Especializado en el diseno de APIs de alto rendimiento, optimizacion
   de modelos relacionales y no relacionales, y automatizacion de pipelines seguros.
 ```
