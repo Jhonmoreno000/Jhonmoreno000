@@ -1,35 +1,31 @@
 <div align="center">
 
-  <!-- ==================== SELF-HOSTED VECTOR CYBER HEADER ==================== -->
-  <img src="./assets/header.svg" width="100%" alt="Jhon Anderson Moreno - Header"/>
+  <!-- ==================== BESPOKE HERO CARD ==================== -->
+  <img src="./assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - Identity Card"/>
 
   <br><br>
 
-  <!-- ==================== ANIMATED TERMINAL SUBTITLE ==================== -->
+  <!-- ==================== ANIMATED SUBTITLE ==================== -->
   <a href="https://github.com/Jhonmoreno000">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&width=680&lines=%3E+Backend+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+TDD+%7C+High-Performance+APIs;%3E+Transforming+complex+logic+into+reliable+software" alt="Typing Subtitle"/>
   </a>
 
   <br><br>
 
-  <!-- ==================== HUD STATUS & CONNECT PILLS ==================== -->
+  <!-- ==================== MINIMALIST CONTACT PILLS ==================== -->
   <p>
-    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/></a>
-    <a href="mailto:morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"/></a>
-    <a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/></a>
-    <img src="https://img.shields.io/badge/STATUS-OPEN_TO_WORK-00F5A0?style=for-the-badge&labelColor=0d1117" alt="Status"/>
-  </p>
-
-  <p>
-    <code>LOCATION: Medellin, Antioquia, Colombia (UTC-5)</code> &nbsp;|&nbsp; 
-    <code>SPECIALTY: Backend, DevSecOps &amp; Database Architecture</code>
+    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=080b12" alt="LinkedIn"/></a>
+    &nbsp;
+    <a href="mailto:morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white&labelColor=080b12" alt="Email"/></a>
+    &nbsp;
+    <a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white&labelColor=080b12" alt="GitHub"/></a>
   </p>
 
 </div>
 
 ---
 
-### // 01. SYSTEM DIAGNOSTIC & PROFILE
+### // 01. PROFILE & ENGINEERING PHILOSOPHY
 
 ```text
        /\         USER: jhon@systems-core
@@ -45,88 +41,33 @@
   de modelos relacionales y no relacionales, y automatizacion de pipelines seguros.
 ```
 
-- **Core Strengths:** APIs modulares, desacoplamiento estricto, persistencia transaccional y bajo consumo de memoria.
-- **Security Paradigm:** Shift-left security, auditoria estatica automatizada (SAST/DAST) y entornos Docker aislados.
-- **Standards:** Clean Code, principios SOLID, inversion de dependencias y pruebas unitarias/integracion exhaustivas.
+Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distribuida**. Mi trabajo se centra en construir sistemas escalables con bajo acoplamiento, diseñar APIs resilientes con contratos estrictos y automatizar pipelines con cultura DevSecOps (seguridad shift-left).
+
+- **Backend & APIs:** Implementacion de microservicios, controladores desacoplados, DTOs tipados y persistencia relacional/NoSQL optimizada.
+- **DevSecOps & Infraestructura:** Contenerizacion con Docker multi-stage, auditoria estatica automatizada (SAST/DAST) y entornos Linux de produccion.
+- **Calidad de Codigo:** Adherencia a principios SOLID, Clean Code, pruebas unitarias y de integracion continuas.
 
 ---
 
-### // 02. PIPELINE DE INGENIERIA & DEVSECOPS
-
-```text
-+------------------+      +-------------------+      +--------------------+
-|  SOURCE CONTROL  | ---> |  SECURITY & SAST  | ---> |   CONTAINER BUILD  |
-|  Git / CI Runner |      |  Ollama / Semgrep |      |   Docker Multi-Stage|
-+------------------+      +-------------------+      +--------------------+
-          |                                                     |
-          v                                                     v
-+------------------+                                 +--------------------+
-| AUTOMATED TESTS  | ------------------------------> | SECURE DEPLOYMENT  |
-| Unit / Integ TDD |                                 | Nginx / Cloud Host |
-+------------------+                                 +--------------------+
-```
-
----
-
-### // 03. TECH ARSENAL & SKILLS MATRIX
+### // 02. TECH STACK MATRIX
 
 <div align="center">
-
-#### [ BACKEND & COMPUTING RUNTIMES ]
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d1117" alt="Python"/>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0d1117" alt="Java"/>
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white&labelColor=0d1117" alt="C#"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white&labelColor=0d1117" alt="Spring Boot"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=0d1117" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=0d1117" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white&labelColor=0d1117" alt="Express"/>
-</p>
-
-#### [ PERSISTENCE & DATA ARCHITECTURE ]
-<p>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0d1117" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0d1117" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=0d1117" alt="MongoDB"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&labelColor=0d1117" alt="Redis"/>
-  <img src="https://img.shields.io/badge/SQL_Optimization-00F2FE?style=for-the-badge&logo=databricks&logoColor=black&labelColor=0d1117" alt="SQL Optimization"/>
-</p>
-
-#### [ DEVOPS, INFRASTRUCTURE & SECURITY ]
-<p>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=0d1117" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=0d1117" alt="Linux"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=0d1117" alt="Git"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=0d1117" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white&labelColor=0d1117" alt="Nginx"/>
-  <img src="https://img.shields.io/badge/DevSecOps-SAST%20%7C%20DAST-informational?style=for-the-badge&labelColor=0d1117" alt="DevSecOps"/>
-</p>
-
-#### [ CLIENT INTERFACES & CONTRACTS ]
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0d1117" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=0d1117" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black&labelColor=0d1117" alt="React"/>
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=0d1117" alt="Vite"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=0d1117" alt="Tailwind CSS"/>
-  <img src="https://img.shields.io/badge/REST_APIs-00F2FE?style=for-the-badge&logo=postman&logoColor=black&labelColor=0d1117" alt="REST APIs"/>
-</p>
-
+  <img src="./assets/stack.svg" width="100%" alt="Tech Stack Matrix"/>
 </div>
 
 ---
 
-### // 04. LIVE REPOSITORIES & DEPLOYMENTS
+### // 03. SELECTED REPOSITORIES & ARCHITECTURES
 
 <div align="center">
 
 <table>
   <thead>
     <tr>
-      <th align="left">REPOSITORIO &amp; ENLACE</th>
-      <th align="left">DESCRIPCION TECNICA &amp; ARQUITECTURA</th>
-      <th align="center">STACK TECNOLOGICO</th>
-      <th align="center">ESTADO</th>
+      <th align="left">PROYECTO</th>
+      <th align="left">ARQUITECTURA &amp; DETALLES TECNICOS</th>
+      <th align="center">TECNOLOGIAS</th>
+      <th align="center">ACCESO</th>
     </tr>
   </thead>
   <tbody>
@@ -135,18 +76,19 @@
         <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
           <b>proyecto-todo-api</b>
         </a>
+        <br>
+        <small>Microservicio RESTful</small>
       </td>
       <td align="left">
-        API RESTful modular para gestion de tareas y flujos de trabajo. Disenada bajo arquitectura MVC con Node.js, persistencia NoSQL en MongoDB y orquestacion contenerizada con Docker Compose lista para produccion.
+        API modular para administracion y programacion de flujos de trabajo. Arquitectura MVC con Node.js, persistencia NoSQL en MongoDB y orquestacion con Docker Compose.
       </td>
       <td align="center">
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+        <code>Node.js</code> <code>Express</code><br>
+        <code>MongoDB</code> <code>Docker</code>
       </td>
       <td align="center">
         <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
         </a>
       </td>
     </tr>
@@ -155,18 +97,19 @@
         <a href="https://github.com/Jhonmoreno000/I-work-in-python">
           <b>I-work-in-python</b>
         </a>
+        <br>
+        <small>Algoritmia &amp; Estructuras</small>
       </td>
       <td align="left">
-        Suite de resolucion de problemas computacionales, estructuras de datos avanzadas y algoritmia en Python. Enfocado en analisis de complejidad Big-O, optimizacion de memoria y Clean Code modular.
+        Implementacion rigurosa de algoritmos de optimizacion, estructuras de datos avanzadas y analisis de complejidad computacional Big-O bajo Clean Code modular.
       </td>
       <td align="center">
-        <img src="https://img.shields.io/badge/Python_3-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3"/>
-        <img src="https://img.shields.io/badge/Algorithms-Core-blue?style=flat-square" alt="Algorithms"/>
-        <img src="https://img.shields.io/badge/Clean_Code-22c55e?style=flat-square" alt="Clean Code"/>
+        <code>Python 3</code> <code>Big-O</code><br>
+        <code>Data Structures</code>
       </td>
       <td align="center">
         <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
         </a>
       </td>
     </tr>
@@ -175,19 +118,71 @@
         <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
           <b>GCP-GESTION-DE-PRODUCTOS-</b>
         </a>
+        <br>
+        <small>Plataforma Empresarial .NET</small>
       </td>
       <td align="left">
-        Sistema empresarial de gestion y administracion transaccional de productos desarrollado en C# (.NET). Implementacion de arquitectura en capas, control de inventario y persistencia relacional estructurada.
+        Sistema empresarial de control transaccional de productos e inventarios. Desarrollado en C# (.NET Core) con arquitectura en capas y modelado relacional estructurado.
       </td>
       <td align="center">
-        <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white" alt="C#"/>
-        <img src="https://img.shields.io/badge/.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET"/>
-        <img src="https://img.shields.io/badge/SQL_DB-00758F?style=flat-square&logo=mysql&logoColor=white" alt="SQL"/>
+        <code>C#</code> <code>.NET Core</code><br>
+        <code>Relational SQL</code>
       </td>
       <td align="center">
         <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
         </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <b>AI Security Orchestrator</b>
+        <br>
+        <small>Arquitectura Insignia</small>
+      </td>
+      <td align="left">
+        Plataforma autonoma para orquestacion de escaneres SAST, DAST y SCA en contenedores aislados. Modelos locales con Ollama para deduplicacion SHA-256 y parches de remediacion.
+      </td>
+      <td align="center">
+        <code>FastAPI</code> <code>Docker</code><br>
+        <code>Local AI</code> <code>DevSecOps</code>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/CORE-DEV-38bdf8?style=flat-square&labelColor=080b12" alt="Core Dev"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <b>NEXUS Database Engine</b>
+        <br>
+        <small>Simulador Interactivo</small>
+      </td>
+      <td align="left">
+        Simulador interactivo de ingenieria de bases de datos para experimentacion con planes de ejecucion SQL (EXPLAIN), indexacion y optimizacion de modelos relacionales.
+      </td>
+      <td align="center">
+        <code>TypeScript</code> <code>React</code><br>
+        <code>SQL Engine</code> <code>Vite</code>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/LAB-PROTOTYPE-10b981?style=flat-square&labelColor=080b12" alt="Prototype"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <b>D&amp;D Textil Platform</b>
+        <br>
+        <small>ERP Empresarial SENA</small>
+      </td>
+      <td align="left">
+        Ecosistema empresarial full-stack para comercializacion y gestion textil. Backend corporativo en Spring Boot, autenticacion con JWT y arquitectura reactiva en React.
+      </td>
+      <td align="center">
+        <code>Java</code> <code>Spring Boot</code><br>
+        <code>MySQL</code> <code>React</code>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/CASE-STUDY-a855f7?style=flat-square&labelColor=080b12" alt="Case Study"/>
       </td>
     </tr>
   </tbody>
@@ -197,96 +192,22 @@
 
 ---
 
-### // 05. FLAGSHIP ARCHITECTURES & SYSTEMS DESIGN
-
-<div align="center">
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h4 align="center">AI Security Orchestrator</h4>
-      <p align="center">
-        <code>STATUS: CORE ARCHITECTURE</code> &nbsp;|&nbsp; <code>DEVSECOPS // AI</code>
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
-        <img src="https://img.shields.io/badge/Ollama-Local_AI-purple?style=flat-square" alt="Ollama"/>
-      </p>
-      <p>
-        Plataforma autonoma para orquestacion de escaneres SAST, DAST y SCA en contenedores aislados. Integracion de modelos locales para deduplicacion de vulnerabilidades (SHA-256) y generacion asistida de parches.
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4 align="center">NEXUS Database Simulator</h4>
-      <p align="center">
-        <code>STATUS: PROTOTYPE</code> &nbsp;|&nbsp; <code>DATA ENGINEERING</code>
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
-        <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"/>
-        <img src="https://img.shields.io/badge/SQL-Interactive-orange?style=flat-square" alt="SQL"/>
-      </p>
-      <p>
-        Motor interactivo para experimentacion de modelos relacionales, analisis de planes de ejecucion SQL (EXPLAIN / INDEXES) y simulacion de optimizacion de rendimiento en motores de bases de datos.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4 align="center">Architect Tower Defense</h4>
-      <p align="center">
-        <code>STATUS: REFACTOR</code> &nbsp;|&nbsp; <code>SIMULATION & IAC</code>
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-        <img src="https://img.shields.io/badge/Canvas-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-        <img src="https://img.shields.io/badge/IaC-Docker%20%7C%20K8s-blue?style=flat-square" alt="IaC"/>
-      </p>
-      <p>
-        Simulador gamificado de diseno de arquitectura de software, concurrencia y generacion dinamica de manifiestos de Infraestructura como Codigo (IaC) en entornos de contenedores.
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4 align="center">D&D Textil Enterprise Platform</h4>
-      <p align="center">
-        <code>STATUS: CASE STUDY</code> &nbsp;|&nbsp; <code>ENTERPRISE ERP</code>
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Java-Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot"/>
-        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
-        <img src="https://img.shields.io/badge/JWT-Security-000000?style=flat-square" alt="JWT"/>
-      </p>
-      <p>
-        Ecosistema corporativo para administracion de inventarios, pedidos y transacciones textiles. Backend modular en Spring Boot con autenticacion basada en tokens y persistencia relacional transaccional.
-      </p>
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
-
-### // 06. TELEMETRY & GITHUB METRICS
+### // 04. GITHUB TELEMETRY & ACTIVITY
 
 <div align="center">
 
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" width="100%" alt="Github Stats"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080b12&title_color=38bdf8&icon_color=38bdf8&text_color=94a3b8" width="100%" alt="Github Stats"/>
     </td>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f2fe&text_color=94a3b8" width="100%" alt="Top Languages"/>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=080b12&title_color=38bdf8&text_color=94a3b8" width="100%" alt="Top Languages"/>
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0d1117&stroke=00f2fe&ring=00f2fe&fire=00f2fe&currStreakNum=ffffff&sideNums=94a3b8&currStreakLabel=00f2fe&sideLabels=94a3b8&dates=64748b" width="100%" alt="Streak Stats"/>
+      <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=080b12&stroke=38bdf8&ring=38bdf8&fire=38bdf8&currStreakNum=ffffff&sideNums=94a3b8&currStreakLabel=38bdf8&sideLabels=94a3b8&dates=64748b" width="100%" alt="Streak Stats"/>
     </td>
   </tr>
 </table>
@@ -295,45 +216,36 @@
 
 ---
 
-### // 07. ENGINEERING PROTOCOLS & SPECIFICATIONS
+### // 05. TECHNICAL PROTOCOLS & RFC STANDARDS
 
 <details>
-  <summary><b>[+] 01. Arquitectura de Software & Estandares de Diseno</b></summary>
+  <summary><b>[+] 01. Principios de Arquitectura de Software</b></summary>
   <br>
 
-  - **Clean Architecture & Domain-Driven Design:** Desacoplamiento estricto de reglas de negocio frente a frameworks y detalles de infraestructura.
-  - **SOLID & Modularidad:** Responsabilidad unica, interfaces segregadas, inversion de dependencias y composicion sobre herencia.
-  - **Test-Driven Development (TDD):** Cobertura exhaustiva con pruebas unitarias, de integracion y validacion de regresion continua.
-  - **Estandar de Contratos API:** Diseno de esquemas REST consistentes, DTOs tipados, manejo de errores unificado y documentacion OpenAPI.
+  - **Clean Architecture & Domain-Driven Design:** Desacoplamiento estricto de las reglas de negocio respecto a frameworks y mecanismos de persistencia.
+  - **Principios SOLID:** Responsabilidad unica por modulo, segregacion de interfaces e inversion de dependencias para facilitar testing.
+  - **Estrategia de Pruebas (TDD):** Cobertura orientada a casos de uso criticos mediante tests unitarios y de integracion.
+  - **Contratos de API REST:** Formato de respuesta consistente, DTOs con validacion estricta y documentacion con OpenAPI.
 
 </details>
 
 <details>
-  <summary><b>[+] 02. Estandares DevSecOps & Seguridad de Infraestructura</b></summary>
+  <summary><b>[+] 02. Estandares DevSecOps & Infraestructura</b></summary>
   <br>
 
-  - **Seguridad Shift-Left:** Integracion de analisis estatico de codigo (SAST) y analisis de composicion de software (SCA) en cada commit.
-  - **Hardening de Contenedores:** Imagenes Docker multi-stage optimizadas, ejecucion sin privilegios root y minimizacion de capas base.
-  - **Integracion Continua (CI/CD):** Automatizacion mediante GitHub Actions para formateo, linters, suites de tests y empaquetado.
-  - **Trazabilidad & Logs:** Formato estructurado JSON y metricas de rendimiento para entornos distribuidos.
+  - **Seguridad Shift-Left:** Escaneo estatico de vulnerabilidades (SAST) y dependencias desactualizadas (SCA) en fase temprana.
+  - **Optimizacion de Contenedores:** Creacion de imagenes Docker multi-stage, usuarios no-root y reduccion de vectores de ataque.
+  - **CI/CD Automatizado:** Verificacion automatica de formato, linters y suites de tests en cada integracion de rama.
+  - **Trazabilidad:** Logs estructurados y configuracion estricta de variables de entorno mediante secretos.
 
 </details>
 
 <details>
-  <summary><b>[+] 03. Formacion Academica & Acreditaciones</b></summary>
+  <summary><b>[+] 03. Formacion Profesional & Objetivos</b></summary>
   <br>
 
-  - **Analisis y Desarrollo de Software (ADSO):** En proceso de titulacion formal — Servicio Nacional de Aprendizaje (SENA).
-  - **Especializacion Tecnica Continua:** Arquitectura de Sistemas Distribuidos, Cloud Computing, Seguridad de Aplicaciones y Bases de Datos.
-
-</details>
-
-<details>
-  <summary><b>[+] 04. Hoja de Ruta Activa & Objetivos Tecnicos</b></summary>
-  <br>
-
-  - **Q4 2026:** Implementacion de orquestacion de contenedores con Kubernetes y patrones de mensajeria asincrona (Event-Driven).
-  - **Q1 2027:** Optimizacion de latencia en microservicios e integracion de cache distribuida de alto rendimiento con Redis.
+  - **ADSO (SENA):** Analisis y Desarrollo de Software — Enfocado en la construccion de software corporativo y buenas practicas de ingenieria.
+  - **Ruta de Crecimiento:** Profundizacion en orquestacion de contenedores con Kubernetes, colas de mensajeria asincronas y sistemas de alta disponibilidad.
 
 </details>
 
@@ -342,14 +254,11 @@
 <div align="center">
 
   ```text
-  > "Controlling complexity is the essence of computer programming." — Brian W. Kernighan
+  "Controlling complexity is the essence of computer programming." — Brian W. Kernighan
   ```
 
   <br>
 
-  <!-- ==================== SELF-HOSTED VECTOR CYBER FOOTER ==================== -->
-  <img src="./assets/footer.svg" width="100%" alt="Jhon Moreno Footer"/>
-
-  <p><code>SYS_STATUS: PRODUCTION OPTIMIZED // ZERO-EMOJI STANDARD // MEDELLIN, COLOMBIA</code></p>
+  <p><code>JHON ANDERSON MORENO POSSO // MEDELLIN, COLOMBIA // 2026</code></p>
 
 </div>

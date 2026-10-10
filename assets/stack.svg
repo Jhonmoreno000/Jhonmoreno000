@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="220">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b101b"/>
+      <stop offset="100%" stop-color="#080c14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="900" height="220" rx="10" fill="#060910"/>
+  <rect x="0.5" y="0.5" width="899" height="219" rx="9.5" fill="none" stroke="#172033" stroke-width="1"/>
+
+  <!-- Header line -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="1">
+    <text x="28" y="28">ARCHITECTURE // TECH STACK MATRIX</text>
+    <text x="872" y="28" text-anchor="end" fill="#38bdf8">PRODUCTION STACK</text>
+  </g>
+  <line x1="28" y1="38" x2="872" y2="38" stroke="#172033" stroke-width="1"/>
+
+  <!-- 4 Columns Grid -->
+  <!-- Col 1: Core Languages -->
+  <g transform="translate(28, 52)">
+    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">01 // LANGUAGES</text>
+    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
+    
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
+      <text x="14" y="52">&#183; Python (Core / 3.x)</text>
+      <text x="14" y="74">&#183; Java (SE / OpenJDK)</text>
+      <text x="14" y="96">&#183; C# (.NET Core)</text>
+      <text x="14" y="118">&#183; TypeScript / JavaScript</text>
+      <text x="14" y="140">&#183; SQL (ANSI / Dialects)</text>
+    </g>
+  </g>
+
+  <!-- Col 2: Frameworks & APIs -->
+  <g transform="translate(242, 52)">
+    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">02 // FRAMEWORKS</text>
+    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
+    
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
+      <text x="14" y="52">&#183; Spring Boot</text>
+      <text x="14" y="74">&#183; FastAPI (Async)</text>
+      <text x="14" y="96">&#183; Node.js / Express</text>
+      <text x="14" y="118">&#183; React / Vite</text>
+      <text x="14" y="140">&#183; RESTful Contracts</text>
+    </g>
+  </g>
+
+  <!-- Col 3: Data Architecture -->
+  <g transform="translate(456, 52)">
+    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">03 // PERSISTENCE</text>
+    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
+    
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
+      <text x="14" y="52">&#183; PostgreSQL (Relational)</text>
+      <text x="14" y="74">&#183; MySQL (Transactions)</text>
+      <text x="14" y="96">&#183; MongoDB (NoSQL Doc)</text>
+      <text x="14" y="118">&#183; Redis (Key-Value / Cache)</text>
+      <text x="14" y="140">&#183; Query Optimization</text>
+    </g>
+  </g>
+
+  <!-- Col 4: DevOps & Infrastructure -->
+  <g transform="translate(670, 52)">
+    <rect width="202" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">04 // DEVSECOPS</text>
+    <line x1="14" y1="32" x2="188" y2="32" stroke="#1e293b" stroke-width="1"/>
+    
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
+      <text x="14" y="52">&#183; Docker &amp; Multi-stage</text>
+      <text x="14" y="74">&#183; Linux (Fedora / Arch)</text>
+      <text x="14" y="96">&#183; GitHub Actions (CI/CD)</text>
+      <text x="14" y="118">&#183; SAST / DAST Security</text>
+      <text x="14" y="140">&#183; Nginx / Reverse Proxy</text>
+    </g>
+  </g>
+</svg>

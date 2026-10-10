@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" width="100%" height="190">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b12"/>
+      <stop offset="50%" stop-color="#0d1322"/>
+      <stop offset="100%" stop-color="#090d17"/>
+    </linearGradient>
+
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#00f2fe" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <style>
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.9); }
+      }
+      .status-dot {
+        animation: pulseDot 2s infinite ease-in-out;
+        transform-origin: 810px 40px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="900" height="190" rx="12" fill="url(#heroBg)"/>
+  <rect x="0.5" y="0.5" width="899" height="189" rx="11.5" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Top Accent Line -->
+  <line x1="50" y1="1" x2="850" y2="1" stroke="url(#cyanLine)" stroke-width="2"/>
+
+  <!-- Sub-grid minimal marks -->
+  <path d="M 24 30 L 24 24 L 30 24" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <path d="M 876 30 L 876 24 L 870 24" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <path d="M 24 160 L 24 166 L 30 166" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <path d="M 876 160 L 876 166 L 870 166" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Metadata Header -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="1">
+    <text x="44" y="44">SYSTEM://PROFILE</text>
+    <text x="180" y="44" fill="#334155">|</text>
+    <text x="200" y="44" fill="#94a3b8">JHON ANDERSON MORENO POSSO</text>
+  </g>
+
+  <!-- Status Pill in Top Right -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="0.5">
+    <rect x="710" y="28" width="146" height="24" rx="12" fill="#0b1727" stroke="#1e3a5f" stroke-width="1"/>
+    <circle cx="725" cy="40" r="4" fill="#10b981" class="status-dot"/>
+    <text x="736" y="44" fill="#10b981">OPEN TO WORK</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="44" y1="58" x2="856" y2="58" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Primary Name -->
+  <text x="44" y="112" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-size="34" 
+        font-weight="800" 
+        letter-spacing="-0.5" 
+        fill="url(#nameGradient)">
+    Jhon Moreno
+  </text>
+
+  <!-- Role Subtitle -->
+  <text x="44" y="142" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-size="15" 
+        font-weight="400" 
+        fill="#94a3b8" 
+        letter-spacing="0.2">
+    Software Engineer focused on Backend Architecture, Distributed APIs &amp; DevSecOps
+  </text>
+
+  <!-- Micro Specs Line -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
+    <text x="44" y="172">MEDELLIN, COLOMBIA (UTC-5)</text>
+    <text x="270" y="172" fill="#334155">&#183;</text>
+    <text x="290" y="172">SENA ADSO TITLED CANDIDATE</text>
+    <text x="520" y="172" fill="#334155">&#183;</text>
+    <text x="540" y="172" fill="#38bdf8">PYTHON / JAVA / C# / DOCKER</text>
+  </g>
+</svg>
