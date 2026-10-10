@@ -1,13 +1,13 @@
 <div align="center">
 
-  <!-- ==================== BESPOKE HERO CARD ==================== -->
+  <!-- ==================== BESPOKE HERO COMPONENT ==================== -->
   <img src="./assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - Identity Card"/>
 
   <br><br>
 
-  <!-- ==================== ANIMATED SUBTITLE ==================== -->
+  <!-- ==================== ANIMATED TERMINAL SUBTITLE ==================== -->
   <a href="https://github.com/Jhonmoreno000">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&width=680&lines=%3E+Backend+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+TDD+%7C+High-Performance+APIs;%3E+Transforming+complex+logic+into+reliable+software" alt="Typing Subtitle"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=2600&pause=1000&color=38BDF8&center=true&vCenter=true&width=680&lines=%3E+Backend+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+Domain-Driven+Design+%7C+TDD;%3E+Transforming+complex+business+logic+into+reliable+code" alt="Typing Subtitle"/>
   </a>
 
   <br><br>
@@ -25,27 +25,21 @@
 
 ---
 
-### // 01. PROFILE & ENGINEERING PHILOSOPHY
+### // 01. PROFILE & EXECUTIVE SUMMARY
 
 ```text
-       /\         USER: jhon@systems-core
-      /  \        HOST: Distributed Systems & Backend Runtime
-     / /\ \       ENVIRONMENT: Linux (Fedora / Arch) // Containerized
-    / /  \ \      UPTIME: 99.99% // Continuous Integration & Delivery
-   / /    \ \     METHODOLOGY: Clean Architecture // DDD // TDD
-  /_/      \_\    STATUS: ACTIVE // Available for High-Impact Engineering Roles
-
-  [ENGINEERING SPECIFICATIONS]
-  Tecnologo en Desarrollo de Software enfocado en Backend Engineering,
-  Arquitectura Distribuida y DevSecOps. Especializado en APIs de alto
-  rendimiento, modelado relacional/NoSQL y automatizacion segura.
+  LOCATION     : Medellin, Antioquia, Colombia [UTC-5]
+  FORMATION    : Analisis y Desarrollo de Software (ADSO) - SENA
+  ROLE         : Tecnologo en Desarrollo de Software // Backend & DevSecOps
+  CORE STACK   : Python, Java, C#, Docker, PostgreSQL, Linux
+  PARADIGM     : Clean Architecture, TDD, Domain-Driven Design
 ```
 
-Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distribuida**. Mi trabajo se centra en construir sistemas escalables con bajo acoplamiento, diseñar APIs resilientes con contratos estrictos y automatizar pipelines con cultura DevSecOps (seguridad shift-left).
+Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distribuida y DevSecOps**. Especializado en la construccion de microservicios resilientes con bajo acoplamiento, diseno de APIs robustas con contratos estrictos y automatizacion de pipelines seguros con cultura shift-left.
 
-- **Backend & APIs:** Implementacion de microservicios, controladores desacoplados, DTOs tipados y persistencia relacional/NoSQL optimizada.
-- **DevSecOps & Infraestructura:** Contenerizacion con Docker multi-stage, auditoria estatica automatizada (SAST/DAST) y entornos Linux de produccion.
-- **Calidad de Codigo:** Adherencia a principios SOLID, Clean Code, pruebas unitarias y de integracion continuas.
+- **Backend & APIs:** Implementacion de microservicios modulares, controladores desacoplados, DTOs tipados y persistencia relacional/NoSQL optimizada.
+- **DevSecOps & Infraestructura:** Contenerizacion con Docker multi-stage, auditoria estatica automatizada (SAST/DAST) y despliegue en entornos Linux.
+- **Calidad de Codigo:** Adherencia estricta a principios SOLID, Clean Code, pruebas unitarias y de integracion continuas.
 
 ---
 
@@ -57,142 +51,59 @@ Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distr
 
 ---
 
-### // 03. SELECTED REPOSITORIES & ARCHITECTURES
+### // 03. FEATURED REPOSITORIES // DEPLOYMENTS
 
 <div align="center">
 
-<table>
-  <thead>
-    <tr>
-      <th align="left">PROYECTO</th>
-      <th align="left">ARQUITECTURA &amp; DETALLES TECNICOS</th>
-      <th align="center">TECNOLOGIAS</th>
-      <th align="center">ACCESO</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">
-        <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-          <b>proyecto-todo-api</b>
-        </a>
-        <br>
-        <small>Microservicio RESTful</small>
-      </td>
-      <td align="left">
-        API modular para administracion y programacion de flujos de trabajo. Arquitectura MVC con Node.js, persistencia NoSQL en MongoDB y orquestacion con Docker Compose.
-      </td>
-      <td align="center">
-        <code>Node.js</code> <code>Express</code><br>
-        <code>MongoDB</code> <code>Docker</code>
-      </td>
-      <td align="center">
-        <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-          <b>I-work-in-python</b>
-        </a>
-        <br>
-        <small>Algoritmia &amp; Estructuras</small>
-      </td>
-      <td align="left">
-        Implementacion rigurosa de algoritmos de optimizacion, estructuras de datos avanzadas y analisis de complejidad computacional Big-O bajo Clean Code modular.
-      </td>
-      <td align="center">
-        <code>Python 3</code> <code>Big-O</code><br>
-        <code>Data Structures</code>
-      </td>
-      <td align="center">
-        <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-          <b>GCP-GESTION-DE-PRODUCTOS-</b>
-        </a>
-        <br>
-        <small>Plataforma Empresarial .NET</small>
-      </td>
-      <td align="left">
-        Sistema empresarial de control transaccional de productos e inventarios. Desarrollado en C# (.NET Core) con arquitectura en capas y modelado relacional estructurado.
-      </td>
-      <td align="center">
-        <code>C#</code> <code>.NET Core</code><br>
-        <code>Relational SQL</code>
-      </td>
-      <td align="center">
-        <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=080b12" alt="Repo"/>
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <b>AI Security Orchestrator</b>
-        <br>
-        <small>Arquitectura Insignia</small>
-      </td>
-      <td align="left">
-        Plataforma autonoma para orquestacion de escaneres SAST, DAST y SCA en contenedores aislados. Modelos locales con Ollama para deduplicacion SHA-256 y parches de remediacion.
-      </td>
-      <td align="center">
-        <code>FastAPI</code> <code>Docker</code><br>
-        <code>Local AI</code> <code>DevSecOps</code>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/CORE-DEV-38bdf8?style=flat-square&labelColor=080b12" alt="Core Dev"/>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <b>NEXUS Database Engine</b>
-        <br>
-        <small>Simulador Interactivo</small>
-      </td>
-      <td align="left">
-        Simulador interactivo de ingenieria de bases de datos para experimentacion con planes de ejecucion SQL (EXPLAIN), indexacion y optimizacion de modelos relacionales.
-      </td>
-      <td align="center">
-        <code>TypeScript</code> <code>React</code><br>
-        <code>SQL Engine</code> <code>Vite</code>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/LAB-PROTOTYPE-10b981?style=flat-square&labelColor=080b12" alt="Prototype"/>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <b>D&amp;D Textil Platform</b>
-        <br>
-        <small>ERP Empresarial SENA</small>
-      </td>
-      <td align="left">
-        Ecosistema empresarial full-stack para comercializacion y gestion textil. Backend corporativo en Spring Boot, autenticacion con JWT y arquitectura reactiva en React.
-      </td>
-      <td align="center">
-        <code>Java</code> <code>Spring Boot</code><br>
-        <code>MySQL</code> <code>React</code>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/CASE-STUDY-a855f7?style=flat-square&labelColor=080b12" alt="Case Study"/>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <!-- REPOSITORY CARD 01 -->
+  <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
+    <img src="./assets/card-todo.svg" width="100%" alt="proyecto-todo-api"/>
+  </a>
+
+  <br><br>
+
+  <!-- REPOSITORY CARD 02 -->
+  <a href="https://github.com/Jhonmoreno000/I-work-in-python">
+    <img src="./assets/card-python.svg" width="100%" alt="I-work-in-python"/>
+  </a>
+
+  <br><br>
+
+  <!-- REPOSITORY CARD 03 -->
+  <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
+    <img src="./assets/card-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
+  </a>
 
 </div>
 
 ---
 
-### // 04. GITHUB TELEMETRY & ACTIVITY
+### // 04. FLAGSHIP ARCHITECTURES & SYSTEMS DESIGN
+
+<div align="center">
+  <img src="./assets/card-flagships.svg" width="100%" alt="Flagship Architectures"/>
+</div>
+
+---
+
+### // 05. DEVSECOPS & CI/CD PIPELINE
+
+```text
++------------------+      +-------------------+      +--------------------+
+|  SOURCE CONTROL  | ---> |  SECURITY & SAST  | ---> |   CONTAINER BUILD  |
+|  Git / CI Runner |      |  Ollama / Semgrep |      |   Docker Multi-Stage|
++------------------+      +-------------------+      +--------------------+
+          |                                                     |
+          v                                                     v
++------------------+                                 +--------------------+
+| AUTOMATED TESTS  | ------------------------------> | SECURE DEPLOYMENT  |
+| Unit / Integ TDD |                                 | Nginx / Cloud Host |
++------------------+                                 +--------------------+
+```
+
+---
+
+### // 06. GITHUB TELEMETRY & ACTIVITY
 
 <div align="center">
 
@@ -216,7 +127,7 @@ Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distr
 
 ---
 
-### // 05. TECHNICAL PROTOCOLS & RFC STANDARDS
+### // 07. TECHNICAL RFC STANDARDS & PROTOCOLS
 
 <details>
   <summary><b>[+] 01. Principios de Arquitectura de Software</b></summary>
@@ -241,10 +152,10 @@ Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distr
 </details>
 
 <details>
-  <summary><b>[+] 03. Formacion Profesional & Objetivos</b></summary>
+  <summary><b>[+] 03. Formacion Profesional & Trayectoria</b></summary>
   <br>
 
-  - **ADSO (SENA):** Analisis y Desarrollo de Software — Enfocado en la construccion de software corporativo y buenas practicas de ingenieria.
+  - **ADSO (SENA):** Analisis y Desarrollo de Software — Enfocado en construccion de software corporativo y buenas practicas de ingenieria.
   - **Ruta de Crecimiento:** Profundizacion en orquestacion de contenedores con Kubernetes, colas de mensajeria asincronas y sistemas de alta disponibilidad.
 
 </details>
