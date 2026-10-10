@@ -1,92 +1,174 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" width="100%" height="190">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240">
   <defs>
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080b12"/>
-      <stop offset="50%" stop-color="#0d1322"/>
-      <stop offset="100%" stop-color="#090d17"/>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13"/>
+      <stop offset="40%" stop-color="#0c1222"/>
+      <stop offset="80%" stop-color="#080d19"/>
+      <stop offset="100%" stop-color="#050811"/>
     </linearGradient>
 
-    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Glowing Top Border Accent -->
+    <linearGradient id="glowBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#00f2fe" stop-opacity="0.8"/>
-      <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#818cf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Name Typography Gradient -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="70%" stop-color="#f1f5f9"/>
+      <stop offset="60%" stop-color="#f8fafc"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
 
+    <!-- Subtle Ambient Radial Glow -->
+    <radialGradient id="ambientGlow" cx="20%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rightGlow" cx="80%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Fine Tech Grid Pattern -->
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.12"/>
+    </pattern>
+
     <style>
-      @keyframes pulseDot {
+      @keyframes pulseLight {
         0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.4; transform: scale(0.9); }
+        50% { opacity: 0.35; transform: scale(0.85); }
       }
-      .status-dot {
-        animation: pulseDot 2s infinite ease-in-out;
-        transform-origin: 810px 40px;
+      @keyframes lineGlow {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      .pulse-indicator {
+        animation: pulseLight 2s infinite ease-in-out;
+        transform-origin: 734px 34px;
+      }
+      .line-pulse {
+        animation: lineGlow 3s infinite ease-in-out;
       }
     </style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="900" height="190" rx="12" fill="url(#heroBg)"/>
-  <rect x="0.5" y="0.5" width="899" height="189" rx="11.5" fill="none" stroke="#1e293b" stroke-width="1"/>
+  <!-- Container Box -->
+  <rect width="900" height="240" rx="14" fill="url(#bgGrad)"/>
+  <rect width="900" height="240" rx="14" fill="url(#dotGrid)"/>
+  <rect width="900" height="240" rx="14" fill="url(#ambientGlow)"/>
+  <rect width="900" height="240" rx="14" fill="url(#rightGlow)"/>
+  <rect x="0.5" y="0.5" width="899" height="239" rx="13.5" fill="none" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Top Accent Line -->
-  <line x1="50" y1="1" x2="850" y2="1" stroke="url(#cyanLine)" stroke-width="2"/>
+  <!-- Top Accent Glowing Line -->
+  <line x1="40" y1="1.5" x2="860" y2="1.5" stroke="url(#glowBorder)" stroke-width="2.5" class="line-pulse"/>
 
-  <!-- Sub-grid minimal marks -->
-  <path d="M 24 30 L 24 24 L 30 24" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 876 30 L 876 24 L 870 24" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 24 160 L 24 166 L 30 166" fill="none" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 876 160 L 876 166 L 870 166" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <!-- ==================== HEADER BAR ==================== -->
+  <!-- Window Controls -->
+  <circle cx="36" cy="34" r="5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="52" cy="34" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="68" cy="34" r="5" fill="#10b981" fill-opacity="0.8"/>
 
-  <!-- Metadata Header -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="1">
-    <text x="44" y="44">SYSTEM://PROFILE</text>
-    <text x="180" y="44" fill="#334155">|</text>
-    <text x="200" y="44" fill="#94a3b8">JHON ANDERSON MORENO POSSO</text>
+  <!-- Path / Title -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
+    <text x="94" y="38">jam://systems.core · terminal</text>
   </g>
 
-  <!-- Status Pill in Top Right -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="0.5">
-    <rect x="710" y="28" width="146" height="24" rx="12" fill="#0b1727" stroke="#1e3a5f" stroke-width="1"/>
-    <circle cx="725" cy="40" r="4" fill="#10b981" class="status-dot"/>
-    <text x="736" y="44" fill="#10b981">OPEN TO WORK</text>
+  <!-- Status Badge (Top Right) -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10">
+    <rect x="718" y="22" width="148" height="24" rx="6" fill="#061320" stroke="#0369a1" stroke-width="1"/>
+    <circle cx="734" cy="34" r="4" fill="#10b981" class="pulse-indicator"/>
+    <text x="746" y="38" fill="#10b981" font-weight="700">STATUS: OPEN TO WORK</text>
   </g>
 
-  <!-- Divider -->
-  <line x1="44" y1="58" x2="856" y2="58" stroke="#1e293b" stroke-width="1"/>
+  <line x1="28" y1="52" x2="872" y2="52" stroke="#172236" stroke-width="1"/>
 
-  <!-- Primary Name -->
-  <text x="44" y="112" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+  <!-- ==================== LEFT COLUMN: IDENTITY ==================== -->
+  <!-- Role Tag -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.5">
+    <text x="36" y="80" fill="#38bdf8" font-weight="600">// BACKEND &amp; DEVSECOPS SPECIALIST</text>
+  </g>
+
+  <!-- Main Name -->
+  <text x="36" y="122" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
         font-size="34" 
         font-weight="800" 
         letter-spacing="-0.5" 
-        fill="url(#nameGradient)">
-    Jhon Moreno
+        fill="url(#nameGrad)">
+    Jhon Anderson Moreno
   </text>
 
-  <!-- Role Subtitle -->
-  <text x="44" y="142" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-        font-size="15" 
+  <!-- Title / Formation -->
+  <text x="36" y="152" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="14.5" 
         font-weight="400" 
-        fill="#94a3b8" 
+        fill="#cbd5e1" 
         letter-spacing="0.2">
-    Tecnologo en Desarrollo de Software &#183; Backend Engineering &amp; DevSecOps
+    Tecnologo en Desarrollo de Software &#183; SENA ADSO
   </text>
 
-  <!-- Micro Specs Line -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
-    <text x="44" y="172">MEDELLIN, COLOMBIA (UTC-5)</text>
-    <text x="270" y="172" fill="#334155">&#183;</text>
-    <text x="290" y="172">SENA ADSO</text>
-    <text x="400" y="172" fill="#334155">&#183;</text>
-    <text x="420" y="172" fill="#38bdf8">PYTHON / JAVA / C# / DOCKER / POSTGRESQL</text>
+  <!-- Location & Timezone -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b">
+    <text x="36" y="180">MEDELLIN, ANTIOQUIA, COLOMBIA (UTC-5)</text>
+  </g>
+
+  <!-- Specialty Pills -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10">
+    <rect x="36" y="196" width="134" height="22" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="103" y="211" fill="#38bdf8" text-anchor="middle">DISTRIBUTED APIS</text>
+
+    <rect x="178" y="196" width="124" height="22" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="240" y="211" fill="#38bdf8" text-anchor="middle">DOCKER &amp; CI/CD</text>
+
+    <rect x="310" y="196" width="108" height="22" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="364" y="211" fill="#38bdf8" text-anchor="middle">CLEAN CODE</text>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: SPEC CONSOLE ==================== -->
+  <g transform="translate(480, 68)">
+    <!-- Console Box -->
+    <rect width="386" height="150" rx="8" fill="#050811" fill-opacity="0.85" stroke="#1e293b" stroke-width="1"/>
+    <rect x="0" y="0" width="386" height="26" rx="8" fill="#0b1322"/>
+    <line x1="0" y1="26" x2="386" y2="26" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Console Header -->
+    <circle cx="14" cy="13" r="3" fill="#38bdf8"/>
+    <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="1">SYSTEM RUNTIME SPECIFICATIONS</text>
+
+    <!-- Key-Value Specs -->
+    <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11">
+      <!-- Line 1 -->
+      <text x="16" y="50" fill="#64748b">CORE STACK</text>
+      <text x="105" y="50" fill="#475569">::</text>
+      <text x="122" y="50" fill="#f1f5f9">Python · Java · C# · Node.js</text>
+
+      <!-- Line 2 -->
+      <text x="16" y="73" fill="#64748b">FRAMEWORKS</text>
+      <text x="105" y="73" fill="#475569">::</text>
+      <text x="122" y="73" fill="#f1f5f9">Spring Boot · FastAPI · Express</text>
+
+      <!-- Line 3 -->
+      <text x="16" y="96" fill="#64748b">DATABASES</text>
+      <text x="105" y="96" fill="#475569">::</text>
+      <text x="122" y="96" fill="#38bdf8">PostgreSQL · MySQL · MongoDB</text>
+
+      <!-- Line 4 -->
+      <text x="16" y="119" fill="#64748b">DEVSECOPS</text>
+      <text x="105" y="119" fill="#475569">::</text>
+      <text x="122" y="119" fill="#f1f5f9">Docker · SAST/DAST · Actions</text>
+
+      <!-- Line 5 -->
+      <text x="16" y="141" fill="#64748b">METHODOLOGY</text>
+      <text x="105" y="141" fill="#475569">::</text>
+      <text x="122" y="141" fill="#10b981">Clean Architecture · TDD · DDD</text>
+    </g>
   </g>
 </svg>
