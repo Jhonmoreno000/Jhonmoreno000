@@ -7,7 +7,7 @@
 
   <!-- ==================== ANIMATED TERMINAL SUBTITLE ==================== -->
   <a href="https://github.com/Jhonmoreno000">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&width=680&lines=%3E+Backend+Engineering+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+TDD+%7C+High-Performance+APIs;%3E+Transforming+complex+logic+into+reliable+software" alt="Typing Subtitle"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2800&pause=1000&color=00F2FE&center=true&vCenter=true&width=680&lines=%3E+Backend+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+TDD+%7C+High-Performance+APIs;%3E+Transforming+complex+logic+into+reliable+software" alt="Typing Subtitle"/>
   </a>
 
   <br><br>
