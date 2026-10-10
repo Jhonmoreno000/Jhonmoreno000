@@ -36,9 +36,9 @@
   /_/      \_\    STATUS: ACTIVE // Available for High-Impact Engineering Roles
 
   [ENGINEERING SPECIFICATIONS]
-  tenologo de Software enfocado en Backend Engineering, Arquitectura Distribuida
-  y DevSecOps. Especializado en el diseno de APIs de alto rendimiento, optimizacion
-  de modelos relacionales y no relacionales, y automatizacion de pipelines seguros.
+  Tecnologo en Desarrollo de Software enfocado en Backend Engineering,
+  Arquitectura Distribuida y DevSecOps. Especializado en APIs de alto
+  rendimiento, modelado relacional/NoSQL y automatizacion segura.
 ```
 
 Desarrollador de software enfocado en **Backend Engineering y Arquitectura Distribuida**. Mi trabajo se centra en construir sistemas escalables con bajo acoplamiento, diseñar APIs resilientes con contratos estrictos y automatizar pipelines con cultura DevSecOps (seguridad shift-left).

@@ -78,15 +78,15 @@
         font-weight="400" 
         fill="#94a3b8" 
         letter-spacing="0.2">
-    Software Engineer focused on Backend Architecture, Distributed APIs &amp; DevSecOps
+    Tecnologo en Desarrollo de Software &#183; Backend Engineering &amp; DevSecOps
   </text>
 
   <!-- Micro Specs Line -->
   <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
     <text x="44" y="172">MEDELLIN, COLOMBIA (UTC-5)</text>
     <text x="270" y="172" fill="#334155">&#183;</text>
-    <text x="290" y="172">SENA ADSO TITLED CANDIDATE</text>
-    <text x="520" y="172" fill="#334155">&#183;</text>
-    <text x="540" y="172" fill="#38bdf8">PYTHON / JAVA / C# / DOCKER</text>
+    <text x="290" y="172">SENA ADSO</text>
+    <text x="400" y="172" fill="#334155">&#183;</text>
+    <text x="420" y="172" fill="#38bdf8">PYTHON / JAVA / C# / DOCKER / POSTGRESQL</text>
   </g>
 </svg>
