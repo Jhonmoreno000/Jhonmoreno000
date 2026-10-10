@@ -1,7 +1,9 @@
 <div align="center">
 
-  <!-- ==================== HERO HEADER ==================== -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:090d16,35:0e1e38,70:0369a1,100:00f2fe&height=220&section=header&text=JHON%20ANDERSON%20MORENO&fontSize=38&fontColor=ffffff&fontAlignY=36&desc=SOFTWARE%20ENGINEER%20%7C%20BACKEND%20%26%20SYSTEMS%20ARCHITECTURE&descSize=14&descAlignY=59" width="100%" alt="Jhon Moreno Header"/>
+  <!-- ==================== SELF-HOSTED VECTOR CYBER HEADER ==================== -->
+  <img src="./assets/header.svg" width="100%" alt="Jhon Anderson Moreno - Header"/>
+
+  <br><br>
 
   <!-- ==================== ANIMATED TERMINAL SUBTITLE ==================== -->
   <a href="https://github.com/Jhonmoreno000">
@@ -20,7 +22,7 @@
 
   <p>
     <code>LOCATION: Medellin, Antioquia, Colombia (UTC-5)</code> &nbsp;|&nbsp; 
-    <code>DOMAIN: Backend Engineering, DevSecOps & Databases</code>
+    <code>SPECIALTY: Backend, DevSecOps &amp; Database Architecture</code>
   </p>
 
 </div>
@@ -33,19 +35,19 @@
        /\         USER: jhon@systems-core
       /  \        HOST: Distributed Systems & Backend Runtime
      / /\ \       ENVIRONMENT: Linux (Fedora / Arch) // Containerized
-    / /  \ \      UPTIME: 99.99% // Continuous Delivery
+    / /  \ \      UPTIME: 99.99% // Continuous Integration & Delivery
    / /    \ \     METHODOLOGY: Clean Architecture // DDD // TDD
   /_/      \_\    STATUS: ACTIVE // Available for High-Impact Engineering Roles
 
-  [SYSTEM OVERVIEW]
-  Ingeniero de Software y Desarrollador Backend especializado en el diseno
-  y construccion de microservicios resilientes, optimizacion de bases de datos
-  y automatizacion de pipelines seguros bajo cultura DevSecOps.
+  [ENGINEERING SPECIFICATIONS]
+  Ingeniero de Software enfocado en Backend Engineering, Arquitectura Distribuida
+  y DevSecOps. Especializado en el diseno de APIs de alto rendimiento, optimizacion
+  de modelos relacionales y no relacionales, y automatizacion de pipelines seguros.
 ```
 
-- **Core Focus:** APIs de alto rendimiento, modularidad estricta y bajo acoplamiento.
+- **Core Strengths:** APIs modulares, desacoplamiento estricto, persistencia transaccional y bajo consumo de memoria.
 - **Security Paradigm:** Shift-left security, auditoria estatica automatizada (SAST/DAST) y entornos Docker aislados.
-- **Engineering Principles:** Clean Code, SOLID, inversion de dependencias y pruebas unitarias/integracion sistematicas.
+- **Standards:** Clean Code, principios SOLID, inversion de dependencias y pruebas unitarias/integracion exhaustivas.
 
 ---
 
@@ -119,25 +121,76 @@
 <div align="center">
 
 <table>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Jhonmoreno000&repo=proyecto-todo-api&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" width="100%" alt="proyecto-todo-api"/>
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Jhonmoreno000&repo=I-work-in-python&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" width="100%" alt="I-work-in-python"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=Jhonmoreno000&repo=GCP-GESTION-DE-PRODUCTOS-&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f2fe&icon_color=00f2fe&text_color=94a3b8" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
-      </a>
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th align="left">REPOSITORIO &amp; ENLACE</th>
+      <th align="left">DESCRIPCION TECNICA &amp; ARQUITECTURA</th>
+      <th align="center">STACK TECNOLOGICO</th>
+      <th align="center">ESTADO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
+          <b>proyecto-todo-api</b>
+        </a>
+      </td>
+      <td align="left">
+        API RESTful modular para gestion de tareas y flujos de trabajo. Disenada bajo arquitectura MVC con Node.js, persistencia NoSQL en MongoDB y orquestacion contenerizada con Docker Compose lista para produccion.
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <a href="https://github.com/Jhonmoreno000/I-work-in-python">
+          <b>I-work-in-python</b>
+        </a>
+      </td>
+      <td align="left">
+        Suite de resolucion de problemas computacionales, estructuras de datos avanzadas y algoritmia en Python. Enfocado en analisis de complejidad Big-O, optimizacion de memoria y Clean Code modular.
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Python_3-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3"/>
+        <img src="https://img.shields.io/badge/Algorithms-Core-blue?style=flat-square" alt="Algorithms"/>
+        <img src="https://img.shields.io/badge/Clean_Code-22c55e?style=flat-square" alt="Clean Code"/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jhonmoreno000/I-work-in-python">
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
+          <b>GCP-GESTION-DE-PRODUCTOS-</b>
+        </a>
+      </td>
+      <td align="left">
+        Sistema empresarial de gestion y administracion transaccional de productos desarrollado en C# (.NET). Implementacion de arquitectura en capas, control de inventario y persistencia relacional estructurada.
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white" alt="C#"/>
+        <img src="https://img.shields.io/badge/.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET"/>
+        <img src="https://img.shields.io/badge/SQL_DB-00758F?style=flat-square&logo=mysql&logoColor=white" alt="SQL"/>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
+          <img src="https://img.shields.io/badge/REPO-00F2FE?style=flat-square&logo=github&labelColor=0d1117" alt="Repo"/>
+        </a>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 </div>
@@ -153,7 +206,7 @@
     <td width="50%" valign="top">
       <h4 align="center">AI Security Orchestrator</h4>
       <p align="center">
-        <code>STATUS: CORE ARCHITECTURE</code> &nbsp;|&nbsp; <code>DEVSECOPS / AI</code>
+        <code>STATUS: CORE ARCHITECTURE</code> &nbsp;|&nbsp; <code>DEVSECOPS // AI</code>
       </p>
       <p align="center">
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
@@ -276,7 +329,7 @@
 </details>
 
 <details>
-  <summary><b>[+] 04. Hoja de Ruta Activa & Objetivos Técnicos</b></summary>
+  <summary><b>[+] 04. Hoja de Ruta Activa & Objetivos Tecnicos</b></summary>
   <br>
 
   - **Q4 2026:** Implementacion de orquestacion de contenedores con Kubernetes y patrones de mensajeria asincrona (Event-Driven).
@@ -294,9 +347,9 @@
 
   <br>
 
-  <!-- ==================== FOOTER WAVE ==================== -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0:00f2fe,30:0369a1,70:0e1e38,100:090d16&height=100&section=footer" width="100%" alt="Footer Wave"/>
+  <!-- ==================== SELF-HOSTED VECTOR CYBER FOOTER ==================== -->
+  <img src="./assets/footer.svg" width="100%" alt="Jhon Moreno Footer"/>
 
-  <p><code>SYS_STATUS: OPTIMIZED // ZERO-EMOJI MINIMALIST STANDARD // MEDELLIN, COLOMBIA</code></p>
+  <p><code>SYS_STATUS: PRODUCTION OPTIMIZED // ZERO-EMOJI STANDARD // MEDELLIN, COLOMBIA</code></p>
 
 </div>
