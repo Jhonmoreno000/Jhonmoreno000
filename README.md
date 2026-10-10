@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- ==================== BESPOKE HERO COMPONENT ==================== -->
-  <img src="./assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - Identity Card"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - Identity Card"/>
 
   <br><br>
 
@@ -46,7 +46,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 ### // 02. TECH STACK MATRIX
 
 <div align="center">
-  <img src="./assets/stack.svg" width="100%" alt="Tech Stack Matrix"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/stack.svg" width="100%" alt="Tech Stack Matrix"/>
 </div>
 
 ---
@@ -57,21 +57,21 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
   <!-- REPOSITORY CARD 01 -->
   <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-    <img src="./assets/card-todo.svg" width="100%" alt="proyecto-todo-api"/>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-todo.svg" width="100%" alt="proyecto-todo-api"/>
   </a>
 
   <br><br>
 
   <!-- REPOSITORY CARD 02 -->
   <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-    <img src="./assets/card-python.svg" width="100%" alt="I-work-in-python"/>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-python.svg" width="100%" alt="I-work-in-python"/>
   </a>
 
   <br><br>
 
   <!-- REPOSITORY CARD 03 -->
   <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-    <img src="./assets/card-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
   </a>
 
 </div>
@@ -81,7 +81,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 ### // 04. FLAGSHIP ARCHITECTURES & SYSTEMS DESIGN
 
 <div align="center">
-  <img src="./assets/card-flagships.svg" width="100%" alt="Flagship Architectures"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-flagships.svg" width="100%" alt="Flagship Architectures"/>
 </div>
 
 ---
@@ -129,7 +129,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ### // 07. TECHNICAL RFC STANDARDS & PROTOCOLS
 
-<details>
+<details open>
   <summary><b>[+] 01. Principios de Arquitectura de Software</b></summary>
   <br>
 
@@ -140,7 +140,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 </details>
 
-<details>
+<details open>
   <summary><b>[+] 02. Estandares DevSecOps & Infraestructura</b></summary>
   <br>
 
@@ -151,7 +151,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 </details>
 
-<details>
+<details open>
   <summary><b>[+] 03. Formacion Profesional & Trayectoria</b></summary>
   <br>
 
