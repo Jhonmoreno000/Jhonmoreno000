@@ -25,11 +25,13 @@
   </g>
 
   <!-- 3D Isometric Database Cylinder in Top-Right Corner -->
-  <g class="b-iso" transform="translate(432, 46)">
-    <path d="M -22 0 L -22 14 A 22 9 0 0 0 22 14 L 22 0 Z" fill="#3d59a1"/>
-    <ellipse cx="0" cy="0" rx="22" ry="9" fill="#7aa2f7"/>
-    <path d="M -22 -16 L -22 -2 A 22 9 0 0 0 22 -2 L 22 -16 Z" fill="#2ac3de"/>
-    <ellipse cx="0" cy="-16" rx="22" ry="9" fill="#7dcfff"/>
+  <g transform="translate(432, 46)">
+    <g class="b-iso">
+      <path d="M -22 0 L -22 14 A 22 9 0 0 0 22 14 L 22 0 Z" fill="#3d59a1"/>
+      <ellipse cx="0" cy="0" rx="22" ry="9" fill="#7aa2f7"/>
+      <path d="M -22 -16 L -22 -2 A 22 9 0 0 0 22 -2 L 22 -16 Z" fill="#2ac3de"/>
+      <ellipse cx="0" cy="-16" rx="22" ry="9" fill="#7dcfff"/>
+    </g>
   </g>
 
   <!-- Description -->

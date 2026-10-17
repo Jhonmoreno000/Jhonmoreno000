@@ -24,10 +24,12 @@
   </g>
 
   <!-- 3D Isometric Algorithm Prism in Top-Right -->
-  <g class="b-iso" transform="translate(432, 46)">
-    <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#e0af68"/>
-    <polygon points="-24,-8 0,4 0,24 -24,12" fill="#b58338"/>
-    <polygon points="24,-8 0,4 0,24 24,12" fill="#78521b"/>
+  <g transform="translate(432, 46)">
+    <g class="b-iso">
+      <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#e0af68"/>
+      <polygon points="-24,-8 0,4 0,24 -24,12" fill="#b58338"/>
+      <polygon points="24,-8 0,4 0,24 24,12" fill="#78521b"/>
+    </g>
   </g>
 
   <!-- Description -->

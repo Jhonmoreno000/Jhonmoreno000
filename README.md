@@ -138,16 +138,7 @@
 
   <br><br>
 
-  <table width="100%">
-    <tr>
-      <td width="50%" align="center">
-        <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0b0d14&stroke=1f2437&ring=7aa2f7&fire=bb9af7&currStreakNum=ffffff&sideNums=73daca&currStreakLabel=7aa2f7&sideLabels=9aa5ce&dates=565f89" width="100%" alt="GitHub Streak"/>
-      </td>
-      <td width="50%" align="center">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=0b0d14&color=9aa5ce&line=7aa2f7&point=bb9af7&area=true&area_color=3d59a1&hide_border=true&custom_title=GitHub%20Commit%20Activity" width="100%" alt="Activity Graph"/>
-      </td>
-    </tr>
-  </table>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/activity-streak-telemetry.svg" width="100%" alt="Contribution Streak &amp; Commit Activity Graph"/>
 
 </div>
 

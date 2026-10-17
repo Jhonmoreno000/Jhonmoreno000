@@ -22,10 +22,12 @@
   </g>
 
   <!-- 3D Isometric Shield Node in Top-Right -->
-  <g class="b-iso" transform="translate(432, 46)">
-    <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#f7768e"/>
-    <polygon points="-24,-8 0,4 0,24 -24,12" fill="#db4b4b"/>
-    <polygon points="24,-8 0,4 0,24 24,12" fill="#991b1b"/>
+  <g transform="translate(432, 46)">
+    <g class="b-iso">
+      <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#f7768e"/>
+      <polygon points="-24,-8 0,4 0,24 -24,12" fill="#db4b4b"/>
+      <polygon points="24,-8 0,4 0,24 24,12" fill="#991b1b"/>
+    </g>
   </g>
 
   <!-- Description -->

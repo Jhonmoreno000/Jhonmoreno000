@@ -22,10 +22,12 @@
   </g>
 
   <!-- 3D Isometric .NET Cube in Top-Right -->
-  <g class="b-iso" transform="translate(432, 46)">
-    <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#bb9af7"/>
-    <polygon points="-24,-8 0,4 0,24 -24,12" fill="#9d7cd8"/>
-    <polygon points="24,-8 0,4 0,24 24,12" fill="#5a3e8e"/>
+  <g transform="translate(432, 46)">
+    <g class="b-iso">
+      <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#bb9af7"/>
+      <polygon points="-24,-8 0,4 0,24 -24,12" fill="#9d7cd8"/>
+      <polygon points="24,-8 0,4 0,24 24,12" fill="#5a3e8e"/>
+    </g>
   </g>
 
   <!-- Description -->

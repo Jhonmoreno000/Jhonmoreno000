@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="100%" height="230">
+  <defs>
+    <linearGradient id="asBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="100%" stop-color="#111522"/>
+    </linearGradient>
+
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7aa2f7" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dcfff"/>
+      <stop offset="50%" stop-color="#7aa2f7"/>
+      <stop offset="100%" stop-color="#bb9af7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== LEFT CARD: STREAK & CONTRIBUTION SUMMARY ==================== -->
+  <g transform="translate(0, 0)">
+    <rect width="488" height="230" rx="16" fill="url(#asBg)"/>
+    <rect x="1" y="1" width="486" height="228" rx="15" fill="none" stroke="#1f2437" stroke-width="1.5"/>
+
+    <text x="26" y="30" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#7aa2f7">
+      CONTRIBUTION STREAK &amp; VELOCITY
+    </text>
+    <line x1="26" y1="42" x2="462" y2="42" stroke="#1f2437" stroke-width="1"/>
+
+    <!-- Col 1: Total Contributions -->
+    <g transform="translate(92, 122)" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif">
+      <text x="0" y="0" font-size="34" font-weight="800" fill="#73daca">118+</text>
+      <text x="0" y="26" font-size="12" font-weight="600" fill="#c0caf5">Total Contributions</text>
+      <text x="0" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#565f89">2024 — Present</text>
+    </g>
+
+    <line x1="172" y1="68" x2="172" y2="196" stroke="#1f2437" stroke-width="1"/>
+
+    <!-- Col 2: Animated Current Streak Ring -->
+    <g transform="translate(244, 122)" text-anchor="middle">
+      <circle cx="0" cy="-6" r="42" fill="none" stroke="#161b2e" stroke-width="6"/>
+      <circle cx="0" cy="-6" r="42" fill="none" stroke="url(#ringGrad)" stroke-width="6"
+              stroke-linecap="round" stroke-dasharray="230 264" transform="rotate(-90 0 -6)">
+        <animate attributeName="stroke-dasharray" values="40 264;230 264;230 264" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Flame Icon at Top of Ring -->
+      <path d="M 0 -56 C 4 -50, 7 -46, 4 -41 C 2 -38, -2 -38, -4 -41 C -7 -46, -4 -50, 0 -56 Z" fill="#bb9af7"/>
+      <text x="0" y="3" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="26" font-weight="800" fill="#ffffff">Active</text>
+      <text x="0" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" fill="#7dcfff">Current Momentum</text>
+      <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="10" fill="#565f89">Medellín [UTC-5]</text>
+    </g>
+
+    <line x1="316" y1="68" x2="316" y2="196" stroke="#1f2437" stroke-width="1"/>
+
+    <!-- Col 3: Public Repos & Architecture -->
+    <g transform="translate(398, 122)" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif">
+      <text x="0" y="0" font-size="34" font-weight="800" fill="#bb9af7">07</text>
+      <text x="0" y="26" font-size="12" font-weight="600" fill="#c0caf5">Public Repositories</text>
+      <text x="0" y="46" font-family="'JetBrains Mono', monospace" font-size="10" fill="#565f89">Clean Arch &amp; Docker</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT CARD: REALTIME COMMIT ACTIVITY AREA GRAPH ==================== -->
+  <g transform="translate(512, 0)">
+    <rect width="488" height="230" rx="16" fill="url(#asBg)"/>
+    <rect x="1" y="1" width="486" height="228" rx="15" fill="none" stroke="#1f2437" stroke-width="1.5"/>
+
+    <text x="26" y="30" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#73daca">
+      COMMIT ACTIVITY &amp; CODE FREQUENCY GRAPH
+    </text>
+    <text x="462" y="30" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#bb9af7">
+      main · verified
+    </text>
+    <line x1="26" y1="42" x2="462" y2="42" stroke="#1f2437" stroke-width="1"/>
+
+    <!-- Chart Grid Lines -->
+    <g stroke="#1a2035" stroke-width="1" stroke-dasharray="3 3">
+      <line x1="48" y1="70" x2="458" y2="70"/>
+      <line x1="48" y1="105" x2="458" y2="105"/>
+      <line x1="48" y1="140" x2="458" y2="140"/>
+      <line x1="48" y1="175" x2="458" y2="175"/>
+    </g>
+
+    <!-- Y-Axis Labels -->
+    <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#565f89" text-anchor="end">
+      <text x="40" y="73">30</text>
+      <text x="40" y="108">20</text>
+      <text x="40" y="143">10</text>
+      <text x="40" y="178">0</text>
+    </g>
+
+    <!-- Area Under Curve -->
+    <path d="M 48 162 C 85 155, 105 118, 130 122 C 160 126, 180 88, 212 92 C 245 96, 265 135, 294 114 C 325 92, 348 64, 376 74 C 405 84, 430 62, 458 58 L 458 175 L 48 175 Z"
+          fill="url(#areaGrad)"/>
+
+    <!-- Smooth Spline Line -->
+    <path d="M 48 162 C 85 155, 105 118, 130 122 C 160 126, 180 88, 212 92 C 245 96, 265 135, 294 114 C 325 92, 348 64, 376 74 C 405 84, 430 62, 458 58"
+          fill="none" stroke="#7dcfff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Glowing Commit Data Points -->
+    <g fill="#bb9af7" stroke="#0b0d14" stroke-width="1.5">
+      <circle cx="48" cy="162" r="4"/>
+      <circle cx="130" cy="122" r="4"/>
+      <circle cx="212" cy="92" r="4.5"/>
+      <circle cx="294" cy="114" r="4"/>
+      <circle cx="376" cy="74" r="4.5"/>
+      <circle cx="458" cy="58" r="5" fill="#73daca">
+        <animate attributeName="r" values="4;7;4" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- X-Axis Labels -->
+    <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#787c99" text-anchor="middle">
+      <text x="58" y="198">May</text>
+      <text x="130" y="198">Jun</text>
+      <text x="212" y="198">Jul</text>
+      <text x="294" y="198">Aug</text>
+      <text x="376" y="198">Sep</text>
+      <text x="448" y="198" fill="#73daca" font-weight="700">Oct</text>
+    </g>
+  </g>
+</svg>
