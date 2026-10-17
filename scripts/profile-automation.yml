@@ -1,0 +1,60 @@
+name: Profile 3D & Telemetry Engine
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "assets/github-3d-contrib.svg"
+      - "assets/snake-dark.svg"
+      - "profile-3d-contrib/**"
+
+permissions:
+  contents: write
+
+jobs:
+  update-3d-and-telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Live 3D Isometric & Telemetry SVG Generator
+        run: python scripts/update_profile_data.py
+
+      - name: Generate 3D Contribution Graph (yoshi389111)
+        uses: yoshi389111/github-profile-3d-contrib@0.8.0
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Generate Contribution Snake (Platane/snk)
+        uses: Platane/snk/svg-only@v3
+        continue-on-error: true
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Commit & Push Updated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-3d-contrib.svg assets/snake-dark.svg
+          if [ -d "profile-3d-contrib" ]; then git add profile-3d-contrib/; fi
+          if [ -d "dist" ]; then git add dist/; fi
+          if git diff --cached --quiet; then
+            echo "No telemetry changes to commit"
+          else
+            git commit -m "chore(telemetry): auto-update 3D contribution terrain & live metrics [skip ci]"
+            git push
+          fi

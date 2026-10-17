@@ -1,193 +1,159 @@
 <div align="center">
 
-  <!-- ==================== 3D ANIMATED HERO COMMAND CENTER BANNER ==================== -->
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - 3D Command Center Banner"/>
+  <!-- 3D ISOMETRIC WORKSTATION & SERVER ROOM HERO -->
+  <picture>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/banner-workstation-3d.svg" width="100%" alt="Jhon Anderson Moreno — Backend & DevSecOps Workstation"/>
+  </picture>
 
   <br><br>
 
-  <!-- ==================== ANIMATED TERMINAL TYPING SUBTITLE ==================== -->
+  <!-- DYNAMIC TYPING SUBTITLE & SOCIAL LINKS -->
   <a href="https://github.com/Jhonmoreno000">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=2500&pause=900&color=00F2FE&center=true&vCenter=true&width=760&lines=%3E+Backend+Architect+%26+Distributed+Microservices+Engineer;%3E+DevSecOps+%7C+Automated+SAST%2FDAST+Scanning+%26+Docker+Multi-Stage;%3E+Relational+%26+NoSQL+Data+Engineering+%7C+PostgreSQL+%C2%B7+MySQL+%C2%B7+MongoDB;%3E+Clean+Architecture+%7C+Domain-Driven+Design+(DDD)+%7C+Strict+TDD" alt="Animated Typing Subtitle"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=14&duration=2600&pause=1000&color=7AA2F7&center=true&vCenter=true&width=720&lines=Backend+Engineering+%C2%B7+Microservicios+Distribuidos+%26+APIs+REST;DevSecOps+Shift-Left+%C2%B7+Docker+Multi-Stage+%C2%B7+Auditor%C3%ADa+SAST+con+IA;Arquitectura+de+Datos+SQL+%26+NoSQL+%C2%B7+PostgreSQL+%C2%B7+MySQL+%C2%B7+MongoDB;Clean+Architecture+%C2%B7+Domain-Driven+Design+(DDD)+%C2%B7+TDD" alt="Typing Subtitle"/>
   </a>
 
-  <br><br>
-
-  <!-- ==================== CONTACT & TELEMETRY PILLS ==================== -->
   <p>
-    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LinkedIn-Jhon_Anderson_Moreno-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=050811" alt="LinkedIn"/></a>
+    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/">
+      <img src="https://img.shields.io/badge/LinkedIn-Jhon_Anderson_Moreno-161926?style=for-the-badge&logo=linkedin&logoColor=7aa2f7&labelColor=0b0d14" alt="LinkedIn"/>
+    </a>
     &nbsp;
-    <a href="mailto:morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/Email-Contacto_Directo-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050811" alt="Email"/></a>
+    <a href="mailto:morenopossojhonanderson313@gmail.com">
+      <img src="https://img.shields.io/badge/Gmail-morenopossojhonanderson313-161926?style=for-the-badge&logo=gmail&logoColor=f7768e&labelColor=0b0d14" alt="Email"/>
+    </a>
     &nbsp;
-    <a href="https://github.com/Jhonmoreno000?tab=repositories"><img src="https://img.shields.io/badge/GitHub-Repositorios_%26_Arquitectura-38BDF8?style=for-the-badge&logo=github&logoColor=white&labelColor=050811" alt="GitHub"/></a>
+    <a href="https://github.com/Jhonmoreno000?tab=repositories">
+      <img src="https://img.shields.io/badge/Repositorios-GitHub-161926?style=for-the-badge&logo=github&logoColor=73daca&labelColor=0b0d14" alt="GitHub"/>
+    </a>
     &nbsp;
-    <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&label=PROFILE+VIEWS&color=00f2fe&style=for-the-badge&labelColor=050811" alt="Profile Views"/>
+    <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&label=VIEWS&color=7aa2f7&style=for-the-badge&labelColor=0b0d14" alt="Views"/>
   </p>
 
 </div>
 
----
+<br>
 
-### // 01. PROFILE & 3D EXECUTIVE BRIEFING
-
+<!-- ==================== FASTFETCH / NEOFETCH RETRO TERMINAL ==================== -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/profile-3d.svg" width="100%" alt="3D Executive Pillars"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/neofetch-terminal.svg" width="100%" alt="Fastfetch Linux Terminal"/>
 </div>
 
 <br>
 
-Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distribuida, Bases de Datos de Alto Rendimiento y DevSecOps**. Especializado en la construcción de microservicios resilientes con bajo acoplamiento, diseño de APIs robustas con contratos estrictos y automatización de pipelines seguros bajo cultura *Shift-Left*.
+<!-- ==================== TECH STACK & SKILL ICONS ==================== -->
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>Lenguajes &amp; Frameworks Backend</h4>
+      <p align="left">
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=py,java,cs,ts,js,fastapi,spring,dotnet,nodejs,express,react,vite&theme=dark&perline=6" alt="Backend & Languages"/>
+        </a>
+      </p>
+      <sub> Construcción de servicios modulares, contratos OpenAPI, autenticación JWT/OAuth2 y arquitectura limpia orientada al dominio.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h4>Persistencia, DevSecOps &amp; Entorno</h4>
+      <p align="left">
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis,docker,linux,githubactions,nginx,git,bash,postman,neovim&theme=dark&perline=6" alt="Databases & DevSecOps"/>
+        </a>
+      </p>
+      <sub> Modelado relacional/NoSQL, optimización de planes de ejecución SQL (<code>EXPLAIN</code>), contenedores multi-stage y pipelines CI/CD seguros.</sub>
+    </td>
+  </tr>
+</table>
 
----
+<br>
 
-### // 02. 3D CREDENTIALS & ACHIEVEMENTS VAULT
-
+<!-- ==================== 3D EXPLODED ARCHITECTURE BLUEPRINT ==================== -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/achievements-3d.svg" width="100%" alt="3D Credentials & Achievements Vault"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/arch-layers-3d.svg" width="100%" alt="3D Exploded Architecture Blueprint"/>
 </div>
 
----
+<br>
 
-### // 03. 3D TECH STACK MATRIX & PROFICIENCY TELEMETRY
+<!-- ==================== BENTO GRID: FEATURED REPOSITORIES ==================== -->
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000/NEXUS">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-nexus.svg" width="100%" alt="NEXUS SQL Engine"/>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000/architect-td">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-architect.svg" width="100%" alt="architect-td"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-todo.svg" width="100%" alt="proyecto-todo-api"/>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000/I-work-in-python">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-python.svg" width="100%" alt="I-work-in-python"/>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/Jhonmoreno000?tab=repositories">
+        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-aisec.svg" width="100%" alt="AI Security & Enterprise ERP"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
+<br>
+
+<!-- ==================== LIVE 3D TERMINAL & MICROSERVICES MESH (COLLAPSIBLE DEEP-DIVE) ==================== -->
+<details open>
+  <summary><b>&#9881;&#65039; Simulación en Vivo: Terminal Split-Pane (Docker + SAST IA + SQL EXPLAIN) &amp; Topología 3D</b></summary>
+  <br>
+  <div align="center">
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/terminal-live.svg" width="100%" alt="Live Split-Pane Terminal"/>
+    <br><br>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/microservices-3d.svg" width="100%" alt="3D Microservices Topology"/>
+  </div>
+</details>
+
+<br>
+
+<!-- ==================== 3D ISOMETRIC CONTRIBUTION TERRAIN & SNAKE (GITHUB ACTIONS) ==================== -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/stack.svg" width="100%" alt="3D Tech Stack Matrix"/>
-</div>
 
----
-
-### // 04. 3D HOLOGRAPHIC MICROSERVICES TOPOLOGY // LIVE DATA MESH
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/microservices-3d.svg" width="100%" alt="3D Holographic Microservices Topology"/>
-</div>
-
----
-
-### // 05. LIVE 3D TERMINAL // DOCKER BUILD, AI SAST & SQL EXPLAIN
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/terminal-live.svg" width="100%" alt="3D Live Terminal Simulation"/>
-</div>
-
----
-
-### // 06. FEATURED REPOSITORIES // 3D INTERACTIVE CARDS
-
-<div align="center">
-
-  <!-- REPOSITORY CARD 01: NEXUS -->
-  <a href="https://github.com/Jhonmoreno000/NEXUS">
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-nexus.svg" width="100%" alt="NEXUS - Relational Schema & SQL Query Simulator"/>
-  </a>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/github-3d-contrib.svg" width="100%" alt="3D Isometric Contribution Terrain"/>
 
   <br><br>
 
-  <!-- REPOSITORY CARD 02: ARCHITECT-TD -->
-  <a href="https://github.com/Jhonmoreno000/architect-td">
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-architect.svg" width="100%" alt="architect-td - DevOps & Software Architecture Game"/>
-  </a>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/snake-dark.svg" width="100%" alt="Contribution Snake Animation"/>
 
   <br><br>
 
-  <!-- REPOSITORY CARD 03: PROYECTO-TODO-API -->
-  <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-todo.svg" width="100%" alt="proyecto-todo-api"/>
-  </a>
-
-  <br><br>
-
-  <!-- REPOSITORY CARD 04: I-WORK-IN-PYTHON -->
-  <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-python.svg" width="100%" alt="I-work-in-python"/>
-  </a>
-
-  <br><br>
-
-  <!-- REPOSITORY CARD 05: GCP-GESTION-DE-PRODUCTOS -->
-  <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
-  </a>
-
-</div>
-
----
-
-### // 07. FLAGSHIP 3D ARCHITECTURES & SYSTEMS DESIGN
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-flagships.svg" width="100%" alt="3D Flagship Architectures"/>
-</div>
-
----
-
-### // 08. 3D ANIMATED DEVSECOPS & CI/CD PIPELINE
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/pipeline-3d.svg" width="100%" alt="3D Animated DevSecOps Pipeline"/>
-</div>
-
----
-
-### // 09. 3D ANIMATED TELEMETRY, STATS & GITHUB ACTIVITY
-
-<div align="center">
-
-  <!-- BESPOKE 3D ANIMATED TELEMETRY & SKYLINE DASHBOARD -->
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/telemetry-stats.svg" width="100%" alt="3D Engineering Telemetry & Stats"/>
-
-  <br><br>
-
-  <!-- LIVE GITHUB STREAK & ACTIVITY GRAPH -->
-  <table>
+  <table width="100%">
     <tr>
       <td width="50%" align="center">
-        <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=040812&stroke=1e293b&ring=00f2fe&fire=c084fc&currStreakNum=ffffff&sideNums=38bdf8&currStreakLabel=00f2fe&sideLabels=94a3b8&dates=64748b" width="100%" alt="GitHub Streak Stats"/>
+        <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=0b0d14&stroke=1f2437&ring=7aa2f7&fire=bb9af7&currStreakNum=ffffff&sideNums=73daca&currStreakLabel=7aa2f7&sideLabels=9aa5ce&dates=565f89" width="100%" alt="GitHub Streak"/>
       </td>
       <td width="50%" align="center">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=040812&color=38bdf8&line=00f2fe&point=c084fc&area=true&area_color=0284c7&hide_border=true&custom_title=REALTIME%20COMMIT%20ACTIVITY%20GRAPH" width="100%" alt="GitHub Activity Graph"/>
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=0b0d14&color=9aa5ce&line=7aa2f7&point=bb9af7&area=true&area_color=3d59a1&hide_border=true&custom_title=GitHub%20Commit%20Activity" width="100%" alt="Activity Graph"/>
       </td>
     </tr>
   </table>
 
 </div>
 
----
+<br>
 
-### // 10. TECHNICAL RFC STANDARDS & PROTOCOLS
-
-<details open>
-  <summary><b>[+] 01. Principios de Arquitectura de Software &amp; Microservicios</b></summary>
-  <br>
-
-  - **Clean Architecture & Domain-Driven Design (DDD):** Desacoplamiento estricto de las reglas de negocio respecto a frameworks, UI y motores de persistencia.
-  - **Principios SOLID:** Responsabilidad única por módulo, segregación de interfaces e inversión de dependencias para facilitar mantenibilidad y testing.
-  - **Estrategia de Pruebas (TDD):** Cobertura orientada a casos de uso críticos mediante pruebas unitarias, mocks de infraestructura y tests de integración.
-  - **Contratos de API REST:** Respuestas estandarizadas, DTOs con validación estricta de esquemas y documentación interactiva con OpenAPI / Swagger.
-
-</details>
-
-<details open>
-  <summary><b>[+] 02. Estándares DevSecOps, IA &amp; Contenerización</b></summary>
-  <br>
-
-  - **Seguridad Shift-Left:** Escaneo estático de vulnerabilidades (SAST), análisis de composición de software (SCA) y remediación asistida por LLMs locales (Ollama).
-  - **Optimización de Contenedores:** Construcción de imágenes Docker *multi-stage*, ejecución con usuarios *non-root* y reducción de superficie de ataque.
-  - **CI/CD Automatizado:** Verificación continua de linters, pruebas automatizadas y despliegues reproducibles mediante GitHub Actions y Linux.
-
-</details>
-
-<details open>
-  <summary><b>[+] 03. Formación Profesional &amp; Trayectoria</b></summary>
-  <br>
-
-  - **ADSO (SENA):** Tecnólogo en Análisis y Desarrollo de Software — Especialización en ingeniería de software corporativo, bases de datos y arquitectura en capas.
-  - **Evolución Continua:** Orquestación distribuida, motores de bases de datos de alto rendimiento, seguridad ofensiva/defensiva automatizada y sistemas cloud-native.
-
-</details>
-
----
-
-<!-- ==================== 3D ANIMATED FOOTER BANNER ==================== -->
+<!-- ==================== ANIMATED FOOTER WAVE ==================== -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/footer-banner.svg" width="100%" alt="3D Animated Footer Banner"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/footer-wave-3d.svg" width="100%" alt="Footer Wave"/>
 </div>

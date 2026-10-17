@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="360">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="100%" stop-color="#10131f"/>
+    </linearGradient>
+
+    <!-- Translucent 3D Glass Plane Gradients -->
+    <linearGradient id="planeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#161b2e" stop-opacity="0.88"/>
+    </linearGradient>
+
+    <linearGradient id="planeMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#18152c" stop-opacity="0.88"/>
+    </linearGradient>
+
+    <linearGradient id="planeBot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#73daca" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0f2122" stop-opacity="0.88"/>
+    </linearGradient>
+
+    <path id="vBeam1" d="M 225 88 L 225 275"/>
+    <path id="vBeam2" d="M 165 112 L 165 299"/>
+    <path id="vBeam3" d="M 285 112 L 285 299"/>
+
+    <style>
+      @keyframes hoverTop {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes hoverMid {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes hoverBot {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-2px); }
+      }
+      .layer-top { animation: hoverTop 4s ease-in-out infinite; }
+      .layer-mid { animation: hoverMid 4s ease-in-out infinite 0.3s; }
+      .layer-bot { animation: hoverBot 4s ease-in-out infinite 0.6s; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="360" rx="16" fill="url(#archBg)"/>
+  <rect x="1" y="1" width="998" height="358" rx="15" fill="none" stroke="#1f2437" stroke-width="1.5"/>
+
+  <!-- Vertical Laser Pillars Connecting the 3 Exploded 3D Planes -->
+  <g stroke="#293048" stroke-width="1.5" stroke-dasharray="4 4">
+    <use href="#vBeam1"/>
+    <use href="#vBeam2"/>
+    <use href="#vBeam3"/>
+  </g>
+
+  <!-- ==================== 3D EXPLODED ISOMETRIC GLASS PLANES (LEFT) ==================== -->
+  <!-- LAYER 03 (BOTTOM): DATA & INFRASTRUCTURE PLANE -->
+  <g class="layer-bot">
+    <polygon points="225,222 365,278 225,334 85,278" fill="url(#planeBot)" stroke="#73daca" stroke-width="1.5"/>
+    <polygon points="85,278 225,334 225,342 85,286" fill="#0d2624" stroke="#73daca" stroke-width="0.8"/>
+    <polygon points="365,278 225,334 225,342 365,286" fill="#081918" stroke="#2ac3de" stroke-width="0.8"/>
+    <!-- Mini 3D Database Cylinders on Bottom Plane -->
+    <g transform="translate(185, 275)">
+      <path d="M -14 -4 L -14 8 A 14 5.5 0 0 0 14 8 L 14 -4 Z" fill="#1abc9c"/>
+      <ellipse cx="0" cy="-4" rx="14" ry="5.5" fill="#73daca"/>
+    </g>
+    <g transform="translate(265, 275)">
+      <path d="M -14 -4 L -14 8 A 14 5.5 0 0 0 14 8 L 14 -4 Z" fill="#2ac3de"/>
+      <ellipse cx="0" cy="-4" rx="14" ry="5.5" fill="#7dcfff"/>
+    </g>
+    <text x="225" y="305" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#73daca">L3 // DATA &amp; DOCKER</text>
+  </g>
+
+  <!-- LAYER 02 (MIDDLE): DOMAIN & MICROSERVICES PLANE -->
+  <g class="layer-mid">
+    <polygon points="225,134 365,190 225,246 85,190" fill="url(#planeMid)" stroke="#bb9af7" stroke-width="1.5"/>
+    <polygon points="85,190 225,246 225,254 85,198" fill="#1f1735" stroke="#bb9af7" stroke-width="0.8"/>
+    <polygon points="365,190 225,246 225,254 365,198" fill="#140f24" stroke="#9d7cd8" stroke-width="0.8"/>
+    <!-- Mini 3D Microservice Cubes on Middle Plane -->
+    <g transform="translate(175, 182)">
+      <polygon points="0,-10 14,-3 0,4 -14,-3" fill="#bb9af7"/>
+      <polygon points="-14,-3 0,4 0,16 -14,9" fill="#9d7cd8"/>
+      <polygon points="14,-3 0,4 0,16 14,9" fill="#5a3e8e"/>
+    </g>
+    <g transform="translate(225, 182)">
+      <polygon points="0,-12 16,-4 0,4 -16,-4" fill="#7aa2f7"/>
+      <polygon points="-16,-4 0,4 0,18 -16,10" fill="#3d59a1"/>
+      <polygon points="16,-4 0,4 0,18 16,10" fill="#243763"/>
+    </g>
+    <g transform="translate(275, 182)">
+      <polygon points="0,-10 14,-3 0,4 -14,-3" fill="#e0af68"/>
+      <polygon points="-14,-3 0,4 0,16 -14,9" fill="#b58338"/>
+      <polygon points="14,-3 0,4 0,16 14,9" fill="#78521b"/>
+    </g>
+    <text x="225" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#bb9af7">L2 // CLEAN DOMAIN &amp; AI SAST</text>
+  </g>
+
+  <!-- LAYER 01 (TOP): API GATEWAY & CONTRACTS PLANE -->
+  <g class="layer-top">
+    <polygon points="225,46 365,102 225,158 85,102" fill="url(#planeTop)" stroke="#7aa2f7" stroke-width="1.5"/>
+    <polygon points="85,102 225,158 225,166 85,110" fill="#172038" stroke="#7aa2f7" stroke-width="0.8"/>
+    <polygon points="365,102 225,158 225,166 365,110" fill="#0f1526" stroke="#3d59a1" stroke-width="0.8"/>
+    <!-- Gateway Apex Prism -->
+    <g transform="translate(225, 92)">
+      <polygon points="0,-14 20,-4 0,6 -20,-4" fill="#7dcfff" stroke="#ffffff" stroke-width="0.8"/>
+      <polygon points="-20,-4 0,6 0,20 -20,10" fill="#7aa2f7"/>
+      <polygon points="20,-4 0,6 0,20 20,10" fill="#3d59a1"/>
+    </g>
+    <text x="225" y="130" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#7dcfff">L1 // API GATEWAY &amp; JWT</text>
+  </g>
+
+  <!-- Animated Data Pulses Traveling Vertically Through the 3D Stack -->
+  <circle r="3.5" fill="#7dcfff">
+    <animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#vBeam1"/></animateMotion>
+  </circle>
+  <circle r="3" fill="#bb9af7">
+    <animateMotion dur="2.8s" begin="0.7s" repeatCount="indefinite"><mpath href="#vBeam2"/></animateMotion>
+  </circle>
+  <circle r="3" fill="#73daca">
+    <animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite"><mpath href="#vBeam3"/></animateMotion>
+  </circle>
+
+  <!-- ==================== ARCHITECTURAL CALLOUT CARDS (RIGHT) ==================== -->
+  <!-- Callout Connectors -->
+  <line x1="365" y1="102" x2="435" y2="82" stroke="#7aa2f7" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="365" y1="190" x2="435" y2="182" stroke="#bb9af7" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="365" y1="278" x2="435" y2="282" stroke="#73daca" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <!-- Card 1: Edge, Contracts & API Design -->
+  <g transform="translate(435, 36)">
+    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
+    <line x1="0" y1="16" x2="0" y2="72" stroke="#7aa2f7" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#7aa2f7">
+      LAYER 01 · INGRESS, RESTFUL CONTRACTS &amp; SECURITY GATES
+    </text>
+    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
+      Diseño de APIs con contratos estrictos (OpenAPI/Swagger), DTOs tipados, validación
+    </text>
+    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
+      de esquemas, autenticación stateless con JWT/OAuth2 y reverse proxy con Nginx.
+    </text>
+  </g>
+
+  <!-- Card 2: Core Domain, Microservices & Shift-Left DevSecOps -->
+  <g transform="translate(435, 136)">
+    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
+    <line x1="0" y1="16" x2="0" y2="72" stroke="#bb9af7" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#bb9af7">
+      LAYER 02 · CLEAN ARCHITECTURE, DDD &amp; AI DEVSECOPS
+    </text>
+    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
+      Lógica de dominio desacoplada en Python (FastAPI), Java (Spring Boot) y C# (.NET Core).
+    </text>
+    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
+      Principios SOLID, TDD continuo y auditoría SAST/DAST automatizada con Ollama LLM.
+    </text>
+  </g>
+
+  <!-- Card 3: Persistence, Query Optimization & Container Infra -->
+  <g transform="translate(435, 236)">
+    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
+    <line x1="0" y1="16" x2="0" y2="72" stroke="#73daca" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#73daca">
+      LAYER 03 · RELATIONAL/NOSQL ENGINES &amp; MULTI-STAGE DOCKER
+    </text>
+    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
+      Modelado ACID e indexación B-Tree (PostgreSQL, MySQL), agregaciones NoSQL (MongoDB),
+    </text>
+    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
+      caché en memoria (Redis) y contenedores Docker multi-stage endurecidos (non-root).
+    </text>
+  </g>
+</svg>

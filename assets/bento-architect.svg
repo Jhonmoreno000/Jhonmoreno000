@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 215" width="100%" height="215">
+  <defs>
+    <linearGradient id="baBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111522"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <style>
+      @keyframes floatBento { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+      .b-iso { animation: floatBento 3.8s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="490" height="215" rx="14" fill="url(#baBg)"/>
+  <rect x="1" y="1" width="488" height="213" rx="13" fill="none" stroke="#24283b" stroke-width="1.5"/>
+
+  <!-- Repo Icon + Title -->
+  <g transform="translate(24, 26)">
+    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z" fill="#73daca" transform="translate(0, 2) scale(1.1)"/>
+    <text x="26" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="18" font-weight="800" fill="#73daca">
+      architect-td
+    </text>
+    <rect x="142" y="1" width="96" height="20" rx="10" fill="#0f2322" stroke="#1abc9c" stroke-width="1"/>
+    <text x="190" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#73daca">DOCKERIZED</text>
+  </g>
+
+  <!-- 3D Isometric Architecture Cube in Top-Right -->
+  <g class="b-iso" transform="translate(432, 46)">
+    <polygon points="0,-20 24,-8 0,4 -24,-8" fill="#73daca"/>
+    <polygon points="-24,-8 0,4 0,24 -24,12" fill="#1abc9c"/>
+    <polygon points="24,-8 0,4 0,24 24,12" fill="#0f766e"/>
+  </g>
+
+  <!-- Description -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" fill="#9aa5ce">
+    <text x="24" y="78">Simulador interactivo de arquitectura de software y</text>
+    <text x="24" y="98">DevOps: mitigación de tráfico DDoS, balanceadores de</text>
+    <text x="24" y="118">carga, WAF, caché CDN y despliegue en Docker + Nginx.</text>
+  </g>
+
+  <!-- Tags Row -->
+  <g transform="translate(24, 138)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c0caf5">
+    <rect x="0" y="0" width="68" height="22" rx="5" fill="#161926" stroke="#293048"/>
+    <text x="34" y="14.5" text-anchor="middle">Docker</text>
+
+    <rect x="76" y="0" width="64" height="22" rx="5" fill="#161926" stroke="#293048"/>
+    <text x="108" y="14.5" text-anchor="middle">Nginx</text>
+
+    <rect x="148" y="0" width="102" height="22" rx="5" fill="#161926" stroke="#293048"/>
+    <text x="199" y="14.5" text-anchor="middle">System Design</text>
+  </g>
+
+  <!-- Footer Metadata -->
+  <g transform="translate(24, 184)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#787c99">
+    <circle cx="6" cy="-4" r="5" fill="#f1e05a"/>
+    <text x="18" y="0" fill="#c0caf5">JavaScript</text>
+    <text x="442" y="0" text-anchor="end" fill="#73daca" font-weight="700">Jhonmoreno000/architect-td &#8599;</text>
+  </g>
+</svg>
