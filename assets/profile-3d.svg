@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 185" width="100%" height="185">
+  <defs>
+    <linearGradient id="profBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040812"/>
+      <stop offset="50%" stop-color="#081122"/>
+      <stop offset="100%" stop-color="#04070e"/>
+    </linearGradient>
+
+    <linearGradient id="pillarCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#050914"/>
+    </linearGradient>
+
+    <style>
+      @keyframes pulseNode {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+      .p-node-1 { animation: pulseNode 3.2s ease-in-out infinite; }
+      .p-node-2 { animation: pulseNode 3.6s ease-in-out infinite 0.4s; }
+      .p-node-3 { animation: pulseNode 4.0s ease-in-out infinite 0.8s; }
+    </style>
+  </defs>
+
+  <rect width="960" height="185" rx="14" fill="url(#profBg)"/>
+  <rect x="1" y="1" width="958" height="183" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">EXECUTIVE BRIEFING // 3D ENGINEERING PILLARS &amp; PARADIGMS</text>
+    <text x="932" y="28" text-anchor="end" fill="#10b981" font-weight="700">SENA ADSO · MEDELLIN [UTC-5]</text>
+  </g>
+  <line x1="24" y1="42" x2="936" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Pillar 1: Backend & Distributed Microservices -->
+  <g transform="translate(24, 56)">
+    <rect width="292" height="112" rx="10" fill="url(#pillarCard)" stroke="#0284c7" stroke-opacity="0.55" stroke-width="1.2"/>
+    <g class="p-node-1" transform="translate(36, 36)">
+      <polygon points="0,-16 18,-7 0,2 -18,-7" fill="#38bdf8"/>
+      <polygon points="-18,-7 0,2 0,20 -18,11" fill="#0284c7"/>
+      <polygon points="18,-7 0,2 0,20 18,11" fill="#0369a1"/>
+    </g>
+    <text x="68" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#38bdf8">01 // BACKEND &amp; APIS</text>
+    <text x="68" y="42" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">CLEAN ARCHITECTURE · DDD</text>
+    <text x="16" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Microservicios desacoplados, contratos</text>
+    <text x="16" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">REST estrictos, DTOs tipados y SOLID.</text>
+    <line x1="16" y1="102" x2="276" y2="102" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Pillar 2: DevSecOps & Shift-Left Security -->
+  <g transform="translate(334, 56)">
+    <rect width="292" height="112" rx="10" fill="url(#pillarCard)" stroke="#7c3aed" stroke-opacity="0.55" stroke-width="1.2"/>
+    <g class="p-node-2" transform="translate(36, 36)">
+      <polygon points="0,-16 18,-7 0,2 -18,-7" fill="#c084fc"/>
+      <polygon points="-18,-7 0,2 0,20 -18,11" fill="#7c3aed"/>
+      <polygon points="18,-7 0,2 0,20 18,11" fill="#5b21b6"/>
+    </g>
+    <text x="68" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#c084fc">02 // DEVSECOPS &amp; IA</text>
+    <text x="68" y="42" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">DOCKER · SAST/DAST · OLLAMA</text>
+    <text x="16" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Contenedores multi-stage, auditoría</text>
+    <text x="16" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">automatizada CI/CD y entornos Linux.</text>
+    <line x1="16" y1="102" x2="276" y2="102" stroke="#c084fc" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Pillar 3: Relational & NoSQL Data Engineering -->
+  <g transform="translate(644, 56)">
+    <rect width="292" height="112" rx="10" fill="url(#pillarCard)" stroke="#059669" stroke-opacity="0.55" stroke-width="1.2"/>
+    <g class="p-node-3" transform="translate(36, 34)">
+      <path d="M -16 -4 L -16 14 A 16 7 0 0 0 16 14 L 16 -4 Z" fill="#059669"/>
+      <ellipse cx="0" cy="-4" rx="16" ry="7" fill="#34d399"/>
+    </g>
+    <text x="68" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#34d399">03 // DATA ENGINEERING</text>
+    <text x="68" y="42" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">ACID · INDEXING · NOSQL</text>
+    <text x="16" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Modelado relacional y documental,</text>
+    <text x="16" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">optimización EXPLAIN y caché Redis.</text>
+    <line x1="16" y1="102" x2="276" y2="102" stroke="#34d399" stroke-width="2" stroke-opacity="0.6"/>
+  </g>
+</svg>

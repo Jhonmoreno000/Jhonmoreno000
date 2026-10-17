@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 265" width="100%" height="265">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040710"/>
+      <stop offset="50%" stop-color="#081020"/>
+      <stop offset="100%" stop-color="#04070f"/>
+    </linearGradient>
+
+    <linearGradient id="conduitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="30%" stop-color="#a855f7"/>
+      <stop offset="65%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <filter id="pipeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <path id="fullPipelinePath" d="M 110 132 L 295 132 L 480 132 L 665 132 L 850 132"/>
+
+    <style>
+      @keyframes stageFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -36; }
+      }
+      @keyframes scanStage2 {
+        0%, 100% { transform: translateY(-16px); opacity: 0.3; }
+        50% { transform: translateY(18px); opacity: 1; }
+      }
+      .st-1 { animation: stageFloat 3.6s ease-in-out infinite 0s; }
+      .st-2 { animation: stageFloat 3.6s ease-in-out infinite 0.4s; }
+      .st-3 { animation: stageFloat 3.6s ease-in-out infinite 0.8s; }
+      .st-4 { animation: stageFloat 3.6s ease-in-out infinite 1.2s; }
+      .st-5 { animation: stageFloat 3.6s ease-in-out infinite 1.6s; }
+      .pipe-dash { stroke-dasharray: 9 9; animation: dashMove 1.4s linear infinite; }
+      .sast-laser { animation: scanStage2 2.2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Base Container -->
+  <rect width="960" height="265" rx="14" fill="url(#pipeBg)"/>
+  <rect x="1" y="1" width="958" height="263" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D DEVSECOPS &amp; SHIFT-LEFT CI/CD PIPELINE // AUTOMATED WORKFLOW</text>
+    <text x="932" y="28" text-anchor="end" fill="#10b981" font-weight="700">PIPELINE: PASSING [100%]</text>
+  </g>
+  <line x1="28" y1="42" x2="932" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Connecting 3D Conduit Lines Between Stages -->
+  <line x1="110" y1="132" x2="850" y2="132" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+  <line x1="110" y1="132" x2="850" y2="132" stroke="url(#conduitGrad)" stroke-width="2.5" class="pipe-dash"/>
+
+  <!-- Animated Data Packets Traveling Across Pipeline -->
+  <circle r="5" fill="#00f2fe" filter="url(#pipeGlow)">
+    <animateMotion dur="4.2s" repeatCount="indefinite">
+      <mpath href="#fullPipelinePath"/>
+    </animateMotion>
+  </circle>
+  <circle r="5" fill="#c084fc" filter="url(#pipeGlow)">
+    <animateMotion dur="4.2s" begin="1.4s" repeatCount="indefinite">
+      <mpath href="#fullPipelinePath"/>
+    </animateMotion>
+  </circle>
+  <circle r="5" fill="#10b981" filter="url(#pipeGlow)">
+    <animateMotion dur="4.2s" begin="2.8s" repeatCount="indefinite">
+      <mpath href="#fullPipelinePath"/>
+    </animateMotion>
+  </circle>
+
+  <!-- ==================== STAGE 01: SOURCE & TDD ==================== -->
+  <g transform="translate(110, 132)">
+    <!-- Isometric Pedestal Base -->
+    <polygon points="0,24 62,50 0,76 -62,50" fill="#081224" stroke="#0284c7" stroke-width="1"/>
+    <polygon points="-62,50 0,76 0,84 -62,58" fill="#050b16" stroke="#0369a1" stroke-width="0.8"/>
+    <polygon points="62,50 0,76 0,84 62,58" fill="#030710" stroke="#0369a1" stroke-width="0.8"/>
+
+    <!-- Floating 3D Code Cube -->
+    <g class="st-1">
+      <polygon points="0,-38 38,-19 0,0 -38,-19" fill="#38bdf8" stroke="#bae6fd" stroke-width="1"/>
+      <polygon points="-38,-19 0,0 0,38 -38,19" fill="#0284c7" stroke="#38bdf8" stroke-width="0.9"/>
+      <polygon points="38,-19 0,0 0,38 38,19" fill="#0369a1" stroke="#0284c7" stroke-width="0.9"/>
+      <text x="0" y="-15" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#ffffff">GIT/TDD</text>
+    </g>
+
+    <!-- Labels Below Pedestal -->
+    <text x="0" y="102" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#38bdf8">01. SOURCE &amp; TDD</text>
+    <text x="0" y="116" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">Clean Code · Unit Tests</text>
+  </g>
+
+  <!-- ==================== STAGE 02: SAST & AI AUDIT ==================== -->
+  <g transform="translate(295, 132)">
+    <polygon points="0,24 62,50 0,76 -62,50" fill="#110b24" stroke="#7c3aed" stroke-width="1"/>
+    <polygon points="-62,50 0,76 0,84 -62,58" fill="#0b0718" stroke="#6d28d9" stroke-width="0.8"/>
+    <polygon points="62,50 0,76 0,84 62,58" fill="#070410" stroke="#5b21b6" stroke-width="0.8"/>
+
+    <!-- Floating 3D Security Scanner Cube -->
+    <g class="st-2">
+      <polygon points="0,-38 38,-19 0,0 -38,-19" fill="#c084fc" stroke="#f3e8ff" stroke-width="1"/>
+      <polygon points="-38,-19 0,0 0,38 -38,19" fill="#7c3aed" stroke="#c084fc" stroke-width="0.9"/>
+      <polygon points="38,-19 0,0 0,38 38,19" fill="#5b21b6" stroke="#7c3aed" stroke-width="0.9"/>
+      <text x="0" y="-15" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#ffffff">SAST/AI</text>
+      <!-- Laser Scan Ring -->
+      <line x1="-42" y1="0" x2="42" y2="0" stroke="#00f2fe" stroke-width="2" class="sast-laser"/>
+    </g>
+
+    <text x="0" y="102" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#c084fc">02. SECURITY GATE</text>
+    <text x="0" y="116" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">Semgrep · Ollama LLM</text>
+  </g>
+
+  <!-- ==================== STAGE 03: DOCKER MULTI-STAGE ==================== -->
+  <g transform="translate(480, 132)">
+    <polygon points="0,24 62,50 0,76 -62,50" fill="#071526" stroke="#00f2fe" stroke-width="1"/>
+    <polygon points="-62,50 0,76 0,84 -62,58" fill="#040d18" stroke="#0284c7" stroke-width="0.8"/>
+    <polygon points="62,50 0,76 0,84 62,58" fill="#020810" stroke="#0369a1" stroke-width="0.8"/>
+
+    <!-- Floating 3D Container Block -->
+    <g class="st-3">
+      <polygon points="0,-38 40,-18 0,2 -40,-18" fill="#00f2fe" stroke="#cffafe" stroke-width="1"/>
+      <polygon points="-40,-18 0,2 0,38 -40,18" fill="#0891b2" stroke="#00f2fe" stroke-width="0.9"/>
+      <polygon points="40,-18 0,2 0,38 40,18" fill="#0e7490" stroke="#0891b2" stroke-width="0.9"/>
+      <!-- Container Ribs -->
+      <line x1="-26" y1="-6" x2="-26" y2="20" stroke="#cffafe" stroke-opacity="0.5" stroke-width="1.2"/>
+      <line x1="-13" y1="0" x2="-13" y2="26" stroke="#cffafe" stroke-opacity="0.5" stroke-width="1.2"/>
+      <line x1="13" y1="0" x2="13" y2="26" stroke="#cffafe" stroke-opacity="0.5" stroke-width="1.2"/>
+      <line x1="26" y1="-6" x2="26" y2="20" stroke="#cffafe" stroke-opacity="0.5" stroke-width="1.2"/>
+      <text x="0" y="-14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#040710">DOCKER</text>
+    </g>
+
+    <text x="0" y="102" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#00f2fe">03. CONTAINERIZE</text>
+    <text x="0" y="116" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">Multi-Stage · Non-Root</text>
+  </g>
+
+  <!-- ==================== STAGE 04: DATA & CACHE CLUSTER ==================== -->
+  <g transform="translate(665, 132)">
+    <polygon points="0,24 62,50 0,76 -62,50" fill="#051c16" stroke="#10b981" stroke-width="1"/>
+    <polygon points="-62,50 0,76 0,84 -62,58" fill="#03120e" stroke="#059669" stroke-width="0.8"/>
+    <polygon points="62,50 0,76 0,84 62,58" fill="#020b09" stroke="#047857" stroke-width="0.8"/>
+
+    <!-- Floating 3D Stacked Database Cylinders -->
+    <g class="st-4">
+      <!-- Bottom Cylinder Tier -->
+      <path d="M -32 4 L -32 24 A 32 13 0 0 0 32 24 L 32 4 Z" fill="#047857" stroke="#34d399" stroke-width="0.8"/>
+      <ellipse cx="0" cy="4" rx="32" ry="13" fill="#059669" stroke="#6ee7b7" stroke-width="0.8"/>
+      <!-- Top Cylinder Tier -->
+      <path d="M -32 -20 L -32 0 A 32 13 0 0 0 32 0 L 32 -20 Z" fill="#059669" stroke="#34d399" stroke-width="0.8"/>
+      <ellipse cx="0" cy="-20" rx="32" ry="13" fill="#34d399" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="0" y="-17" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#022c22">SQL/DB</text>
+    </g>
+
+    <text x="0" y="102" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#34d399">04. DATA ENGINE</text>
+    <text x="0" y="116" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">Postgres · Mongo · Redis</text>
+  </g>
+
+  <!-- ==================== STAGE 05: CLOUD & NGINX DEPLOY ==================== -->
+  <g transform="translate(850, 132)">
+    <polygon points="0,24 62,50 0,76 -62,50" fill="#1c1406" stroke="#f59e0b" stroke-width="1"/>
+    <polygon points="-62,50 0,76 0,84 -62,58" fill="#120c03" stroke="#d97706" stroke-width="0.8"/>
+    <polygon points="62,50 0,76 0,84 62,58" fill="#0a0702" stroke="#b45309" stroke-width="0.8"/>
+
+    <!-- Floating 3D Production Server Tower -->
+    <g class="st-5">
+      <polygon points="0,-42 36,-24 0,-6 -36,-24" fill="#fbbf24" stroke="#fef3c7" stroke-width="1"/>
+      <polygon points="-36,-24 0,-6 0,38 -36,20" fill="#d97706" stroke="#fbbf24" stroke-width="0.9"/>
+      <polygon points="36,-24 0,-6 0,38 36,20" fill="#92400e" stroke="#d97706" stroke-width="0.9"/>
+      <!-- Blinking Server Rack LEDs -->
+      <circle cx="-18" cy="-4" r="2.2" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.2;1" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-18" cy="6" r="2.2" fill="#00f2fe">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-18" cy="16" r="2.2" fill="#10b981"/>
+      <text x="0" y="-20" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#451a03">PROD</text>
+    </g>
+
+    <text x="0" y="102" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#fbbf24">05. CLOUD DEPLOY</text>
+    <text x="0" y="116" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#94a3b8">Nginx · Linux · Zero-Trust</text>
+  </g>
+</svg>

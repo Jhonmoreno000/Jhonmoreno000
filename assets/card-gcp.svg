@@ -1,74 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 145" width="100%" height="145">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 150" width="100%" height="150">
   <defs>
     <linearGradient id="gcpCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1120"/>
-      <stop offset="60%" stop-color="#080d1a"/>
-      <stop offset="100%" stop-color="#050811"/>
+      <stop offset="0%" stop-color="#080a1c"/>
+      <stop offset="60%" stop-color="#0b1024"/>
+      <stop offset="100%" stop-color="#040710"/>
     </linearGradient>
+    <style>
+      @keyframes floatIsoGcp {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      .iso-gcp { animation: floatIsoGcp 3.7s ease-in-out infinite; }
+    </style>
   </defs>
 
-  <!-- Base Card -->
-  <rect width="850" height="145" rx="10" fill="url(#gcpCardBg)"/>
-  <rect x="0.5" y="0.5" width="849" height="144" rx="9.5" fill="none" stroke="#1e293b" stroke-width="1"/>
-  
-  <!-- Left Accent Glow Bar -->
-  <line x1="2" y1="20" x2="2" y2="125" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
-  
+  <rect width="960" height="150" rx="12" fill="url(#gcpCardBg)"/>
+  <rect x="1" y="1" width="958" height="148" rx="11" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="2.5" y1="20" x2="2.5" y2="130" stroke="#c084fc" stroke-width="3.5" stroke-linecap="round"/>
+
   <!-- Category & Live Status -->
   <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="1">
-    <text x="32" y="28" fill="#c084fc">REPOSITORY // 03 · ENTERPRISE PRODUCT PLATFORM</text>
-    <text x="818" y="28" text-anchor="end" fill="#c084fc">LAYERED ARCHITECTURE</text>
-    <circle cx="654" cy="25" r="3" fill="#c084fc"/>
+    <text x="32" y="28" fill="#c084fc" font-weight="700">REPOSITORY // 05 · ENTERPRISE PRODUCT PLATFORM (.NET CORE)</text>
+    <circle cx="655" cy="24" r="3.5" fill="#c084fc">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="667" y="28" fill="#c084fc" font-weight="700">LAYERED ARCHITECTURE</text>
   </g>
 
   <!-- Title -->
-  <text x="32" y="58" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="20" 
-        font-weight="700" 
-        fill="#f8fafc" 
-        letter-spacing="-0.3">
-    GCP-GESTION-DE-PRODUCTOS-
+  <text x="32" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#f8fafc">
+    GCP-GESTION-DE-PRODUCTOS- — Enterprise Product Management
   </text>
 
   <!-- Technical Description -->
-  <text x="32" y="82" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="13" 
-        fill="#94a3b8">
-    Sistema corporativo de gestion, catalogo y control transaccional de productos desarrollado en C# (.NET Core).
+  <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    Sistema corporativo de gestión, catálogo y control transaccional de productos desarrollado en C# (.NET Core).
   </text>
-  <text x="32" y="100" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="13" 
-        fill="#94a3b8">
-    Implementacion de arquitectura en capas desacopladas, validacion de dominio y persistencia relacional transaccional.
+  <text x="32" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    Implementación de arquitectura en capas desacopladas, validación de dominio y persistencia relacional transaccional.
   </text>
 
   <!-- Tech Pills Bar & CTA -->
   <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10">
-    <!-- Pill 1 -->
-    <rect x="32" y="114" width="55" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="59" y="128" fill="#cbd5e1" text-anchor="middle">C#</text>
-    
-    <!-- Pill 2 -->
-    <rect x="95" y="114" width="76" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="133" y="128" fill="#cbd5e1" text-anchor="middle">.NET Core</text>
-    
-    <!-- Pill 3 -->
-    <rect x="179" y="114" width="88" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="223" y="128" fill="#cbd5e1" text-anchor="middle">Layered Arch</text>
-    
-    <!-- Pill 4 -->
-    <rect x="275" y="114" width="102" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="326" y="128" fill="#c084fc" text-anchor="middle">SQL Relational</text>
+    <rect x="32" y="116" width="60" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="62" y="130.5" fill="#c084fc" text-anchor="middle" font-weight="600">C#</text>
 
-    <!-- Pill 5 -->
-    <rect x="385" y="114" width="80" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="425" y="128" fill="#cbd5e1" text-anchor="middle">Clean CRUD</text>
+    <rect x="100" y="116" width="80" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="140" y="130.5" fill="#cbd5e1" text-anchor="middle">.NET Core</text>
 
-    <!-- CTA Button on Right -->
-    <rect x="700" y="114" width="118" height="20" rx="4" fill="#7c3aed" fill-opacity="0.2" stroke="#c084fc" stroke-width="1"/>
-    <text x="759" y="128" fill="#c084fc" text-anchor="middle" font-weight="700">EXPLORE REPO &gt;</text>
+    <rect x="188" y="116" width="94" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="235" y="130.5" fill="#cbd5e1" text-anchor="middle">Layered Arch</text>
+
+    <rect x="290" y="116" width="104" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="342" y="130.5" fill="#c084fc" text-anchor="middle">SQL Relational</text>
+
+    <rect x="402" y="116" width="84" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="444" y="130.5" fill="#cbd5e1" text-anchor="middle">Clean CRUD</text>
+
+    <rect x="688" y="116" width="128" height="22" rx="4" fill="#7c3aed" fill-opacity="0.2" stroke="#c084fc" stroke-width="1"/>
+    <text x="752" y="130.5" fill="#c084fc" text-anchor="middle" font-weight="700">EXPLORE REPO &gt;</text>
+  </g>
+
+  <!-- 3D Isometric Enterprise Cube on Right -->
+  <g transform="translate(885, 78)">
+    <polygon points="0,20 48,40 0,60 -48,40" fill="#120b24" stroke="#c084fc" stroke-opacity="0.5" stroke-width="1"/>
+    <g class="iso-gcp">
+      <polygon points="0,-28 28,-14 0,0 -28,-14" fill="#c084fc" stroke="#f3e8ff" stroke-width="1"/>
+      <polygon points="-28,-14 0,0 0,28 -28,14" fill="#7c3aed" stroke="#c084fc" stroke-width="0.8"/>
+      <polygon points="28,-14 0,0 0,28 28,14" fill="#5b21b6" stroke="#7c3aed" stroke-width="0.8"/>
+      <text x="0" y="-11" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#ffffff">.NET</text>
+    </g>
   </g>
 </svg>

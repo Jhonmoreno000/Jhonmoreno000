@@ -1,74 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 145" width="100%" height="145">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 150" width="100%" height="150">
   <defs>
     <linearGradient id="pyCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1120"/>
-      <stop offset="60%" stop-color="#080d1a"/>
-      <stop offset="100%" stop-color="#050811"/>
+      <stop offset="0%" stop-color="#060c1a"/>
+      <stop offset="60%" stop-color="#081122"/>
+      <stop offset="100%" stop-color="#040710"/>
     </linearGradient>
+    <style>
+      @keyframes floatIsoPy {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      .iso-py { animation: floatIsoPy 4s ease-in-out infinite; }
+    </style>
   </defs>
 
-  <!-- Base Card -->
-  <rect width="850" height="145" rx="10" fill="url(#pyCardBg)"/>
-  <rect x="0.5" y="0.5" width="849" height="144" rx="9.5" fill="none" stroke="#1e293b" stroke-width="1"/>
-  
-  <!-- Left Accent Glow Bar -->
-  <line x1="2" y1="20" x2="2" y2="125" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-  
+  <rect width="960" height="150" rx="12" fill="url(#pyCardBg)"/>
+  <rect x="1" y="1" width="958" height="148" rx="11" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="2.5" y1="20" x2="2.5" y2="130" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+
   <!-- Category & Live Status -->
   <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="1">
-    <text x="32" y="28" fill="#38bdf8">REPOSITORY // 02 · ALGORITHMS &amp; COMPUTATIONAL LOGIC</text>
-    <text x="818" y="28" text-anchor="end" fill="#38bdf8">CLEAN CODE MODULAR</text>
-    <circle cx="670" cy="25" r="3" fill="#38bdf8"/>
+    <text x="32" y="28" fill="#38bdf8" font-weight="700">REPOSITORY // 04 · ALGORITHMS &amp; COMPUTATIONAL LOGIC</text>
+    <circle cx="668" cy="24" r="3.5" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="680" y="28" fill="#38bdf8" font-weight="700">CLEAN CODE MODULAR</text>
   </g>
 
   <!-- Title -->
-  <text x="32" y="58" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="20" 
-        font-weight="700" 
-        fill="#f8fafc" 
-        letter-spacing="-0.3">
-    I-work-in-python
+  <text x="32" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#f8fafc">
+    I-work-in-python — Computational Logic &amp; Data Structures
   </text>
 
   <!-- Technical Description -->
-  <text x="32" y="82" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="13" 
-        fill="#94a3b8">
-    Suite de resolucion de problemas computacionales y estructuras de datos avanzadas en Python puro. Enfoque
+  <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    Suite de resolución de problemas computacionales y estructuras de datos avanzadas en Python puro. Enfoque
   </text>
-  <text x="32" y="100" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-        font-size="13" 
-        fill="#94a3b8">
-    riguroso en analisis de complejidad temporal y espacial Big-O, optimizacion de memoria y diseno desacoplado.
+  <text x="32" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    riguroso en análisis de complejidad temporal y espacial Big-O, optimización de memoria y diseño desacoplado.
   </text>
 
   <!-- Tech Pills Bar & CTA -->
   <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10">
-    <!-- Pill 1 -->
-    <rect x="32" y="114" width="80" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="72" y="128" fill="#cbd5e1" text-anchor="middle">Python 3.x</text>
-    
-    <!-- Pill 2 -->
-    <rect x="120" y="114" width="86" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="163" y="128" fill="#cbd5e1" text-anchor="middle">Algorithms</text>
-    
-    <!-- Pill 3 -->
-    <rect x="214" y="114" width="112" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="270" y="128" fill="#cbd5e1" text-anchor="middle">Data Structures</text>
-    
-    <!-- Pill 4 -->
-    <rect x="334" y="114" width="86" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="377" y="128" fill="#38bdf8" text-anchor="middle">Big-O Opt</text>
+    <rect x="32" y="116" width="84" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="74" y="130.5" fill="#38bdf8" text-anchor="middle" font-weight="600">Python 3.x</text>
 
-    <!-- Pill 5 -->
-    <rect x="428" y="114" width="84" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-    <text x="470" y="128" fill="#cbd5e1" text-anchor="middle">Clean Code</text>
+    <rect x="124" y="116" width="88" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="168" y="130.5" fill="#cbd5e1" text-anchor="middle">Algorithms</text>
 
-    <!-- CTA Button on Right -->
-    <rect x="700" y="114" width="118" height="20" rx="4" fill="#0284c7" fill-opacity="0.2" stroke="#00f2fe" stroke-width="1"/>
-    <text x="759" y="128" fill="#00f2fe" text-anchor="middle" font-weight="700">EXPLORE REPO &gt;</text>
+    <rect x="220" y="116" width="114" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="277" y="130.5" fill="#cbd5e1" text-anchor="middle">Data Structures</text>
+
+    <rect x="342" y="116" width="86" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="385" y="130.5" fill="#38bdf8" text-anchor="middle">Big-O Opt</text>
+
+    <rect x="436" y="116" width="84" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="478" y="130.5" fill="#cbd5e1" text-anchor="middle">Clean Code</text>
+
+    <rect x="688" y="116" width="128" height="22" rx="4" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+    <text x="752" y="130.5" fill="#38bdf8" text-anchor="middle" font-weight="700">EXPLORE REPO &gt;</text>
+  </g>
+
+  <!-- 3D Isometric Algorithm Prism on Right -->
+  <g transform="translate(885, 78)">
+    <polygon points="0,20 48,40 0,60 -48,40" fill="#071526" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1"/>
+    <g class="iso-py">
+      <polygon points="0,-28 28,-14 0,0 -28,-14" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1"/>
+      <polygon points="-28,-14 0,0 0,28 -28,14" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8"/>
+      <polygon points="28,-14 0,0 0,28 28,14" fill="#0369a1" stroke="#0284c7" stroke-width="0.8"/>
+      <text x="0" y="-11" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#ffffff">PY</text>
+    </g>
   </g>
 </svg>

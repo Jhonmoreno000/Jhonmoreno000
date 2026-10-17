@@ -1,80 +1,301 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 305" width="100%" height="305">
   <defs>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0b101b"/>
-      <stop offset="100%" stop-color="#080c14"/>
+    <linearGradient id="stackBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040812"/>
+      <stop offset="50%" stop-color="#081020"/>
+      <stop offset="100%" stop-color="#04070e"/>
     </linearGradient>
+
+    <linearGradient id="colCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1426"/>
+      <stop offset="100%" stop-color="#060b14"/>
+    </linearGradient>
+
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+
+    <linearGradient id="barPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="barEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <linearGradient id="barAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+
+    <pattern id="stackGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.12"/>
+    </pattern>
+
+    <path id="busPath" d="M 35 45 L 925 45"/>
+
+    <style>
+      @keyframes floatIcon {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+      @keyframes barPulse {
+        0%, 100% { opacity: 0.85; }
+        50% { opacity: 1; }
+      }
+      @keyframes busDash {
+        to { stroke-dashoffset: -32; }
+      }
+      .float-3d-1 { animation: floatIcon 3.4s ease-in-out infinite; }
+      .float-3d-2 { animation: floatIcon 3.8s ease-in-out infinite 0.4s; }
+      .float-3d-3 { animation: floatIcon 4.2s ease-in-out infinite 0.8s; }
+      .float-3d-4 { animation: floatIcon 3.6s ease-in-out infinite 1.2s; }
+      .skill-bar { animation: barPulse 2.5s ease-in-out infinite; }
+      .bus-line { stroke-dasharray: 8 8; animation: busDash 1.5s linear infinite; }
+    </style>
   </defs>
 
-  <!-- Container Base -->
-  <rect width="900" height="220" rx="10" fill="#060910"/>
-  <rect x="0.5" y="0.5" width="899" height="219" rx="9.5" fill="none" stroke="#172033" stroke-width="1"/>
+  <!-- Main Container -->
+  <rect width="960" height="305" rx="14" fill="url(#stackBg)"/>
+  <rect width="960" height="305" rx="14" fill="url(#stackGrid)"/>
+  <rect x="1" y="1" width="958" height="303" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
 
-  <!-- Header line -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#64748b" letter-spacing="1">
-    <text x="28" y="28">ARCHITECTURE // TECH STACK MATRIX</text>
-    <text x="872" y="28" text-anchor="end" fill="#38bdf8">PRODUCTION STACK</text>
-  </g>
-  <line x1="28" y1="38" x2="872" y2="38" stroke="#172033" stroke-width="1"/>
-
-  <!-- 4 Columns Grid -->
-  <!-- Col 1: Core Languages -->
-  <g transform="translate(28, 52)">
-    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">01 // LANGUAGES</text>
-    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
-    
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
-      <text x="14" y="52">&#183; Python (Core / 3.x)</text>
-      <text x="14" y="74">&#183; Java (SE / OpenJDK)</text>
-      <text x="14" y="96">&#183; C# (.NET Core)</text>
-      <text x="14" y="118">&#183; TypeScript / JavaScript</text>
-      <text x="14" y="140">&#183; SQL (ANSI / Dialects)</text>
-    </g>
+  <!-- Header Bar -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#00f2fe">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D ARCHITECTURE // PRODUCTION TECH STACK MATRIX</text>
+    <text x="932" y="28" text-anchor="end" fill="#38bdf8" font-weight="700">TELEMETRY: VERIFIED</text>
   </g>
 
-  <!-- Col 2: Frameworks & APIs -->
-  <g transform="translate(242, 52)">
-    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">02 // FRAMEWORKS</text>
-    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
-    
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
-      <text x="14" y="52">&#183; Spring Boot</text>
-      <text x="14" y="74">&#183; FastAPI (Async)</text>
-      <text x="14" y="96">&#183; Node.js / Express</text>
-      <text x="14" y="118">&#183; React / Vite</text>
-      <text x="14" y="140">&#183; RESTful Contracts</text>
+  <!-- Animated Data Bus Line -->
+  <line x1="28" y1="45" x2="932" y2="45" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="28" y1="45" x2="932" y2="45" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" class="bus-line"/>
+  <circle r="3" fill="#00f2fe">
+    <animateMotion dur="4.5s" repeatCount="indefinite">
+      <mpath href="#busPath"/>
+    </animateMotion>
+  </circle>
+  <circle r="3" fill="#c084fc">
+    <animateMotion dur="4.5s" begin="2.25s" repeatCount="indefinite">
+      <mpath href="#busPath"/>
+    </animateMotion>
+  </circle>
+
+  <!-- ==================== COLUMN 1: CORE LANGUAGES ==================== -->
+  <g transform="translate(24, 62)">
+    <!-- 3D Isometric Depth Shadow -->
+    <rect x="4" y="4" width="214" height="222" rx="10" fill="#02050b" stroke="#0f172a" stroke-width="1"/>
+    <!-- Card Body -->
+    <rect width="214" height="222" rx="10" fill="url(#colCardBg)" stroke="#0284c7" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="198" y2="1" stroke="#00f2fe" stroke-width="2.5"/>
+
+    <!-- Floating 3D Isometric Cube Icon -->
+    <g class="float-3d-1" transform="translate(178, 24)">
+      <polygon points="0,-12 16,-4 0,4 -16,-4" fill="#38bdf8"/>
+      <polygon points="-16,-4 0,4 0,20 -16,12" fill="#0284c7"/>
+      <polygon points="16,-4 0,4 0,20 16,12" fill="#0369a1"/>
     </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#38bdf8">01 // LANGUAGES</text>
+    <text x="16" y="38" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">TYPED &amp; MULTI-PARADIGM</text>
+    <line x1="16" y1="48" x2="198" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Item 1 -->
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Python 3.x (Core / Async)</text>
+    <text x="198" y="68" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">95%</text>
+    <rect x="16" y="74" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="74" width="173" height="5" rx="2.5" fill="url(#barCyan)" class="skill-bar">
+      <animate attributeName="width" values="20;173;173" keyTimes="0;0.25;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 2 -->
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Java (SE / OpenJDK 21)</text>
+    <text x="198" y="102" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">92%</text>
+    <rect x="16" y="108" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="108" width="167" height="5" rx="2.5" fill="url(#barCyan)" class="skill-bar">
+      <animate attributeName="width" values="20;167;167" keyTimes="0;0.28;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 3 -->
+    <text x="16" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">C# (.NET Core / Enterprise)</text>
+    <text x="198" y="136" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">88%</text>
+    <rect x="16" y="142" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="142" width="160" height="5" rx="2.5" fill="url(#barCyan)" class="skill-bar">
+      <animate attributeName="width" values="20;160;160" keyTimes="0;0.31;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 4 -->
+    <text x="16" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">TypeScript / JavaScript</text>
+    <text x="198" y="170" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">90%</text>
+    <rect x="16" y="176" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="176" width="164" height="5" rx="2.5" fill="url(#barCyan)" class="skill-bar"/>
+
+    <!-- Item 5 -->
+    <text x="16" y="204" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">SQL (Procedural / ANSI)</text>
+    <text x="198" y="204" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#38bdf8">94%</text>
+    <rect x="16" y="210" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="210" width="171" height="5" rx="2.5" fill="url(#barCyan)" class="skill-bar"/>
   </g>
 
-  <!-- Col 3: Data Architecture -->
-  <g transform="translate(456, 52)">
-    <rect width="198" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">03 // PERSISTENCE</text>
-    <line x1="14" y1="32" x2="184" y2="32" stroke="#1e293b" stroke-width="1"/>
-    
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
-      <text x="14" y="52">&#183; PostgreSQL (Relational)</text>
-      <text x="14" y="74">&#183; MySQL (Transactions)</text>
-      <text x="14" y="96">&#183; MongoDB (NoSQL Doc)</text>
-      <text x="14" y="118">&#183; Redis (Key-Value / Cache)</text>
-      <text x="14" y="140">&#183; Query Optimization</text>
+  <!-- ==================== COLUMN 2: FRAMEWORKS & APIS ==================== -->
+  <g transform="translate(256, 62)">
+    <rect x="4" y="4" width="214" height="222" rx="10" fill="#02050b" stroke="#0f172a" stroke-width="1"/>
+    <rect width="214" height="222" rx="10" fill="url(#colCardBg)" stroke="#7c3aed" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="198" y2="1" stroke="#c084fc" stroke-width="2.5"/>
+
+    <!-- Floating 3D Isometric Layered Prism Icon -->
+    <g class="float-3d-2" transform="translate(178, 24)">
+      <polygon points="0,-12 16,-4 0,4 -16,-4" fill="#c084fc"/>
+      <polygon points="-16,-4 0,4 0,11 -16,3" fill="#9333ea"/>
+      <polygon points="16,-4 0,4 0,11 16,3" fill="#6b21a8"/>
+      <polygon points="-16,6 0,14 0,20 -16,12" fill="#7c3aed"/>
+      <polygon points="16,6 0,14 0,20 16,12" fill="#581c87"/>
     </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#c084fc">02 // FRAMEWORKS</text>
+    <text x="16" y="38" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">DISTRIBUTED &amp; REACTIVE</text>
+    <line x1="16" y1="48" x2="198" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Item 1 -->
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Spring Boot / Security</text>
+    <text x="198" y="68" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c084fc">93%</text>
+    <rect x="16" y="74" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="74" width="169" height="5" rx="2.5" fill="url(#barPurple)" class="skill-bar">
+      <animate attributeName="width" values="20;169;169" keyTimes="0;0.25;1" dur="5.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 2 -->
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">FastAPI (Async / Pydantic)</text>
+    <text x="198" y="102" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c084fc">95%</text>
+    <rect x="16" y="108" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="108" width="173" height="5" rx="2.5" fill="url(#barPurple)" class="skill-bar">
+      <animate attributeName="width" values="20;173;173" keyTimes="0;0.28;1" dur="5.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 3 -->
+    <text x="16" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Node.js / Express REST</text>
+    <text x="198" y="136" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c084fc">91%</text>
+    <rect x="16" y="142" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="142" width="165" height="5" rx="2.5" fill="url(#barPurple)" class="skill-bar"/>
+
+    <!-- Item 4 -->
+    <text x="16" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">React 18 / Vite / Tailwind</text>
+    <text x="198" y="170" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c084fc">88%</text>
+    <rect x="16" y="176" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="176" width="160" height="5" rx="2.5" fill="url(#barPurple)" class="skill-bar"/>
+
+    <!-- Item 5 -->
+    <text x="16" y="204" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">OpenAPI / JWT / OAuth2</text>
+    <text x="198" y="204" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#c084fc">94%</text>
+    <rect x="16" y="210" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="210" width="171" height="5" rx="2.5" fill="url(#barPurple)" class="skill-bar"/>
   </g>
 
-  <!-- Col 4: DevOps & Infrastructure -->
-  <g transform="translate(670, 52)">
-    <rect width="202" height="150" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="0.5">04 // DEVSECOPS</text>
-    <line x1="14" y1="32" x2="188" y2="32" stroke="#1e293b" stroke-width="1"/>
-    
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1">
-      <text x="14" y="52">&#183; Docker &amp; Multi-stage</text>
-      <text x="14" y="74">&#183; Linux (Fedora / Arch)</text>
-      <text x="14" y="96">&#183; GitHub Actions (CI/CD)</text>
-      <text x="14" y="118">&#183; SAST / DAST Security</text>
-      <text x="14" y="140">&#183; Nginx / Reverse Proxy</text>
+  <!-- ==================== COLUMN 3: DATA ARCHITECTURE ==================== -->
+  <g transform="translate(488, 62)">
+    <rect x="4" y="4" width="214" height="222" rx="10" fill="#02050b" stroke="#0f172a" stroke-width="1"/>
+    <rect width="214" height="222" rx="10" fill="url(#colCardBg)" stroke="#059669" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="198" y2="1" stroke="#34d399" stroke-width="2.5"/>
+
+    <!-- Floating 3D Isometric Database Cylinder Icon -->
+    <g class="float-3d-3" transform="translate(178, 22)">
+      <ellipse cx="0" cy="-6" rx="14" ry="6" fill="#34d399"/>
+      <path d="M -14 -6 L -14 4 A 14 6 0 0 0 14 4 L 14 -6 Z" fill="#059669"/>
+      <ellipse cx="0" cy="-6" rx="14" ry="6" fill="#6ee7b7" fill-opacity="0.6"/>
+      <path d="M -14 6 L -14 16 A 14 6 0 0 0 14 16 L 14 6 Z" fill="#047857"/>
     </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#34d399">03 // PERSISTENCE</text>
+    <text x="16" y="38" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">ACID &amp; NOSQL CLUSTERS</text>
+    <line x1="16" y1="48" x2="198" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Item 1 -->
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">PostgreSQL (Indexing/ACID)</text>
+    <text x="198" y="68" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">95%</text>
+    <rect x="16" y="74" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="74" width="173" height="5" rx="2.5" fill="url(#barEmerald)" class="skill-bar">
+      <animate attributeName="width" values="20;173;173" keyTimes="0;0.26;1" dur="5.4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 2 -->
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">MySQL (Relational Engine)</text>
+    <text x="198" y="102" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">94%</text>
+    <rect x="16" y="108" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="108" width="171" height="5" rx="2.5" fill="url(#barEmerald)" class="skill-bar"/>
+
+    <!-- Item 3 -->
+    <text x="16" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">MongoDB (Document Agg)</text>
+    <text x="198" y="136" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">90%</text>
+    <rect x="16" y="142" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="142" width="164" height="5" rx="2.5" fill="url(#barEmerald)" class="skill-bar"/>
+
+    <!-- Item 4 -->
+    <text x="16" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Redis (In-Memory Cache)</text>
+    <text x="198" y="170" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">87%</text>
+    <rect x="16" y="176" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="176" width="158" height="5" rx="2.5" fill="url(#barEmerald)" class="skill-bar"/>
+
+    <!-- Item 5 -->
+    <text x="16" y="204" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">EXPLAIN / Query Tuning</text>
+    <text x="198" y="204" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#34d399">92%</text>
+    <rect x="16" y="210" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="210" width="167" height="5" rx="2.5" fill="url(#barEmerald)" class="skill-bar"/>
+  </g>
+
+  <!-- ==================== COLUMN 4: DEVSECOPS & INFRASTRUCTURE ==================== -->
+  <g transform="translate(720, 62)">
+    <rect x="4" y="4" width="214" height="222" rx="10" fill="#02050b" stroke="#0f172a" stroke-width="1"/>
+    <rect width="214" height="222" rx="10" fill="url(#colCardBg)" stroke="#d97706" stroke-opacity="0.6" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="198" y2="1" stroke="#fbbf24" stroke-width="2.5"/>
+
+    <!-- Floating 3D Isometric Shield / Container Icon -->
+    <g class="float-3d-4" transform="translate(178, 24)">
+      <polygon points="0,-13 15,-5 0,3 -15,-5" fill="#fbbf24"/>
+      <polygon points="-15,-5 0,3 0,19 -15,11" fill="#d97706"/>
+      <polygon points="15,-5 0,3 0,19 15,11" fill="#92400e"/>
+      <line x1="-8" y1="2" x2="-8" y2="13" stroke="#fef3c7" stroke-width="1" stroke-opacity="0.6"/>
+      <line x1="8" y1="2" x2="8" y2="13" stroke="#fef3c7" stroke-width="1" stroke-opacity="0.6"/>
+    </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#fbbf24">04 // DEVSECOPS</text>
+    <text x="16" y="38" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#64748b">CONTAINERS &amp; SHIFT-LEFT</text>
+    <line x1="16" y1="48" x2="198" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Item 1 -->
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Docker &amp; Multi-Stage</text>
+    <text x="198" y="68" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">94%</text>
+    <rect x="16" y="74" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="74" width="171" height="5" rx="2.5" fill="url(#barAmber)" class="skill-bar">
+      <animate attributeName="width" values="20;171;171" keyTimes="0;0.27;1" dur="5.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Item 2 -->
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Linux (Fedora / Arch / Bash)</text>
+    <text x="198" y="102" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">92%</text>
+    <rect x="16" y="108" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="108" width="167" height="5" rx="2.5" fill="url(#barAmber)" class="skill-bar"/>
+
+    <!-- Item 3 -->
+    <text x="16" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">SAST / DAST / Ollama AI</text>
+    <text x="198" y="136" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">91%</text>
+    <rect x="16" y="142" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="142" width="165" height="5" rx="2.5" fill="url(#barAmber)" class="skill-bar"/>
+
+    <!-- Item 4 -->
+    <text x="16" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">GitHub Actions (CI/CD)</text>
+    <text x="198" y="170" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">90%</text>
+    <rect x="16" y="176" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="176" width="164" height="5" rx="2.5" fill="url(#barAmber)" class="skill-bar"/>
+
+    <!-- Item 5 -->
+    <text x="16" y="204" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Nginx / Reverse Proxy</text>
+    <text x="198" y="204" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#fbbf24">89%</text>
+    <rect x="16" y="210" width="182" height="5" rx="2.5" fill="#0f172a"/>
+    <rect x="16" y="210" width="162" height="5" rx="2.5" fill="url(#barAmber)" class="skill-bar"/>
   </g>
 </svg>

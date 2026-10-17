@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 150" width="100%" height="150">
+  <defs>
+    <linearGradient id="archCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c1a"/>
+      <stop offset="60%" stop-color="#081322"/>
+      <stop offset="100%" stop-color="#040710"/>
+    </linearGradient>
+    <style>
+      @keyframes floatIsoArch {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      .iso-arch { animation: floatIsoArch 3.8s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="960" height="150" rx="12" fill="url(#archCardBg)"/>
+  <rect x="1" y="1" width="958" height="148" rx="11" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="2.5" y1="20" x2="2.5" y2="130" stroke="#10b981" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Category & Status -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="1">
+    <text x="32" y="28" fill="#34d399" font-weight="700">REPOSITORY // 02 · DEVOPS &amp; CLOUD ARCHITECTURE SIMULATOR</text>
+    <circle cx="655" cy="24" r="3.5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="667" y="28" fill="#34d399" font-weight="700">DOCKERIZED ARCHITECTURE</text>
+  </g>
+
+  <!-- Title -->
+  <text x="32" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#f8fafc">
+    architect-td — DevOps &amp; Software Architecture Tower Defense
+  </text>
+
+  <!-- Description -->
+  <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    Simulador gamificado de infraestructura distribuida y mitigación de tráfico (DDoS, balanceo de carga,
+  </text>
+  <text x="32" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">
+    auto-scaling, firewalls WAF y caché CDN) empaquetado con Docker multi-stage y servidor Nginx.
+  </text>
+
+  <!-- Tech Pills -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10">
+    <rect x="32" y="116" width="88" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="76" y="130.5" fill="#34d399" text-anchor="middle" font-weight="600">Dockerized</text>
+
+    <rect x="128" y="116" width="98" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="177" y="130.5" fill="#cbd5e1" text-anchor="middle">System Design</text>
+
+    <rect x="234" y="116" width="84" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="276" y="130.5" fill="#cbd5e1" text-anchor="middle">JavaScript</text>
+
+    <rect x="326" y="116" width="90" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="371" y="130.5" fill="#38bdf8" text-anchor="middle">DevSecOps</text>
+
+    <rect x="424" y="116" width="68" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="458" y="130.5" fill="#cbd5e1" text-anchor="middle">Nginx</text>
+
+    <rect x="688" y="116" width="128" height="22" rx="4" fill="#059669" fill-opacity="0.2" stroke="#34d399" stroke-width="1"/>
+    <text x="752" y="130.5" fill="#34d399" text-anchor="middle" font-weight="700">EXPLORE REPO &gt;</text>
+  </g>
+
+  <!-- 3D Isometric Defense Tower / Node on Right -->
+  <g transform="translate(885, 78)">
+    <polygon points="0,20 48,40 0,60 -48,40" fill="#081a17" stroke="#34d399" stroke-opacity="0.5" stroke-width="1"/>
+    <g class="iso-arch">
+      <polygon points="0,-28 28,-14 0,0 -28,-14" fill="#34d399" stroke="#a7f3d0" stroke-width="1"/>
+      <polygon points="-28,-14 0,0 0,28 -28,14" fill="#059669" stroke="#34d399" stroke-width="0.8"/>
+      <polygon points="28,-14 0,0 0,28 28,14" fill="#047857" stroke="#059669" stroke-width="0.8"/>
+      <text x="0" y="-11" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#022c22">ARCH</text>
+    </g>
+  </g>
+</svg>

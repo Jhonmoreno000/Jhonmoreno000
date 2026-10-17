@@ -1,60 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 190" width="100%" height="190">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 225" width="100%" height="225">
   <defs>
-    <linearGradient id="flagBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a101d"/>
-      <stop offset="100%" stop-color="#060912"/>
+    <linearGradient id="flagContainerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040812"/>
+      <stop offset="50%" stop-color="#070f1e"/>
+      <stop offset="100%" stop-color="#04070e"/>
     </linearGradient>
+
+    <linearGradient id="flagCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1426"/>
+      <stop offset="100%" stop-color="#050912"/>
+    </linearGradient>
+
+    <style>
+      @keyframes float3DFlag {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes borderFlow {
+        to { stroke-dashoffset: -28; }
+      }
+      .fl-1 { animation: float3DFlag 3.5s ease-in-out infinite; }
+      .fl-2 { animation: float3DFlag 3.9s ease-in-out infinite 0.5s; }
+      .fl-3 { animation: float3DFlag 4.2s ease-in-out infinite 1s; }
+      .dash-accent { stroke-dasharray: 7 7; animation: borderFlow 1.6s linear infinite; }
+    </style>
   </defs>
 
-  <rect width="850" height="190" rx="10" fill="#050811"/>
-  <rect x="0.5" y="0.5" width="849" height="189" rx="9.5" fill="none" stroke="#172033" stroke-width="1"/>
+  <rect width="960" height="225" rx="14" fill="url(#flagContainerBg)"/>
+  <rect x="1" y="1" width="958" height="223" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
 
-  <!-- Top bar -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" letter-spacing="1">
-    <text x="24" y="24" fill="#64748b">SYSTEM ARCHITECTURES // CORE ENGINEERING SHOWCASES</text>
-    <text x="826" y="24" text-anchor="end" fill="#38bdf8">FLAGSHIP SYSTEMS</text>
+  <!-- Top Bar -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#c084fc">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D SYSTEM ARCHITECTURES // FLAGSHIP ENGINEERING SHOWCASES</text>
+    <text x="932" y="28" text-anchor="end" fill="#38bdf8" font-weight="700">ENTERPRISE &amp; AI</text>
   </g>
-  <line x1="24" y1="32" x2="826" y2="32" stroke="#172033" stroke-width="1"/>
+  <line x1="24" y1="42" x2="936" y2="42" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Col 1: AI Security -->
-  <g transform="translate(24, 44)">
-    <rect width="254" height="130" rx="8" fill="url(#flagBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">AI SECURITY ORCHESTRATOR</text>
-    <text x="14" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981">DEVSECOPS // AI LOCAL</text>
-    <line x1="14" y1="44" x2="240" y2="44" stroke="#1e293b" stroke-width="1"/>
-    
-    <text x="14" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Orquestacion multimotor de escaneres</text>
-    <text x="14" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">SAST/DAST en Docker. Deduplicacion</text>
-    <text x="14" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">SHA-256 y parches con Ollama LLM.</text>
+  <!-- ==================== COL 1: AI SECURITY ORCHESTRATOR ==================== -->
+  <g transform="translate(24, 56)">
+    <rect x="3" y="3" width="292" height="150" rx="10" fill="#02050b"/>
+    <rect width="292" height="150" rx="10" fill="url(#flagCardGrad)" stroke="#10b981" stroke-opacity="0.55" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="180" y2="1" stroke="#10b981" stroke-width="2.5"/>
 
-    <text x="14" y="114" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8">PYTHON · FASTAPI · DOCKER · OLLAMA</text>
+    <!-- Floating 3D Shield Cube -->
+    <g class="fl-1" transform="translate(254, 30)">
+      <polygon points="0,-14 18,-5 0,4 -18,-5" fill="#34d399"/>
+      <polygon points="-18,-5 0,4 0,22 -18,13" fill="#059669"/>
+      <polygon points="18,-5 0,4 0,22 18,13" fill="#047857"/>
+      <circle cx="0" cy="-5" r="2.5" fill="#ffffff"/>
+    </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#34d399">AI SECURITY ORCHESTRATOR</text>
+    <text x="16" y="39" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8" font-weight="700">DEVSECOPS // LOCAL AI ENGINE</text>
+    <line x1="16" y1="48" x2="220" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Orquestación multimotor de escáneres</text>
+    <text x="16" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">SAST/DAST en Docker. Deduplicación</text>
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">SHA-256 y parches con Ollama LLM.</text>
+
+    <rect x="16" y="118" width="260" height="20" rx="4" fill="#041311" stroke="#059669" stroke-width="0.8"/>
+    <text x="146" y="131.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#34d399">PYTHON · FASTAPI · DOCKER · OLLAMA</text>
   </g>
 
-  <!-- Col 2: NEXUS Engine -->
-  <g transform="translate(298, 44)">
-    <rect width="254" height="130" rx="8" fill="url(#flagBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">NEXUS DATABASE ENGINE</text>
-    <text x="14" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f59e0b">DATA ENGINEERING SIMULATOR</text>
-    <line x1="14" y1="44" x2="240" y2="44" stroke="#1e293b" stroke-width="1"/>
-    
-    <text x="14" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Simulador interactivo de esquemas</text>
-    <text x="14" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">relacionales. Analisis de planes de</text>
-    <text x="14" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">ejecucion SQL (EXPLAIN / INDEXES).</text>
+  <!-- ==================== COL 2: NEXUS DATABASE ENGINE ==================== -->
+  <g transform="translate(334, 56)">
+    <rect x="3" y="3" width="292" height="150" rx="10" fill="#02050b"/>
+    <rect width="292" height="150" rx="10" fill="url(#flagCardGrad)" stroke="#f59e0b" stroke-opacity="0.55" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="180" y2="1" stroke="#fbbf24" stroke-width="2.5"/>
 
-    <text x="14" y="114" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f59e0b">TYPESCRIPT · REACT · SQL · VITE</text>
+    <!-- Floating 3D Database Cylinder -->
+    <g class="fl-2" transform="translate(254, 28)">
+      <path d="M -16 -4 L -16 14 A 16 7 0 0 0 16 14 L 16 -4 Z" fill="#d97706"/>
+      <ellipse cx="0" cy="-4" rx="16" ry="7" fill="#fbbf24"/>
+      <ellipse cx="0" cy="5" rx="16" ry="7" fill="none" stroke="#fef3c7" stroke-width="0.8" stroke-opacity="0.6"/>
+    </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#fbbf24">NEXUS DATABASE ENGINE</text>
+    <text x="16" y="39" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8" font-weight="700">DATA ENGINEERING SIMULATOR</text>
+    <line x1="16" y1="48" x2="220" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Simulador interactivo de esquemas</text>
+    <text x="16" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">relacionales. Análisis visual de planes</text>
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">de ejecución SQL (EXPLAIN / INDEXES).</text>
+
+    <rect x="16" y="118" width="260" height="20" rx="4" fill="#181004" stroke="#d97706" stroke-width="0.8"/>
+    <text x="146" y="131.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#fbbf24">TYPESCRIPT · REACT · SQL · VITE</text>
   </g>
 
-  <!-- Col 3: D&D Textil ERP -->
-  <g transform="translate(572, 44)">
-    <rect width="254" height="130" rx="8" fill="url(#flagBg)" stroke="#1e293b" stroke-width="1"/>
-    <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">D&amp;D TEXTIL ENTERPRISE</text>
-    <text x="14" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#c084fc">ERP EMPRESARIAL SENA</text>
-    <line x1="14" y1="44" x2="240" y2="44" stroke="#1e293b" stroke-width="1"/>
-    
-    <text x="14" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Plataforma corporativa full-stack</text>
-    <text x="14" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">para gestion e inventarios textiles.</text>
-    <text x="14" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Arquitectura reactiva y roles con JWT.</text>
+  <!-- ==================== COL 3: D&D TEXTIL ENTERPRISE ==================== -->
+  <g transform="translate(644, 56)">
+    <rect x="3" y="3" width="292" height="150" rx="10" fill="#02050b"/>
+    <rect width="292" height="150" rx="10" fill="url(#flagCardGrad)" stroke="#a855f7" stroke-opacity="0.55" stroke-width="1.2"/>
+    <line x1="16" y1="1" x2="180" y2="1" stroke="#c084fc" stroke-width="2.5"/>
 
-    <text x="14" y="114" font-family="'JetBrains Mono', monospace" font-size="9" fill="#c084fc">SPRING BOOT · JAVA · MYSQL · REACT</text>
+    <!-- Floating 3D Enterprise Cube Stack -->
+    <g class="fl-3" transform="translate(254, 30)">
+      <polygon points="0,-14 18,-5 0,4 -18,-5" fill="#c084fc"/>
+      <polygon points="-18,-5 0,4 0,22 -18,13" fill="#7c3aed"/>
+      <polygon points="18,-5 0,4 0,22 18,13" fill="#5b21b6"/>
+      <line x1="-18" y1="4" x2="0" y2="13" stroke="#f3e8ff" stroke-width="0.8" stroke-opacity="0.6"/>
+      <line x1="18" y1="4" x2="0" y2="13" stroke="#f3e8ff" stroke-width="0.8" stroke-opacity="0.6"/>
+    </g>
+
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#c084fc">D&amp;D TEXTIL ENTERPRISE</text>
+    <text x="16" y="39" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8" font-weight="700">ERP EMPRESARIAL FULL-STACK</text>
+    <line x1="16" y1="48" x2="220" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Plataforma corporativa full-stack</text>
+    <text x="16" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">para gestión e inventarios textiles.</text>
+    <text x="16" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">Arquitectura reactiva y roles con JWT.</text>
+
+    <rect x="16" y="118" width="260" height="20" rx="4" fill="#120924" stroke="#7c3aed" stroke-width="0.8"/>
+    <text x="146" y="131.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#c084fc">SPRING BOOT · JAVA · MYSQL · REACT</text>
   </g>
 </svg>

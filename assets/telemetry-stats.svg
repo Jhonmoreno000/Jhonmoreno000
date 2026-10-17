@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="100%" height="320">
+  <defs>
+    <linearGradient id="teleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040812"/>
+      <stop offset="50%" stop-color="#081122"/>
+      <stop offset="100%" stop-color="#04070e"/>
+    </linearGradient>
+
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1324"/>
+      <stop offset="100%" stop-color="#050912"/>
+    </linearGradient>
+
+    <linearGradient id="waveFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      @keyframes towerPulse1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes towerPulse2 {
+        0%, 100% { transform: translateY(-6px); }
+        50% { transform: translateY(2px); }
+      }
+      @keyframes towerPulse3 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-11px); }
+      }
+      .t-p1 { animation: towerPulse1 2.8s ease-in-out infinite; }
+      .t-p2 { animation: towerPulse2 3.2s ease-in-out infinite; }
+      .t-p3 { animation: towerPulse3 2.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Main Container -->
+  <rect width="960" height="320" rx="14" fill="url(#teleBg)"/>
+  <rect x="1" y="1" width="958" height="318" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D ENGINEERING TELEMETRY // ANIMATED METRICS &amp; SKYLINE</text>
+    <text x="932" y="28" text-anchor="end" fill="#00f2fe" font-weight="700">REALTIME HUD v2.6</text>
+  </g>
+  <line x1="24" y1="42" x2="936" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ==================== PANEL 1: ANIMATED RADIAL HUD GAUGES ==================== -->
+  <g transform="translate(24, 56)">
+    <rect width="292" height="244" rx="10" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#38bdf8" letter-spacing="0.8">
+      01 // CORE DOMAIN METRICS
+    </text>
+    <line x1="16" y1="30" x2="276" y2="30" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Gauge 1: Backend & APIs (96% -> 169 of 176) -->
+    <g transform="translate(76, 86)">
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0f172a" stroke-width="6"/>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#00f2fe" stroke-width="6"
+              stroke-linecap="round" stroke-dasharray="169 176" transform="rotate(-90)">
+        <animate attributeName="stroke-dasharray" values="0 176;169 176;169 176" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#ffffff">96%</text>
+      <text x="0" y="46" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#38bdf8">BACKEND APIS</text>
+    </g>
+
+    <!-- Gauge 2: DevSecOps (92% -> 162 of 176) -->
+    <g transform="translate(216, 86)">
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0f172a" stroke-width="6"/>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#c084fc" stroke-width="6"
+              stroke-linecap="round" stroke-dasharray="162 176" transform="rotate(-90)">
+        <animate attributeName="stroke-dasharray" values="0 176;162 176;162 176" keyTimes="0;0.38;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#ffffff">92%</text>
+      <text x="0" y="46" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#c084fc">DEVSECOPS</text>
+    </g>
+
+    <!-- Gauge 3: Databases (95% -> 167 of 176) -->
+    <g transform="translate(76, 182)">
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0f172a" stroke-width="6"/>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#34d399" stroke-width="6"
+              stroke-linecap="round" stroke-dasharray="167 176" transform="rotate(-90)">
+        <animate attributeName="stroke-dasharray" values="0 176;167 176;167 176" keyTimes="0;0.41;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#ffffff">95%</text>
+      <text x="0" y="46" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#34d399">SQL / NOSQL</text>
+    </g>
+
+    <!-- Gauge 4: Clean Arch & TDD (94% -> 165 of 176) -->
+    <g transform="translate(216, 182)">
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#0f172a" stroke-width="6"/>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#fbbf24" stroke-width="6"
+              stroke-linecap="round" stroke-dasharray="165 176" transform="rotate(-90)">
+        <animate attributeName="stroke-dasharray" values="0 176;165 176;165 176" keyTimes="0;0.44;1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#ffffff">94%</text>
+      <text x="0" y="46" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#fbbf24">CLEAN ARCH</text>
+    </g>
+  </g>
+
+  <!-- ==================== PANEL 2: 3D ISOMETRIC SKYLINE & WAVEFORM ==================== -->
+  <g transform="translate(332, 56)">
+    <rect width="296" height="244" rx="10" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#c084fc" letter-spacing="0.8">
+      02 // 3D ACTIVITY SKYLINE &amp; PULSE
+    </text>
+    <line x1="16" y1="30" x2="280" y2="30" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Isometric 3D Grid Base inside Center Panel -->
+    <polygon points="148,78 264,124 148,170 32,124" fill="#071020" stroke="#1e293b" stroke-width="1.2"/>
+    <polygon points="32,124 148,170 148,178 32,132" fill="#040914" stroke="#0284c7" stroke-width="0.6"/>
+    <polygon points="264,124 148,170 148,178 264,132" fill="#03060e" stroke="#0369a1" stroke-width="0.6"/>
+
+    <!-- 3D Isometric Contribution Towers (Back to Front Order for Proper 3D Occlusion) -->
+    <!-- Tower B1 (Center-Back) -->
+    <g class="t-p1" transform="translate(148, 92)">
+      <polygon points="0,-32 14,-25 0,-18 -14,-25" fill="#38bdf8"/>
+      <polygon points="-14,-25 0,-18 0,10 -14,3" fill="#0284c7"/>
+      <polygon points="14,-25 0,-18 0,10 14,3" fill="#0369a1"/>
+    </g>
+
+    <!-- Tower B2 (Left-Back) -->
+    <g class="t-p2" transform="translate(112, 106)">
+      <polygon points="0,-24 14,-17 0,-10 -14,-17" fill="#c084fc"/>
+      <polygon points="-14,-17 0,-10 0,10 -14,3" fill="#7c3aed"/>
+      <polygon points="14,-17 0,-10 0,10 14,3" fill="#5b21b6"/>
+    </g>
+
+    <!-- Tower B3 (Right-Back) -->
+    <g class="t-p3" transform="translate(184, 106)">
+      <polygon points="0,-38 14,-31 0,-24 -14,-31" fill="#34d399"/>
+      <polygon points="-14,-31 0,-24 0,10 -14,3" fill="#059669"/>
+      <polygon points="14,-31 0,-24 0,10 14,3" fill="#047857"/>
+    </g>
+
+    <!-- Tower M1 (Far-Left) -->
+    <g class="t-p3" transform="translate(76, 120)">
+      <polygon points="0,-18 14,-11 0,-4 -14,-11" fill="#38bdf8"/>
+      <polygon points="-14,-11 0,-4 0,10 -14,3" fill="#0284c7"/>
+      <polygon points="14,-11 0,-4 0,10 14,3" fill="#0369a1"/>
+    </g>
+
+    <!-- Tower M2 (Center-Core Tallest) -->
+    <g class="t-p1" transform="translate(148, 120)">
+      <polygon points="0,-46 15,-38 0,-30 -15,-38" fill="#00f2fe"/>
+      <polygon points="-15,-38 0,-30 0,12 -15,4" fill="#0284c7"/>
+      <polygon points="15,-38 0,-30 0,12 15,4" fill="#0369a1"/>
+    </g>
+
+    <!-- Tower M3 (Far-Right) -->
+    <g class="t-p2" transform="translate(220, 120)">
+      <polygon points="0,-28 14,-21 0,-14 -14,-21" fill="#fbbf24"/>
+      <polygon points="-14,-21 0,-14 0,10 -14,3" fill="#d97706"/>
+      <polygon points="14,-21 0,-14 0,10 14,3" fill="#92400e"/>
+    </g>
+
+    <!-- Tower F1 (Front-Left) -->
+    <g class="t-p2" transform="translate(112, 134)">
+      <polygon points="0,-30 14,-23 0,-16 -14,-23" fill="#34d399"/>
+      <polygon points="-14,-23 0,-16 0,10 -14,3" fill="#059669"/>
+      <polygon points="14,-23 0,-16 0,10 14,3" fill="#047857"/>
+    </g>
+
+    <!-- Tower F2 (Front-Right) -->
+    <g class="t-p3" transform="translate(184, 134)">
+      <polygon points="0,-34 14,-27 0,-20 -14,-27" fill="#c084fc"/>
+      <polygon points="-14,-27 0,-20 0,10 -14,3" fill="#7c3aed"/>
+      <polygon points="14,-27 0,-20 0,10 14,3" fill="#5b21b6"/>
+    </g>
+
+    <!-- Tower F3 (Front-Apex) -->
+    <g class="t-p1" transform="translate(148, 148)">
+      <polygon points="0,-24 14,-17 0,-10 -14,-17" fill="#38bdf8"/>
+      <polygon points="-14,-17 0,-10 0,10 -14,3" fill="#0284c7"/>
+      <polygon points="14,-17 0,-10 0,10 14,3" fill="#0369a1"/>
+    </g>
+
+    <!-- Live Animated Telemetry Waveform at Bottom of Panel 2 -->
+    <g transform="translate(16, 184)">
+      <rect width="264" height="46" rx="6" fill="#040811" stroke="#1e293b" stroke-width="1"/>
+      <path fill="url(#waveFill)" stroke="#00f2fe" stroke-width="1.8">
+        <animate attributeName="d"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 values="M 0 32 Q 33 10, 66 26 T 132 18 T 198 28 T 264 16 L 264 46 L 0 46 Z;
+                         M 0 22 Q 33 36, 66 16 T 132 30 T 198 14 T 264 28 L 264 46 L 0 46 Z;
+                         M 0 32 Q 33 10, 66 26 T 132 18 T 198 28 T 264 16 L 264 46 L 0 46 Z"/>
+      </path>
+      <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#38bdf8" font-weight="700">THROUGHPUT // LIVE STREAM</text>
+      <text x="254" y="15" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#10b981" font-weight="700">99.9% SLA</text>
+    </g>
+  </g>
+
+  <!-- ==================== PANEL 3: ANIMATED LANGUAGE & REPO TELEMETRY ==================== -->
+  <g transform="translate(644, 56)">
+    <rect width="292" height="244" rx="10" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#34d399" letter-spacing="0.8">
+      03 // CODEBASE DISTRIBUTION
+    </text>
+    <line x1="16" y1="30" x2="276" y2="30" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Multi-Language Combined Bar -->
+    <g transform="translate(16, 42)">
+      <rect x="0" y="0" width="90" height="8" rx="2" fill="#00f2fe"/>
+      <rect x="92" y="0" width="64" height="8" rx="2" fill="#c084fc"/>
+      <rect x="158" y="0" width="52" height="8" rx="2" fill="#34d399"/>
+      <rect x="212" y="0" width="30" height="8" rx="2" fill="#fbbf24"/>
+      <rect x="244" y="0" width="16" height="8" rx="2" fill="#f43f5e"/>
+    </g>
+
+    <!-- Language Breakdown Rows -->
+    <g transform="translate(16, 68)" font-family="'JetBrains Mono', monospace" font-size="10">
+      <!-- Row 1 -->
+      <circle cx="6" cy="4" r="4" fill="#00f2fe"/>
+      <text x="18" y="8" fill="#f8fafc" font-weight="600">Python (FastAPI / Core)</text>
+      <text x="260" y="8" text-anchor="end" fill="#00f2fe" font-weight="700">34%</text>
+      <rect x="0" y="14" width="260" height="4" rx="2" fill="#0f172a"/>
+      <rect x="0" y="14" width="185" height="4" rx="2" fill="#00f2fe">
+        <animate attributeName="width" values="10;185;185" keyTimes="0;0.3;1" dur="5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 32)">
+        <circle cx="6" cy="4" r="4" fill="#c084fc"/>
+        <text x="18" y="8" fill="#f8fafc" font-weight="600">Java (Spring Boot)</text>
+        <text x="260" y="8" text-anchor="end" fill="#c084fc" font-weight="700">24%</text>
+        <rect x="0" y="14" width="260" height="4" rx="2" fill="#0f172a"/>
+        <rect x="0" y="14" width="145" height="4" rx="2" fill="#c084fc">
+          <animate attributeName="width" values="10;145;145" keyTimes="0;0.34;1" dur="5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Row 3 -->
+      <g transform="translate(0, 64)">
+        <circle cx="6" cy="4" r="4" fill="#34d399"/>
+        <text x="18" y="8" fill="#f8fafc" font-weight="600">TypeScript / Node.js</text>
+        <text x="260" y="8" text-anchor="end" fill="#34d399" font-weight="700">20%</text>
+        <rect x="0" y="14" width="260" height="4" rx="2" fill="#0f172a"/>
+        <rect x="0" y="14" width="125" height="4" rx="2" fill="#34d399">
+          <animate attributeName="width" values="10;125;125" keyTimes="0;0.38;1" dur="5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Row 4 -->
+      <g transform="translate(0, 96)">
+        <circle cx="6" cy="4" r="4" fill="#fbbf24"/>
+        <text x="18" y="8" fill="#f8fafc" font-weight="600">C# (.NET Core / SQL)</text>
+        <text x="260" y="8" text-anchor="end" fill="#fbbf24" font-weight="700">14%</text>
+        <rect x="0" y="14" width="260" height="4" rx="2" fill="#0f172a"/>
+        <rect x="0" y="14" width="96" height="4" rx="2" fill="#fbbf24">
+          <animate attributeName="width" values="10;96;96" keyTimes="0;0.42;1" dur="5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- Bottom Summary KPI Pills -->
+    <g transform="translate(16, 200)" font-family="'JetBrains Mono', monospace" font-size="9.5">
+      <rect x="0" y="0" width="125" height="28" rx="6" fill="#040811" stroke="#1e293b" stroke-width="1"/>
+      <text x="62.5" y="18" text-anchor="middle" fill="#94a3b8">REPOS: <tspan fill="#38bdf8" font-weight="800">07 PUBLIC</tspan></text>
+
+      <rect x="135" y="0" width="125" height="28" rx="6" fill="#040811" stroke="#1e293b" stroke-width="1"/>
+      <text x="197.5" y="18" text-anchor="middle" fill="#94a3b8">SEC: <tspan fill="#10b981" font-weight="800">DEVSECOPS</tspan></text>
+    </g>
+  </g>
+</svg>

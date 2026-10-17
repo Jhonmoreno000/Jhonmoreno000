@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 165" width="100%" height="165">
+  <defs>
+    <linearGradient id="footBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040710"/>
+      <stop offset="50%" stop-color="#081020"/>
+      <stop offset="100%" stop-color="#03050a"/>
+    </linearGradient>
+
+    <linearGradient id="waveCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <linearGradient id="wavePurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="sigGrad" x1="0%" y1="0%" x2="200%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#34d399"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-480 0" to="480 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <style>
+      @keyframes floatPolyL {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes floatPolyR {
+        0%, 100% { transform: translateY(-5px); }
+        50% { transform: translateY(3px); }
+      }
+      .poly-l { animation: floatPolyL 3.8s ease-in-out infinite; }
+      .poly-r { animation: floatPolyR 4.2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="960" height="165" rx="14" fill="url(#footBg)"/>
+
+  <!-- Animated Flowing Multi-Layer Waves -->
+  <path fill="url(#waveCyan)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5">
+    <animate attributeName="d"
+             dur="7s"
+             repeatCount="indefinite"
+             values="M 0 110 Q 240 75, 480 110 T 960 105 L 960 165 L 0 165 Z;
+                     M 0 105 Q 240 135, 480 100 T 960 115 L 960 165 L 0 165 Z;
+                     M 0 110 Q 240 75, 480 110 T 960 105 L 960 165 L 0 165 Z"/>
+  </path>
+
+  <path fill="url(#wavePurple)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.45">
+    <animate attributeName="d"
+             dur="5.5s"
+             repeatCount="indefinite"
+             values="M 0 125 Q 240 150, 480 120 T 960 130 L 960 165 L 0 165 Z;
+                     M 0 120 Q 240 95, 480 130 T 960 118 L 960 165 L 0 165 Z;
+                     M 0 125 Q 240 150, 480 120 T 960 130 L 960 165 L 0 165 Z"/>
+  </path>
+
+  <rect x="1" y="1" width="958" height="163" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Left 3D Isometric Cube -->
+  <g transform="translate(68, 72)">
+    <g class="poly-l">
+      <polygon points="0,-20 22,-9 0,2 -22,-9" fill="#38bdf8"/>
+      <polygon points="-22,-9 0,2 0,24 -22,13" fill="#0284c7"/>
+      <polygon points="22,-9 0,2 0,24 22,13" fill="#0369a1"/>
+    </g>
+  </g>
+
+  <!-- Right 3D Isometric Cube -->
+  <g transform="translate(892, 72)">
+    <g class="poly-r">
+      <polygon points="0,-20 22,-9 0,2 -22,-9" fill="#c084fc"/>
+      <polygon points="-22,-9 0,2 0,24 -22,13" fill="#7c3aed"/>
+      <polygon points="22,-9 0,2 0,24 22,13" fill="#5b21b6"/>
+    </g>
+  </g>
+
+  <!-- Center Engineering Quote & Animated Signature -->
+  <text x="480" y="54" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="13" font-weight="600" fill="#e2e8f0">
+    &quot;Controlling complexity is the essence of computer programming.&quot; — Brian W. Kernighan
+  </text>
+
+  <text x="480" y="88" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11.5" font-weight="800" letter-spacing="2" fill="url(#sigGrad)">
+    JHON ANDERSON MORENO POSSO // BACKEND &amp; DEVSECOPS ARCHITECT
+  </text>
+
+  <text x="480" y="142" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#94a3b8" letter-spacing="1.5">
+    MEDELLIN, ANTIOQUIA, COLOMBIA [UTC-5] · SYSTEMS ONLINE · 2026
+  </text>
+</svg>

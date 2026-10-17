@@ -1,75 +1,85 @@
 <div align="center">
 
-  <!-- ==================== BESPOKE HERO COMPONENT ==================== -->
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - Identity Card"/>
+  <!-- ==================== 3D ANIMATED HERO COMMAND CENTER BANNER ==================== -->
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/hero.svg" width="100%" alt="Jhon Anderson Moreno - 3D Command Center Banner"/>
 
   <br><br>
 
-  <!-- ==================== ANIMATED TERMINAL SUBTITLE ==================== -->
+  <!-- ==================== ANIMATED TERMINAL TYPING SUBTITLE ==================== -->
   <a href="https://github.com/Jhonmoreno000">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=2600&pause=1000&color=38BDF8&center=true&vCenter=true&width=680&lines=%3E+Backend+%26+Distributed+Microservices;%3E+DevSecOps+%7C+Automated+Security+Scanning+%26+IaC;%3E+Clean+Architecture+%7C+Domain-Driven+Design+%7C+TDD;%3E+Transforming+complex+business+logic+into+reliable+code" alt="Typing Subtitle"/>
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=2500&pause=900&color=00F2FE&center=true&vCenter=true&width=760&lines=%3E+Backend+Architect+%26+Distributed+Microservices+Engineer;%3E+DevSecOps+%7C+Automated+SAST%2FDAST+Scanning+%26+Docker+Multi-Stage;%3E+Relational+%26+NoSQL+Data+Engineering+%7C+PostgreSQL+%C2%B7+MySQL+%C2%B7+MongoDB;%3E+Clean+Architecture+%7C+Domain-Driven+Design+(DDD)+%7C+Strict+TDD" alt="Animated Typing Subtitle"/>
   </a>
 
   <br><br>
 
-  <!-- ==================== MINIMALIST CONTACT PILLS ==================== -->
+  <!-- ==================== CONTACT & TELEMETRY PILLS ==================== -->
   <p>
-    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=080b12" alt="LinkedIn"/></a>
+    <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/"><img src="https://img.shields.io/badge/LinkedIn-Jhon_Anderson_Moreno-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=050811" alt="LinkedIn"/></a>
     &nbsp;
-    <a href="mailto:morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white&labelColor=080b12" alt="Email"/></a>
+    <a href="mailto:morenopossojhonanderson313@gmail.com"><img src="https://img.shields.io/badge/Email-Contacto_Directo-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050811" alt="Email"/></a>
     &nbsp;
-    <a href="https://github.com/Jhonmoreno000"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white&labelColor=080b12" alt="GitHub"/></a>
+    <a href="https://github.com/Jhonmoreno000?tab=repositories"><img src="https://img.shields.io/badge/GitHub-Repositorios_%26_Arquitectura-38BDF8?style=for-the-badge&logo=github&logoColor=white&labelColor=050811" alt="GitHub"/></a>
+    &nbsp;
+    <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&label=PROFILE+VIEWS&color=00f2fe&style=for-the-badge&labelColor=050811" alt="Profile Views"/>
   </p>
 
 </div>
 
 ---
 
-### // 01. PROFILE & EXECUTIVE SUMMARY
+### // 01. PROFILE & 3D EXECUTIVE BRIEFING
 
-```text
-  LOCATION     : Medellin, Antioquia, Colombia [UTC-5]
-  FORMATION    : Analisis y Desarrollo de Software (ADSO) - SENA
-  ROLE         : Tecnologo en Desarrollo de Software // Backend & DevSecOps
-  CORE STACK   : Python, Java, C#, Docker, PostgreSQL, Linux
-  PARADIGM     : Clean Architecture, TDD, Domain-Driven Design
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/profile-3d.svg" width="100%" alt="3D Executive Pillars"/>
+</div>
 
-Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distribuida y DevSecOps**. Especializado en la construccion de microservicios resilientes con bajo acoplamiento, diseno de APIs robustas con contratos estrictos y automatizacion de pipelines seguros con cultura shift-left.
+<br>
 
-- **Backend & APIs:** Implementacion de microservicios modulares, controladores desacoplados, DTOs tipados y persistencia relacional/NoSQL optimizada.
-- **DevSecOps & Infraestructura:** Contenerizacion con Docker multi-stage, auditoria estatica automatizada (SAST/DAST) y despliegue en entornos Linux.
-- **Calidad de Codigo:** Adherencia estricta a principios SOLID, Clean Code, pruebas unitarias y de integracion continuas.
+Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distribuida, Bases de Datos de Alto Rendimiento y DevSecOps**. Especializado en la construcción de microservicios resilientes con bajo acoplamiento, diseño de APIs robustas con contratos estrictos y automatización de pipelines seguros bajo cultura *Shift-Left*.
 
 ---
 
-### // 02. TECH STACK MATRIX
+### // 02. 3D TECH STACK MATRIX & PROFICIENCY TELEMETRY
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/stack.svg" width="100%" alt="Tech Stack Matrix"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/stack.svg" width="100%" alt="3D Tech Stack Matrix"/>
 </div>
 
 ---
 
-### // 03. FEATURED REPOSITORIES // DEPLOYMENTS
+### // 03. FEATURED REPOSITORIES // 3D INTERACTIVE CARDS
 
 <div align="center">
 
-  <!-- REPOSITORY CARD 01 -->
+  <!-- REPOSITORY CARD 01: NEXUS -->
+  <a href="https://github.com/Jhonmoreno000/NEXUS">
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-nexus.svg" width="100%" alt="NEXUS - Relational Schema & SQL Query Simulator"/>
+  </a>
+
+  <br><br>
+
+  <!-- REPOSITORY CARD 02: ARCHITECT-TD -->
+  <a href="https://github.com/Jhonmoreno000/architect-td">
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-architect.svg" width="100%" alt="architect-td - DevOps & Software Architecture Game"/>
+  </a>
+
+  <br><br>
+
+  <!-- REPOSITORY CARD 03: PROYECTO-TODO-API -->
   <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
     <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-todo.svg" width="100%" alt="proyecto-todo-api"/>
   </a>
 
   <br><br>
 
-  <!-- REPOSITORY CARD 02 -->
+  <!-- REPOSITORY CARD 04: I-WORK-IN-PYTHON -->
   <a href="https://github.com/Jhonmoreno000/I-work-in-python">
     <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-python.svg" width="100%" alt="I-work-in-python"/>
   </a>
 
   <br><br>
 
-  <!-- REPOSITORY CARD 03 -->
+  <!-- REPOSITORY CARD 05: GCP-GESTION-DE-PRODUCTOS -->
   <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
     <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS-"/>
   </a>
@@ -78,50 +88,42 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 04. FLAGSHIP ARCHITECTURES & SYSTEMS DESIGN
+### // 04. FLAGSHIP 3D ARCHITECTURES & SYSTEMS DESIGN
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-flagships.svg" width="100%" alt="Flagship Architectures"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-flagships.svg" width="100%" alt="3D Flagship Architectures"/>
 </div>
 
 ---
 
-### // 05. DEVSECOPS & CI/CD PIPELINE
+### // 05. 3D ANIMATED DEVSECOPS & CI/CD PIPELINE
 
-```text
-+------------------+      +-------------------+      +--------------------+
-|  SOURCE CONTROL  | ---> |  SECURITY & SAST  | ---> |   CONTAINER BUILD  |
-|  Git / CI Runner |      |  Ollama / Semgrep |      |   Docker Multi-Stage|
-+------------------+      +-------------------+      +--------------------+
-          |                                                     |
-          v                                                     v
-+------------------+                                 +--------------------+
-| AUTOMATED TESTS  | ------------------------------> | SECURE DEPLOYMENT  |
-| Unit / Integ TDD |                                 | Nginx / Cloud Host |
-+------------------+                                 +--------------------+
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/pipeline-3d.svg" width="100%" alt="3D Animated DevSecOps Pipeline"/>
+</div>
 
 ---
 
-### // 06. GITHUB TELEMETRY & ACTIVITY
+### // 06. 3D ANIMATED TELEMETRY, STATS & GITHUB ACTIVITY
 
 <div align="center">
 
-<table>
-  <tr>
-    <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=Jhonmoreno000&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080b12&title_color=38bdf8&icon_color=38bdf8&text_color=94a3b8" width="100%" alt="Github Stats"/>
-    </td>
-    <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jhonmoreno000&layout=compact&theme=tokyonight&hide_border=true&bg_color=080b12&title_color=38bdf8&text_color=94a3b8" width="100%" alt="Top Languages"/>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=080b12&stroke=38bdf8&ring=38bdf8&fire=38bdf8&currStreakNum=ffffff&sideNums=94a3b8&currStreakLabel=38bdf8&sideLabels=94a3b8&dates=64748b" width="100%" alt="Streak Stats"/>
-    </td>
-  </tr>
-</table>
+  <!-- BESPOKE 3D ANIMATED TELEMETRY & SKYLINE DASHBOARD -->
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/telemetry-stats.svg" width="100%" alt="3D Engineering Telemetry & Stats"/>
+
+  <br><br>
+
+  <!-- LIVE GITHUB STREAK & ACTIVITY GRAPH -->
+  <table>
+    <tr>
+      <td width="50%" align="center">
+        <img src="https://streak-stats.demolab.com/?user=Jhonmoreno000&theme=tokyonight&hide_border=true&background=040812&stroke=1e293b&ring=00f2fe&fire=c084fc&currStreakNum=ffffff&sideNums=38bdf8&currStreakLabel=00f2fe&sideLabels=94a3b8&dates=64748b" width="100%" alt="GitHub Streak Stats"/>
+      </td>
+      <td width="50%" align="center">
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jhonmoreno000&bg_color=040812&color=38bdf8&line=00f2fe&point=c084fc&area=true&area_color=0284c7&hide_border=true&custom_title=REALTIME%20COMMIT%20ACTIVITY%20GRAPH" width="100%" alt="GitHub Activity Graph"/>
+      </td>
+    </tr>
+  </table>
 
 </div>
 
@@ -130,46 +132,38 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 ### // 07. TECHNICAL RFC STANDARDS & PROTOCOLS
 
 <details open>
-  <summary><b>[+] 01. Principios de Arquitectura de Software</b></summary>
+  <summary><b>[+] 01. Principios de Arquitectura de Software &amp; Microservicios</b></summary>
   <br>
 
-  - **Clean Architecture & Domain-Driven Design:** Desacoplamiento estricto de las reglas de negocio respecto a frameworks y mecanismos de persistencia.
-  - **Principios SOLID:** Responsabilidad unica por modulo, segregacion de interfaces e inversion de dependencias para facilitar testing.
-  - **Estrategia de Pruebas (TDD):** Cobertura orientada a casos de uso criticos mediante tests unitarios y de integracion.
-  - **Contratos de API REST:** Formato de respuesta consistente, DTOs con validacion estricta y documentacion con OpenAPI.
+  - **Clean Architecture & Domain-Driven Design (DDD):** Desacoplamiento estricto de las reglas de negocio respecto a frameworks, UI y motores de persistencia.
+  - **Principios SOLID:** Responsabilidad única por módulo, segregación de interfaces e inversión de dependencias para facilitar mantenibilidad y testing.
+  - **Estrategia de Pruebas (TDD):** Cobertura orientada a casos de uso críticos mediante pruebas unitarias, mocks de infraestructura y tests de integración.
+  - **Contratos de API REST:** Respuestas estandarizadas, DTOs con validación estricta de esquemas y documentación interactiva con OpenAPI / Swagger.
 
 </details>
 
 <details open>
-  <summary><b>[+] 02. Estandares DevSecOps & Infraestructura</b></summary>
+  <summary><b>[+] 02. Estándares DevSecOps, IA &amp; Contenerización</b></summary>
   <br>
 
-  - **Seguridad Shift-Left:** Escaneo estatico de vulnerabilidades (SAST) y dependencias desactualizadas (SCA) en fase temprana.
-  - **Optimizacion de Contenedores:** Creacion de imagenes Docker multi-stage, usuarios no-root y reduccion de vectores de ataque.
-  - **CI/CD Automatizado:** Verificacion automatica de formato, linters y suites de tests en cada integracion de rama.
-  - **Trazabilidad:** Logs estructurados y configuracion estricta de variables de entorno mediante secretos.
+  - **Seguridad Shift-Left:** Escaneo estático de vulnerabilidades (SAST), análisis de composición de software (SCA) y remediación asistida por LLMs locales (Ollama).
+  - **Optimización de Contenedores:** Construcción de imágenes Docker *multi-stage*, ejecución con usuarios *non-root* y reducción de superficie de ataque.
+  - **CI/CD Automatizado:** Verificación continua de linters, pruebas automatizadas y despliegues reproducibles mediante GitHub Actions y Linux.
 
 </details>
 
 <details open>
-  <summary><b>[+] 03. Formacion Profesional & Trayectoria</b></summary>
+  <summary><b>[+] 03. Formación Profesional &amp; Trayectoria</b></summary>
   <br>
 
-  - **ADSO (SENA):** Analisis y Desarrollo de Software — Enfocado en construccion de software corporativo y buenas practicas de ingenieria.
-  - **Ruta de Crecimiento:** Profundizacion en orquestacion de contenedores con Kubernetes, colas de mensajeria asincronas y sistemas de alta disponibilidad.
+  - **ADSO (SENA):** Tecnólogo en Análisis y Desarrollo de Software — Especialización en ingeniería de software corporativo, bases de datos y arquitectura en capas.
+  - **Evolución Continua:** Orquestación distribuida, motores de bases de datos de alto rendimiento, seguridad ofensiva/defensiva automatizada y sistemas cloud-native.
 
 </details>
 
 ---
 
+<!-- ==================== 3D ANIMATED FOOTER BANNER ==================== -->
 <div align="center">
-
-  ```text
-  "Controlling complexity is the essence of computer programming." — Brian W. Kernighan
-  ```
-
-  <br>
-
-  <p><code>JHON ANDERSON MORENO POSSO // MEDELLIN, COLOMBIA // 2026</code></p>
-
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/footer-banner.svg" width="100%" alt="3D Animated Footer Banner"/>
 </div>
