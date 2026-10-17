@@ -39,7 +39,15 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 02. 3D TECH STACK MATRIX & PROFICIENCY TELEMETRY
+### // 02. 3D CREDENTIALS & ACHIEVEMENTS VAULT
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/achievements-3d.svg" width="100%" alt="3D Credentials & Achievements Vault"/>
+</div>
+
+---
+
+### // 03. 3D TECH STACK MATRIX & PROFICIENCY TELEMETRY
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/stack.svg" width="100%" alt="3D Tech Stack Matrix"/>
@@ -47,7 +55,23 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 03. FEATURED REPOSITORIES // 3D INTERACTIVE CARDS
+### // 04. 3D HOLOGRAPHIC MICROSERVICES TOPOLOGY // LIVE DATA MESH
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/microservices-3d.svg" width="100%" alt="3D Holographic Microservices Topology"/>
+</div>
+
+---
+
+### // 05. LIVE 3D TERMINAL // DOCKER BUILD, AI SAST & SQL EXPLAIN
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/terminal-live.svg" width="100%" alt="3D Live Terminal Simulation"/>
+</div>
+
+---
+
+### // 06. FEATURED REPOSITORIES // 3D INTERACTIVE CARDS
 
 <div align="center">
 
@@ -88,7 +112,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 04. FLAGSHIP 3D ARCHITECTURES & SYSTEMS DESIGN
+### // 07. FLAGSHIP 3D ARCHITECTURES & SYSTEMS DESIGN
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/card-flagships.svg" width="100%" alt="3D Flagship Architectures"/>
@@ -96,7 +120,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 05. 3D ANIMATED DEVSECOPS & CI/CD PIPELINE
+### // 08. 3D ANIMATED DEVSECOPS & CI/CD PIPELINE
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/pipeline-3d.svg" width="100%" alt="3D Animated DevSecOps Pipeline"/>
@@ -104,7 +128,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 06. 3D ANIMATED TELEMETRY, STATS & GITHUB ACTIVITY
+### // 09. 3D ANIMATED TELEMETRY, STATS & GITHUB ACTIVITY
 
 <div align="center">
 
@@ -129,7 +153,7 @@ Desarrollador de software enfocado en **Backend Engineering, Arquitectura Distri
 
 ---
 
-### // 07. TECHNICAL RFC STANDARDS & PROTOCOLS
+### // 10. TECHNICAL RFC STANDARDS & PROTOCOLS
 
 <details open>
   <summary><b>[+] 01. Principios de Arquitectura de Software &amp; Microservicios</b></summary>

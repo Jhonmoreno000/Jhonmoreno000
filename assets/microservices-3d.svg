@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="100%" height="360">
+  <defs>
+    <linearGradient id="msBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03060d"/>
+      <stop offset="50%" stop-color="#071022"/>
+      <stop offset="100%" stop-color="#03050a"/>
+    </linearGradient>
+
+    <radialGradient id="msCenterGlow" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#7c3aed" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="msGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.5"/>
+      <circle cx="28" cy="28" r="0.9" fill="#38bdf8" fill-opacity="0.25"/>
+    </pattern>
+
+    <filter id="msGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Motion Paths for Live Traffic -->
+    <path id="pathGwToFast" d="M 130 185 L 245 185 L 285 110 L 370 110"/>
+    <path id="pathGwToSpring" d="M 130 185 L 370 185"/>
+    <path id="pathGwToNet" d="M 130 185 L 245 185 L 285 260 L 370 260"/>
+
+    <path id="pathFastToRedis" d="M 370 110 L 505 110 L 545 140 L 630 140"/>
+    <path id="pathSpringToRedis" d="M 370 185 L 505 185 L 545 140 L 630 140"/>
+    <path id="pathSpringToQueue" d="M 370 185 L 505 185 L 545 235 L 630 235"/>
+    <path id="pathNetToQueue" d="M 370 260 L 505 260 L 545 235 L 630 235"/>
+
+    <path id="pathRedisToPg" d="M 630 140 L 840 140"/>
+    <path id="pathQueueToMongo" d="M 630 235 L 840 235"/>
+    <path id="pathCrossDb" d="M 630 140 L 735 188 L 840 140"/>
+
+    <style>
+      @keyframes floatNodeA {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes floatNodeB {
+        0%, 100% { transform: translateY(-4px); }
+        50% { transform: translateY(4px); }
+      }
+      @keyframes dashStream {
+        to { stroke-dashoffset: -32; }
+      }
+      .f-a { animation: floatNodeA 3.6s ease-in-out infinite; }
+      .f-b { animation: floatNodeB 4.0s ease-in-out infinite; }
+      .stream-line { stroke-dasharray: 8 8; animation: dashStream 1.4s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background & Grid -->
+  <rect width="960" height="360" rx="14" fill="url(#msBg)"/>
+  <rect width="960" height="360" rx="14" fill="url(#msGrid)"/>
+  <rect width="960" height="360" rx="14" fill="url(#msCenterGlow)"/>
+  <rect x="1" y="1" width="958" height="358" rx="13" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1.2">
+    <circle cx="32" cy="24" r="4" fill="#00f2fe">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D HOLOGRAPHIC MICROSERVICES TOPOLOGY // LIVE DATA MESH</text>
+    <text x="932" y="28" text-anchor="end" fill="#10b981" font-weight="700">LATENCY: &lt;8.5ms P99</text>
+  </g>
+  <line x1="24" y1="42" x2="936" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tier Column Headers -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#64748b" letter-spacing="1">
+    <text x="130" y="62" text-anchor="middle" fill="#38bdf8">01 // INGRESS GATEWAY</text>
+    <text x="370" y="62" text-anchor="middle" fill="#c084fc">02 // DOMAIN SERVICES</text>
+    <text x="630" y="62" text-anchor="middle" fill="#fbbf24">03 // CACHE &amp; BROKER</text>
+    <text x="840" y="62" text-anchor="middle" fill="#34d399">04 // ACID &amp; NOSQL DB</text>
+  </g>
+
+  <!-- ==================== CIRCUIT CONDUITS (BACKGROUND LAYER) ==================== -->
+  <g fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#pathGwToFast"/>
+    <use href="#pathGwToSpring"/>
+    <use href="#pathGwToNet"/>
+    <use href="#pathFastToRedis"/>
+    <use href="#pathSpringToRedis"/>
+    <use href="#pathSpringToQueue"/>
+    <use href="#pathNetToQueue"/>
+    <use href="#pathRedisToPg"/>
+    <use href="#pathQueueToMongo"/>
+  </g>
+
+  <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="stream-line">
+    <use href="#pathGwToFast" stroke="#00f2fe" stroke-opacity="0.7"/>
+    <use href="#pathGwToSpring" stroke="#c084fc" stroke-opacity="0.7"/>
+    <use href="#pathGwToNet" stroke="#fbbf24" stroke-opacity="0.7"/>
+    <use href="#pathFastToRedis" stroke="#00f2fe" stroke-opacity="0.6"/>
+    <use href="#pathSpringToRedis" stroke="#c084fc" stroke-opacity="0.6"/>
+    <use href="#pathSpringToQueue" stroke="#c084fc" stroke-opacity="0.6"/>
+    <use href="#pathNetToQueue" stroke="#fbbf24" stroke-opacity="0.6"/>
+    <use href="#pathRedisToPg" stroke="#34d399" stroke-opacity="0.75"/>
+    <use href="#pathQueueToMongo" stroke="#34d399" stroke-opacity="0.75"/>
+  </g>
+
+  <!-- ==================== ANIMATED LIVE TRAFFIC PACKETS ==================== -->
+  <circle r="4" fill="#00f2fe" filter="url(#msGlow)">
+    <animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#pathGwToFast"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#c084fc" filter="url(#msGlow)">
+    <animateMotion dur="2.0s" repeatCount="indefinite"><mpath href="#pathGwToSpring"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#fbbf24" filter="url(#msGlow)">
+    <animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#pathGwToNet"/></animateMotion>
+  </circle>
+  <circle r="3.5" fill="#00f2fe" filter="url(#msGlow)">
+    <animateMotion dur="2.2s" begin="0.8s" repeatCount="indefinite"><mpath href="#pathFastToRedis"/></animateMotion>
+  </circle>
+  <circle r="3.5" fill="#c084fc" filter="url(#msGlow)">
+    <animateMotion dur="2.3s" begin="0.5s" repeatCount="indefinite"><mpath href="#pathSpringToQueue"/></animateMotion>
+  </circle>
+  <circle r="3.5" fill="#fbbf24" filter="url(#msGlow)">
+    <animateMotion dur="2.5s" begin="1.1s" repeatCount="indefinite"><mpath href="#pathNetToQueue"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#34d399" filter="url(#msGlow)">
+    <animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#pathRedisToPg"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#34d399" filter="url(#msGlow)">
+    <animateMotion dur="1.9s" begin="0.9s" repeatCount="indefinite"><mpath href="#pathQueueToMongo"/></animateMotion>
+  </circle>
+
+  <!-- ==================== TIER 1: NGINX API GATEWAY & JWT WAF ==================== -->
+  <g transform="translate(130, 185)">
+    <!-- Isometric Base Platform -->
+    <polygon points="0,32 76,62 0,92 -76,62" fill="#071326" stroke="#00f2fe" stroke-width="1.2"/>
+    <polygon points="-76,62 0,92 0,102 -76,72" fill="#040b18" stroke="#0284c7" stroke-width="0.8"/>
+    <polygon points="76,62 0,92 0,102 76,72" fill="#030710" stroke="#0369a1" stroke-width="0.8"/>
+
+    <!-- Orbiting Radar Ring -->
+    <ellipse cx="0" cy="10" rx="58" ry="24" fill="none" stroke="#00f2fe" stroke-width="1" stroke-dasharray="5 5" stroke-opacity="0.6"/>
+
+    <!-- 3D Gateway Prism Tower -->
+    <g class="f-a">
+      <polygon points="0,-52 44,-30 0,-8 -44,-30" fill="#00f2fe" stroke="#cffafe" stroke-width="1.2"/>
+      <polygon points="-44,-30 0,-8 0,48 -44,26" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+      <polygon points="44,-30 0,-8 0,48 44,26" fill="#0369a1" stroke="#0284c7" stroke-width="1"/>
+      <text x="0" y="-26" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#030712">GATEWAY</text>
+      <text x="-22" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#e0f2fe">JWT</text>
+      <text x="22" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#bae6fd">TLS</text>
+    </g>
+
+    <text x="0" y="118" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#00f2fe">NGINX // API GATEWAY</text>
+    <text x="0" y="131" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#94a3b8">Rate-Limit · OAuth2 · 1.2ms</text>
+  </g>
+
+  <!-- ==================== TIER 2: MICROSERVICES MESH (3D CUBES) ==================== -->
+  <!-- Service 1: FastAPI (Python) -->
+  <g transform="translate(370, 110)">
+    <polygon points="0,16 52,38 0,60 -52,38" fill="#071526" stroke="#38bdf8" stroke-width="1"/>
+    <g class="f-a">
+      <polygon points="0,-28 32,-12 0,4 -32,-12" fill="#38bdf8" stroke="#bae6fd" stroke-width="1"/>
+      <polygon points="-32,-12 0,4 0,32 -32,16" fill="#0284c7" stroke="#38bdf8" stroke-width="0.9"/>
+      <polygon points="32,-12 0,4 0,32 32,16" fill="#0369a1" stroke="#0284c7" stroke-width="0.9"/>
+      <text x="0" y="-9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#ffffff">FASTAPI</text>
+    </g>
+    <text x="0" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#38bdf8">PYTHON ASYNC · AI</text>
+  </g>
+
+  <!-- Service 2: Spring Boot (Java) -->
+  <g transform="translate(370, 185)">
+    <polygon points="0,16 52,38 0,60 -52,38" fill="#130b29" stroke="#c084fc" stroke-width="1"/>
+    <g class="f-b">
+      <polygon points="0,-28 32,-12 0,4 -32,-12" fill="#c084fc" stroke="#f3e8ff" stroke-width="1"/>
+      <polygon points="-32,-12 0,4 0,32 -32,16" fill="#7c3aed" stroke="#c084fc" stroke-width="0.9"/>
+      <polygon points="32,-12 0,4 0,32 32,16" fill="#5b21b6" stroke="#7c3aed" stroke-width="0.9"/>
+      <text x="0" y="-9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#ffffff">SPRING</text>
+    </g>
+    <text x="0" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#c084fc">JAVA 21 · CORE ERP</text>
+  </g>
+
+  <!-- Service 3: .NET Core (C#) -->
+  <g transform="translate(370, 260)">
+    <polygon points="0,16 52,38 0,60 -52,38" fill="#1c1204" stroke="#fbbf24" stroke-width="1"/>
+    <g class="f-a">
+      <polygon points="0,-28 32,-12 0,4 -32,-12" fill="#fbbf24" stroke="#fef3c7" stroke-width="1"/>
+      <polygon points="-32,-12 0,4 0,32 -32,16" fill="#d97706" stroke="#fbbf24" stroke-width="0.9"/>
+      <polygon points="32,-12 0,4 0,32 32,16" fill="#92400e" stroke="#d97706" stroke-width="0.9"/>
+      <text x="0" y="-9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#451a03">.NET CORE</text>
+    </g>
+    <text x="0" y="52" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#fbbf24">C# · TRANSACTIONS</text>
+  </g>
+
+  <!-- ==================== TIER 3: REDIS CACHE & EVENT BROKER ==================== -->
+  <!-- Node 1: Redis In-Memory Cache -->
+  <g transform="translate(630, 140)">
+    <polygon points="0,18 54,40 0,62 -54,40" fill="#1c1204" stroke="#fbbf24" stroke-width="1"/>
+    <g class="f-b">
+      <polygon points="0,-30 34,-14 0,2 -34,-14" fill="#fbbf24" stroke="#fef3c7" stroke-width="1"/>
+      <polygon points="-34,-14 0,2 0,30 -34,14" fill="#d97706" stroke="#fbbf24" stroke-width="0.9"/>
+      <polygon points="34,-14 0,2 0,30 34,14" fill="#92400e" stroke="#d97706" stroke-width="0.9"/>
+      <text x="0" y="-11" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#451a03">REDIS</text>
+    </g>
+    <text x="0" y="54" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#fbbf24">CACHE // 0.3ms HIT</text>
+  </g>
+
+  <!-- Node 2: Async Event / AI Security Queue -->
+  <g transform="translate(630, 235)">
+    <polygon points="0,18 54,40 0,62 -54,40" fill="#130b29" stroke="#c084fc" stroke-width="1"/>
+    <g class="f-a">
+      <polygon points="0,-30 34,-14 0,2 -34,-14" fill="#c084fc" stroke="#f3e8ff" stroke-width="1"/>
+      <polygon points="-34,-14 0,2 0,30 -34,14" fill="#7c3aed" stroke="#c084fc" stroke-width="0.9"/>
+      <polygon points="34,-14 0,2 0,30 34,14" fill="#5b21b6" stroke="#7c3aed" stroke-width="0.9"/>
+      <text x="0" y="-11" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#ffffff">BROKER</text>
+    </g>
+    <text x="0" y="54" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#c084fc">ASYNC PUB/SUB BUS</text>
+  </g>
+
+  <!-- ==================== TIER 4: 3D DATABASE CYLINDERS ==================== -->
+  <!-- DB 1: PostgreSQL / MySQL Relational Engine -->
+  <g transform="translate(840, 140)">
+    <polygon points="0,18 56,40 0,62 -56,40" fill="#041c16" stroke="#34d399" stroke-width="1"/>
+    <g class="f-a">
+      <path d="M -32 2 L -32 22 A 32 12 0 0 0 32 22 L 32 2 Z" fill="#047857" stroke="#34d399" stroke-width="0.8"/>
+      <ellipse cx="0" cy="2" rx="32" ry="12" fill="#059669" stroke="#6ee7b7" stroke-width="0.8"/>
+      <path d="M -32 -20 L -32 0 A 32 12 0 0 0 32 0 L 32 -20 Z" fill="#059669" stroke="#34d399" stroke-width="0.8"/>
+      <ellipse cx="0" cy="-20" rx="32" ry="12" fill="#34d399" stroke="#a7f3d0" stroke-width="1"/>
+      <text x="0" y="-17" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#022c22">POSTGRES</text>
+    </g>
+    <text x="0" y="54" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#34d399">ACID · B-TREE INDEX</text>
+  </g>
+
+  <!-- DB 2: MongoDB NoSQL Cluster -->
+  <g transform="translate(840, 235)">
+    <polygon points="0,18 56,40 0,62 -56,40" fill="#071526" stroke="#00f2fe" stroke-width="1"/>
+    <g class="f-b">
+      <path d="M -32 2 L -32 22 A 32 12 0 0 0 32 22 L 32 2 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="0.8"/>
+      <ellipse cx="0" cy="2" rx="32" ry="12" fill="#0284c7" stroke="#7dd3fc" stroke-width="0.8"/>
+      <path d="M -32 -20 L -32 0 A 32 12 0 0 0 32 0 L 32 -20 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8"/>
+      <ellipse cx="0" cy="-20" rx="32" ry="12" fill="#00f2fe" stroke="#cffafe" stroke-width="1"/>
+      <text x="0" y="-17" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" fill="#030712">MONGODB</text>
+    </g>
+    <text x="0" y="54" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#00f2fe">DOCUMENT REPLICA</text>
+  </g>
+
+  <!-- ==================== BOTTOM TELEMETRY FOOTER BAR ==================== -->
+  <rect x="24" y="322" width="912" height="24" rx="6" fill="#050b18" stroke="#1e293b" stroke-width="1"/>
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#94a3b8">
+    <text x="40" y="338">PATTERN: <tspan fill="#00f2fe" font-weight="700">CLEAN ARCHITECTURE &amp; DDD</tspan></text>
+    <text x="330" y="338">CONTAINERS: <tspan fill="#c084fc" font-weight="700">DOCKER MULTI-STAGE</tspan></text>
+    <text x="595" y="338">SECURITY: <tspan fill="#34d399" font-weight="700">ZERO-TRUST JWT + SAST</tspan></text>
+    <text x="920" y="338" text-anchor="end" fill="#fbbf24" font-weight="700">ONLINE</text>
+  </g>
+</svg>
