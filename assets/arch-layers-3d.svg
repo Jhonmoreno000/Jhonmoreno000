@@ -1,213 +1,224 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
   <defs>
+    <!-- 60% Dominant Base: Deep Warm Slate -->
+    <linearGradient id="dnaBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1017"/>
+      <stop offset="50%" stop-color="#111622"/>
+      <stop offset="100%" stop-color="#0b0e14"/>
+    </linearGradient>
+
+    <!-- Diffused Ambient Light Orbs for Glassmorphism -->
+    <radialGradient id="dnaOrb1" cx="20%" cy="25%" r="48%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dnaOrb2" cx="80%" cy="75%" r="48%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 30% Frosted Glass Surface Gradients -->
+    <linearGradient id="glassCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
+    </linearGradient>
+    <linearGradient id="glassInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.012"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.17"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.025"/>
+    </linearGradient>
+
+    <!-- 10% Harmonious Low-Saturation Progress Gradients (Analogous Cool Harmony) -->
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="bar4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#6ee7b7"/>
+    </linearGradient>
+
     <style>
-      .bg { fill: #0b0d14; }
-      .grid { stroke: #161926; stroke-width: 1; }
-      .card { fill: #111420; stroke: #24293e; stroke-width: 1.5; }
-      .card-inner { fill: #0d101a; stroke: #1e2436; stroke-width: 1; }
-      .mono-title { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; font-weight: 700; fill: #a9b1d6; letter-spacing: 1.2px; }
-      .name-h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 800; fill: #c0caf5; letter-spacing: 0.4px; }
-      .role-sub { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; fill: #7aa2f7; letter-spacing: 0.6px; }
-      .card-h { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
-      .card-p { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #9aa5ce; }
-      .mono-sm { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #787c99; }
-      .mono-val { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; }
-      .kpi-num { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; }
-      .kpi-lbl { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 700; fill: #565f89; letter-spacing: 0.8px; }
+      .sans-hdr { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; font-weight: 600; fill: #e2e8f0; letter-spacing: 0.1px; }
+      .name-h1 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 700; fill: #f1f5f9; letter-spacing: -0.3px; }
+      .role-sub { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: #93c5fd; }
+      .card-h { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; font-weight: 600; fill: #f1f5f9; }
+      .card-p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #94a3b8; }
+      .meta-sm { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 500; fill: #64748b; }
+      .val-num { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; }
+      .kpi-num { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: 700; fill: #f1f5f9; }
+      .kpi-lbl { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 500; fill: #94a3b8; }
 
       @keyframes floatBadge {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
+        50% { transform: translateY(-3.5px); }
       }
       @keyframes pulseGlow {
         0%, 100% { opacity: 0.45; }
-        50% { opacity: 1; }
+        50% { opacity: 0.95; }
       }
-      @keyframes flowDash {
-        to { stroke-dashoffset: -24; }
-      }
-      .float-iso { animation: floatBadge 4s ease-in-out infinite; }
-      .pulse-led { animation: pulseGlow 2.4s ease-in-out infinite; }
-      .dash-line { stroke-dasharray: 4 4; animation: flowDash 1.5s linear infinite; }
+      .float-iso { animation: floatBadge 4.2s ease-in-out infinite; }
+      .pulse-led { animation: pulseGlow 2.6s ease-in-out infinite; }
     </style>
-
-    <pattern id="dnaGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" class="grid"/>
-    </pattern>
-
-    <linearGradient id="barJs" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#e0af68"/>
-      <stop offset="100%" stop-color="#73daca"/>
-    </linearGradient>
-    <linearGradient id="barTs" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3d59a1"/>
-      <stop offset="100%" stop-color="#7dcfff"/>
-    </linearGradient>
-    <linearGradient id="barCs" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7847bd"/>
-      <stop offset="100%" stop-color="#bb9af7"/>
-    </linearGradient>
-    <linearGradient id="barPy" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2ac3de"/>
-      <stop offset="100%" stop-color="#9ece6a"/>
-    </linearGradient>
   </defs>
 
-  <!-- Outer Frame -->
-  <rect width="1000" height="450" rx="14" class="bg"/>
-  <rect width="1000" height="450" rx="14" fill="url(#dnaGrid)" opacity="0.65"/>
-  <rect x="1" y="1" width="998" height="448" rx="13" fill="none" stroke="#24293e" stroke-width="1.5"/>
+  <!-- Outer Ambient Base & Frosted Frame -->
+  <rect width="1000" height="450" rx="16" fill="url(#dnaBase)"/>
+  <rect width="1000" height="450" rx="16" fill="url(#dnaOrb1)"/>
+  <rect width="1000" height="450" rx="16" fill="url(#dnaOrb2)"/>
+  <rect x="1" y="1" width="998" height="448" rx="15" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1.2"/>
 
-  <!-- Top Bar Header -->
-  <rect x="1" y="1" width="998" height="38" rx="13" fill="#131624"/>
-  <line x1="1" y1="39" x2="999" y2="39" stroke="#24293e" stroke-width="1"/>
-  <circle cx="24" cy="20" r="4.5" fill="#73daca" class="pulse-led"/>
-  <text x="38" y="24" class="mono-title">JHON ANDERSON MORENO POSSO // DOSSIER DE INGENIERÍA &amp; ADN DE REPOSITORIOS</text>
-  <text x="976" y="24" class="mono-sm" text-anchor="end" fill="#7aa2f7">MEDELLÍN, CO · SENA ADSO · @Jhonmoreno000</text>
+  <!-- Top Frosted Header Bar -->
+  <rect x="2" y="2" width="996" height="38" rx="14" fill="#ffffff" fill-opacity="0.035"/>
+  <line x1="2" y1="40" x2="998" y2="40" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+  <line x1="24" y1="2" x2="420" y2="2" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
+
+  <circle cx="24" cy="21" r="4" fill="#6ee7b7" fill-opacity="0.85" class="pulse-led"/>
+  <text x="38" y="25" class="sans-hdr">Perfil de Ingeniería &amp; Distribución Real de Repositorios</text>
+  <text x="976" y="25" class="meta-sm" text-anchor="end" fill="#94a3b8">Medellín, Colombia · SENA ADSO · @Jhonmoreno000</text>
 
   <!-- ======================================================================= -->
   <!-- LEFT COLUMN: PERSONAL ENGINEERING DOSSIER & TRAJECTORY (x=22..478)      -->
   <!-- ======================================================================= -->
-  <rect x="22" y="54" width="456" height="376" rx="10" class="card"/>
+  <rect x="22" y="54" width="456" height="376" rx="12" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1"/>
+  <line x1="38" y1="55" x2="240" y2="55" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
 
   <!-- Personal Identity Header Card -->
-  <rect x="36" y="68" width="428" height="86" rx="8" class="card-inner"/>
+  <rect x="36" y="68" width="428" height="86" rx="10" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
 
-  <!-- 3D Isometric Personal Monogram Cube on Left (Safely nested transform!) -->
+  <!-- Translucent Glass Isometric Cube on Left (Safely nested transform!) -->
   <g transform="translate(80, 112)">
     <g class="float-iso">
-      <!-- Outer glowing base diamond -->
-      <polygon points="0,-30 32,-14 0,2 -32,-14" fill="#161926" stroke="#7aa2f7" stroke-width="1.2"/>
-      <!-- 3D Cube Top -->
-      <polygon points="0,-28 22,-17 0,-6 -22,-17" fill="#7aa2f7"/>
-      <!-- 3D Cube Left -->
-      <polygon points="-22,-17 0,-6 0,18 -22,7" fill="#3d59a1"/>
-      <!-- 3D Cube Right -->
-      <polygon points="22,-17 0,-6 0,18 22,7" fill="#2ac3de"/>
-      <text x="0" y="-14" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14" text-anchor="middle">JM</text>
-      <text x="-11" y="4" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800" fill="#ffffff" text-anchor="middle">SQL</text>
-      <text x="11" y="4" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800" fill="#0b0d14" text-anchor="middle">API</text>
+      <polygon points="0,-28 28,-13 0,2 -28,-13" fill="#ffffff" fill-opacity="0.04" stroke="#93c5fd" stroke-opacity="0.35" stroke-width="1"/>
+      <polygon points="0,-26 20,-16 0,-6 -20,-16" fill="#93c5fd" fill-opacity="0.75"/>
+      <polygon points="-20,-16 0,-6 0,16 -20,6" fill="#6366f1" fill-opacity="0.65"/>
+      <polygon points="20,-16 0,-6 0,16 20,6" fill="#38bdf8" fill-opacity="0.55"/>
     </g>
   </g>
 
   <!-- Personal Bio & Credentials -->
-  <text x="128" y="90" class="name-h1">Jhon Anderson Moreno Posso</text>
-  <text x="128" y="108" class="role-sub">BACKEND ENGINEER · DEVSECOPS · ARQUITECTURA SQL</text>
+  <text x="124" y="91" class="name-h1">Jhon Anderson Moreno Posso</text>
+  <text x="124" y="110" class="role-sub">Ingeniero de Software Backend · Arquitectura &amp; DevSecOps</text>
 
-  <rect x="128" y="118" width="146" height="20" rx="4" fill="#132226" stroke="#73daca" stroke-width="0.8"/>
-  <text x="201" y="132" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#73daca" text-anchor="middle">SENA · TECNÓLOGO ADSO</text>
+  <rect x="124" y="120" width="150" height="22" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.09"/>
+  <text x="199" y="135" class="meta-sm" fill="#cbd5e1" text-anchor="middle">SENA · Tecnólogo ADSO</text>
 
-  <rect x="282" y="118" width="166" height="20" rx="4" fill="#161926" stroke="#bb9af7" stroke-width="0.8"/>
-  <text x="365" y="132" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#bb9af7" text-anchor="middle">MEDELLÍN, COLOMBIA (UTC-5)</text>
+  <rect x="282" y="120" width="166" height="22" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.09"/>
+  <text x="365" y="135" class="meta-sm" fill="#cbd5e1" text-anchor="middle">Medellín, Colombia (UTC-5)</text>
 
   <!-- Section Title: 3 Personal Pillars -->
-  <text x="36" y="176" class="mono-sm" fill="#7aa2f7" font-weight="700">// PILARES TÉCNICOS &amp; ENFOQUE DE INGENIERÍA PERSONAL</text>
+  <text x="38" y="176" class="meta-sm" fill="#93c5fd">Enfoque Técnico &amp; Trayectoria de Desarrollo</text>
 
-  <!-- Pillar 1: SENA ADSO & Clean Architecture -->
-  <rect x="36" y="186" width="428" height="68" rx="7" class="card-inner"/>
-  <rect x="36" y="186" width="4" height="68" rx="2" fill="#7aa2f7"/>
-  <text x="52" y="205" class="card-h" fill="#7aa2f7">01 · FORMACIÓN ADSO (SENA) &amp; CLEAN ARCHITECTURE</text>
-  <text x="452" y="205" class="mono-sm" text-anchor="end" fill="#73daca">SOLID · DDD · TDD</text>
-  <text x="52" y="224" class="card-p">Diseño de software desacoplado en capas, contratos REST estrictos,</text>
-  <text x="52" y="241" class="card-p">inversión de dependencias y validación continua con suites de pruebas.</text>
+  <!-- Pillar 1 -->
+  <rect x="36" y="186" width="428" height="68" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
+  <rect x="36" y="198" width="3" height="44" rx="1.5" fill="#93c5fd" fill-opacity="0.8"/>
+  <text x="52" y="206" class="card-h">Formación ADSO (SENA) &amp; Arquitectura Limpia</text>
+  <text x="450" y="206" class="meta-sm" text-anchor="end" fill="#93c5fd">SOLID · DDD · TDD</text>
+  <text x="52" y="225" class="card-p">Diseño de software desacoplado por capas, contratos REST bien definidos,</text>
+  <text x="52" y="242" class="card-p">inversión de dependencias y validación continua con pruebas automatizadas.</text>
 
-  <!-- Pillar 2: Simulation-Driven Engineering (NEXUS & Architect-TD) -->
-  <rect x="36" y="264" width="428" height="68" rx="7" class="card-inner"/>
-  <rect x="36" y="264" width="4" height="68" rx="2" fill="#bb9af7"/>
-  <text x="52" y="283" class="card-h" fill="#bb9af7">02 · CREADOR DE SIMULADORES TÉCNICOS INTERACTIVOS</text>
-  <text x="452" y="283" class="mono-sm" text-anchor="end" fill="#e0af68">NEXUS &amp; ARCHITECT-TD</text>
-  <text x="52" y="302" class="card-p">Construcción de motores propios: PostgreSQL 16 en memoria (pg-mem)</text>
-  <text x="52" y="319" class="card-p">para incidentes SQL reales y defensa perimetral 360° con generador IaC.</text>
+  <!-- Pillar 2 -->
+  <rect x="36" y="264" width="428" height="68" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
+  <rect x="36" y="276" width="3" height="44" rx="1.5" fill="#a5b4fc" fill-opacity="0.8"/>
+  <text x="52" y="284" class="card-h">Desarrollo de Simuladores Técnicos Interactivos</text>
+  <text x="450" y="284" class="meta-sm" text-anchor="end" fill="#a5b4fc">NEXUS &amp; Architect-TD</text>
+  <text x="52" y="303" class="card-p">Creación de entornos prácticos: PostgreSQL 16 en memoria (pg-mem)</text>
+  <text x="52" y="320" class="card-p">para diagnóstico de incidentes SQL y simulación perimetral con IaC.</text>
 
-  <!-- Pillar 3: DevSecOps, Multi-Stage Docker & Enterprise POS -->
-  <rect x="36" y="342" width="428" height="72" rx="7" class="card-inner"/>
-  <rect x="36" y="342" width="4" height="72" rx="2" fill="#73daca"/>
-  <text x="52" y="361" class="card-h" fill="#73daca">03 · DEVSECOPS SHIFT-LEFT, DOCKER &amp; SISTEMAS POS (.NET 10)</text>
-  <text x="452" y="361" class="mono-sm" text-anchor="end" fill="#7dcfff">DOCKER · SAST IA</text>
-  <text x="52" y="380" class="card-p">Orquestación multi-contenedor (Node/Mongo/Postgres), auditoría SAST</text>
-  <text x="52" y="397" class="card-p">con LLMs locales (Ollama SHA-256) y analíticas nativas GDI+ a 60 FPS.</text>
+  <!-- Pillar 3 -->
+  <rect x="36" y="342" width="428" height="72" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
+  <rect x="36" y="354" width="3" height="48" rx="1.5" fill="#6ee7b7" fill-opacity="0.8"/>
+  <text x="52" y="362" class="card-h">Contenedores Multi-Stage, Seguridad SAST &amp; Sistemas .NET</text>
+  <text x="450" y="362" class="meta-sm" text-anchor="end" fill="#6ee7b7">Docker · .NET 10</text>
+  <text x="52" y="381" class="card-p">Orquestación con Docker Compose (Node, Mongo, Postgres), auditoría SAST</text>
+  <text x="52" y="398" class="card-p">asistida por modelos locales (Ollama) y sistemas POS nativos a 60 FPS.</text>
 
   <!-- ======================================================================= -->
   <!-- RIGHT COLUMN: REAL GITHUB REPOSITORY CODEBASE DNA (x=496..978)          -->
   <!-- ======================================================================= -->
-  <rect x="496" y="54" width="482" height="376" rx="10" class="card"/>
+  <rect x="496" y="54" width="482" height="376" rx="12" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1"/>
+  <line x1="514" y1="55" x2="740" y2="55" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
 
-  <text x="514" y="78" class="mono-title" fill="#c0caf5">ADN REAL DE CÓDIGO // TELEMETRÍA DE MIS REPOSITORIOS</text>
-  <text x="960" y="78" class="mono-sm" text-anchor="end" fill="#73daca">918.8 KB · 100% VERIFICADO</text>
-  <line x1="514" y1="88" x2="960" y2="88" stroke="#1e2436" stroke-width="1"/>
+  <text x="514" y="78" class="sans-hdr">Volumen de Código por Lenguaje y Proyecto</text>
+  <text x="960" y="78" class="meta-sm" text-anchor="end" fill="#6ee7b7">918.8 KB en GitHub</text>
+  <line x1="514" y1="88" x2="960" y2="88" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
 
   <!-- Language 1: JavaScript ES6+ / Node.js 20 -->
   <g transform="translate(514, 100)">
-    <text x="0" y="14" class="card-h" fill="#e0af68">JavaScript ES6+ &amp; Node.js v20</text>
-    <text x="446" y="14" class="mono-val" fill="#73daca" text-anchor="end">568.9 KB · 55.4%</text>
-    <text x="0" y="30" class="mono-sm">Repos: architect-td (318 KB · 56 Tests · Canvas 2D) + NEXUS + proyecto-todo-api</text>
-    <!-- Progress Track -->
-    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
-    <rect x="0" y="38" width="248" height="10" rx="5" fill="url(#barJs)">
+    <text x="0" y="14" class="card-h">JavaScript ES6+ &amp; Node.js v20</text>
+    <text x="446" y="14" class="val-num" fill="#93c5fd" text-anchor="end">568.9 KB · 55.4%</text>
+    <text x="0" y="31" class="card-p">architect-td (318 KB · 56 Tests · Canvas 2D) · NEXUS · proyecto-todo-api</text>
+    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
+    <rect x="0" y="40" width="248" height="8" rx="4" fill="url(#bar1)" fill-opacity="0.9">
       <animate attributeName="width" values="0;248" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
   <!-- Language 2: TypeScript 5.3 / Fastify / React 18 -->
   <g transform="translate(514, 162)">
-    <text x="0" y="14" class="card-h" fill="#7dcfff">TypeScript 5.3 · Fastify 4.26 · React 18</text>
-    <text x="446" y="14" class="mono-val" fill="#7dcfff" text-anchor="end">278.7 KB · 27.1%</text>
-    <text x="0" y="30" class="mono-sm">Repo: NEXUS (Monorepo SQL IDE · Monaco Editor · PostgreSQL 16 pg-mem Engine)</text>
-    <!-- Progress Track -->
-    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
-    <rect x="0" y="38" width="160" height="10" rx="5" fill="url(#barTs)">
+    <text x="0" y="14" class="card-h">TypeScript 5.3 · Fastify 4.26 · React 18</text>
+    <text x="446" y="14" class="val-num" fill="#7dd3fc" text-anchor="end">278.7 KB · 27.1%</text>
+    <text x="0" y="31" class="card-p">NEXUS (Monorepo SQL IDE · Monaco Editor · Motor PostgreSQL 16 pg-mem)</text>
+    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
+    <rect x="0" y="40" width="160" height="8" rx="4" fill="url(#bar2)" fill-opacity="0.9">
       <animate attributeName="width" values="0;160" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
   <!-- Language 3: C# 12 (.NET 10.0) & Java Spring Boot -->
   <g transform="translate(514, 224)">
-    <text x="0" y="14" class="card-h" fill="#bb9af7">C# 12 (.NET 10.0 WinForms GDI+) &amp; Java Spring Boot</text>
-    <text x="446" y="14" class="mono-val" fill="#bb9af7" text-anchor="end">64.0 KB · 11.2%</text>
-    <text x="0" y="30" class="mono-sm">Repos: GCP-GESTION-DE-PRODUCTOS- (POS 60FPS · FormVentas/Catalogo) + D&amp;D ERP</text>
-    <!-- Progress Track -->
-    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
-    <rect x="0" y="38" width="96" height="10" rx="5" fill="url(#barCs)">
+    <text x="0" y="14" class="card-h">C# 12 (.NET 10.0 WinForms GDI+) &amp; Java Spring Boot</text>
+    <text x="446" y="14" class="val-num" fill="#c4b5fd" text-anchor="end">64.0 KB · 11.2%</text>
+    <text x="0" y="31" class="card-p">GCP-GESTION-DE-PRODUCTOS- (POS 60 FPS · FormVentas/Catalogo) · D&amp;D ERP</text>
+    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
+    <rect x="0" y="40" width="96" height="8" rx="4" fill="url(#bar3)" fill-opacity="0.9">
       <animate attributeName="width" values="0;96" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
   <!-- Language 4: Python 3, Docker Multi-Stage & HTML/Tailwind -->
   <g transform="translate(514, 286)">
-    <text x="0" y="14" class="card-h" fill="#9ece6a">Python 3 · Docker Compose IaC · HTML5/Tailwind</text>
-    <text x="446" y="14" class="mono-val" fill="#9ece6a" text-anchor="end">57.8 KB · 6.3%</text>
-    <text x="0" y="30" class="mono-sm">Repos: I-work-in-python (ejercicio_1..8.py) + Dockerfiles en 4 repos + Ollama SAST</text>
-    <!-- Progress Track -->
-    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
-    <rect x="0" y="38" width="68" height="10" rx="5" fill="url(#barPy)">
+    <text x="0" y="14" class="card-h">Python 3 · Docker Compose IaC · HTML5 &amp; Tailwind</text>
+    <text x="446" y="14" class="val-num" fill="#6ee7b7" text-anchor="end">57.8 KB · 6.3%</text>
+    <text x="0" y="31" class="card-p">I-work-in-python (ejercicio_1..8.py) · Dockerfiles en 4 repos · Ollama SAST</text>
+    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
+    <rect x="0" y="40" width="68" height="8" rx="4" fill="url(#bar4)" fill-opacity="0.9">
       <animate attributeName="width" values="0;68" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
-  <!-- Bottom Live Repository KPI Counters (4 Mini Telemetry Cards) -->
+  <!-- Bottom Frosted Glass KPI Counters -->
   <g transform="translate(514, 352)">
-    <!-- KPI 1 -->
-    <rect x="0" y="0" width="104" height="62" rx="7" class="card-inner"/>
-    <text x="52" y="28" class="kpi-num" fill="#7aa2f7" text-anchor="middle">07</text>
-    <text x="52" y="44" class="kpi-lbl" text-anchor="middle">REPOS PÚBLICOS</text>
-    <text x="52" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#73daca" text-anchor="middle">100% OPEN SOURCE</text>
+    <rect x="0" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="52" y="27" class="kpi-num" fill="#93c5fd" text-anchor="middle">07</text>
+    <text x="52" y="43" class="kpi-lbl" text-anchor="middle">Repositorios</text>
+    <text x="52" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Open Source</text>
 
-    <!-- KPI 2 -->
-    <rect x="114" y="0" width="104" height="62" rx="7" class="card-inner"/>
-    <text x="166" y="28" class="kpi-num" fill="#73daca" text-anchor="middle">918 KB</text>
-    <text x="166" y="44" class="kpi-lbl" text-anchor="middle">CÓDIGO FUENTE</text>
-    <text x="166" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#7aa2f7" text-anchor="middle">TS · JS · C# · PY</text>
+    <rect x="114" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="166" y="27" class="kpi-num" fill="#e2e8f0" text-anchor="middle">918 KB</text>
+    <text x="166" y="43" class="kpi-lbl" text-anchor="middle">Código Fuente</text>
+    <text x="166" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">TS · JS · C# · PY</text>
 
-    <!-- KPI 3 -->
-    <rect x="228" y="0" width="104" height="62" rx="7" class="card-inner"/>
-    <text x="280" y="28" class="kpi-num" fill="#bb9af7" text-anchor="middle">56 PASS</text>
-    <text x="280" y="44" class="kpi-lbl" text-anchor="middle">SUITE DE TESTS</text>
-    <text x="280" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#e0af68" text-anchor="middle">ARCHITECT-TD CI</text>
+    <rect x="228" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="280" y="27" class="kpi-num" fill="#a5b4fc" text-anchor="middle">56 Tests</text>
+    <text x="280" y="43" class="kpi-lbl" text-anchor="middle">Suite Activa</text>
+    <text x="280" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Architect-TD</text>
 
-    <!-- KPI 4 -->
-    <rect x="342" y="0" width="104" height="62" rx="7" class="card-inner"/>
-    <text x="394" y="28" class="kpi-num" fill="#e0af68" text-anchor="middle">04 STACKS</text>
-    <text x="394" y="44" class="kpi-lbl" text-anchor="middle">DOCKER COMPOSE</text>
-    <text x="394" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#9ece6a" text-anchor="middle">MULTI-CONTAINER</text>
+    <rect x="342" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="394" y="27" class="kpi-num" fill="#6ee7b7" text-anchor="middle">04 Stacks</text>
+    <text x="394" y="43" class="kpi-lbl" text-anchor="middle">Dockerizados</text>
+    <text x="394" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Multi-Container</text>
   </g>
 </svg>

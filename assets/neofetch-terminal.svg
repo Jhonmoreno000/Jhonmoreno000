@@ -1,109 +1,186 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="100%" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" width="100%" height="330">
   <defs>
-    <linearGradient id="nfBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#11131d"/>
-      <stop offset="100%" stop-color="#0b0d14"/>
+    <!-- 60% Dominant Base: Deep Warm Slate Canvas -->
+    <linearGradient id="baseCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1017"/>
+      <stop offset="50%" stop-color="#111622"/>
+      <stop offset="100%" stop-color="#0b0e14"/>
     </linearGradient>
 
-    <linearGradient id="asciiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7aa2f7"/>
-      <stop offset="50%" stop-color="#bb9af7"/>
-      <stop offset="100%" stop-color="#73daca"/>
+    <!-- Soft Ambient Light Orbs for Glass Refraction (Low Saturation Color Theory) -->
+    <radialGradient id="ambientIndigo" cx="22%" cy="28%" r="48%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ambientSage" cx="82%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 30% Frosted Glass Surface Gradients -->
+    <linearGradient id="glassWindow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.055"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.012"/>
+    </linearGradient>
+
+    <linearGradient id="glassPanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
+    </linearGradient>
+
+    <linearGradient id="glassHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Specular Glass Rim Border (Top-left light refraction) -->
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <linearGradient id="avatarRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a5b4fc" stop-opacity="0.3"/>
     </linearGradient>
 
     <style>
-      @keyframes blinkBlock {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
+      .sans-title { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: #f1f5f9; letter-spacing: -0.2px; }
+      .sans-sub { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: #94a3b8; }
+      .sans-label { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #cbd5e1; }
+      .sans-val { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; font-weight: 400; fill: #e2e8f0; }
+      .sans-pill { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 500; fill: #cbd5e1; }
+      .term-cmd { font-family: 'SF Mono', 'Segoe UI Mono', Consolas, 'Liberation Mono', monospace; font-size: 11.5px; fill: #cbd5e1; }
+
+      @keyframes softPulse {
+        0%, 100% { opacity: 0.45; }
+        50% { opacity: 0.95; }
       }
-      @keyframes cmdAppear1 {
-        0%, 12% { opacity: 0; }
+      @keyframes cmdFade1 {
+        0%, 10% { opacity: 0; }
         18%, 92% { opacity: 1; }
-        96%, 100% { opacity: 0; }
+        97%, 100% { opacity: 0; }
       }
-      @keyframes cmdAppear2 {
-        0%, 32% { opacity: 0; }
-        40%, 92% { opacity: 1; }
-        96%, 100% { opacity: 0; }
+      @keyframes cmdFade2 {
+        0%, 28% { opacity: 0; }
+        36%, 92% { opacity: 1; }
+        97%, 100% { opacity: 0; }
       }
-      .nf-cursor { animation: blinkBlock 1s infinite; }
-      .nf-cmd-1 { animation: cmdAppear1 9s infinite; }
-      .nf-cmd-2 { animation: cmdAppear2 9s infinite; }
+      .cursor-soft { animation: softPulse 1.2s ease-in-out infinite; }
+      .cmd-line-1 { animation: cmdFade1 10s ease-in-out infinite; }
+      .cmd-line-2 { animation: cmdFade2 10s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Terminal Window Frame -->
-  <rect width="1000" height="340" rx="14" fill="url(#nfBg)"/>
-  <rect x="1" y="1" width="998" height="338" rx="13" fill="none" stroke="#24283b" stroke-width="1.5"/>
+  <!-- Ambient Base & Diffused Light Orbs -->
+  <rect width="1000" height="330" rx="16" fill="url(#baseCanvas)"/>
+  <rect width="1000" height="330" rx="16" fill="url(#ambientIndigo)"/>
+  <rect width="1000" height="330" rx="16" fill="url(#ambientSage)"/>
 
-  <!-- Top Kitty/Alacritty Window Bar -->
-  <rect x="2" y="2" width="996" height="36" rx="12" fill="#161926"/>
-  <line x1="2" y1="38" x2="998" y2="38" stroke="#24283b" stroke-width="1"/>
+  <!-- Frosted Glass Outer Window -->
+  <rect x="1" y="1" width="998" height="328" rx="15" fill="url(#glassWindow)" stroke="url(#glassBorder)" stroke-width="1.2"/>
 
-  <circle cx="24" cy="20" r="5.5" fill="#f7768e"/>
-  <circle cx="42" cy="20" r="5.5" fill="#e0af68"/>
-  <circle cx="60" cy="20" r="5.5" fill="#9ece6a"/>
+  <!-- Top Frosted Glass Titlebar -->
+  <rect x="2" y="2" width="996" height="38" rx="14" fill="url(#glassHeader)"/>
+  <line x1="2" y1="40" x2="998" y2="40" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+  <!-- Top Specular Highlight Shimmer -->
+  <line x1="24" y1="2" x2="420" y2="2" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
 
-  <text x="500" y="24" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#787c99">
-    jhon@medellin-workstation: ~ (zsh - fastfetch)
+  <!-- Desaturated Muted macOS Window Controls -->
+  <circle cx="24" cy="21" r="5" fill="#e28787" fill-opacity="0.75"/>
+  <circle cx="42" cy="21" r="5" fill="#dec184" fill-opacity="0.75"/>
+  <circle cx="60" cy="21" r="5" fill="#85c192" fill-opacity="0.75"/>
+
+  <text x="500" y="25" text-anchor="middle" class="sans-sub" fill="#94a3b8">
+    Consola de Entorno &amp; Especificaciones Técnicas — jhon.moreno
   </text>
 
-  <!-- ==================== LEFT SIDE: 3D ISOMETRIC + ASCII LOGO ==================== -->
-  <g transform="translate(46, 62)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11.5" font-weight="700" fill="url(#asciiGrad)" xml:space="preserve">
-    <text x="0" y="16">        /\        </text>
-    <text x="0" y="32">       /  \       </text>
-    <text x="0" y="48">      / /\ \      </text>
-    <text x="0" y="64">     / /  \ \     </text>
-    <text x="0" y="80">    / /    \ \    </text>
-    <text x="0" y="96">   / /  /\  \ \   </text>
-    <text x="0" y="112">  / /  /  \  \ \  </text>
-    <text x="0" y="128"> / /__/ /\ \__\ \ </text>
-    <text x="0" y="144"> \____\/  \/____/ </text>
+  <!-- ==================== LEFT GLASS CARD: IDENTITY & ENVIRONMENT SUMMARY ==================== -->
+  <g transform="translate(22, 54)">
+    <rect width="256" height="256" rx="12" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="1"/>
+    <line x1="16" y1="1" x2="140" y2="1" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+
+    <!-- Minimalist Frosted Avatar Monogram -->
+    <circle cx="128" cy="54" r="28" fill="#ffffff" fill-opacity="0.03" stroke="url(#avatarRing)" stroke-width="1.5"/>
+    <circle cx="128" cy="54" r="21" fill="#818cf8" fill-opacity="0.12"/>
+    <text x="128" y="60" text-anchor="middle" class="sans-title" font-size="16" fill="#e2e8f0">JM</text>
+
+    <text x="128" y="104" text-anchor="middle" class="sans-title">Jhon Anderson Moreno</text>
+    <text x="128" y="124" text-anchor="middle" class="sans-sub" fill="#93c5fd">Ingeniería Backend &amp; DevSecOps</text>
+
+    <line x1="28" y1="142" x2="228" y2="142" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+    <!-- Subtle Glass Info Pills -->
+    <rect x="24" y="156" width="208" height="28" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="40" cy="170" r="3.5" fill="#6ee7b7" fill-opacity="0.85" class="cursor-soft"/>
+    <text x="52" y="174" class="sans-pill" fill="#cbd5e1">SENA — Tecnólogo ADSO</text>
+
+    <rect x="24" y="192" width="208" height="28" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="40" cy="206" r="3.5" fill="#93c5fd" fill-opacity="0.85"/>
+    <text x="52" y="210" class="sans-pill" fill="#cbd5e1">Medellín, Colombia (UTC-5)</text>
+
+    <text x="128" y="240" text-anchor="middle" class="sans-sub" font-size="11" fill="#64748b">
+      Linux · Docker Engine · Clean Code
+    </text>
   </g>
 
-  <!-- 3D Isometric Mini-Cube Embedded Below ASCII Art -->
-  <g transform="translate(112, 256)">
-    <polygon points="0,-20 26,-7 0,6 -26,-7" fill="#7aa2f7"/>
-    <polygon points="-26,-7 0,6 0,32 -26,19" fill="#3d59a1"/>
-    <polygon points="26,-7 0,6 0,32 26,19" fill="#243763"/>
-    <text x="0" y="48" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#565f89">ARCH // LINUX</text>
-  </g>
+  <!-- ==================== RIGHT GLASS CARD: SYSTEM SPECS & LIVE CONSOLE ==================== -->
+  <g transform="translate(294, 54)">
+    <rect width="684" height="256" rx="12" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="1"/>
+    <line x1="20" y1="1" x2="220" y2="1" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
 
-  <!-- ==================== RIGHT SIDE: FASTFETCH SYSTEM SPECS ==================== -->
-  <g transform="translate(245, 62)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="12">
-    <!-- User@Host Header -->
-    <text x="0" y="14" font-weight="800" fill="#7aa2f7">jhon.moreno<tspan fill="#c0caf5">@</tspan><tspan fill="#bb9af7">medellin-cluster</tspan></text>
-    <text x="0" y="28" fill="#414868">--------------------------------------------</text>
+    <!-- Row 1 -->
+    <g transform="translate(24, 28)">
+      <rect x="0" y="-14" width="136" height="22" rx="6" fill="#818cf8" fill-opacity="0.10"/>
+      <text x="10" y="1" class="sans-label" fill="#a5b4fc">Rol Principal</text>
+      <text x="154" y="1" class="sans-val">Desarrollo Backend, Arquitectura de Datos &amp; Automatización</text>
+    </g>
+    <line x1="24" y1="44" x2="660" y2="44" stroke="#ffffff" stroke-opacity="0.04"/>
 
-    <!-- Column 1 of Specs -->
-    <text x="0" y="48"><tspan fill="#7aa2f7" font-weight="700">OS</tspan><tspan fill="#565f89">           ~ </tspan><tspan fill="#c0caf5">Linux (Arch / Fedora) · Docker Engine</tspan></text>
-    <text x="0" y="68"><tspan fill="#7aa2f7" font-weight="700">Role</tspan><tspan fill="#565f89">         ~ </tspan><tspan fill="#c0caf5">Backend Engineer &amp; DevSecOps Specialist</tspan></text>
-    <text x="0" y="88"><tspan fill="#7aa2f7" font-weight="700">Formation</tspan><tspan fill="#565f89">    ~ </tspan><tspan fill="#c0caf5">Tecnólogo en Desarrollo de Software (SENA ADSO)</tspan></text>
-    <text x="0" y="108"><tspan fill="#bb9af7" font-weight="700">Languages</tspan><tspan fill="#565f89">    ~ </tspan><tspan fill="#c0caf5">Python 3.12, Java 21, C# (.NET), TypeScript, SQL</tspan></text>
-    <text x="0" y="128"><tspan fill="#bb9af7" font-weight="700">Frameworks</tspan><tspan fill="#565f89">   ~ </tspan><tspan fill="#c0caf5">Spring Boot, FastAPI, Node.js/Express, React</tspan></text>
-    <text x="0" y="148"><tspan fill="#73daca" font-weight="700">Databases</tspan><tspan fill="#565f89">    ~ </tspan><tspan fill="#c0caf5">PostgreSQL, MySQL, MongoDB, Redis (ACID &amp; NoSQL)</tspan></text>
-    <text x="0" y="168"><tspan fill="#73daca" font-weight="700">Architecture</tspan><tspan fill="#565f89"> ~ </tspan><tspan fill="#c0caf5">Clean Architecture, Hexagonal, DDD, SOLID, TDD</tspan></text>
-    <text x="0" y="188"><tspan fill="#e0af68" font-weight="700">DevSecOps</tspan><tspan fill="#565f89">    ~ </tspan><tspan fill="#c0caf5">Multi-Stage Docker, SAST/DAST, Ollama AI, Actions</tspan></text>
+    <!-- Row 2 -->
+    <g transform="translate(24, 64)">
+      <rect x="0" y="-14" width="136" height="22" rx="6" fill="#818cf8" fill-opacity="0.10"/>
+      <text x="10" y="1" class="sans-label" fill="#a5b4fc">Lenguajes</text>
+      <text x="154" y="1" class="sans-val">TypeScript 5.3, JavaScript ES6+, Python 3.12, Java 21, C# (.NET 10)</text>
+    </g>
+    <line x1="24" y1="80" x2="660" y2="80" stroke="#ffffff" stroke-opacity="0.04"/>
 
-    <!-- 16-Color ANSI Terminal Palette Swatches -->
-    <g transform="translate(0, 204)">
-      <rect x="0" y="0" width="22" height="12" rx="2" fill="#15161e"/>
-      <rect x="26" y="0" width="22" height="12" rx="2" fill="#f7768e"/>
-      <rect x="52" y="0" width="22" height="12" rx="2" fill="#9ece6a"/>
-      <rect x="78" y="0" width="22" height="12" rx="2" fill="#e0af68"/>
-      <rect x="104" y="0" width="22" height="12" rx="2" fill="#7aa2f7"/>
-      <rect x="130" y="0" width="22" height="12" rx="2" fill="#bb9af7"/>
-      <rect x="156" y="0" width="22" height="12" rx="2" fill="#7dcfff"/>
-      <rect x="182" y="0" width="22" height="12" rx="2" fill="#a9b1d6"/>
+    <!-- Row 3 -->
+    <g transform="translate(24, 100)">
+      <rect x="0" y="-14" width="136" height="22" rx="6" fill="#38bdf8" fill-opacity="0.10"/>
+      <text x="10" y="1" class="sans-label" fill="#93c5fd">Frameworks &amp; UI</text>
+      <text x="154" y="1" class="sans-val">Fastify, Express, FastAPI, Spring Boot, React 18, WinForms GDI+</text>
+    </g>
+    <line x1="24" y1="116" x2="660" y2="116" stroke="#ffffff" stroke-opacity="0.04"/>
+
+    <!-- Row 4 -->
+    <g transform="translate(24, 136)">
+      <rect x="0" y="-14" width="136" height="22" rx="6" fill="#38bdf8" fill-opacity="0.10"/>
+      <text x="10" y="1" class="sans-label" fill="#93c5fd">Persistencia</text>
+      <text x="154" y="1" class="sans-val">PostgreSQL 16 (pg-mem &amp; B-Tree), MySQL, MongoDB v6, Redis</text>
+    </g>
+    <line x1="24" y1="152" x2="660" y2="152" stroke="#ffffff" stroke-opacity="0.04"/>
+
+    <!-- Row 5 -->
+    <g transform="translate(24, 172)">
+      <rect x="0" y="-14" width="136" height="22" rx="6" fill="#2dd4bf" fill-opacity="0.10"/>
+      <text x="10" y="1" class="sans-label" fill="#6ee7b7">Infraestructura</text>
+      <text x="154" y="1" class="sans-val">Docker Compose Multi-Stage, Nginx, GitHub Actions, Auditoría SAST</text>
     </g>
 
-    <!-- Interactive Live Prompt Execution Below Fastfetch -->
-    <g transform="translate(0, 236)">
-      <text x="0" y="12" fill="#9ece6a" font-weight="700">&#10140;</text>
-      <text x="18" y="12" fill="#7dcfff" font-weight="700">~</text>
-      <text x="34" y="12" fill="#c0caf5" class="nf-cmd-1">systemctl status microservices.target nexus-sql.service ai-sec.service</text>
-      <text x="0" y="32" fill="#73daca" font-size="11" class="nf-cmd-2">● Active: active (running) · 0 critical vulnerabilities · EXPLAIN index scan 0.29ms</text>
-      <rect x="595" y="21" width="7" height="13" fill="#7aa2f7" class="nf-cursor"/>
+    <!-- Bottom Frosted Command Bar -->
+    <g transform="translate(20, 196)">
+      <rect width="644" height="46" rx="8" fill="#090c12" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.07"/>
+      <text x="14" y="19" class="term-cmd" fill="#93c5fd">❯</text>
+      <text x="30" y="19" class="term-cmd cmd-line-1" fill="#e2e8f0">docker compose ps --services --filter "status=running"</text>
+      <text x="14" y="36" class="term-cmd cmd-line-2" font-size="11" fill="#94a3b8">
+        <tspan fill="#6ee7b7">●</tspan> nexus-postgres16 · architect-td-engine · todo-api-mongo · pos-dotnet10 (Activos)
+      </text>
+      <rect x="556" y="8" width="6" height="13" rx="1.5" fill="#93c5fd" class="cursor-soft"/>
     </g>
   </g>
 </svg>

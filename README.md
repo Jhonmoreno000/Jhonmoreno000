@@ -9,23 +9,23 @@
 
   <!-- DYNAMIC TYPING SUBTITLE & SOCIAL LINKS -->
   <a href="https://github.com/Jhonmoreno000">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=14&duration=2600&pause=1000&color=7AA2F7&center=true&vCenter=true&width=720&lines=Backend+Engineering+%C2%B7+Microservicios+Distribuidos+%26+APIs+REST;DevSecOps+Shift-Left+%C2%B7+Docker+Multi-Stage+%C2%B7+Auditor%C3%ADa+SAST+con+IA;Arquitectura+de+Datos+SQL+%26+NoSQL+%C2%B7+PostgreSQL+%C2%B7+MySQL+%C2%B7+MongoDB;Clean+Architecture+%C2%B7+Domain-Driven+Design+(DDD)+%C2%B7+TDD" alt="Typing Subtitle"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=15&duration=2800&pause=1200&color=CBD5E1&center=true&vCenter=true&width=720&lines=Ingenier%C3%ADa+Backend+%C2%B7+Microservicios+Distribuidos+%26+APIs+REST;DevSecOps+Shift-Left+%C2%B7+Docker+Multi-Stage+%C2%B7+Auditor%C3%ADa+SAST+con+IA;Arquitectura+de+Datos+SQL+%26+NoSQL+%C2%B7+PostgreSQL+%C2%B7+MySQL+%C2%B7+MongoDB;Clean+Architecture+%C2%B7+Domain-Driven+Design+(DDD)+%C2%B7+TDD" alt="Typing Subtitle"/>
   </a>
 
   <p>
     <a href="https://www.linkedin.com/in/jhon-anderson-moreno-posso-7b0433407/">
-      <img src="https://img.shields.io/badge/LinkedIn-Jhon_Anderson_Moreno-161926?style=for-the-badge&logo=linkedin&logoColor=7aa2f7&labelColor=0b0d14" alt="LinkedIn"/>
+      <img src="https://img.shields.io/badge/LinkedIn-Jhon_Anderson_Moreno-1e293b?style=flat-square&logo=linkedin&logoColor=93c5fd&labelColor=0f172a" alt="LinkedIn"/>
     </a>
     &nbsp;
     <a href="mailto:morenopossojhonanderson313@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-morenopossojhonanderson313-161926?style=for-the-badge&logo=gmail&logoColor=f7768e&labelColor=0b0d14" alt="Email"/>
+      <img src="https://img.shields.io/badge/Contacto-morenopossojhonanderson313-1e293b?style=flat-square&logo=gmail&logoColor=fda4af&labelColor=0f172a" alt="Email"/>
     </a>
     &nbsp;
     <a href="https://github.com/Jhonmoreno000?tab=repositories">
-      <img src="https://img.shields.io/badge/Repositorios-GitHub-161926?style=for-the-badge&logo=github&logoColor=73daca&labelColor=0b0d14" alt="GitHub"/>
+      <img src="https://img.shields.io/badge/Repositorios-GitHub-1e293b?style=flat-square&logo=github&logoColor=6ee7b7&labelColor=0f172a" alt="GitHub"/>
     </a>
     &nbsp;
-    <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&label=VIEWS&color=7aa2f7&style=for-the-badge&labelColor=0b0d14" alt="Views"/>
+    <img src="https://komarev.com/ghpvc/?username=Jhonmoreno000&label=Visitas&color=334155&style=flat-square&labelColor=0f172a" alt="Views"/>
   </p>
 
 </div>
