@@ -1,174 +1,213 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
   <defs>
-    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0d14"/>
-      <stop offset="100%" stop-color="#10131f"/>
-    </linearGradient>
-
-    <!-- Translucent 3D Glass Plane Gradients -->
-    <linearGradient id="planeTop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#161b2e" stop-opacity="0.88"/>
-    </linearGradient>
-
-    <linearGradient id="planeMid" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#18152c" stop-opacity="0.88"/>
-    </linearGradient>
-
-    <linearGradient id="planeBot" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#73daca" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#0f2122" stop-opacity="0.88"/>
-    </linearGradient>
-
-    <path id="vBeam1" d="M 225 88 L 225 275"/>
-    <path id="vBeam2" d="M 165 112 L 165 299"/>
-    <path id="vBeam3" d="M 285 112 L 285 299"/>
-
     <style>
-      @keyframes hoverTop {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
-      }
-      @keyframes hoverMid {
+      .bg { fill: #0b0d14; }
+      .grid { stroke: #161926; stroke-width: 1; }
+      .card { fill: #111420; stroke: #24293e; stroke-width: 1.5; }
+      .card-inner { fill: #0d101a; stroke: #1e2436; stroke-width: 1; }
+      .mono-title { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; font-weight: 700; fill: #a9b1d6; letter-spacing: 1.2px; }
+      .name-h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 800; fill: #c0caf5; letter-spacing: 0.4px; }
+      .role-sub { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; fill: #7aa2f7; letter-spacing: 0.6px; }
+      .card-h { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+      .card-p { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #9aa5ce; }
+      .mono-sm { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #787c99; }
+      .mono-val { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; }
+      .kpi-num { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; }
+      .kpi-lbl { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 700; fill: #565f89; letter-spacing: 0.8px; }
+
+      @keyframes floatBadge {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-4px); }
       }
-      @keyframes hoverBot {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-2px); }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.45; }
+        50% { opacity: 1; }
       }
-      .layer-top { animation: hoverTop 4s ease-in-out infinite; }
-      .layer-mid { animation: hoverMid 4s ease-in-out infinite 0.3s; }
-      .layer-bot { animation: hoverBot 4s ease-in-out infinite 0.6s; }
+      @keyframes flowDash {
+        to { stroke-dashoffset: -24; }
+      }
+      .float-iso { animation: floatBadge 4s ease-in-out infinite; }
+      .pulse-led { animation: pulseGlow 2.4s ease-in-out infinite; }
+      .dash-line { stroke-dasharray: 4 4; animation: flowDash 1.5s linear infinite; }
     </style>
+
+    <pattern id="dnaGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" class="grid"/>
+    </pattern>
+
+    <linearGradient id="barJs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0af68"/>
+      <stop offset="100%" stop-color="#73daca"/>
+    </linearGradient>
+    <linearGradient id="barTs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3d59a1"/>
+      <stop offset="100%" stop-color="#7dcfff"/>
+    </linearGradient>
+    <linearGradient id="barCs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7847bd"/>
+      <stop offset="100%" stop-color="#bb9af7"/>
+    </linearGradient>
+    <linearGradient id="barPy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2ac3de"/>
+      <stop offset="100%" stop-color="#9ece6a"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1000" height="360" rx="16" fill="url(#archBg)"/>
-  <rect x="1" y="1" width="998" height="358" rx="15" fill="none" stroke="#1f2437" stroke-width="1.5"/>
+  <!-- Outer Frame -->
+  <rect width="1000" height="450" rx="14" class="bg"/>
+  <rect width="1000" height="450" rx="14" fill="url(#dnaGrid)" opacity="0.65"/>
+  <rect x="1" y="1" width="998" height="448" rx="13" fill="none" stroke="#24293e" stroke-width="1.5"/>
 
-  <!-- Vertical Laser Pillars Connecting the 3 Exploded 3D Planes -->
-  <g stroke="#293048" stroke-width="1.5" stroke-dasharray="4 4">
-    <use href="#vBeam1"/>
-    <use href="#vBeam2"/>
-    <use href="#vBeam3"/>
+  <!-- Top Bar Header -->
+  <rect x="1" y="1" width="998" height="38" rx="13" fill="#131624"/>
+  <line x1="1" y1="39" x2="999" y2="39" stroke="#24293e" stroke-width="1"/>
+  <circle cx="24" cy="20" r="4.5" fill="#73daca" class="pulse-led"/>
+  <text x="38" y="24" class="mono-title">JHON ANDERSON MORENO POSSO // DOSSIER DE INGENIERÍA &amp; ADN DE REPOSITORIOS</text>
+  <text x="976" y="24" class="mono-sm" text-anchor="end" fill="#7aa2f7">MEDELLÍN, CO · SENA ADSO · @Jhonmoreno000</text>
+
+  <!-- ======================================================================= -->
+  <!-- LEFT COLUMN: PERSONAL ENGINEERING DOSSIER & TRAJECTORY (x=22..478)      -->
+  <!-- ======================================================================= -->
+  <rect x="22" y="54" width="456" height="376" rx="10" class="card"/>
+
+  <!-- Personal Identity Header Card -->
+  <rect x="36" y="68" width="428" height="86" rx="8" class="card-inner"/>
+
+  <!-- 3D Isometric Personal Monogram Cube on Left (Safely nested transform!) -->
+  <g transform="translate(80, 112)">
+    <g class="float-iso">
+      <!-- Outer glowing base diamond -->
+      <polygon points="0,-30 32,-14 0,2 -32,-14" fill="#161926" stroke="#7aa2f7" stroke-width="1.2"/>
+      <!-- 3D Cube Top -->
+      <polygon points="0,-28 22,-17 0,-6 -22,-17" fill="#7aa2f7"/>
+      <!-- 3D Cube Left -->
+      <polygon points="-22,-17 0,-6 0,18 -22,7" fill="#3d59a1"/>
+      <!-- 3D Cube Right -->
+      <polygon points="22,-17 0,-6 0,18 22,7" fill="#2ac3de"/>
+      <text x="0" y="-14" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14" text-anchor="middle">JM</text>
+      <text x="-11" y="4" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800" fill="#ffffff" text-anchor="middle">SQL</text>
+      <text x="11" y="4" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="800" fill="#0b0d14" text-anchor="middle">API</text>
+    </g>
   </g>
 
-  <!-- ==================== 3D EXPLODED ISOMETRIC GLASS PLANES (LEFT) ==================== -->
-  <!-- LAYER 03 (BOTTOM): DATA & INFRASTRUCTURE PLANE -->
-  <g class="layer-bot">
-    <polygon points="225,222 365,278 225,334 85,278" fill="url(#planeBot)" stroke="#73daca" stroke-width="1.5"/>
-    <polygon points="85,278 225,334 225,342 85,286" fill="#0d2624" stroke="#73daca" stroke-width="0.8"/>
-    <polygon points="365,278 225,334 225,342 365,286" fill="#081918" stroke="#2ac3de" stroke-width="0.8"/>
-    <!-- Mini 3D Database Cylinders on Bottom Plane -->
-    <g transform="translate(185, 275)">
-      <path d="M -14 -4 L -14 8 A 14 5.5 0 0 0 14 8 L 14 -4 Z" fill="#1abc9c"/>
-      <ellipse cx="0" cy="-4" rx="14" ry="5.5" fill="#73daca"/>
-    </g>
-    <g transform="translate(265, 275)">
-      <path d="M -14 -4 L -14 8 A 14 5.5 0 0 0 14 8 L 14 -4 Z" fill="#2ac3de"/>
-      <ellipse cx="0" cy="-4" rx="14" ry="5.5" fill="#7dcfff"/>
-    </g>
-    <text x="225" y="305" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#73daca">L3 // DATA &amp; DOCKER</text>
+  <!-- Personal Bio & Credentials -->
+  <text x="128" y="90" class="name-h1">Jhon Anderson Moreno Posso</text>
+  <text x="128" y="108" class="role-sub">BACKEND ENGINEER · DEVSECOPS · ARQUITECTURA SQL</text>
+
+  <rect x="128" y="118" width="146" height="20" rx="4" fill="#132226" stroke="#73daca" stroke-width="0.8"/>
+  <text x="201" y="132" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#73daca" text-anchor="middle">SENA · TECNÓLOGO ADSO</text>
+
+  <rect x="282" y="118" width="166" height="20" rx="4" fill="#161926" stroke="#bb9af7" stroke-width="0.8"/>
+  <text x="365" y="132" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#bb9af7" text-anchor="middle">MEDELLÍN, COLOMBIA (UTC-5)</text>
+
+  <!-- Section Title: 3 Personal Pillars -->
+  <text x="36" y="176" class="mono-sm" fill="#7aa2f7" font-weight="700">// PILARES TÉCNICOS &amp; ENFOQUE DE INGENIERÍA PERSONAL</text>
+
+  <!-- Pillar 1: SENA ADSO & Clean Architecture -->
+  <rect x="36" y="186" width="428" height="68" rx="7" class="card-inner"/>
+  <rect x="36" y="186" width="4" height="68" rx="2" fill="#7aa2f7"/>
+  <text x="52" y="205" class="card-h" fill="#7aa2f7">01 · FORMACIÓN ADSO (SENA) &amp; CLEAN ARCHITECTURE</text>
+  <text x="452" y="205" class="mono-sm" text-anchor="end" fill="#73daca">SOLID · DDD · TDD</text>
+  <text x="52" y="224" class="card-p">Diseño de software desacoplado en capas, contratos REST estrictos,</text>
+  <text x="52" y="241" class="card-p">inversión de dependencias y validación continua con suites de pruebas.</text>
+
+  <!-- Pillar 2: Simulation-Driven Engineering (NEXUS & Architect-TD) -->
+  <rect x="36" y="264" width="428" height="68" rx="7" class="card-inner"/>
+  <rect x="36" y="264" width="4" height="68" rx="2" fill="#bb9af7"/>
+  <text x="52" y="283" class="card-h" fill="#bb9af7">02 · CREADOR DE SIMULADORES TÉCNICOS INTERACTIVOS</text>
+  <text x="452" y="283" class="mono-sm" text-anchor="end" fill="#e0af68">NEXUS &amp; ARCHITECT-TD</text>
+  <text x="52" y="302" class="card-p">Construcción de motores propios: PostgreSQL 16 en memoria (pg-mem)</text>
+  <text x="52" y="319" class="card-p">para incidentes SQL reales y defensa perimetral 360° con generador IaC.</text>
+
+  <!-- Pillar 3: DevSecOps, Multi-Stage Docker & Enterprise POS -->
+  <rect x="36" y="342" width="428" height="72" rx="7" class="card-inner"/>
+  <rect x="36" y="342" width="4" height="72" rx="2" fill="#73daca"/>
+  <text x="52" y="361" class="card-h" fill="#73daca">03 · DEVSECOPS SHIFT-LEFT, DOCKER &amp; SISTEMAS POS (.NET 10)</text>
+  <text x="452" y="361" class="mono-sm" text-anchor="end" fill="#7dcfff">DOCKER · SAST IA</text>
+  <text x="52" y="380" class="card-p">Orquestación multi-contenedor (Node/Mongo/Postgres), auditoría SAST</text>
+  <text x="52" y="397" class="card-p">con LLMs locales (Ollama SHA-256) y analíticas nativas GDI+ a 60 FPS.</text>
+
+  <!-- ======================================================================= -->
+  <!-- RIGHT COLUMN: REAL GITHUB REPOSITORY CODEBASE DNA (x=496..978)          -->
+  <!-- ======================================================================= -->
+  <rect x="496" y="54" width="482" height="376" rx="10" class="card"/>
+
+  <text x="514" y="78" class="mono-title" fill="#c0caf5">ADN REAL DE CÓDIGO // TELEMETRÍA DE MIS REPOSITORIOS</text>
+  <text x="960" y="78" class="mono-sm" text-anchor="end" fill="#73daca">918.8 KB · 100% VERIFICADO</text>
+  <line x1="514" y1="88" x2="960" y2="88" stroke="#1e2436" stroke-width="1"/>
+
+  <!-- Language 1: JavaScript ES6+ / Node.js 20 -->
+  <g transform="translate(514, 100)">
+    <text x="0" y="14" class="card-h" fill="#e0af68">JavaScript ES6+ &amp; Node.js v20</text>
+    <text x="446" y="14" class="mono-val" fill="#73daca" text-anchor="end">568.9 KB · 55.4%</text>
+    <text x="0" y="30" class="mono-sm">Repos: architect-td (318 KB · 56 Tests · Canvas 2D) + NEXUS + proyecto-todo-api</text>
+    <!-- Progress Track -->
+    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
+    <rect x="0" y="38" width="248" height="10" rx="5" fill="url(#barJs)">
+      <animate attributeName="width" values="0;248" dur="1.4s" fill="freeze"/>
+    </rect>
   </g>
 
-  <!-- LAYER 02 (MIDDLE): DOMAIN & MICROSERVICES PLANE -->
-  <g class="layer-mid">
-    <polygon points="225,134 365,190 225,246 85,190" fill="url(#planeMid)" stroke="#bb9af7" stroke-width="1.5"/>
-    <polygon points="85,190 225,246 225,254 85,198" fill="#1f1735" stroke="#bb9af7" stroke-width="0.8"/>
-    <polygon points="365,190 225,246 225,254 365,198" fill="#140f24" stroke="#9d7cd8" stroke-width="0.8"/>
-    <!-- Mini 3D Microservice Cubes on Middle Plane -->
-    <g transform="translate(175, 182)">
-      <polygon points="0,-10 14,-3 0,4 -14,-3" fill="#bb9af7"/>
-      <polygon points="-14,-3 0,4 0,16 -14,9" fill="#9d7cd8"/>
-      <polygon points="14,-3 0,4 0,16 14,9" fill="#5a3e8e"/>
-    </g>
-    <g transform="translate(225, 182)">
-      <polygon points="0,-12 16,-4 0,4 -16,-4" fill="#7aa2f7"/>
-      <polygon points="-16,-4 0,4 0,18 -16,10" fill="#3d59a1"/>
-      <polygon points="16,-4 0,4 0,18 16,10" fill="#243763"/>
-    </g>
-    <g transform="translate(275, 182)">
-      <polygon points="0,-10 14,-3 0,4 -14,-3" fill="#e0af68"/>
-      <polygon points="-14,-3 0,4 0,16 -14,9" fill="#b58338"/>
-      <polygon points="14,-3 0,4 0,16 14,9" fill="#78521b"/>
-    </g>
-    <text x="225" y="218" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#bb9af7">L2 // CLEAN DOMAIN &amp; AI SAST</text>
+  <!-- Language 2: TypeScript 5.3 / Fastify / React 18 -->
+  <g transform="translate(514, 162)">
+    <text x="0" y="14" class="card-h" fill="#7dcfff">TypeScript 5.3 · Fastify 4.26 · React 18</text>
+    <text x="446" y="14" class="mono-val" fill="#7dcfff" text-anchor="end">278.7 KB · 27.1%</text>
+    <text x="0" y="30" class="mono-sm">Repo: NEXUS (Monorepo SQL IDE · Monaco Editor · PostgreSQL 16 pg-mem Engine)</text>
+    <!-- Progress Track -->
+    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
+    <rect x="0" y="38" width="160" height="10" rx="5" fill="url(#barTs)">
+      <animate attributeName="width" values="0;160" dur="1.4s" fill="freeze"/>
+    </rect>
   </g>
 
-  <!-- LAYER 01 (TOP): API GATEWAY & CONTRACTS PLANE -->
-  <g class="layer-top">
-    <polygon points="225,46 365,102 225,158 85,102" fill="url(#planeTop)" stroke="#7aa2f7" stroke-width="1.5"/>
-    <polygon points="85,102 225,158 225,166 85,110" fill="#172038" stroke="#7aa2f7" stroke-width="0.8"/>
-    <polygon points="365,102 225,158 225,166 365,110" fill="#0f1526" stroke="#3d59a1" stroke-width="0.8"/>
-    <!-- Gateway Apex Prism -->
-    <g transform="translate(225, 92)">
-      <polygon points="0,-14 20,-4 0,6 -20,-4" fill="#7dcfff" stroke="#ffffff" stroke-width="0.8"/>
-      <polygon points="-20,-4 0,6 0,20 -20,10" fill="#7aa2f7"/>
-      <polygon points="20,-4 0,6 0,20 20,10" fill="#3d59a1"/>
-    </g>
-    <text x="225" y="130" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#7dcfff">L1 // API GATEWAY &amp; JWT</text>
+  <!-- Language 3: C# 12 (.NET 10.0) & Java Spring Boot -->
+  <g transform="translate(514, 224)">
+    <text x="0" y="14" class="card-h" fill="#bb9af7">C# 12 (.NET 10.0 WinForms GDI+) &amp; Java Spring Boot</text>
+    <text x="446" y="14" class="mono-val" fill="#bb9af7" text-anchor="end">64.0 KB · 11.2%</text>
+    <text x="0" y="30" class="mono-sm">Repos: GCP-GESTION-DE-PRODUCTOS- (POS 60FPS · FormVentas/Catalogo) + D&amp;D ERP</text>
+    <!-- Progress Track -->
+    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
+    <rect x="0" y="38" width="96" height="10" rx="5" fill="url(#barCs)">
+      <animate attributeName="width" values="0;96" dur="1.4s" fill="freeze"/>
+    </rect>
   </g>
 
-  <!-- Animated Data Pulses Traveling Vertically Through the 3D Stack -->
-  <circle r="3.5" fill="#7dcfff">
-    <animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#vBeam1"/></animateMotion>
-  </circle>
-  <circle r="3" fill="#bb9af7">
-    <animateMotion dur="2.8s" begin="0.7s" repeatCount="indefinite"><mpath href="#vBeam2"/></animateMotion>
-  </circle>
-  <circle r="3" fill="#73daca">
-    <animateMotion dur="2.6s" begin="1.4s" repeatCount="indefinite"><mpath href="#vBeam3"/></animateMotion>
-  </circle>
-
-  <!-- ==================== ARCHITECTURAL CALLOUT CARDS (RIGHT) ==================== -->
-  <!-- Callout Connectors -->
-  <line x1="365" y1="102" x2="435" y2="82" stroke="#7aa2f7" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <line x1="365" y1="190" x2="435" y2="182" stroke="#bb9af7" stroke-width="1.2" stroke-dasharray="4 3"/>
-  <line x1="365" y1="278" x2="435" y2="282" stroke="#73daca" stroke-width="1.2" stroke-dasharray="4 3"/>
-
-  <!-- Card 1: Edge, Contracts & API Design -->
-  <g transform="translate(435, 36)">
-    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
-    <line x1="0" y1="16" x2="0" y2="72" stroke="#7aa2f7" stroke-width="3.5" stroke-linecap="round"/>
-    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#7aa2f7">
-      LAYER 01 · INGRESS, RESTFUL CONTRACTS &amp; SECURITY GATES
-    </text>
-    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
-      Diseño de APIs con contratos estrictos (OpenAPI/Swagger), DTOs tipados, validación
-    </text>
-    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
-      de esquemas, autenticación stateless con JWT/OAuth2 y reverse proxy con Nginx.
-    </text>
+  <!-- Language 4: Python 3, Docker Multi-Stage & HTML/Tailwind -->
+  <g transform="translate(514, 286)">
+    <text x="0" y="14" class="card-h" fill="#9ece6a">Python 3 · Docker Compose IaC · HTML5/Tailwind</text>
+    <text x="446" y="14" class="mono-val" fill="#9ece6a" text-anchor="end">57.8 KB · 6.3%</text>
+    <text x="0" y="30" class="mono-sm">Repos: I-work-in-python (ejercicio_1..8.py) + Dockerfiles en 4 repos + Ollama SAST</text>
+    <!-- Progress Track -->
+    <rect x="0" y="38" width="446" height="10" rx="5" fill="#0b0d14" stroke="#1e2436" stroke-width="1"/>
+    <rect x="0" y="38" width="68" height="10" rx="5" fill="url(#barPy)">
+      <animate attributeName="width" values="0;68" dur="1.4s" fill="freeze"/>
+    </rect>
   </g>
 
-  <!-- Card 2: Core Domain, Microservices & Shift-Left DevSecOps -->
-  <g transform="translate(435, 136)">
-    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
-    <line x1="0" y1="16" x2="0" y2="72" stroke="#bb9af7" stroke-width="3.5" stroke-linecap="round"/>
-    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#bb9af7">
-      LAYER 02 · CLEAN ARCHITECTURE, DDD &amp; AI DEVSECOPS
-    </text>
-    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
-      Lógica de dominio desacoplada en Python (FastAPI), Java (Spring Boot) y C# (.NET Core).
-    </text>
-    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
-      Principios SOLID, TDD continuo y auditoría SAST/DAST automatizada con Ollama LLM.
-    </text>
-  </g>
+  <!-- Bottom Live Repository KPI Counters (4 Mini Telemetry Cards) -->
+  <g transform="translate(514, 352)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="104" height="62" rx="7" class="card-inner"/>
+    <text x="52" y="28" class="kpi-num" fill="#7aa2f7" text-anchor="middle">07</text>
+    <text x="52" y="44" class="kpi-lbl" text-anchor="middle">REPOS PÚBLICOS</text>
+    <text x="52" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#73daca" text-anchor="middle">100% OPEN SOURCE</text>
 
-  <!-- Card 3: Persistence, Query Optimization & Container Infra -->
-  <g transform="translate(435, 236)">
-    <rect width="530" height="88" rx="10" fill="#131726" stroke="#293048" stroke-width="1.2"/>
-    <line x1="0" y1="16" x2="0" y2="72" stroke="#73daca" stroke-width="3.5" stroke-linecap="round"/>
-    <text x="20" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#73daca">
-      LAYER 03 · RELATIONAL/NOSQL ENGINES &amp; MULTI-STAGE DOCKER
-    </text>
-    <text x="20" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#c0caf5">
-      Modelado ACID e indexación B-Tree (PostgreSQL, MySQL), agregaciones NoSQL (MongoDB),
-    </text>
-    <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12.5" fill="#9aa5ce">
-      caché en memoria (Redis) y contenedores Docker multi-stage endurecidos (non-root).
-    </text>
+    <!-- KPI 2 -->
+    <rect x="114" y="0" width="104" height="62" rx="7" class="card-inner"/>
+    <text x="166" y="28" class="kpi-num" fill="#73daca" text-anchor="middle">918 KB</text>
+    <text x="166" y="44" class="kpi-lbl" text-anchor="middle">CÓDIGO FUENTE</text>
+    <text x="166" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#7aa2f7" text-anchor="middle">TS · JS · C# · PY</text>
+
+    <!-- KPI 3 -->
+    <rect x="228" y="0" width="104" height="62" rx="7" class="card-inner"/>
+    <text x="280" y="28" class="kpi-num" fill="#bb9af7" text-anchor="middle">56 PASS</text>
+    <text x="280" y="44" class="kpi-lbl" text-anchor="middle">SUITE DE TESTS</text>
+    <text x="280" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#e0af68" text-anchor="middle">ARCHITECT-TD CI</text>
+
+    <!-- KPI 4 -->
+    <rect x="342" y="0" width="104" height="62" rx="7" class="card-inner"/>
+    <text x="394" y="28" class="kpi-num" fill="#e0af68" text-anchor="middle">04 STACKS</text>
+    <text x="394" y="44" class="kpi-lbl" text-anchor="middle">DOCKER COMPOSE</text>
+    <text x="394" y="55" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#9ece6a" text-anchor="middle">MULTI-CONTAINER</text>
   </g>
 </svg>

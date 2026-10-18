@@ -1,259 +1,307 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="100%" height="100%">
   <defs>
-    <linearGradient id="msBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0d14"/>
-      <stop offset="50%" stop-color="#111522"/>
-      <stop offset="100%" stop-color="#090b10"/>
-    </linearGradient>
+    <style>
+      .bg { fill: #0b0d14; }
+      .grid { stroke: #151926; stroke-width: 1; }
+      .quad { fill: #10131f; stroke: #24293e; stroke-width: 1.5; }
+      .subbox { fill: #0b0e17; stroke: #1d2233; stroke-width: 1; }
+      .hdr-title { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; font-weight: 700; fill: #c0caf5; letter-spacing: 1.1px; }
+      .q-title { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; }
+      .code-ln { font-family: 'JetBrains Mono', monospace; font-size: 9px; }
+      .lbl-b { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; }
+      .lbl-s { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; fill: #787c99; }
+      .desc-t { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #9aa5ce; }
 
-    <radialGradient id="msCenterGlow" cx="50%" cy="50%" r="45%">
-      <stop offset="0%" stop-color="#7aa2f7" stop-opacity="0.14"/>
-      <stop offset="60%" stop-color="#bb9af7" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
+      @keyframes flowPacket {
+        to { stroke-dashoffset: -20; }
+      }
+      @keyframes pulseNode {
+        0%, 100% { opacity: 0.45; }
+        50% { opacity: 1; }
+      }
+      .pkt-line { stroke-dasharray: 4 4; animation: flowPacket 1.2s linear infinite; }
+      .pulse-dot { animation: pulseNode 2s ease-in-out infinite; }
+    </style>
 
-    <pattern id="msGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1f2437" stroke-width="0.6" stroke-opacity="0.5"/>
-      <circle cx="28" cy="28" r="0.9" fill="#7aa2f7" fill-opacity="0.25"/>
+    <pattern id="labGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" class="grid"/>
     </pattern>
 
-    <filter id="msGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Motion Paths for Live Traffic (Well-Spaced Coordinates) -->
-    <path id="pathGwToFast" d="M 130 200 L 240 200 L 280 104 L 370 104"/>
-    <path id="pathGwToSpring" d="M 130 200 L 370 200"/>
-    <path id="pathGwToNet" d="M 130 200 L 240 200 L 280 296 L 370 296"/>
-
-    <path id="pathFastToRedis" d="M 370 104 L 500 104 L 545 148 L 630 148"/>
-    <path id="pathSpringToRedis" d="M 370 200 L 500 200 L 545 148 L 630 148"/>
-    <path id="pathSpringToQueue" d="M 370 200 L 500 200 L 545 256 L 630 256"/>
-    <path id="pathNetToQueue" d="M 370 296 L 500 296 L 545 256 L 630 256"/>
-
-    <path id="pathRedisToPg" d="M 630 148 L 835 148"/>
-    <path id="pathQueueToMongo" d="M 630 256 L 835 256"/>
-
-    <style>
-      @keyframes floatNodeA {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-      @keyframes floatNodeB {
-        0%, 100% { transform: translateY(-3px); }
-        50% { transform: translateY(3px); }
-      }
-      @keyframes dashStream {
-        to { stroke-dashoffset: -32; }
-      }
-      .f-a { animation: floatNodeA 3.6s ease-in-out infinite; }
-      .f-b { animation: floatNodeB 4.0s ease-in-out infinite; }
-      .stream-line { stroke-dasharray: 8 8; animation: dashStream 1.4s linear infinite; }
-    </style>
+    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#3730a3"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+    <linearGradient id="radarSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#73daca" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#73daca" stop-opacity="0.0"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background & Grid -->
-  <rect width="960" height="400" rx="14" fill="url(#msBg)"/>
-  <rect width="960" height="400" rx="14" fill="url(#msGrid)"/>
-  <rect width="960" height="400" rx="14" fill="url(#msCenterGlow)"/>
-  <rect x="1" y="1" width="958" height="398" rx="13" fill="none" stroke="#1f2437" stroke-width="1.5"/>
+  <!-- Outer Canvas -->
+  <rect width="1000" height="540" rx="14" class="bg"/>
+  <rect width="1000" height="540" rx="14" fill="url(#labGrid)" opacity="0.7"/>
+  <rect x="1" y="1" width="998" height="538" rx="13" fill="none" stroke="#24293e" stroke-width="1.5"/>
 
-  <!-- Top Header Bar -->
-  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" letter-spacing="1">
-    <circle cx="32" cy="24" r="4" fill="#73daca">
-      <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/>
-    </circle>
-    <text x="44" y="28" fill="#e2e8f0" font-weight="700">3D HOLOGRAPHIC MICROSERVICES TOPOLOGY // LIVE DATA MESH</text>
-    <text x="932" y="28" text-anchor="end" fill="#73daca" font-weight="700">LATENCY: &lt;8.5ms P99</text>
-  </g>
-  <line x1="24" y1="42" x2="936" y2="42" stroke="#1f2437" stroke-width="1"/>
+  <!-- Top Header Chrome -->
+  <rect x="1" y="1" width="998" height="38" rx="13" fill="#131624"/>
+  <line x1="1" y1="39" x2="999" y2="39" stroke="#24293e" stroke-width="1"/>
+  <circle cx="24" cy="20" r="4.5" fill="#7aa2f7" class="pulse-dot"/>
+  <text x="38" y="24" class="hdr-title">LABORATORIO DE INGENIERÍA // ARQUITECTURA INTERNA DE MIS 4 REPOSITORIOS INSIGNIA</text>
+  <text x="976" y="24" class="lbl-s" text-anchor="end" fill="#73daca">DOCKER · PG16 · CANVAS 360° · .NET 10 · MONGO 6</text>
 
-  <!-- Tier Column Headers -->
-  <g font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" letter-spacing="1">
-    <text x="130" y="62" text-anchor="middle" fill="#7dcfff">01 // INGRESS GATEWAY</text>
-    <text x="370" y="62" text-anchor="middle" fill="#bb9af7">02 // DOMAIN SERVICES</text>
-    <text x="630" y="62" text-anchor="middle" fill="#e0af68">03 // CACHE &amp; BROKER</text>
-    <text x="835" y="62" text-anchor="middle" fill="#73daca">04 // ACID &amp; NOSQL DB</text>
-  </g>
+  <!-- ======================================================================= -->
+  <!-- QUADRANT 01 (TOP-LEFT): NEXUS — DATABASE ENGINEERING SIMULATOR          -->
+  <!-- ======================================================================= -->
+  <rect x="20" y="52" width="468" height="224" rx="10" class="quad"/>
+  <rect x="20" y="52" width="468" height="28" rx="10" fill="#15192b"/>
+  <circle cx="36" cy="66" r="4" fill="#7dcfff"/>
+  <text x="48" y="70" class="q-title" fill="#7dcfff">01 // NEXUS · DATABASE ENGINEERING SIMULATOR</text>
+  <text x="474" y="70" class="lbl-s" text-anchor="end" fill="#73daca">TS 5.3 · Fastify · PG16 pg-mem</text>
 
-  <!-- ==================== CIRCUIT CONDUITS (BACKGROUND LAYER) ==================== -->
-  <g fill="none" stroke="#0d101b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-    <use href="#pathGwToFast"/>
-    <use href="#pathGwToSpring"/>
-    <use href="#pathGwToNet"/>
-    <use href="#pathFastToRedis"/>
-    <use href="#pathSpringToRedis"/>
-    <use href="#pathSpringToQueue"/>
-    <use href="#pathNetToQueue"/>
-    <use href="#pathRedisToPg"/>
-    <use href="#pathQueueToMongo"/>
-  </g>
+  <!-- Left Subbox: Monaco SQL Incident IDE -->
+  <rect x="32" y="90" width="234" height="142" rx="6" class="subbox"/>
+  <rect x="32" y="90" width="234" height="20" rx="6" fill="#131826"/>
+  <text x="42" y="103" class="lbl-b" fill="#7aa2f7">incident_deadlock.sql</text>
+  <text x="256" y="103" class="lbl-s" text-anchor="end" fill="#565f89">Monaco IDE</text>
 
-  <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="stream-line">
-    <use href="#pathGwToFast" stroke="#7dcfff" stroke-opacity="0.7"/>
-    <use href="#pathGwToSpring" stroke="#bb9af7" stroke-opacity="0.7"/>
-    <use href="#pathGwToNet" stroke="#e0af68" stroke-opacity="0.7"/>
-    <use href="#pathFastToRedis" stroke="#7dcfff" stroke-opacity="0.6"/>
-    <use href="#pathSpringToRedis" stroke="#bb9af7" stroke-opacity="0.6"/>
-    <use href="#pathSpringToQueue" stroke="#bb9af7" stroke-opacity="0.6"/>
-    <use href="#pathNetToQueue" stroke="#e0af68" stroke-opacity="0.6"/>
-    <use href="#pathRedisToPg" stroke="#73daca" stroke-opacity="0.75"/>
-    <use href="#pathQueueToMongo" stroke="#73daca" stroke-opacity="0.75"/>
-  </g>
+  <text x="42" y="122" class="code-ln" fill="#565f89">1 <tspan fill="#bb9af7">BEGIN ISOLATION LEVEL</tspan> <tspan fill="#e0af68">SERIALIZABLE</tspan>;</text>
+  <text x="42" y="137" class="code-ln" fill="#565f89">2 <tspan fill="#7dcfff">EXPLAIN ANALYZE</tspan></text>
+  <text x="42" y="152" class="code-ln" fill="#565f89">3 <tspan fill="#bb9af7">SELECT</tspan> tx_id, account_id, balance</text>
+  <text x="42" y="167" class="code-ln" fill="#565f89">4 <tspan fill="#bb9af7">FROM</tspan> core_ledger_transactions</text>
+  <text x="42" y="182" class="code-ln" fill="#565f89">5 <tspan fill="#bb9af7">WHERE</tspan> lock_state = <tspan fill="#9ece6a">'DEADLOCK'</tspan></text>
+  <text x="42" y="197" class="code-ln" fill="#565f89">6 <tspan fill="#bb9af7">FOR UPDATE NOWAIT</tspan>;</text>
 
-  <!-- ==================== ANIMATED LIVE TRAFFIC PACKETS ==================== -->
-  <circle r="4" fill="#7dcfff" filter="url(#msGlow)">
-    <animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#pathGwToFast"/></animateMotion>
-  </circle>
-  <circle r="4" fill="#bb9af7" filter="url(#msGlow)">
-    <animateMotion dur="2.0s" repeatCount="indefinite"><mpath href="#pathGwToSpring"/></animateMotion>
-  </circle>
-  <circle r="4" fill="#e0af68" filter="url(#msGlow)">
-    <animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#pathGwToNet"/></animateMotion>
-  </circle>
-  <circle r="3.5" fill="#7dcfff" filter="url(#msGlow)">
-    <animateMotion dur="2.2s" begin="0.8s" repeatCount="indefinite"><mpath href="#pathFastToRedis"/></animateMotion>
-  </circle>
-  <circle r="3.5" fill="#bb9af7" filter="url(#msGlow)">
-    <animateMotion dur="2.3s" begin="0.5s" repeatCount="indefinite"><mpath href="#pathSpringToQueue"/></animateMotion>
-  </circle>
-  <circle r="3.5" fill="#e0af68" filter="url(#msGlow)">
-    <animateMotion dur="2.5s" begin="1.1s" repeatCount="indefinite"><mpath href="#pathNetToQueue"/></animateMotion>
-  </circle>
-  <circle r="4" fill="#73daca" filter="url(#msGlow)">
-    <animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#pathRedisToPg"/></animateMotion>
-  </circle>
-  <circle r="4" fill="#73daca" filter="url(#msGlow)">
-    <animateMotion dur="1.9s" begin="0.9s" repeatCount="indefinite"><mpath href="#pathQueueToMongo"/></animateMotion>
-  </circle>
+  <rect x="42" y="207" width="214" height="18" rx="4" fill="#102126" stroke="#73daca" stroke-width="0.8"/>
+  <text x="149" y="219" class="lbl-b" fill="#73daca" text-anchor="middle">pg-mem PG16 · Index Scan: 0.38ms</text>
 
-  <!-- ==================== TIER 1: NGINX API GATEWAY & JWT WAF ==================== -->
-  <g transform="translate(130, 195)">
-    <polygon points="0,24 68,52 0,80 -68,52" fill="#0d1526" stroke="#7dcfff" stroke-width="1.2"/>
-    <polygon points="-68,52 0,80 0,88 -68,60" fill="#080d18" stroke="#2ac3de" stroke-width="0.8"/>
-    <polygon points="68,52 0,80 0,88 68,60" fill="#050910" stroke="#0284c7" stroke-width="0.8"/>
+  <!-- Right Subbox: Execution Plan & B-Tree Engine -->
+  <rect x="276" y="90" width="200" height="142" rx="6" class="subbox"/>
+  <text x="288" y="106" class="lbl-b" fill="#c0caf5">PIPELINE &amp; B-TREE ENGINE</text>
 
-    <ellipse cx="0" cy="6" rx="54" ry="22" fill="none" stroke="#7dcfff" stroke-width="1" stroke-dasharray="5 5" stroke-opacity="0.6"/>
+  <!-- Node 1: React 18 + Monaco -->
+  <rect x="288" y="114" width="176" height="26" rx="4" fill="#141929" stroke="#7aa2f7" stroke-width="1"/>
+  <text x="298" y="130" class="lbl-b" fill="#7aa2f7">React 18 + Vite 5.4</text>
+  <text x="454" y="130" class="lbl-s" text-anchor="end" fill="#9aa5ce">Client IDE</text>
 
-    <g class="f-a">
-      <polygon points="0,-46 40,-26 0,-6 -40,-26" fill="#7dcfff" stroke="#e0f2fe" stroke-width="1.1"/>
-      <polygon points="-40,-26 0,-6 0,44 -40,24" fill="#2ac3de" stroke="#7dcfff" stroke-width="0.9"/>
-      <polygon points="40,-26 0,-6 0,44 40,24" fill="#0284c7" stroke="#2ac3de" stroke-width="0.9"/>
-      <text x="0" y="-22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#0b0d14">GATEWAY</text>
-      <text x="-20" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#ffffff">JWT</text>
-      <text x="20" y="12" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#e0f2fe">TLS</text>
-    </g>
+  <!-- Animated Connector 1 -->
+  <line x1="376" y1="140" x2="376" y2="152" stroke="#7dcfff" stroke-width="1.5" class="pkt-line"/>
 
-    <text x="0" y="106" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#7dcfff">NGINX // API GATEWAY</text>
-    <text x="0" y="120" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9aa5ce">Rate-Limit · OAuth2 · 1.2ms</text>
+  <!-- Node 2: Fastify 4.26 API -->
+  <rect x="288" y="152" width="176" height="26" rx="4" fill="#141929" stroke="#bb9af7" stroke-width="1"/>
+  <text x="298" y="168" class="lbl-b" fill="#bb9af7">Fastify 4.26 REST</text>
+  <text x="454" y="168" class="lbl-s" text-anchor="end" fill="#9aa5ce">Sandbox API</text>
+
+  <!-- Animated Connector 2 -->
+  <line x1="376" y1="178" x2="376" y2="190" stroke="#73daca" stroke-width="1.5" class="pkt-line"/>
+
+  <!-- Node 3: PostgreSQL 16 pg-mem -->
+  <rect x="288" y="190" width="176" height="32" rx="4" fill="#112224" stroke="#73daca" stroke-width="1"/>
+  <text x="298" y="204" class="lbl-b" fill="#73daca">PostgreSQL 16 (pg-mem)</text>
+  <text x="298" y="216" class="lbl-s" fill="#9ece6a">FKs · Deadlocks · EXPLAIN Tree</text>
+
+  <!-- Bottom Motto Bar Q1 -->
+  <text x="32" y="252" class="desc-t">Simulador de incidentes reales de producción: bloqueos por concurrencia, anomalías</text>
+  <text x="32" y="266" class="desc-t">referenciales y reconciliación contable. <tspan fill="#7dcfff" font-weight="700">"Don't study SQL. Use it."</tspan></text>
+
+  <!-- ======================================================================= -->
+  <!-- QUADRANT 02 (TOP-RIGHT): ARCHITECT-TD — 360° DEVOPS & CYBER DEFENSE      -->
+  <!-- ======================================================================= -->
+  <rect x="512" y="52" width="468" height="224" rx="10" class="quad"/>
+  <rect x="512" y="52" width="468" height="28" rx="10" fill="#15192b"/>
+  <circle cx="528" cy="66" r="4" fill="#e0af68"/>
+  <text x="540" y="70" class="q-title" fill="#e0af68">02 // ARCHITECT-TD · DEVOPS, DSA &amp; CYBER DEFENSE</text>
+  <text x="966" y="70" class="lbl-s" text-anchor="end" fill="#9ece6a">56/56 TESTS PASS · DOCKER</text>
+
+  <!-- Left Subbox: 360° DMZ Perimeter Radar Simulation -->
+  <rect x="524" y="90" width="166" height="142" rx="6" class="subbox"/>
+  <text x="607" y="104" class="lbl-b" fill="#73daca" text-anchor="middle">RADAR DMZ 360° LIVE</text>
+
+  <!-- Concentric Radar Circles at (607, 166) -->
+  <circle cx="607" cy="166" r="52" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="607" cy="166" r="36" fill="none" stroke="#243247" stroke-width="1"/>
+  <circle cx="607" cy="166" r="18" fill="#13262c" stroke="#73daca" stroke-width="1.2"/>
+
+  <!-- Rotating Radar Sweep Wedge -->
+  <g transform="translate(607, 166)">
+    <path d="M 0,0 L 52,0 A 52,52 0 0,1 36,36 Z" fill="url(#radarSweep)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+    </path>
   </g>
 
-  <!-- ==================== TIER 2: MICROSERVICES MESH (WELL-SPACED AT Y=104, 200, 296) ==================== -->
-  <!-- Service 1: FastAPI (Python) -->
-  <g transform="translate(370, 104)">
-    <polygon points="0,10 44,28 0,46 -44,28" fill="#0d1828" stroke="#7dcfff" stroke-width="1"/>
-    <g class="f-a">
-      <polygon points="0,-24 28,-10 0,4 -28,-10" fill="#7dcfff" stroke="#e0f2fe" stroke-width="1"/>
-      <polygon points="-28,-10 0,4 0,28 -28,14" fill="#2ac3de" stroke="#7dcfff" stroke-width="0.8"/>
-      <polygon points="28,-10 0,4 0,28 28,14" fill="#0284c7" stroke="#2ac3de" stroke-width="0.8"/>
-      <text x="0" y="-7" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">FASTAPI</text>
-    </g>
-    <rect x="-58" y="34" width="116" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#2ac3de" stroke-width="0.8"/>
-    <text x="0" y="45" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#7dcfff">PYTHON ASYNC · AI</text>
-  </g>
+  <!-- Central Infra Core -->
+  <circle cx="607" cy="166" r="5" fill="#73daca"/>
+  <text x="607" y="180" font-family="'JetBrains Mono', monospace" font-size="6.5" font-weight="700" fill="#c0caf5" text-anchor="middle">CORE</text>
 
-  <!-- Service 2: Spring Boot (Java) -->
-  <g transform="translate(370, 200)">
-    <polygon points="0,10 44,28 0,46 -44,28" fill="#161129" stroke="#bb9af7" stroke-width="1"/>
-    <g class="f-b">
-      <polygon points="0,-24 28,-10 0,4 -28,-10" fill="#bb9af7" stroke="#f3e8ff" stroke-width="1"/>
-      <polygon points="-28,-10 0,4 0,28 -28,14" fill="#9d7cd8" stroke="#bb9af7" stroke-width="0.8"/>
-      <polygon points="28,-10 0,4 0,28 28,14" fill="#5a3e8e" stroke="#9d7cd8" stroke-width="0.8"/>
-      <text x="0" y="-7" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">SPRING</text>
-    </g>
-    <rect x="-58" y="34" width="116" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#9d7cd8" stroke-width="0.8"/>
-    <text x="0" y="45" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#bb9af7">JAVA 21 · CORE ERP</text>
-  </g>
+  <!-- Defense Towers on Ring (WAF, API GW, REDIS, ENVOY) -->
+  <circle cx="607" cy="130" r="4" fill="#7aa2f7"/>
+  <text x="607" y="123" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#7aa2f7" text-anchor="middle">WAF L7</text>
 
-  <!-- Service 3: .NET Core (C#) -->
-  <g transform="translate(370, 296)">
-    <polygon points="0,10 44,28 0,46 -44,28" fill="#21180b" stroke="#e0af68" stroke-width="1"/>
-    <g class="f-a">
-      <polygon points="0,-24 28,-10 0,4 -28,-10" fill="#e0af68" stroke="#fef3c7" stroke-width="1"/>
-      <polygon points="-28,-10 0,4 0,28 -28,14" fill="#b58338" stroke="#e0af68" stroke-width="0.8"/>
-      <polygon points="28,-10 0,4 0,28 28,14" fill="#78521b" stroke="#b58338" stroke-width="0.8"/>
-      <text x="0" y="-7" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800" fill="#0b0d14">.NET CORE</text>
-    </g>
-    <rect x="-58" y="34" width="116" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#b58338" stroke-width="0.8"/>
-    <text x="0" y="45" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#e0af68">C# · TRANSACTIONS</text>
-  </g>
+  <circle cx="643" cy="166" r="4" fill="#bb9af7"/>
+  <text x="664" y="168" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#bb9af7" text-anchor="middle">ENVOY</text>
 
-  <!-- ==================== TIER 3: REDIS CACHE & EVENT BROKER ==================== -->
-  <!-- Node 1: Redis In-Memory Cache -->
-  <g transform="translate(630, 148)">
-    <polygon points="0,12 46,30 0,48 -46,30" fill="#21180b" stroke="#e0af68" stroke-width="1"/>
-    <g class="f-b">
-      <polygon points="0,-26 30,-12 0,2 -30,-12" fill="#e0af68" stroke="#fef3c7" stroke-width="1"/>
-      <polygon points="-30,-12 0,2 0,28 -30,14" fill="#b58338" stroke="#e0af68" stroke-width="0.8"/>
-      <polygon points="30,-12 0,2 0,28 30,14" fill="#78521b" stroke="#b58338" stroke-width="0.8"/>
-      <text x="0" y="-9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">REDIS</text>
-    </g>
-    <rect x="-60" y="36" width="120" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#b58338" stroke-width="0.8"/>
-    <text x="0" y="47" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#e0af68">CACHE // 0.3ms HIT</text>
-  </g>
+  <circle cx="571" cy="166" r="4" fill="#9ece6a"/>
+  <text x="550" y="168" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#9ece6a" text-anchor="middle">REDIS</text>
 
-  <!-- Node 2: Async Event / AI Security Queue -->
-  <g transform="translate(630, 256)">
-    <polygon points="0,12 46,30 0,48 -46,30" fill="#161129" stroke="#bb9af7" stroke-width="1"/>
-    <g class="f-a">
-      <polygon points="0,-26 30,-12 0,2 -30,-12" fill="#bb9af7" stroke="#f3e8ff" stroke-width="1"/>
-      <polygon points="-30,-12 0,2 0,28 -30,14" fill="#9d7cd8" stroke="#bb9af7" stroke-width="0.8"/>
-      <polygon points="30,-12 0,2 0,28 30,14" fill="#5a3e8e" stroke="#9d7cd8" stroke-width="0.8"/>
-      <text x="0" y="-9" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">BROKER</text>
-    </g>
-    <rect x="-60" y="36" width="120" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#9d7cd8" stroke-width="0.8"/>
-    <text x="0" y="47" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#bb9af7">ASYNC PUB/SUB BUS</text>
-  </g>
+  <circle cx="607" cy="202" r="4" fill="#e0af68"/>
+  <text x="607" y="214" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#e0af68" text-anchor="middle">GATEWAY</text>
 
-  <!-- ==================== TIER 4: 3D DATABASE CYLINDERS ==================== -->
-  <!-- DB 1: PostgreSQL / MySQL Relational Engine -->
-  <g transform="translate(835, 148)">
-    <polygon points="0,12 48,30 0,48 -48,30" fill="#0c221e" stroke="#73daca" stroke-width="1"/>
-    <g class="f-a">
-      <path d="M -28 2 L -28 20 A 28 11 0 0 0 28 20 L 28 2 Z" fill="#0f766e" stroke="#73daca" stroke-width="0.8"/>
-      <ellipse cx="0" cy="2" rx="28" ry="11" fill="#1abc9c" stroke="#a7f3d0" stroke-width="0.8"/>
-      <path d="M -28 -18 L -28 0 A 28 11 0 0 0 28 0 L 28 -18 Z" fill="#1abc9c" stroke="#73daca" stroke-width="0.8"/>
-      <ellipse cx="0" cy="-18" rx="28" ry="11" fill="#73daca" stroke="#d1fae5" stroke-width="1"/>
-      <text x="0" y="-15" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">POSTGRES</text>
-    </g>
-    <rect x="-62" y="36" width="124" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#1abc9c" stroke-width="0.8"/>
-    <text x="0" y="47" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#73daca">ACID · B-TREE INDEX</text>
-  </g>
+  <!-- Incoming Red Threat Vectors Intercepted by Lasers -->
+  <circle cx="568" cy="128" r="3.5" fill="#f7768e" class="pulse-dot"/>
+  <line x1="607" y1="130" x2="568" y2="128" stroke="#73daca" stroke-width="1.2" class="pkt-line"/>
+  <circle cx="648" cy="200" r="3.5" fill="#f7768e" class="pulse-dot"/>
+  <line x1="643" y1="166" x2="648" y2="200" stroke="#bb9af7" stroke-width="1.2" class="pkt-line"/>
 
-  <!-- DB 2: MongoDB NoSQL Cluster -->
-  <g transform="translate(835, 256)">
-    <polygon points="0,12 48,30 0,48 -48,30" fill="#0d1828" stroke="#7dcfff" stroke-width="1"/>
-    <g class="f-b">
-      <path d="M -28 2 L -28 20 A 28 11 0 0 0 28 20 L 28 2 Z" fill="#0369a1" stroke="#7dcfff" stroke-width="0.8"/>
-      <ellipse cx="0" cy="2" rx="28" ry="11" fill="#0284c7" stroke="#bae6fd" stroke-width="0.8"/>
-      <path d="M -28 -18 L -28 0 A 28 11 0 0 0 28 0 L 28 -18 Z" fill="#2ac3de" stroke="#7dcfff" stroke-width="0.8"/>
-      <ellipse cx="0" cy="-18" rx="28" ry="11" fill="#7dcfff" stroke="#e0f2fe" stroke-width="1"/>
-      <text x="0" y="-15" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#0b0d14">MONGODB</text>
-    </g>
-    <rect x="-62" y="36" width="124" height="16" rx="4" fill="#0b0d14" fill-opacity="0.85" stroke="#2ac3de" stroke-width="0.8"/>
-    <text x="0" y="47" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#7dcfff">DOCUMENT REPLICA</text>
-  </g>
+  <!-- Right Subbox: Architect-TD Engineering Modules -->
+  <rect x="700" y="90" width="268" height="142" rx="6" class="subbox"/>
+  <text x="712" y="106" class="lbl-b" fill="#e0af68">ARQUITECTURA &amp; MÓDULOS DEL MOTOR</text>
 
-  <!-- ==================== BOTTOM TELEMETRY FOOTER BAR ==================== -->
-  <rect x="24" y="362" width="912" height="24" rx="6" fill="#0d101b" stroke="#1f2437" stroke-width="1"/>
-  <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9aa5ce">
-    <text x="40" y="378">PATTERN: <tspan fill="#7dcfff" font-weight="700">CLEAN ARCHITECTURE &amp; DDD</tspan></text>
-    <text x="330" y="378">CONTAINERS: <tspan fill="#bb9af7" font-weight="700">DOCKER MULTI-STAGE</tspan></text>
-    <text x="595" y="378">SECURITY: <tspan fill="#73daca" font-weight="700">ZERO-TRUST JWT + SAST</tspan></text>
-    <text x="920" y="378" text-anchor="end" fill="#e0af68" font-weight="700">ONLINE</text>
-  </g>
+  <!-- Module 1 -->
+  <rect x="712" y="114" width="244" height="25" rx="4" fill="#141929" stroke="#24293e" stroke-width="1"/>
+  <text x="720" y="130" class="lbl-b" fill="#7aa2f7">TORRES:</text>
+  <text x="768" y="130" class="lbl-s" fill="#c0caf5">WAF · Load Balancer · Circuit Breaker</text>
+
+  <!-- Module 2 -->
+  <rect x="712" y="144" width="244" height="25" rx="4" fill="#141929" stroke="#24293e" stroke-width="1"/>
+  <text x="720" y="160" class="lbl-b" fill="#f7768e">AMENAZAS:</text>
+  <text x="778" y="160" class="lbl-s" fill="#c0caf5">SYN Flood · SQLi · MITM · Spectre</text>
+
+  <!-- Module 3 -->
+  <rect x="712" y="174" width="244" height="25" rx="4" fill="#141929" stroke="#24293e" stroke-width="1"/>
+  <text x="720" y="190" class="lbl-b" fill="#bb9af7">IDE &amp; IaC:</text>
+  <text x="776" y="190" class="lbl-s" fill="#c0caf5">Hotfix Terminal · DSA · Docker/K8s</text>
+
+  <!-- Module 4 -->
+  <rect x="712" y="204" width="244" height="22" rx="4" fill="#102126" stroke="#73daca" stroke-width="0.8"/>
+  <text x="834" y="218" class="lbl-b" fill="#73daca" text-anchor="middle">7 CAPÍTULOS CAMPAÑA + 5 TOPOLOGÍAS DMZ</text>
+
+  <text x="524" y="252" class="desc-t">Plataforma gamificada en HTML5 Canvas + JS ES6+ con Scripting Engine sandbox,</text>
+  <text x="524" y="266" class="desc-t">laboratorio de estructuras de datos (DSA), Nginx y 56 pruebas automatizadas.</text>
+
+  <!-- ======================================================================= -->
+  <!-- QUADRANT 03 (BOTTOM-LEFT): GCP-GESTION-DE-PRODUCTOS (.NET 10 POS GDI+)  -->
+  <!-- ======================================================================= -->
+  <rect x="20" y="294" width="468" height="226" rx="10" class="quad"/>
+  <rect x="20" y="294" width="468" height="28" rx="10" fill="#15192b"/>
+  <circle cx="36" cy="308" r="4" fill="#bb9af7"/>
+  <text x="48" y="312" class="q-title" fill="#bb9af7">03 // GCP-GESTION-DE-PRODUCTOS · POS &amp; INVENTARIO</text>
+  <text x="474" y="312" class="lbl-s" text-anchor="end" fill="#bb9af7">C# 12 · .NET 10 · GDI+ 60FPS</text>
+
+  <!-- Left Subbox: GDI+ Stock Bar Chart with 5 u. Alert Threshold -->
+  <rect x="32" y="332" width="196" height="142" rx="6" class="subbox"/>
+  <text x="42" y="347" class="lbl-b" fill="#c0caf5">GDI+ BARRAS DE STOCK</text>
+  <text x="218" y="347" class="lbl-s" text-anchor="end" fill="#f7768e">Alerta &lt;=5u</text>
+
+  <!-- Chart Axes & Alert Threshold Line -->
+  <line x1="46" y1="448" x2="214" y2="448" stroke="#24293e" stroke-width="1.2"/>
+  <!-- Bar 1 (24u - Indigo) -->
+  <rect x="56" y="372" width="24" height="76" rx="3" fill="url(#indigoGrad)"/>
+  <text x="68" y="367" font-family="'JetBrains Mono', monospace" font-size="8" fill="#7aa2f7" text-anchor="middle">24u</text>
+  <!-- Bar 2 (19u - Indigo) -->
+  <rect x="94" y="388" width="24" height="60" rx="3" fill="url(#indigoGrad)"/>
+  <text x="106" y="383" font-family="'JetBrains Mono', monospace" font-size="8" fill="#7aa2f7" text-anchor="middle">19u</text>
+  <!-- Bar 3 (4u - Critical Rose!) -->
+  <rect x="132" y="432" width="24" height="16" rx="3" fill="url(#roseGrad)" class="pulse-dot"/>
+  <text x="144" y="421" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#f7768e" text-anchor="middle">4u!</text>
+  <!-- Bar 4 (16u - Indigo) -->
+  <rect x="170" y="396" width="24" height="52" rx="3" fill="url(#indigoGrad)"/>
+  <text x="182" y="391" font-family="'JetBrains Mono', monospace" font-size="8" fill="#7aa2f7" text-anchor="middle">16u</text>
+
+  <!-- Horizontal Warning Line (Límite Alerta 5 u.) -->
+  <line x1="46" y1="428" x2="214" y2="428" stroke="#f7768e" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="130" y="463" class="lbl-s" fill="#9aa5ce" text-anchor="middle">FormCatalogo.cs · GDI+ Vector</text>
+
+  <!-- Center Subbox: Donut Ring Chart (Óptimo, Medio, Crítico) -->
+  <rect x="236" y="332" width="114" height="142" rx="6" class="subbox"/>
+  <text x="293" y="347" class="lbl-b" fill="#c0caf5" text-anchor="middle">DONUT STOCK</text>
+  <circle cx="293" cy="396" r="32" fill="none" stroke="#1e2436" stroke-width="10"/>
+  <!-- Optimal Segment (Green/Teal) -->
+  <circle cx="293" cy="396" r="32" fill="none" stroke="#10b981" stroke-width="10" stroke-dasharray="135 201" transform="rotate(-90 293 396)"/>
+  <!-- Medium Segment (Indigo) -->
+  <circle cx="293" cy="396" r="32" fill="none" stroke="#6366f1" stroke-width="10" stroke-dasharray="44 201" stroke-dashoffset="-135" transform="rotate(-90 293 396)"/>
+  <!-- Critical Segment (Rose) -->
+  <circle cx="293" cy="396" r="32" fill="none" stroke="#f43f5e" stroke-width="10" stroke-dasharray="22 201" stroke-dashoffset="-179" transform="rotate(-90 293 396)"/>
+  <text x="293" y="399" class="lbl-b" fill="#ffffff" text-anchor="middle">68%</text>
+  <text x="293" y="446" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#10b981" text-anchor="middle">● Óptimo &gt;15u</text>
+  <text x="293" y="458" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#f43f5e" text-anchor="middle">● Crítico &lt;=5u</text>
+
+  <!-- Right Subbox: Real-Time POS KPI Cards (FormVentas.cs) -->
+  <rect x="358" y="332" width="118" height="142" rx="6" class="subbox"/>
+  <text x="417" y="347" class="lbl-b" fill="#bb9af7" text-anchor="middle">POS KPIs LIVE</text>
+
+  <rect x="366" y="355" width="102" height="26" rx="4" fill="#141929"/>
+  <text x="372" y="366" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#787c99">INGRESOS HOY</text>
+  <text x="372" y="377" class="lbl-b" fill="#73daca">$4,850,000</text>
+
+  <rect x="366" y="386" width="102" height="26" rx="4" fill="#141929"/>
+  <text x="372" y="397" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#787c99">VENTAS POS</text>
+  <text x="372" y="408" class="lbl-b" fill="#7aa2f7">142 Facturas</text>
+
+  <rect x="366" y="417" width="102" height="26" rx="4" fill="#141929"/>
+  <text x="372" y="428" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#787c99">MATRIZ TÁCTIL</text>
+  <text x="372" y="439" class="lbl-b" fill="#e0af68">2x2 · 44px Dock</text>
+
+  <rect x="366" y="448" width="102" height="20" rx="4" fill="#28131e" stroke="#f7768e" stroke-width="0.8"/>
+  <text x="417" y="461" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#f7768e" text-anchor="middle">FormVentas.cs</text>
+
+  <text x="32" y="494" class="desc-t">Punto de Venta (POS) e Inventarios en C# (.NET 10.0) con renderizado vectorial</text>
+  <text x="32" y="508" class="desc-t">nativo GDI+, TableLayoutPanel responsivo (35%/65%) y alertas de stock en vivo.</text>
+
+  <!-- ======================================================================= -->
+  <!-- QUADRANT 04 (BOTTOM-RIGHT): PROYECTO-TODO-API & PYTHON / AI SAST        -->
+  <!-- ======================================================================= -->
+  <rect x="512" y="294" width="468" height="226" rx="10" class="quad"/>
+  <rect x="512" y="294" width="468" height="28" rx="10" fill="#15192b"/>
+  <circle cx="528" cy="308" r="4" fill="#73daca"/>
+  <text x="540" y="312" class="q-title" fill="#73daca">04 // PROYECTO-TODO-API · PYTHON &amp; AI SAST</text>
+  <text x="966" y="312" class="lbl-s" text-anchor="end" fill="#7aa2f7">Node 20 · Mongo 6 · Python 3</text>
+
+  <!-- Top Subbox: Docker Compose Multi-Container Network (proyecto-todo-api) -->
+  <rect x="524" y="332" width="444" height="76" rx="6" class="subbox"/>
+  <text x="536" y="347" class="lbl-b" fill="#73daca">DOCKER-COMPOSE.YML // ORQUESTACIÓN MULTI-CONTENEDOR (PROYECTO-TODO-API)</text>
+
+  <!-- Container 1: API REST :3000 -->
+  <rect x="536" y="356" width="124" height="42" rx="5" fill="#141929" stroke="#7aa2f7" stroke-width="1"/>
+  <text x="598" y="372" class="lbl-b" fill="#7aa2f7" text-anchor="middle">api :3000</text>
+  <text x="598" y="384" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#9aa5ce" text-anchor="middle">Node 20 + Express</text>
+  <text x="598" y="394" font-family="'JetBrains Mono', monospace" font-size="7" fill="#73daca" text-anchor="middle">CRUD /api/tasks</text>
+
+  <!-- Animated Link 1 -> 2 -->
+  <line x1="660" y1="377" x2="684" y2="377" stroke="#73daca" stroke-width="1.5" class="pkt-line"/>
+
+  <!-- Container 2: MongoDB :27017 -->
+  <rect x="684" y="356" width="124" height="42" rx="5" fill="#112224" stroke="#73daca" stroke-width="1"/>
+  <text x="746" y="372" class="lbl-b" fill="#73daca" text-anchor="middle">mongodb :27017</text>
+  <text x="746" y="384" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#9aa5ce" text-anchor="middle">MongoDB v6 NoSQL</text>
+  <text x="746" y="394" font-family="'JetBrains Mono', monospace" font-size="7" fill="#9ece6a" text-anchor="middle">Persistent Volume</text>
+
+  <!-- Animated Link 2 -> 3 -->
+  <line x1="808" y1="377" x2="832" y2="377" stroke="#bb9af7" stroke-width="1.5" class="pkt-line"/>
+
+  <!-- Container 3: Mongo Express :8081 -->
+  <rect x="832" y="356" width="124" height="42" rx="5" fill="#141929" stroke="#bb9af7" stroke-width="1"/>
+  <text x="894" y="372" class="lbl-b" fill="#bb9af7" text-anchor="middle">admin :8081</text>
+  <text x="894" y="384" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#9aa5ce" text-anchor="middle">Mongo Express UI</text>
+  <text x="894" y="394" font-family="'JetBrains Mono', monospace" font-size="7" fill="#e0af68" text-anchor="middle">render.yaml Ready</text>
+
+  <!-- Bottom Subbox: I-work-in-python + AI Security Orchestrator -->
+  <rect x="524" y="416" width="216" height="58" rx="6" class="subbox"/>
+  <text x="536" y="432" class="lbl-b" fill="#e0af68">I-WORK-IN-PYTHON // ALGORITMIA</text>
+  <text x="536" y="446" class="lbl-s" fill="#c0caf5">ejercicio_1.py .. ejercicio_8.py + main.py</text>
+  <text x="536" y="460" class="lbl-s" fill="#73daca">Complejidad Big-O · Estructuras · Clean Code</text>
+
+  <rect x="752" y="416" width="216" height="58" rx="6" class="subbox"/>
+  <text x="764" y="432" class="lbl-b" fill="#f7768e">AI SECURITY SAST &amp; D&amp;D ERP</text>
+  <text x="764" y="446" class="lbl-s" fill="#c0caf5">FastAPI + Ollama LLM (Deduplicación SHA-256)</text>
+  <text x="764" y="460" class="lbl-s" fill="#bb9af7">Spring Boot + MySQL + JWT Transaccional</text>
+
+  <text x="524" y="494" class="desc-t">Microservicios contenerizados listos para nube (render.yaml / Docker Compose),</text>
+  <text x="524" y="508" class="desc-t">algoritmia avanzada en Python 3 y auditoría SAST automatizada con IA local.</text>
+
+  <!-- Central Connector Badge between the 4 Quadrants -->
+  <rect x="444" y="271" width="112" height="26" rx="13" fill="#131624" stroke="#7aa2f7" stroke-width="1.5"/>
+  <text x="500" y="287" class="lbl-b" fill="#7aa2f7" text-anchor="middle">4 CORE SYSTEMS</text>
 </svg>

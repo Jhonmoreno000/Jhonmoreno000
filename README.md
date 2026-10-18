@@ -65,9 +65,9 @@
 
 <br>
 
-<!-- ==================== 3D EXPLODED ARCHITECTURE BLUEPRINT ==================== -->
+<!-- ==================== PERSONAL ENGINEERING DOSSIER & REPOSITORY DNA ==================== -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/arch-layers-3d.svg" width="100%" alt="3D Exploded Architecture Blueprint"/>
+  <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/arch-layers-3d.svg" width="100%" alt="Jhon Anderson Moreno Posso — Dossier de Ingeniería & ADN de Repositorios"/>
 </div>
 
 <br>
@@ -114,14 +114,14 @@
 
 <br>
 
-<!-- ==================== LIVE 3D TERMINAL & MICROSERVICES MESH (COLLAPSIBLE DEEP-DIVE) ==================== -->
+<!-- ==================== LIVE 3D TERMINAL & 4-PROJECT ENGINEERING LAB (COLLAPSIBLE DEEP-DIVE) ==================== -->
 <details open>
-  <summary><b>&#9881;&#65039; Simulación en Vivo: Terminal Split-Pane (Docker + SAST IA + SQL EXPLAIN) &amp; Topología 3D</b></summary>
+  <summary><b>&#9881;&#65039; Simulación en Vivo: Terminal Split-Pane (Docker + SAST IA + SQL EXPLAIN) &amp; Laboratorio de Arquitectura de Mis 4 Proyectos Insignia</b></summary>
   <br>
   <div align="center">
     <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/terminal-live.svg" width="100%" alt="Live Split-Pane Terminal"/>
     <br><br>
-    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/microservices-3d.svg" width="100%" alt="3D Microservices Topology"/>
+    <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/microservices-3d.svg" width="100%" alt="Laboratorio de Arquitectura Interna de Repositorios"/>
   </div>
 </details>
 
