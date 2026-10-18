@@ -1,80 +1,91 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="100%" height="230">
   <defs>
     <linearGradient id="asBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0d14"/>
-      <stop offset="100%" stop-color="#111522"/>
+      <stop offset="0%" stop-color="#0d1017"/>
+      <stop offset="100%" stop-color="#111622"/>
     </linearGradient>
-
+    <linearGradient id="asSurf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
+    </linearGradient>
+    <linearGradient id="asRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.025"/>
+    </linearGradient>
     <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.42"/>
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.32"/>
       <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.0"/>
     </linearGradient>
-
     <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#93c5fd"/>
-      <stop offset="50%" stop-color="#93c5fd"/>
-      <stop offset="100%" stop-color="#a5b4fc"/>
+      <stop offset="50%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#6ee7b7"/>
     </linearGradient>
+    <style>
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
   </defs>
 
-  <!-- ==================== LEFT CARD: STREAK & CONTRIBUTION SUMMARY ==================== -->
-  <g transform="translate(0, 0)">
+  <!-- ==================== LEFT GLASS CARD: STREAK & CONTRIBUTION SUMMARY ==================== -->
+  <g transform="translate(0, 0)" class="sans">
     <rect width="488" height="230" rx="16" fill="url(#asBg)"/>
-    <rect x="1" y="1" width="486" height="228" rx="15" fill="none" stroke="#22293a" stroke-width="1.5"/>
+    <rect x="1" y="1" width="486" height="228" rx="15" fill="url(#asSurf)" stroke="url(#asRim)" stroke-width="1.2"/>
+    <line x1="24" y1="2" x2="240" y2="2" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
 
-    <text x="26" y="30" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#93c5fd">
+    <text x="26" y="30" font-size="12" font-weight="600" fill="#e2e8f0">
       Resumen de Actividad y Constancia
     </text>
-    <line x1="26" y1="42" x2="462" y2="42" stroke="#22293a" stroke-width="1"/>
+    <line x1="26" y1="42" x2="462" y2="42" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
 
     <!-- Col 1: Total Contributions -->
-    <g transform="translate(92, 122)" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif">
-      <text x="0" y="0" font-size="34" font-weight="800" fill="#6ee7b7">118+</text>
-      <text x="0" y="26" font-size="12" font-weight="600" fill="#c0caf5">Total Contributions</text>
-      <text x="0" y="46" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#565f89">2024 — Present</text>
+    <g transform="translate(92, 122)" text-anchor="middle">
+      <text x="0" y="0" font-size="30" font-weight="700" fill="#6ee7b7">118+</text>
+      <text x="0" y="25" font-size="11.5" font-weight="500" fill="#cbd5e1">Contribuciones</text>
+      <text x="0" y="44" font-size="10" fill="#64748b">2024 — Presente</text>
     </g>
 
-    <line x1="172" y1="68" x2="172" y2="196" stroke="#22293a" stroke-width="1"/>
+    <line x1="172" y1="68" x2="172" y2="196" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
 
-    <!-- Col 2: Animated Current Streak Ring -->
+    <!-- Col 2: Animated Current Streak Ring (Proportioned cleanly inside ring!) -->
     <g transform="translate(244, 122)" text-anchor="middle">
-      <circle cx="0" cy="-6" r="42" fill="none" stroke="#161b2e" stroke-width="6"/>
-      <circle cx="0" cy="-6" r="42" fill="none" stroke="url(#ringGrad)" stroke-width="6"
-              stroke-linecap="round" stroke-dasharray="230 264" transform="rotate(-90 0 -6)">
-        <animate attributeName="stroke-dasharray" values="40 264;230 264;230 264" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite"/>
+      <circle cx="0" cy="-10" r="38" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="5"/>
+      <circle cx="0" cy="-10" r="38" fill="none" stroke="url(#ringGrad)" stroke-width="5"
+              stroke-linecap="round" stroke-dasharray="210 239" transform="rotate(-90 0 -10)">
+        <animate attributeName="stroke-dasharray" values="40 239;210 239;210 239" keyTimes="0;0.35;1" dur="5s" repeatCount="indefinite"/>
       </circle>
-      <!-- Flame Icon at Top of Ring -->
-      <path d="M 0 -56 C 4 -50, 7 -46, 4 -41 C 2 -38, -2 -38, -4 -41 C -7 -46, -4 -50, 0 -56 Z" fill="#a5b4fc"/>
-      <text x="0" y="3" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="26" font-weight="800" fill="#ffffff">Active</text>
-      <text x="0" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="700" fill="#93c5fd">Current Momentum</text>
-      <text x="0" y="70" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#565f89">Medellín [UTC-5]</text>
+      <circle cx="0" cy="-48" r="3.5" fill="#93c5fd"/>
+      <text x="0" y="-5" font-size="15.5" font-weight="600" fill="#f1f5f9">Activo</text>
+      <text x="0" y="50" font-size="11.5" font-weight="500" fill="#93c5fd">Ritmo Continuo</text>
+      <text x="0" y="67" font-size="10" fill="#64748b">Medellín (UTC-5)</text>
     </g>
 
-    <line x1="316" y1="68" x2="316" y2="196" stroke="#22293a" stroke-width="1"/>
+    <line x1="316" y1="68" x2="316" y2="196" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
 
     <!-- Col 3: Public Repos & Architecture -->
-    <g transform="translate(398, 122)" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif">
-      <text x="0" y="0" font-size="34" font-weight="800" fill="#a5b4fc">07</text>
-      <text x="0" y="26" font-size="12" font-weight="600" fill="#c0caf5">Public Repositories</text>
-      <text x="0" y="46" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#565f89">Clean Arch &amp; Docker</text>
+    <g transform="translate(398, 122)" text-anchor="middle">
+      <text x="0" y="0" font-size="30" font-weight="700" fill="#a5b4fc">07</text>
+      <text x="0" y="25" font-size="11.5" font-weight="500" fill="#cbd5e1">Repositorios</text>
+      <text x="0" y="44" font-size="10" fill="#64748b">Clean Arch &amp; Docker</text>
     </g>
   </g>
 
-  <!-- ==================== RIGHT CARD: REALTIME COMMIT ACTIVITY AREA GRAPH ==================== -->
-  <g transform="translate(512, 0)">
+  <!-- ==================== RIGHT GLASS CARD: REALTIME COMMIT ACTIVITY AREA GRAPH ==================== -->
+  <g transform="translate(512, 0)" class="sans">
     <rect width="488" height="230" rx="16" fill="url(#asBg)"/>
-    <rect x="1" y="1" width="486" height="228" rx="15" fill="none" stroke="#22293a" stroke-width="1.5"/>
+    <rect x="1" y="1" width="486" height="228" rx="15" fill="url(#asSurf)" stroke="url(#asRim)" stroke-width="1.2"/>
+    <line x1="24" y1="2" x2="240" y2="2" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
 
-    <text x="26" y="30" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">
+    <text x="26" y="30" font-size="12" font-weight="600" fill="#e2e8f0">
       Frecuencia de Commits Recientes
     </text>
-    <text x="462" y="30" text-anchor="end" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#a5b4fc">
-      main · verified
+    <text x="462" y="30" text-anchor="end" font-size="10.5" fill="#94a3b8">
+      Rama principal · Verificado
     </text>
-    <line x1="26" y1="42" x2="462" y2="42" stroke="#22293a" stroke-width="1"/>
+    <line x1="26" y1="42" x2="462" y2="42" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
 
     <!-- Chart Grid Lines -->
-    <g stroke="#1a2035" stroke-width="1" stroke-dasharray="3 3">
+    <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" stroke-dasharray="3 3">
       <line x1="48" y1="70" x2="458" y2="70"/>
       <line x1="48" y1="105" x2="458" y2="105"/>
       <line x1="48" y1="140" x2="458" y2="140"/>
@@ -82,7 +93,7 @@
     </g>
 
     <!-- Y-Axis Labels -->
-    <g font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#565f89" text-anchor="end">
+    <g font-size="9.5" fill="#64748b" text-anchor="end">
       <text x="40" y="73">30</text>
       <text x="40" y="108">20</text>
       <text x="40" y="143">10</text>
@@ -95,28 +106,28 @@
 
     <!-- Smooth Spline Line -->
     <path d="M 48 162 C 85 155, 105 118, 130 122 C 160 126, 180 88, 212 92 C 245 96, 265 135, 294 114 C 325 92, 348 64, 376 74 C 405 84, 430 62, 458 58"
-          fill="none" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round"/>
+          fill="none" stroke="#93c5fd" stroke-width="2.2" stroke-linecap="round"/>
 
-    <!-- Glowing Commit Data Points -->
-    <g fill="#a5b4fc" stroke="#0b0d14" stroke-width="1.5">
-      <circle cx="48" cy="162" r="4"/>
-      <circle cx="130" cy="122" r="4"/>
-      <circle cx="212" cy="92" r="4.5"/>
-      <circle cx="294" cy="114" r="4"/>
-      <circle cx="376" cy="74" r="4.5"/>
-      <circle cx="458" cy="58" r="5" fill="#6ee7b7">
-        <animate attributeName="r" values="4;7;4" dur="1.8s" repeatCount="indefinite"/>
+    <!-- Soft Commit Data Points -->
+    <g fill="#a5b4fc" stroke="#0d1017" stroke-width="1.5">
+      <circle cx="48" cy="162" r="3.5"/>
+      <circle cx="130" cy="122" r="3.5"/>
+      <circle cx="212" cy="92" r="4"/>
+      <circle cx="294" cy="114" r="3.5"/>
+      <circle cx="376" cy="74" r="4"/>
+      <circle cx="458" cy="58" r="4.5" fill="#6ee7b7">
+        <animate attributeName="r" values="3.5;6;3.5" dur="2.2s" repeatCount="indefinite"/>
       </circle>
     </g>
 
     <!-- X-Axis Labels -->
-    <g font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" fill="#787c99" text-anchor="middle">
+    <g font-size="10" fill="#64748b" text-anchor="middle">
       <text x="58" y="198">May</text>
       <text x="130" y="198">Jun</text>
       <text x="212" y="198">Jul</text>
-      <text x="294" y="198">Aug</text>
+      <text x="294" y="198">Ago</text>
       <text x="376" y="198">Sep</text>
-      <text x="448" y="198" fill="#6ee7b7" font-weight="700">Oct</text>
+      <text x="448" y="198" fill="#6ee7b7" font-weight="600">Oct</text>
     </g>
   </g>
 </svg>

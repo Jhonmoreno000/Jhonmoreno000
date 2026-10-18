@@ -73,44 +73,17 @@
 <br>
 
 <!-- ==================== BENTO GRID: FEATURED REPOSITORIES ==================== -->
-<table width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000/NEXUS">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-nexus.svg" width="100%" alt="NEXUS SQL Engine"/>
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000/architect-td">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-architect.svg" width="100%" alt="architect-td"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000/proyecto-todo-api">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-todo.svg" width="100%" alt="proyecto-todo-api"/>
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-gcp.svg" width="100%" alt="GCP-GESTION-DE-PRODUCTOS"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000/I-work-in-python">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-python.svg" width="100%" alt="I-work-in-python"/>
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/Jhonmoreno000?tab=repositories">
-        <img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-aisec.svg" width="100%" alt="AI Security & Enterprise ERP"/>
-      </a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <p>
+    <a href="https://github.com/Jhonmoreno000/NEXUS"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-nexus.svg" width="49%" alt="NEXUS SQL Engine"/></a>&nbsp;<a href="https://github.com/Jhonmoreno000/architect-td"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-architect.svg" width="49%" alt="architect-td"/></a>
+  </p>
+  <p>
+    <a href="https://github.com/Jhonmoreno000/proyecto-todo-api"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-todo.svg" width="49%" alt="proyecto-todo-api"/></a>&nbsp;<a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-gcp.svg" width="49%" alt="GCP-GESTION-DE-PRODUCTOS"/></a>
+  </p>
+  <p>
+    <a href="https://github.com/Jhonmoreno000/I-work-in-python"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-python.svg" width="49%" alt="I-work-in-python"/></a>&nbsp;<a href="https://github.com/Jhonmoreno000?tab=repositories"><img src="https://raw.githubusercontent.com/Jhonmoreno000/Jhonmoreno000/main/assets/bento-aisec.svg" width="49%" alt="AI Security & Enterprise ERP"/></a>
+  </p>
+</div>
 
 <br>
 
