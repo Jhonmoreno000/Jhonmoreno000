@@ -764,5 +764,4 @@ if __name__ == "__main__":
     generate_3d_contrib_svg(u, r)
     generate_snake_svg()
     generate_activity_streak_svg(u, r)
-    generate_bento_cards()
-    print("Generated all cybersecurity SOC telemetry and Bento SVG assets successfully.")
+    print("Generated all cybersecurity 3D telemetry SVG assets successfully.")

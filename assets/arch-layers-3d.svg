@@ -1,244 +1,262 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="100%" height="460">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="450">
   <defs>
-    <linearGradient id="didBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#03070b"/>
-      <stop offset="50%" stop-color="#061019"/>
-      <stop offset="100%" stop-color="#020508"/>
+    <linearGradient id="alBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060a"/>
+      <stop offset="55%" stop-color="#070c14"/>
+      <stop offset="100%" stop-color="#020306"/>
     </linearGradient>
 
-    <radialGradient id="didOrb1" cx="22%" cy="28%" r="46%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.11"/>
-      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
+    <radialGradient id="alGlowL" cx="24%" cy="48%" r="40%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="didOrb2" cx="78%" cy="72%" r="46%">
+    <radialGradient id="alGlowR" cx="76%" cy="52%" r="42%">
       <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.11"/>
-      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="didPanel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a1722" stop-opacity="0.86"/>
-      <stop offset="100%" stop-color="#050c13" stop-opacity="0.94"/>
-    </linearGradient>
-
-    <linearGradient id="didSub" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1e2d" stop-opacity="0.72"/>
-      <stop offset="100%" stop-color="#050d15" stop-opacity="0.88"/>
-    </linearGradient>
-
-    <linearGradient id="didBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.42"/>
-      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.08"/>
-    </linearGradient>
-
-    <!-- Tactical Cyber Progress Bar Gradients -->
-    <linearGradient id="cyberBar1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#059669"/>
-      <stop offset="100%" stop-color="#00ff9d"/>
-    </linearGradient>
-    <linearGradient id="cyberBar2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#00e5ff"/>
-    </linearGradient>
-    <linearGradient id="cyberBar3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0d9488"/>
-      <stop offset="100%" stop-color="#2dd4bf"/>
-    </linearGradient>
-    <linearGradient id="cyberBar4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0369a1"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
-    </linearGradient>
-
-    <pattern id="didGrid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-opacity="0.06"/>
+    <pattern id="alDots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="0.65" fill="#00ff66" opacity="0.07"/>
     </pattern>
 
     <style>
-      .mono-top { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.7px; }
-      .disp-h1 { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; font-size: 16px; font-weight: 800; fill: #f8fafc; letter-spacing: 0.4px; }
-      .mono-sub { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.4px; }
-      .card-title { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 700; fill: #f1f5f9; }
-      .card-desc { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.2px; fill: #94a3b8; }
-      .kpi-val { font-family: 'Orbitron', 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; }
-
-      @keyframes layerFloat1 {
+      .mono { font-family: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', 'Fira Code', Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+      .marquee-rail {
+        stroke-dasharray: 8, 5;
+        animation: dashAl 24s linear infinite;
+      }
+      @keyframes dashAl {
+        to { stroke-dashoffset: -1200; }
+      }
+      @keyframes floatSlabA {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
+        50% { transform: translateY(-6px); }
       }
-      @keyframes layerFloat2 {
+      @keyframes floatSlabB {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
+        50% { transform: translateY(-3px); }
       }
-      @keyframes pulseBeacon {
-        0%, 100% { opacity: 0.35; }
-        50% { opacity: 1; }
-      }
-      .iso-layer-1 { animation: layerFloat1 3.6s ease-in-out infinite; }
-      .iso-layer-2 { animation: layerFloat2 3.6s ease-in-out infinite; }
-      .beacon-dot { animation: pulseBeacon 2s ease-in-out infinite; }
+      .slab-top { animation: floatSlabA 3.6s ease-in-out infinite; }
+      .slab-mid { animation: floatSlabB 3.6s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Base Canvas -->
-  <rect width="1000" height="460" rx="14" fill="url(#didBg)"/>
-  <rect width="1000" height="460" rx="14" fill="url(#didGrid)"/>
-  <rect width="1000" height="460" rx="14" fill="url(#didOrb1)"/>
-  <rect width="1000" height="460" rx="14" fill="url(#didOrb2)"/>
+  <!-- Die-Cut Industrial Chassis & Dot Matrix -->
+  <rect width="1000" height="450" rx="10" fill="url(#alBg)"/>
+  <rect width="1000" height="450" rx="10" fill="url(#alDots)"/>
+  <rect width="1000" height="450" rx="10" fill="url(#alGlowL)"/>
+  <rect width="1000" height="450" rx="10" fill="url(#alGlowR)"/>
 
-  <!-- Outer Armored Frame & Corner Brackets -->
-  <rect x="1.5" y="1.5" width="997" height="457" rx="13" fill="none" stroke="url(#didBorder)" stroke-width="1.3"/>
-  <path d="M 14 2 L 2 2 L 2 16" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 986 2 L 998 2 L 998 16" fill="none" stroke="#00e5ff" stroke-width="2"/>
-  <path d="M 14 458 L 2 458 L 2 444" fill="none" stroke="#00e5ff" stroke-width="2"/>
-  <path d="M 986 458 L 998 458 L 998 444" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 36,8 L 210,8 L 224,20 L 776,20 L 790,8 L 964,8 L 992,36 L 992,414 L 964,442 L 36,442 L 8,414 L 8,36 Z"
+        stroke="#162232" stroke-width="2" fill="none"/>
 
-  <!-- Top Header Bar -->
-  <rect x="2" y="2" width="996" height="36" rx="12" fill="#07131e" fill-opacity="0.9"/>
-  <line x1="2" y1="38" x2="998" y2="38" stroke="#00ff9d" stroke-opacity="0.22" stroke-width="1"/>
-  <circle cx="24" cy="20" r="3.5" fill="#00ff9d" class="beacon-dot"/>
-  <text x="38" y="24" class="mono-top" fill="#e2e8f0">
-    [ DEFENSE-IN-DEPTH // ARQUITECTURA DE SEGURIDAD &amp; TELEMETRIA DE CODIGO ]
-  </text>
-  <text x="978" y="24" text-anchor="end" class="mono-sub" fill="#00e5ff">
-    OWASP ASVS // ISO 25010 // @JHONMORENO000
+  <path class="marquee-rail"
+        d="M 40,13 L 207,13 L 221,25 L 779,25 L 793,13 L 960,13 L 987,40 L 987,410 L 960,437 L 40,437 L 13,410 L 13,40 Z"
+        stroke="#00ff66" stroke-width="0.9" opacity="0.28" fill="none"/>
+
+  <path d="M 8,50 L 8,36 L 36,8 L 50,8" fill="none" stroke="#00ff66" stroke-width="2.2"/>
+  <path d="M 950,8 L 964,8 L 992,36 L 992,50" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
+  <path d="M 8,400 L 8,414 L 36,442 L 50,442" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
+  <path d="M 950,442 L 964,442 L 992,414 L 992,400" fill="none" stroke="#00ff66" stroke-width="2.2"/>
+
+  <text x="500" y="15" class="mono" font-size="8.5" font-weight="bold" fill="#64748b" letter-spacing="2.5" text-anchor="middle">
+    ARCH_DNA_V4 // 3D EXPLODED DEFENSE STACK &amp; CODEBASE TELEMETRY
   </text>
 
   <!-- ======================================================================= -->
-  <!-- LEFT COLUMN: DEFENSE-IN-DEPTH DOSSIER & 3 SECURITY LAYERS (x=20..480)   -->
+  <!-- LEFT MODULE: 3D EXPLODED ARCHITECTURE STACK & ENGINEERING PILLARS       -->
   <!-- ======================================================================= -->
-  <rect x="20" y="50" width="460" height="392" rx="10" fill="url(#didPanel)" stroke="url(#didBorder)" stroke-width="1"/>
-  <line x1="36" y1="51" x2="240" y2="51" stroke="#00ff9d" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(28, 34)">
+    <path d="M 0,0 L 440,0 L 454,14 L 454,384 L 14,384 L 0,370 Z" fill="#04070c" stroke="#162232" stroke-width="1.2"/>
+    <rect x="0" y="0" width="440" height="3" fill="#00ff66"/>
+    <text x="16" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" letter-spacing="1.4">
+      EXPLODED_3D_STACK // CAPAS DE DEFENSA Y ARQUITECTURA
+    </text>
 
-  <!-- Top Operator Header Card -->
-  <rect x="34" y="64" width="432" height="86" rx="8" fill="url(#didSub)" stroke="#00e5ff" stroke-opacity="0.28"/>
+    <!-- 3D Exploded Isometric Stack Diagram (Left Side x=94, y=132) -->
+    <g transform="translate(94, 142)">
+      <!-- Vertical Alignment Axis Lines -->
+      <line x1="-54" y1="-56" x2="-54" y2="54" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="54" y1="-56" x2="54" y2="54" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3"/>
 
-  <!-- Animated 3D Isometric Layered Defense Stack Icon -->
-  <g transform="translate(76, 114)">
-    <!-- Base Layer (Data/Persistence) -->
-    <polygon points="0,-6 28,8 0,22 -28,8" fill="#061824" stroke="#00e5ff" stroke-width="1.2"/>
-    <!-- Middle Layer (API/Zero-Trust) -->
-    <g class="iso-layer-1">
-      <polygon points="0,-18 28,-4 0,10 -28,-4" fill="#082836" stroke="#00e5ff" stroke-width="1.2"/>
+      <!-- Layer 3 (Bottom): Persistence & Crypto Vault -->
+      <g transform="translate(0, 38)">
+        <polygon points="0,-24 54,2 0,28 -54,2" fill="#140c29" stroke="#c084fc" stroke-width="1.3"/>
+        <polygon points="-54,2 0,28 0,38 -54,12" fill="#0d081c" stroke="#c084fc" stroke-opacity="0.6"/>
+        <polygon points="54,2 0,28 0,38 54,12" fill="#080512" stroke="#c084fc" stroke-opacity="0.6"/>
+        <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#c084fc">PG17 // ACID</text>
+      </g>
+
+      <!-- Layer 2 (Middle): Backend Services & SAST AI -->
+      <g class="slab-mid">
+        <polygon points="0,-24 54,2 0,28 -54,2" fill="#061d2b" stroke="#00e5ff" stroke-width="1.3"/>
+        <polygon points="-54,2 0,28 0,38 -54,12" fill="#04131d" stroke="#00e5ff" stroke-opacity="0.6"/>
+        <polygon points="54,2 0,28 0,38 54,12" fill="#020b12" stroke="#00e5ff" stroke-opacity="0.6"/>
+        <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#00e5ff">SAST // API</text>
+      </g>
+
+      <!-- Layer 1 (Top): WAF L7 & Zero-Trust Shield -->
+      <g transform="translate(0, -40)">
+        <g class="slab-top">
+          <polygon points="0,-24 54,2 0,28 -54,2" fill="#06291c" stroke="#00ff66" stroke-width="1.4"/>
+          <polygon points="-54,2 0,28 0,38 -54,12" fill="#041c13" stroke="#00ff66" stroke-opacity="0.6"/>
+          <polygon points="54,2 0,28 0,38 54,12" fill="#02100b" stroke="#00ff66" stroke-opacity="0.6"/>
+          <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#00ff66">WAF // ZERO-TRUST</text>
+        </g>
+      </g>
     </g>
-    <!-- Top Crown Layer (WAF/SAST Shield) -->
-    <g class="iso-layer-2">
-      <polygon points="0,-30 28,-16 0,-2 -28,-16" fill="#00ff9d" fill-opacity="0.25" stroke="#00ff9d" stroke-width="1.4"/>
-      <circle cx="0" cy="-16" r="3" fill="#00ff9d"/>
+
+    <!-- 3 Callout Specification Cards Connected to the 3D Exploded Layers -->
+    <g transform="translate(172, 42)">
+      <!-- Callout 1 (Top Layer) -->
+      <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
+      <rect x="0" y="0" width="3" height="58" fill="#00ff66"/>
+      <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66">PERIMETRO // WAF L7 &amp; RATE LIMIT</text>
+      <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Mitigación SYN Flood, SQLi y MITM con nodos</text>
+      <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">Envoy/Redis y límite de 1200 req/min por IP.</text>
+
+      <!-- Callout 2 (Middle Layer) -->
+      <g transform="translate(0, 68)">
+        <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
+        <rect x="0" y="0" width="3" height="58" fill="#00e5ff"/>
+        <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff">SAST IA // QWEN 2.5 7B &amp; CLEAN ARCH</text>
+        <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Auditoría estática local en C# Direct3D y Python</text>
+        <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">con deduplicación SHA-256 y arquitectura DDD.</text>
+      </g>
+
+      <!-- Callout 3 (Bottom Layer) -->
+      <g transform="translate(0, 136)">
+        <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
+        <rect x="0" y="0" width="3" height="58" fill="#c084fc"/>
+        <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#c084fc">PERSISTENCIA ACID // PG 16/17 &amp; CRYPTO</text>
+        <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Aislamiento SERIALIZABLE, prevención de</text>
+        <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">deadlocks y webhooks firmados con HMAC-SHA256.</text>
+      </g>
+    </g>
+
+    <!-- Bottom Operator Summary Strip -->
+    <g transform="translate(16, 252)">
+      <path d="M 0,0 L 410,0 L 420,10 L 420,114 L 0,114 Z" fill="#060a10" stroke="#162232" stroke-width="1"/>
+      <rect x="0" y="0" width="410" height="2.5" fill="#ffaa00"/>
+      <text x="14" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#ffaa00" letter-spacing="1">
+        PERFIL_DE_INGENIERIA // JHON ANDERSON MORENO POSSO
+      </text>
+      <text x="14" y="40" class="sans" font-size="11.5" fill="#e2e8f0">
+        Tecnólogo en Análisis y Desarrollo de Software (SENA ADSO) especializado en
+      </text>
+      <text x="14" y="57" class="sans" font-size="11.5" fill="#e2e8f0">
+        el diseño de motores backend resilientes, simuladores interactivos de arquitectura
+      </text>
+      <text x="14" y="74" class="sans" font-size="11.5" fill="#e2e8f0">
+        y herramientas de seguridad ofensiva/defensiva aceleradas por hardware.
+      </text>
+      <text x="14" y="98" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" letter-spacing="0.8">
+        ESTANDARES: ISO/IEC 25010 · OWASP ASVS L2 · SOLID · TDD · DOCKER IAC
+      </text>
     </g>
   </g>
 
-  <text x="120" y="88" class="disp-h1">JHON ANDERSON MORENO POSSO</text>
-  <text x="120" y="106" class="mono-sub" fill="#00ff9d">INGENIERO BACKEND // DEVSECOPS &amp; CIBERDEFENSA</text>
-
-  <rect x="120" y="116" width="154" height="22" rx="4" fill="#040a10" stroke="#00ff9d" stroke-opacity="0.35"/>
-  <text x="197" y="131" class="mono-sub" font-size="9.5" fill="#cbd5e1" text-anchor="middle">SENA :: TECNOLOGO ADSO</text>
-
-  <rect x="282" y="116" width="170" height="22" rx="4" fill="#040a10" stroke="#00e5ff" stroke-opacity="0.35"/>
-  <text x="367" y="131" class="mono-sub" font-size="9.5" fill="#00e5ff" text-anchor="middle">ZERO-TRUST &amp; CLEAN ARCH</text>
-
-  <text x="36" y="172" class="mono-sub" fill="#00e5ff" letter-spacing="0.8">
-    &gt;&gt; CAPAS DE INGENIERIA Y SEGURIDAD APLICADA EN MIS SISTEMAS
-  </text>
-
-  <!-- Pillar 1: Shift-Left & AI SAST -->
-  <rect x="34" y="182" width="432" height="74" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
-  <rect x="34" y="182" width="3.5" height="74" rx="1.5" fill="#00ff9d"/>
-  <text x="48" y="201" class="card-title">01 // AUDITORIA SAST CON IA LOCAL &amp; SHIFT-LEFT</text>
-  <text x="454" y="201" class="mono-sub" font-size="9.5" text-anchor="end" fill="#00ff9d">SECDEV · QWEN 2.5 7B</text>
-  <text x="48" y="221" class="card-desc">Estación nativa de ciberseguridad con inferencia LLM local (Qwen 2.5 Coder</text>
-  <text x="48" y="238" class="card-desc">7B / Ollama), análisis estático Semgrep/Bandit y deduplicación SHA-256.</text>
-
-  <!-- Pillar 2: Cryptographic FinTech & Identity -->
-  <rect x="34" y="266" width="432" height="74" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
-  <rect x="34" y="266" width="3.5" height="74" rx="1.5" fill="#00e5ff"/>
-  <text x="48" y="285" class="card-title">02 // CRIPTOGRAFIA TRANSACCIONAL &amp; BLINDAJE API</text>
-  <text x="454" y="285" class="mono-sub" font-size="9.5" text-anchor="end" fill="#00e5ff">SHA-256 · OAUTH2 · ASVS</text>
-  <text x="48" y="305" class="card-desc">Verificación criptográfica SHA-256 en webhooks de pasarelas (Wompi),</text>
-  <text x="48" y="322" class="card-desc">SSO certificado directo con Google/Microsoft y Rate Limiting (1200 req/m).</text>
-
-  <!-- Pillar 3: Perimeter Defense & ACID Resilience -->
-  <rect x="34" y="350" width="432" height="76" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
-  <rect x="34" y="350" width="3.5" height="76" rx="1.5" fill="#2dd4bf"/>
-  <text x="48" y="369" class="card-title">03 // DEFENSA PERIMETRAL 360 &amp; MOTORES SQL ACID</text>
-  <text x="454" y="369" class="mono-sub" font-size="9.5" text-anchor="end" fill="#2dd4bf">NEXUS · ARCHITECT-TD</text>
-  <text x="48" y="389" class="card-desc">Simulación de mitigación SYN Flood, SQLi y MITM con nodos WAF/Envoy, y</text>
-  <text x="48" y="406" class="card-desc">resolución de deadlocks transaccionales sobre PostgreSQL 16/17.</text>
-
   <!-- ======================================================================= -->
-  <!-- RIGHT COLUMN: ARSENAL CODEBASE DISTRIBUTION & TELEMETRY (x=496..980)    -->
+  <!-- RIGHT MODULE: 3D RING DISTRIBUTION & REPOSITORY TELEMETRY               -->
   <!-- ======================================================================= -->
-  <rect x="496" y="50" width="484" height="392" rx="10" fill="url(#didPanel)" stroke="url(#didBorder)" stroke-width="1"/>
-  <line x1="514" y1="51" x2="760" y2="51" stroke="#00e5ff" stroke-opacity="0.65" stroke-width="1.5"/>
+  <g transform="translate(498, 34)">
+    <path d="M 0,0 L 460,0 L 474,14 L 474,384 L 0,384 Z" fill="#04070c" stroke="#162232" stroke-width="1.2"/>
+    <rect x="0" y="0" width="460" height="3" fill="#00e5ff"/>
+    <text x="18" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff" letter-spacing="1.4">
+      CODEBASE_METRICS // DISTRIBUCION REAL POR LENGUAJE Y MOTOR
+    </text>
 
-  <text x="514" y="75" class="mono-top" fill="#f1f5f9">ARSENAL DE CODIGO POR ECOSISTEMA &amp; PROYECTO</text>
-  <text x="962" y="75" class="mono-sub" text-anchor="end" fill="#00ff9d">09 REPOSITORIOS ACTIVOS</text>
-  <line x1="514" y1="86" x2="962" y2="86" stroke="#1e293b" stroke-width="1"/>
+    <!-- Top Multi-Segment Donut Chart (inspired by yoshi389111) + Legend -->
+    <g transform="translate(86, 98)">
+      <!-- 3D Shadow Ring -->
+      <circle cx="2" cy="4" r="46" fill="none" stroke="#020306" stroke-width="14"/>
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#0d1624" stroke-width="13"/>
+      <!-- Segment 1: JS/Node/React (46% -> 133 of 289) -->
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#00ff66" stroke-width="13"
+              stroke-dasharray="133 289" transform="rotate(-90)"/>
+      <!-- Segment 2: TypeScript/Fastify (25% -> 72 of 289) -->
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#00e5ff" stroke-width="13"
+              stroke-dasharray="72 289" stroke-dashoffset="-133" transform="rotate(-90)"/>
+      <!-- Segment 3: Java & C# .NET 10 (18% -> 52 of 289) -->
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#ffaa00" stroke-width="13"
+              stroke-dasharray="52 289" stroke-dashoffset="-205" transform="rotate(-90)"/>
+      <!-- Segment 4: Python & Docker (11% -> 32 of 289) -->
+      <circle cx="0" cy="0" r="46" fill="none" stroke="#c084fc" stroke-width="13"
+              stroke-dasharray="32 289" stroke-dashoffset="-257" transform="rotate(-90)"/>
+      <text x="0" y="-2" text-anchor="middle" class="mono" font-size="14" font-weight="bold" fill="#ffffff">09</text>
+      <text x="0" y="11" text-anchor="middle" class="mono" font-size="7" font-weight="bold" fill="#00ff66">REPOS</text>
+    </g>
 
-  <!-- Bar 1: JavaScript ES6+ / React / Node.js -->
-  <g transform="translate(514, 98)">
-    <text x="0" y="14" class="card-title">JAVASCRIPT ES6+ // REACT 18 // NODE.JS 20</text>
-    <text x="448" y="14" class="mono-sub" fill="#00ff9d" text-anchor="end">46.5% // CORE STACK</text>
-    <text x="0" y="31" class="card-desc">D&amp;D Textil E-Commerce · architect-td (56 Tests · WAF Sim) · Todo-API</text>
-    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
-    <rect x="0" y="40" width="268" height="8" rx="3" fill="url(#cyberBar1)">
-      <animate attributeName="width" values="0;268" dur="1.4s" fill="freeze"/>
-    </rect>
-  </g>
+    <!-- Right of Donut: 4 High-Contrast Telemetry Cards -->
+    <g transform="translate(162, 42)" class="mono">
+      <rect x="0" y="0" width="142" height="50" fill="#060b12" stroke="#162232"/>
+      <rect x="0" y="0" width="142" height="2.5" fill="#00ff66"/>
+      <text x="10" y="16" font-size="7.5" font-weight="bold" fill="#00ff66">JS_NODE_REACT</text>
+      <text x="10" y="36" font-size="15" font-weight="bold" fill="#ffffff">46.5%</text>
+      <text x="132" y="36" font-size="8" fill="#8ca0ba" text-anchor="end">3 REPOS</text>
 
-  <!-- Bar 2: TypeScript 5.3 / Fastify / PostgreSQL 16 -->
-  <g transform="translate(514, 162)">
-    <text x="0" y="14" class="card-title">TYPESCRIPT 5.3 // FASTIFY 4.26 // SQL ENGINE</text>
-    <text x="448" y="14" class="mono-sub" fill="#00e5ff" text-anchor="end">24.8% // ACID &amp; IDE</text>
-    <text x="0" y="31" class="card-desc">NEXUS (Simulador SQL PostgreSQL 16 pg-mem · Deadlocks · EXPLAIN)</text>
-    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
-    <rect x="0" y="40" width="176" height="8" rx="3" fill="url(#cyberBar2)">
-      <animate attributeName="width" values="0;176" dur="1.4s" fill="freeze"/>
-    </rect>
-  </g>
+      <rect x="152" y="0" width="142" height="50" fill="#060b12" stroke="#162232"/>
+      <rect x="152" y="0" width="142" height="2.5" fill="#00e5ff"/>
+      <text x="162" y="16" font-size="7.5" font-weight="bold" fill="#00e5ff">TS_FASTIFY_SQL</text>
+      <text x="162" y="36" font-size="15" font-weight="bold" fill="#ffffff">24.8%</text>
+      <text x="284" y="36" font-size="8" fill="#8ca0ba" text-anchor="end">NEXUS</text>
 
-  <!-- Bar 3: Java 21 & C# 12 (.NET 10 / Direct3D / GDI+) -->
-  <g transform="translate(514, 226)">
-    <text x="0" y="14" class="card-title">JAVA 21 &amp; C# 12 (.NET 10 // DIRECT3D &amp; GDI+)</text>
-    <text x="448" y="14" class="mono-sub" fill="#2dd4bf" text-anchor="end">18.4% // NATIVE &amp; API</text>
-    <text x="0" y="31" class="card-desc">secdev (Estación IA Ciberseguridad C#) · D&amp;D Backend JDBC · GCP POS</text>
-    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
-    <rect x="0" y="40" width="132" height="8" rx="3" fill="url(#cyberBar3)">
-      <animate attributeName="width" values="0;132" dur="1.4s" fill="freeze"/>
-    </rect>
-  </g>
+      <rect x="0" y="60" width="142" height="50" fill="#060b12" stroke="#162232"/>
+      <rect x="0" y="60" width="142" height="2.5" fill="#ffaa00"/>
+      <text x="10" y="76" font-size="7.5" font-weight="bold" fill="#ffaa00">CSHARP_JAVA</text>
+      <text x="10" y="96" font-size="15" font-weight="bold" fill="#ffffff">18.4%</text>
+      <text x="132" y="96" font-size="8" fill="#8ca0ba" text-anchor="end">SECDEV/POS</text>
 
-  <!-- Bar 4: Python 3.12 / Docker / SAST Orchestration -->
-  <g transform="translate(514, 290)">
-    <text x="0" y="14" class="card-title">PYTHON 3.12 // DOCKER MULTI-STAGE // SAST IA</text>
-    <text x="448" y="14" class="mono-sub" fill="#38bdf8" text-anchor="end">10.3% // SEC-AUTOMATION</text>
-    <text x="0" y="31" class="card-desc">Orquestador SAST Ollama · I-work-in-python (Big-O) · Contenedores</text>
-    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
-    <rect x="0" y="40" width="92" height="8" rx="3" fill="url(#cyberBar4)">
-      <animate attributeName="width" values="0;92" dur="1.4s" fill="freeze"/>
-    </rect>
-  </g>
+      <rect x="152" y="60" width="142" height="50" fill="#060b12" stroke="#162232"/>
+      <rect x="152" y="60" width="142" height="2.5" fill="#c084fc"/>
+      <text x="162" y="76" font-size="7.5" font-weight="bold" fill="#c084fc">PYTHON_DOCKER</text>
+      <text x="162" y="96" font-size="15" font-weight="bold" fill="#ffffff">10.3%</text>
+      <text x="284" y="96" font-size="8" fill="#8ca0ba" text-anchor="end">SAST/DSA</text>
+    </g>
 
-  <!-- Bottom 4 Tactical HUD KPI Counters -->
-  <g transform="translate(514, 356)">
-    <rect x="0" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#00ff9d" stroke-opacity="0.35"/>
-    <text x="52" y="28" class="kpi-val" fill="#00ff9d" text-anchor="middle">09</text>
-    <text x="52" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">REPOSITORIOS</text>
-    <text x="52" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">OPEN SOURCE</text>
+    <line x1="18" y1="168" x2="456" y2="168" stroke="#162232" stroke-width="1"/>
 
-    <rect x="114" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#00e5ff" stroke-opacity="0.35"/>
-    <text x="166" y="28" class="kpi-val" fill="#00e5ff" text-anchor="middle">SHA-256</text>
-    <text x="166" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">CRIPTOGRAFIA</text>
-    <text x="166" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">JWT · OAUTH2</text>
+    <!-- Detailed Breakdown Bars -->
+    <g transform="translate(18, 182)">
+      <!-- Bar 1 -->
+      <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">JavaScript ES6+ · React 18 · Node.js 20</text>
+      <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" text-anchor="end">D&amp;D Textil · architect-td · Todo-API</text>
+      <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
+      <rect x="0" y="20" width="290" height="7" fill="#00ff66">
+        <animate attributeName="width" values="0;290" dur="1.4s" fill="freeze"/>
+      </rect>
 
-    <rect x="228" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#2dd4bf" stroke-opacity="0.35"/>
-    <text x="280" y="28" class="kpi-val" fill="#2dd4bf" text-anchor="middle">56+ TESTS</text>
-    <text x="280" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">SUITE ACTIVA</text>
-    <text x="280" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">OWASP ASVS</text>
+      <!-- Bar 2 -->
+      <g transform="translate(0, 46)">
+        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">TypeScript 5.3 · Fastify 4.26 · PostgreSQL 16</text>
+        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff" text-anchor="end">NEXUS SQL Engine · Monaco IDE</text>
+        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
+        <rect x="0" y="20" width="210" height="7" fill="#00e5ff">
+          <animate attributeName="width" values="0;210" dur="1.4s" fill="freeze"/>
+        </rect>
+      </g>
 
-    <rect x="342" y="0" width="106" height="68" rx="6" fill="url(#didSub)" stroke="#38bdf8" stroke-opacity="0.35"/>
-    <text x="395" y="28" class="kpi-val" fill="#38bdf8" text-anchor="middle">05 STACKS</text>
-    <text x="395" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">DOCKERIZADOS</text>
-    <text x="395" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">NON-ROOT UID</text>
+      <!-- Bar 3 -->
+      <g transform="translate(0, 92)">
+        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">C# 12 (.NET 10 Direct3D / GDI+) &amp; Java 21 JDBC</text>
+        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#ffaa00" text-anchor="end">secdev IA · GCP POS · ERP Backend</text>
+        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
+        <rect x="0" y="20" width="156" height="7" fill="#ffaa00">
+          <animate attributeName="width" values="0;156" dur="1.4s" fill="freeze"/>
+        </rect>
+      </g>
+
+      <!-- Bar 4 -->
+      <g transform="translate(0, 138)">
+        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">Python 3.12 · Ollama SAST · Docker Compose IaC</text>
+        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#c084fc" text-anchor="end">I-work-in-python · Multi-Stage</text>
+        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
+        <rect x="0" y="20" width="108" height="7" fill="#c084fc">
+          <animate attributeName="width" values="0;108" dur="1.4s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
   </g>
 </svg>

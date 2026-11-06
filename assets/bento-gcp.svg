@@ -1,86 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
   <defs>
-    <linearGradient id="bgBase" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#03070b"/>
-      <stop offset="100%" stop-color="#07121c"/>
+    <linearGradient id="bgGc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05080c"/>
+      <stop offset="100%" stop-color="#19080f"/>
     </linearGradient>
-    <radialGradient id="orbGlow" cx="85%" cy="22%" r="48%">
-      <stop offset="0%" stop-color="#059669" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="hudRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.50"/>
-      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.08"/>
-    </linearGradient>
-    <pattern id="cardGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00e5ff" stroke-width="0.4" stroke-opacity="0.06"/>
+    <pattern id="dotsGc" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#ff2a5f" fill-opacity="0.14"/>
     </pattern>
     <style>
-      .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; }
-      .disp { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; }
-      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railPulse { to { stroke-dashoffset: -24; } }
-      .rail-anim { stroke-dasharray: 6 6; animation: railPulse 1.5s linear infinite; }
+      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      @keyframes railGc { to { stroke-dashoffset: -26; } }
+      @keyframes floatGc { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
+      .rail { stroke-dasharray: 8 5; animation: railGc 1.6s linear infinite; }
+      .float3d { animation: floatGc 3.4s ease-in-out infinite; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="12" fill="url(#bgBase)"/>
-  <rect width="490" height="220" rx="12" fill="url(#cardGrid)"/>
-  <rect width="490" height="220" rx="12" fill="url(#orbGlow)"/>
-  <rect x="1.5" y="1.5" width="487" height="217" rx="11" fill="none" stroke="url(#hudRim)" stroke-width="1.3"/>
+  <rect width="490" height="220" rx="6" fill="#030508"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="url(#bgGc)" stroke="#1e293b" stroke-width="1.5"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="url(#dotsGc)"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="none" stroke="#ff2a5f" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
 
-  <!-- Corner Tactical Reticles -->
-  <path d="M 12 2 L 2 2 L 2 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 478 2 L 488 2 L 488 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 12 218 L 2 218 L 2 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 478 218 L 488 218 L 488 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <rect x="24" y="5" width="90" height="3" fill="#ff2a5f"/>
+  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#ff2a5f" letter-spacing="2">SYS_05 // .NET 10 ENGINE</text>
 
-  <!-- Animated Top Data Rail -->
-  <line x1="24" y1="2" x2="240" y2="2" stroke="#00ff9d" stroke-opacity="0.75" stroke-width="1.5" class="rail-anim"/>
+  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#ff2a5f" fill-opacity="0.35" letter-spacing="2">GCP POS .NET 10</text>
+  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">GCP POS .NET 10</text>
+  <text x="224" y="51" class="mono" font-size="10" font-weight="700" fill="#00e5ff" letter-spacing="1">// GDI+ 60FPS</text>
 
-  <!-- Module Code & Title -->
-  <g transform="translate(22, 22)">
-    <text x="0" y="0" class="mono" font-size="8.5" font-weight="700" fill="#00ff9d" letter-spacing="0.8">
-      [ MOD-05 // NATIVE TELEMETRY ]
-    </text>
-    <!-- Vector Shield/Node Icon -->
-    <polygon points="0,12 7,8 14,12 14,20 7,25 0,20" fill="#061622" stroke="#00ff9d" stroke-width="1.3"/>
-    <circle cx="7" cy="16.5" r="2" fill="#00ff9d"/>
-    <text x="22" y="22" class="disp" font-size="15.5" font-weight="800" letter-spacing="0.4" fill="#f8fafc">GCP-GESTION-PRODUCTOS</text>
+  <g class="sans" font-size="11.2" fill="#94a3b8">
+    <text x="24" y="78">Sistema nativo de punto de venta e inventario en C# 12</text>
+    <text x="24" y="96">y .NET 10 con renderizado vectorial GDI+ a 60 FPS,</text>
+    <text x="24" y="114">telemetria en vivo y alertas automaticas de stock.</text>
   </g>
 
-  <!-- Tactical Status Badge -->
-  <g transform="translate(332, 24)" class="mono">
-    <rect x="0" y="0" width="136" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="68" y="14.5" text-anchor="middle" font-size="9" font-weight="700" fill="#00ff9d">.NET 10 · GDI+ 60FPS</text>
+  <!-- 3D ISOMETRIC SCULPTURE: 3D RISING TELEMETRY COLUMNS -->
+  <g transform="translate(418, 88)">
+    <polygon points="0,8 44,26 0,44 -44,26" fill="#0a0407" stroke="#ff2a5f" stroke-opacity="0.45" stroke-width="1"/>
+    <g class="float3d">
+      <!-- Column 1 (Left, Cyan) -->
+      <polygon points="-26,-4 -18,-8 -10,-4 -18,0" fill="#00e5ff"/>
+      <polygon points="-26,-4 -18,0 -18,22 -26,18" fill="#084c61"/>
+      <polygon points="-18,0 -10,-4 -10,18 -18,22" fill="#052f3d"/>
+      <!-- Column 2 (Center, Emerald) -->
+      <polygon points="-8,-18 0,-22 8,-18 0,-14" fill="#00ff66"/>
+      <polygon points="-8,-18 0,-14 0,24 -8,20" fill="#05603a"/>
+      <polygon points="0,-14 8,-18 8,20 0,24" fill="#033b24"/>
+      <!-- Column 3 (Right, Crimson Tall) -->
+      <polygon points="10,-32 18,-36 26,-32 18,-28" fill="#ff2a5f"/>
+      <polygon points="10,-32 18,-28 18,22 10,18" fill="#9f1239"/>
+      <polygon points="18,-28 26,-32 26,18 18,22" fill="#6b0d28"/>
+    </g>
   </g>
 
-  <!-- Description Lines -->
-  <g class="sans" font-size="11.8" fill="#94a3b8">
-    <text x="22" y="76">Sistema transaccional de Punto de Venta (POS) y control de</text>
-    <text x="22" y="96">inventario en C# 12 y Windows Forms (.NET 10.0) con gráficas</text>
-    <text x="22" y="116">vectoriales en GDI+ a 60 FPS y alertas de umbrales críticos.</text>
+  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
+    <g transform="translate(0, 0)">
+      <path d="M 6,0 L 82,0 L 76,22 L 0,22 Z" fill="#1f0812" stroke="#ff2a5f" stroke-width="1"/>
+      <text x="41" y="14.5" text-anchor="middle" fill="#fda4af">C# 12</text>
+    </g>
+    <g transform="translate(86, 0)">
+      <path d="M 6,0 L 90,0 L 84,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
+      <text x="45" y="14.5" text-anchor="middle" fill="#00e5ff">.NET 10.0</text>
+    </g>
+    <g transform="translate(180, 0)">
+      <path d="M 6,0 L 104,0 L 98,22 L 0,22 Z" fill="#051a14" stroke="#00ff66" stroke-width="1"/>
+      <text x="52" y="14.5" text-anchor="middle" fill="#00ff66">GDI+ 60 FPS</text>
+    </g>
+    <g transform="translate(288, 0)">
+      <path d="M 6,0 L 94,0 L 88,22 L 0,22 Z" fill="#1a1205" stroke="#ffaa00" stroke-width="1"/>
+      <text x="47" y="14.5" text-anchor="middle" fill="#ffaa00">WINFORMS</text>
+    </g>
   </g>
 
-  <!-- Tech Tags -->
-  <g transform="translate(22, 136)" class="mono" font-size="9.2" font-weight="600">
-    <rect x="0" y="0" width="54" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="27.0" y="14.5" text-anchor="middle" fill="#cbd5e1">C# 12</text>
-    <rect x="62" y="0" width="81" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="102.6" y="14.5" text-anchor="middle" fill="#cbd5e1">.NET 10.0</text>
-    <rect x="151" y="0" width="108" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="205.4" y="14.5" text-anchor="middle" fill="#cbd5e1">WinForms GDI+</text>
-    <rect x="268" y="0" width="88" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="311.6" y="14.5" text-anchor="middle" fill="#cbd5e1">POS 60 FPS</text>
-  </g>
-
-  <line x1="22" y1="174" x2="468" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(22, 196)" class="mono" font-size="10" font-weight="700">
-    <circle cx="5" cy="-3.5" r="3.5" fill="#00ff9d">
-      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="15" y="0" fill="#e2e8f0">C# (.NET 10.0)</text>
-    <text x="446" y="0" text-anchor="end" fill="#00ff9d">REPO // GCP-POS &gt;&gt;</text>
+  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
+  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
+    <rect x="0" y="-9" width="7" height="7" fill="#ff2a5f"/>
+    <text x="14" y="-2" fill="#cbd5e1">DOUBLE-BUFFERED // ZERO FLICKER</text>
+    <text x="442" y="-2" text-anchor="end" fill="#ff2a5f">OPEN_REPO // GCP-POS &gt;&gt;</text>
   </g>
 </svg>

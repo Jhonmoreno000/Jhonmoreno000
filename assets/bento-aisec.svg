@@ -1,86 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
   <defs>
-    <linearGradient id="bgBase" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#03070b"/>
-      <stop offset="100%" stop-color="#07121c"/>
+    <linearGradient id="bgAi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05080c"/>
+      <stop offset="100%" stop-color="#130d21"/>
     </linearGradient>
-    <radialGradient id="orbGlow" cx="85%" cy="22%" r="48%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="hudRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.50"/>
-      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.08"/>
-    </linearGradient>
-    <pattern id="cardGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00e5ff" stroke-width="0.4" stroke-opacity="0.06"/>
+    <pattern id="dotsAi" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#c084fc" fill-opacity="0.14"/>
     </pattern>
     <style>
-      .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; }
-      .disp { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; }
-      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railPulse { to { stroke-dashoffset: -24; } }
-      .rail-anim { stroke-dasharray: 6 6; animation: railPulse 1.5s linear infinite; }
+      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      @keyframes railAi { to { stroke-dashoffset: -26; } }
+      @keyframes floatAi { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+      @keyframes scanAi { 0%, 100% { transform: translateY(-18px); } 50% { transform: translateY(14px); } }
+      .rail { stroke-dasharray: 8 5; animation: railAi 1.6s linear infinite; }
+      .float3d { animation: floatAi 3.5s ease-in-out infinite; }
+      .laser-ring { animation: scanAi 2.6s ease-in-out infinite; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="12" fill="url(#bgBase)"/>
-  <rect width="490" height="220" rx="12" fill="url(#cardGrid)"/>
-  <rect width="490" height="220" rx="12" fill="url(#orbGlow)"/>
-  <rect x="1.5" y="1.5" width="487" height="217" rx="11" fill="none" stroke="url(#hudRim)" stroke-width="1.3"/>
+  <rect width="490" height="220" rx="6" fill="#030508"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="url(#bgAi)" stroke="#1e293b" stroke-width="1.5"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="url(#dotsAi)"/>
+  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
+        fill="none" stroke="#c084fc" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
 
-  <!-- Corner Tactical Reticles -->
-  <path d="M 12 2 L 2 2 L 2 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 478 2 L 488 2 L 488 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 12 218 L 2 218 L 2 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 478 218 L 488 218 L 488 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <rect x="24" y="5" width="90" height="3" fill="#c084fc"/>
+  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#c084fc" letter-spacing="2">SYS_03 // LOCAL AI SAST</text>
 
-  <!-- Animated Top Data Rail -->
-  <line x1="24" y1="2" x2="240" y2="2" stroke="#00ff9d" stroke-opacity="0.75" stroke-width="1.5" class="rail-anim"/>
+  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#c084fc" fill-opacity="0.35" letter-spacing="2">SECDEV</text>
+  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">SECDEV</text>
+  <text x="114" y="51" class="mono" font-size="10" font-weight="700" fill="#00ff66" letter-spacing="1">// QWEN 2.5 7B + D3D</text>
 
-  <!-- Module Code & Title -->
-  <g transform="translate(22, 22)">
-    <text x="0" y="0" class="mono" font-size="8.5" font-weight="700" fill="#00ff9d" letter-spacing="0.8">
-      [ MOD-03 // LOCAL AI SECURITY ]
-    </text>
-    <!-- Vector Shield/Node Icon -->
-    <polygon points="0,12 7,8 14,12 14,20 7,25 0,20" fill="#061622" stroke="#00ff9d" stroke-width="1.3"/>
-    <circle cx="7" cy="16.5" r="2" fill="#00ff9d"/>
-    <text x="22" y="22" class="disp" font-size="15.5" font-weight="800" letter-spacing="0.4" fill="#f8fafc">SECDEV // CYBER STATION</text>
+  <g class="sans" font-size="11.2" fill="#94a3b8">
+    <text x="24" y="78">Estacion nativa de ingenieria y ciberseguridad con</text>
+    <text x="24" y="96">aceleracion Direct3D, auditoria SAST mediante IA local</text>
+    <text x="24" y="114">(Qwen 2.5 Coder 7B) y deduplicacion SHA-256 sin nube.</text>
   </g>
 
-  <!-- Tactical Status Badge -->
-  <g transform="translate(332, 24)" class="mono">
-    <rect x="0" y="0" width="136" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="68" y="14.5" text-anchor="middle" font-size="9" font-weight="700" fill="#00ff9d">QWEN 7B · DIRECT3D</text>
+  <!-- 3D ISOMETRIC SCULPTURE: 3D OCTAHEDRON AI CORE & LASER SCANNER -->
+  <g transform="translate(418, 86)">
+    <ellipse cx="0" cy="30" rx="42" ry="16" fill="#05040a" stroke="#c084fc" stroke-opacity="0.45" stroke-width="1"/>
+    <g class="float3d">
+      <!-- Top Pyramid of Octahedron -->
+      <polygon points="0,-32 -24,-4 0,8" fill="#c084fc" fill-opacity="0.5" stroke="#e9d5ff" stroke-width="1.2"/>
+      <polygon points="0,-32 24,-4 0,8" fill="#9333ea" fill-opacity="0.55" stroke="#c084fc" stroke-width="1.2"/>
+      <!-- Bottom Pyramid of Octahedron -->
+      <polygon points="0,26 -24,-4 0,8" fill="#581c87" fill-opacity="0.7" stroke="#c084fc" stroke-width="1"/>
+      <polygon points="0,26 24,-4 0,8" fill="#3b0764" fill-opacity="0.85" stroke="#a855f7" stroke-width="1"/>
+      <!-- Scanning Laser Ring -->
+      <g class="laser-ring">
+        <ellipse cx="0" cy="-2" rx="34" ry="11" fill="none" stroke="#00ff66" stroke-width="1.6"/>
+      </g>
+    </g>
   </g>
 
-  <!-- Description Lines -->
-  <g class="sans" font-size="11.8" fill="#94a3b8">
-    <text x="22" y="76">Estación nativa de ingeniería de software y ciberseguridad</text>
-    <text x="22" y="96">con IA local (Qwen 2.5 Coder 7B), aceleración Direct3D,</text>
-    <text x="22" y="116">auditoría SAST automatizada y deduplicación SHA-256.</text>
+  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
+    <g transform="translate(0, 0)">
+      <path d="M 6,0 L 88,0 L 82,22 L 0,22 Z" fill="#170d2a" stroke="#c084fc" stroke-width="1"/>
+      <text x="44" y="14.5" text-anchor="middle" fill="#e9d5ff">C# NATIVE</text>
+    </g>
+    <g transform="translate(92, 0)">
+      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#051a14" stroke="#00ff66" stroke-width="1"/>
+      <text x="48" y="14.5" text-anchor="middle" fill="#00ff66">QWEN 2.5 7B</text>
+    </g>
+    <g transform="translate(192, 0)">
+      <path d="M 6,0 L 92,0 L 86,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
+      <text x="46" y="14.5" text-anchor="middle" fill="#00e5ff">DIRECT3D</text>
+    </g>
+    <g transform="translate(288, 0)">
+      <path d="M 6,0 L 94,0 L 88,22 L 0,22 Z" fill="#1a1205" stroke="#ffaa00" stroke-width="1"/>
+      <text x="47" y="14.5" text-anchor="middle" fill="#ffaa00">SAST SARIF</text>
+    </g>
   </g>
 
-  <!-- Tech Tags -->
-  <g transform="translate(22, 136)" class="mono" font-size="9.2" font-weight="600">
-    <rect x="0" y="0" width="68" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="33.8" y="14.5" text-anchor="middle" fill="#cbd5e1">C# .NET</text>
-    <rect x="76" y="0" width="95" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="123.0" y="14.5" text-anchor="middle" fill="#cbd5e1">Qwen 2.5 7B</text>
-    <rect x="178" y="0" width="74" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="215.6" y="14.5" text-anchor="middle" fill="#cbd5e1">Direct3D</text>
-    <rect x="261" y="0" width="115" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="318.4" y="14.5" text-anchor="middle" fill="#cbd5e1">SAST DevSecOps</text>
-  </g>
-
-  <line x1="22" y1="174" x2="468" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(22, 196)" class="mono" font-size="10" font-weight="700">
-    <circle cx="5" cy="-3.5" r="3.5" fill="#00ff9d">
-      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="15" y="0" fill="#e2e8f0">C# // Local AI Security</text>
-    <text x="446" y="0" text-anchor="end" fill="#00ff9d">REPO // SECDEV &gt;&gt;</text>
+  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
+  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
+    <rect x="0" y="-9" width="7" height="7" fill="#c084fc"/>
+    <text x="14" y="-2" fill="#cbd5e1">100% OFFLINE LLM // ZERO CODE LEAK</text>
+    <text x="442" y="-2" text-anchor="end" fill="#c084fc">OPEN_REPO // SECDEV &gt;&gt;</text>
   </g>
 </svg>
