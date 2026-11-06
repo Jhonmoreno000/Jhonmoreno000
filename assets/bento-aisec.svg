@@ -30,42 +30,49 @@
   <rect width="490" height="220" rx="12" fill="url(#orbGlow)"/>
   <rect x="1.5" y="1.5" width="487" height="217" rx="11" fill="none" stroke="url(#hudRim)" stroke-width="1.3"/>
 
+  <!-- Corner Tactical Reticles -->
   <path d="M 12 2 L 2 2 L 2 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 478 2 L 488 2 L 488 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 12 218 L 2 218 L 2 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 478 218 L 488 218 L 488 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
 
+  <!-- Animated Top Data Rail -->
   <line x1="24" y1="2" x2="240" y2="2" stroke="#00ff9d" stroke-opacity="0.75" stroke-width="1.5" class="rail-anim"/>
 
+  <!-- Module Code & Title -->
   <g transform="translate(22, 22)">
     <text x="0" y="0" class="mono" font-size="8.5" font-weight="700" fill="#00ff9d" letter-spacing="0.8">
       [ MOD-03 // LOCAL AI SECURITY ]
     </text>
+    <!-- Vector Shield/Node Icon -->
     <polygon points="0,12 7,8 14,12 14,20 7,25 0,20" fill="#061622" stroke="#00ff9d" stroke-width="1.3"/>
     <circle cx="7" cy="16.5" r="2" fill="#00ff9d"/>
     <text x="22" y="22" class="disp" font-size="15.5" font-weight="800" letter-spacing="0.4" fill="#f8fafc">SECDEV // CYBER STATION</text>
   </g>
 
+  <!-- Tactical Status Badge -->
   <g transform="translate(332, 24)" class="mono">
     <rect x="0" y="0" width="136" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.45" stroke-width="1"/>
     <text x="68" y="14.5" text-anchor="middle" font-size="9" font-weight="700" fill="#00ff9d">QWEN 7B · DIRECT3D</text>
   </g>
 
+  <!-- Description Lines -->
   <g class="sans" font-size="11.8" fill="#94a3b8">
     <text x="22" y="76">Estación nativa de ingeniería de software y ciberseguridad</text>
     <text x="22" y="96">con IA local (Qwen 2.5 Coder 7B), aceleración Direct3D,</text>
     <text x="22" y="116">auditoría SAST automatizada y deduplicación SHA-256.</text>
   </g>
 
+  <!-- Tech Tags -->
   <g transform="translate(22, 136)" class="mono" font-size="9.2" font-weight="600">
-    <rect x="0" y="0" width="70" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="35" y="14.5" text-anchor="middle" fill="#cbd5e1">C# .NET</text>
-    <rect x="78" y="0" width="96" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="126" y="14.5" text-anchor="middle" fill="#cbd5e1">Qwen 2.5 7B</text>
-    <rect x="182" y="0" width="76" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="220" y="14.5" text-anchor="middle" fill="#cbd5e1">Direct3D</text>
-    <rect x="266" y="0" width="110" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="321" y="14.5" text-anchor="middle" fill="#cbd5e1">SAST DevSecOps</text>
+    <rect x="0" y="0" width="68" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="33.8" y="14.5" text-anchor="middle" fill="#cbd5e1">C# .NET</text>
+    <rect x="76" y="0" width="95" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="123.0" y="14.5" text-anchor="middle" fill="#cbd5e1">Qwen 2.5 7B</text>
+    <rect x="178" y="0" width="74" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="215.6" y="14.5" text-anchor="middle" fill="#cbd5e1">Direct3D</text>
+    <rect x="261" y="0" width="115" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="318.4" y="14.5" text-anchor="middle" fill="#cbd5e1">SAST DevSecOps</text>
   </g>
 
   <line x1="22" y1="174" x2="468" y2="174" stroke="#1e293b" stroke-width="1"/>

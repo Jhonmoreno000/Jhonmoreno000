@@ -30,42 +30,49 @@
   <rect width="490" height="220" rx="12" fill="url(#orbGlow)"/>
   <rect x="1.5" y="1.5" width="487" height="217" rx="11" fill="none" stroke="url(#hudRim)" stroke-width="1.3"/>
 
+  <!-- Corner Tactical Reticles -->
   <path d="M 12 2 L 2 2 L 2 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 478 2 L 488 2 L 488 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 12 218 L 2 218 L 2 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
   <path d="M 478 218 L 488 218 L 488 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
 
+  <!-- Animated Top Data Rail -->
   <line x1="24" y1="2" x2="240" y2="2" stroke="#00ff9d" stroke-opacity="0.75" stroke-width="1.5" class="rail-anim"/>
 
+  <!-- Module Code & Title -->
   <g transform="translate(22, 22)">
     <text x="0" y="0" class="mono" font-size="8.5" font-weight="700" fill="#00ff9d" letter-spacing="0.8">
       [ MOD-01 // ACID ENGINE ]
     </text>
+    <!-- Vector Shield/Node Icon -->
     <polygon points="0,12 7,8 14,12 14,20 7,25 0,20" fill="#061622" stroke="#00ff9d" stroke-width="1.3"/>
     <circle cx="7" cy="16.5" r="2" fill="#00ff9d"/>
     <text x="22" y="22" class="disp" font-size="15.5" font-weight="800" letter-spacing="0.4" fill="#f8fafc">NEXUS</text>
   </g>
 
+  <!-- Tactical Status Badge -->
   <g transform="translate(332, 24)" class="mono">
     <rect x="0" y="0" width="136" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.45" stroke-width="1"/>
     <text x="68" y="14.5" text-anchor="middle" font-size="9" font-weight="700" fill="#00ff9d">PG16 · MONACO IDE</text>
   </g>
 
+  <!-- Description Lines -->
   <g class="sans" font-size="11.8" fill="#94a3b8">
     <text x="22" y="76">Simulador interactivo de ingeniería SQL y resiliencia ACID con</text>
     <text x="22" y="96">editor Monaco, motor PostgreSQL 16 en memoria (pg-mem),</text>
     <text x="22" y="116">mitigación de deadlocks concurrentes y auditoría EXPLAIN.</text>
   </g>
 
+  <!-- Tech Tags -->
   <g transform="translate(22, 136)" class="mono" font-size="9.2" font-weight="600">
-    <rect x="0" y="0" width="110" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="55" y="14.5" text-anchor="middle" fill="#cbd5e1">TypeScript 5.3</text>
-    <rect x="118" y="0" width="96" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="166" y="14.5" text-anchor="middle" fill="#cbd5e1">Fastify 4.26</text>
-    <rect x="222" y="0" width="74" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="259" y="14.5" text-anchor="middle" fill="#cbd5e1">React 18</text>
-    <rect x="304" y="0" width="104" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
-    <text x="356" y="14.5" text-anchor="middle" fill="#cbd5e1">PostgreSQL 16</text>
+    <rect x="0" y="0" width="115" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="57.6" y="14.5" text-anchor="middle" fill="#cbd5e1">TypeScript 5.3</text>
+    <rect x="123" y="0" width="102" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="174.0" y="14.5" text-anchor="middle" fill="#cbd5e1">Fastify 4.26</text>
+    <rect x="233" y="0" width="74" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="270.0" y="14.5" text-anchor="middle" fill="#cbd5e1">React 18</text>
+    <rect x="315" y="0" width="108" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="369.4" y="14.5" text-anchor="middle" fill="#cbd5e1">PostgreSQL 16</text>
   </g>
 
   <line x1="22" y1="174" x2="468" y2="174" stroke="#1e293b" stroke-width="1"/>
