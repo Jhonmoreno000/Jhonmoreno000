@@ -42,37 +42,50 @@
     </style>
   </defs>
 
-  <rect width="1000" height="360" rx="8" fill="#030508"/>
-  <path d="M 32,8 L 220,8 L 234,18 L 766,18 L 780,8 L 968,8 L 992,32 L 992,332 L 968,352 L 32,352 L 8,332 L 8,32 Z"
-        fill="url(#bg3d)" stroke="#1e293b" stroke-width="1.5"/>
-  <rect width="1000" height="360" rx="16" fill="url(#orb3d)"/>
+  <rect width="1000" height="360" rx="14" fill="url(#bg3d)"/>
+  <rect width="1000" height="360" rx="14" fill="url(#grid3d)"/>
+  <rect width="1000" height="360" rx="14" fill="url(#orb3d)"/>
+  <rect x="1.5" y="1.5" width="997" height="357" rx="13" fill="none" stroke="url(#hudRim3d)" stroke-width="1.3"/>
+  <path d="M 14 2 L 2 2 L 2 16" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 986 2 L 998 2 L 998 16" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 14 358 L 2 358 L 2 344" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 986 358 L 998 358 L 998 344" fill="none" stroke="#00ff9d" stroke-width="2"/>
 
-  <g class="sans">
-    <rect x="34" y="21" width="8" height="8" fill="#00ff66"/>
-    <text x="50" y="29" font-size="11" font-weight="800" fill="#f8fafc" letter-spacing="2">3D_CONTRIB_RADAR // MAPA ISOMETRICO 3D DE ACTIVIDAD Y COMMITS</text>
-    <text x="964" y="29" text-anchor="end" font-size="10" font-weight="700" fill="#00e5ff" letter-spacing="1.5">SYNC: 2026-11-06 UTC</text>
+  <rect x="2" y="2" width="996" height="36" rx="12" fill="#07131e" fill-opacity="0.9"/>
+  <line x1="2" y1="38" x2="998" y2="38" stroke="#00ff9d" stroke-opacity="0.22" stroke-width="1"/>
+
+  <g class="mono">
+    <circle cx="24" cy="20" r="3.5" fill="#00ff9d">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="38" y="24" font-size="11" font-weight="700" fill="#f1f5f9" letter-spacing="0.6">
+      [ TOPOLOGIA ISOMETRICA 3D // ACTIVIDAD Y DESPLIEGUES EN GITHUB ]
+    </text>
+    <text x="976" y="24" text-anchor="end" font-size="10" fill="#00e5ff">SYNC: 2026-11-06 UTC</text>
   </g>
-  <line x1="26" y1="42" x2="974" y2="42" stroke="#1e293b" stroke-width="1"/>
 
-  <g transform="translate(28, 62)" class="sans">
-    <path d="M 0,0 L 225,0 L 235,10 L 235,78 L 0,78 Z" fill="#07111a" stroke="#1e293b" stroke-width="1.2"/>
-    <rect x="0" y="0" width="4" height="78" fill="#00ff66"/>
-    <text x="18" y="24" font-size="9.5" fill="#94a3b8" font-weight="800" letter-spacing="1.5">SYS_REPOS // PUBLICOS</text>
-    <text x="18" y="56" font-size="25" font-weight="900" fill="#f8fafc">09 <tspan font-size="11" font-weight="800" fill="#00ff66">VERIFIED</tspan></text>
+  <g transform="translate(26, 56)" class="mono">
+    <rect width="242" height="82" rx="8" fill="url(#hudCard3d)" stroke="url(#hudRim3d)" stroke-width="1"/>
+    <rect x="0" y="0" width="3.5" height="82" fill="#00ff9d"/>
+    <text x="18" y="24" font-size="10" fill="#94a3b8" font-weight="600">01 // REPOSITORIOS PUBLICOS</text>
+    <text x="18" y="56" class="disp" font-size="25" font-weight="800" fill="#f8fafc">09 <tspan class="mono" font-size="10.5" font-weight="700" fill="#00ff9d">ACTIVOS</tspan></text>
+    <text x="18" y="72" font-size="8.8" fill="#64748b">VERIFICADOS CON SAST &amp; DOCKER</text>
 
-    <g transform="translate(0, 92)">
-      <path d="M 0,0 L 225,0 L 235,10 L 235,78 L 0,78 Z" fill="#07111a" stroke="#1e293b" stroke-width="1.2"/>
-      <rect x="0" y="0" width="4" height="78" fill="#00e5ff"/>
-      <text x="18" y="24" font-size="9.5" fill="#94a3b8" font-weight="800" letter-spacing="1.5">CODEBASE // VOLUMEN</text>
-      <text x="18" y="56" font-size="24" font-weight="900" fill="#f8fafc">1,903 <tspan font-size="11" font-weight="800" fill="#00e5ff">KB</tspan></text>
+    <g transform="translate(0, 96)">
+      <rect width="242" height="82" rx="8" fill="url(#hudCard3d)" stroke="url(#hudRim3d)" stroke-width="1"/>
+      <rect x="0" y="0" width="3.5" height="82" fill="#00e5ff"/>
+      <text x="18" y="24" font-size="10" fill="#94a3b8" font-weight="600">02 // VOLUMEN AUDITADO</text>
+      <text x="18" y="56" class="disp" font-size="23" font-weight="800" fill="#f8fafc">58,778 <tspan class="mono" font-size="10.5" font-weight="700" fill="#00e5ff">KB</tspan></text>
+      <text x="18" y="72" font-size="8.8" fill="#64748b">CODIGO FUENTE &amp; ARTEFACTOS</text>
     </g>
 
-    <g transform="translate(0, 184)">
-      <path d="M 0,0 L 225,0 L 235,10 L 235,82 L 0,82 Z" fill="#07111a" stroke="#1e293b" stroke-width="1.2"/>
-      <rect x="0" y="0" width="4" height="82" fill="#ffaa00"/>
-      <text x="18" y="23" font-size="9.5" fill="#ffaa00" font-weight="800" letter-spacing="1.5">STACK // MOTORES CORE</text>
-      <text x="18" y="46" font-size="11" font-weight="800" fill="#e2e8f0">TS 5.3 · JS · C# 12 · JAVA 21</text>
-      <text x="18" y="65" font-size="10" font-weight="700" fill="#00ff66">PG 16/17 · DOCKER · QWEN 7B</text>
+    <g transform="translate(0, 192)">
+      <rect width="242" height="86" rx="8" fill="url(#hudCard3d)" stroke="url(#hudRim3d)" stroke-width="1"/>
+      <rect x="0" y="0" width="3.5" height="86" fill="#10b981"/>
+      <text x="18" y="23" font-size="10" fill="#94a3b8" font-weight="600">03 // STACK DE SEGURIDAD</text>
+      <text x="18" y="44" font-size="10.5" font-weight="700" fill="#00ff9d">OWASP ASVS · SHA-256 · JWT</text>
+      <text x="18" y="61" font-size="9.5" fill="#e2e8f0">TS · Java · C# · Python · PG17</text>
+      <text x="18" y="76" font-size="8.8" fill="#00e5ff">Qwen 2.5 7B SAST · Docker</text>
     </g>
   </g>
 
