@@ -1,224 +1,244 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="100%" height="460">
   <defs>
-    <!-- 60% Dominant Base: Deep Warm Slate -->
-    <linearGradient id="dnaBase" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1017"/>
-      <stop offset="50%" stop-color="#111622"/>
-      <stop offset="100%" stop-color="#0b0e14"/>
+    <linearGradient id="didBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03070b"/>
+      <stop offset="50%" stop-color="#061019"/>
+      <stop offset="100%" stop-color="#020508"/>
     </linearGradient>
 
-    <!-- Diffused Ambient Light Orbs for Glassmorphism -->
-    <radialGradient id="dnaOrb1" cx="20%" cy="25%" r="48%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="dnaOrb2" cx="80%" cy="75%" r="48%">
-      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.09"/>
-      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+    <radialGradient id="didOrb1" cx="22%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- 30% Frosted Glass Surface Gradients -->
-    <linearGradient id="glassCard" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
-    </linearGradient>
-    <linearGradient id="glassInner" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.012"/>
-    </linearGradient>
-    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.17"/>
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.025"/>
+    <radialGradient id="didOrb2" cx="78%" cy="72%" r="46%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="didPanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1722" stop-opacity="0.86"/>
+      <stop offset="100%" stop-color="#050c13" stop-opacity="0.94"/>
     </linearGradient>
 
-    <!-- 10% Harmonious Low-Saturation Progress Gradients (Analogous Cool Harmony) -->
-    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#93c5fd"/>
+    <linearGradient id="didSub" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1e2d" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050d15" stop-opacity="0.88"/>
     </linearGradient>
-    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#7dd3fc"/>
+
+    <linearGradient id="didBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.42"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.08"/>
     </linearGradient>
-    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#c4b5fd"/>
+
+    <!-- Tactical Cyber Progress Bar Gradients -->
+    <linearGradient id="cyberBar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
     </linearGradient>
-    <linearGradient id="bar4" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="cyberBar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <linearGradient id="cyberBar3" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0d9488"/>
-      <stop offset="100%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
     </linearGradient>
+    <linearGradient id="cyberBar4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <pattern id="didGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-opacity="0.06"/>
+    </pattern>
 
     <style>
-      .sans-hdr { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; font-weight: 600; fill: #e2e8f0; letter-spacing: 0.1px; }
-      .name-h1 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 700; fill: #f1f5f9; letter-spacing: -0.3px; }
-      .role-sub { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: #93c5fd; }
-      .card-h { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; font-weight: 600; fill: #f1f5f9; }
-      .card-p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; fill: #94a3b8; }
-      .meta-sm { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 500; fill: #64748b; }
-      .val-num { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; }
-      .kpi-num { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: 700; fill: #f1f5f9; }
-      .kpi-lbl { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; font-weight: 500; fill: #94a3b8; }
+      .mono-top { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.7px; }
+      .disp-h1 { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; font-size: 16px; font-weight: 800; fill: #f8fafc; letter-spacing: 0.4px; }
+      .mono-sub { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.4px; }
+      .card-title { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 700; fill: #f1f5f9; }
+      .card-desc { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.2px; fill: #94a3b8; }
+      .kpi-val { font-family: 'Orbitron', 'JetBrains Mono', monospace; font-size: 16px; font-weight: 800; }
 
-      @keyframes floatBadge {
+      @keyframes layerFloat1 {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-3.5px); }
+        50% { transform: translateY(-4px); }
       }
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.45; }
-        50% { opacity: 0.95; }
+      @keyframes layerFloat2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
       }
-      .float-iso { animation: floatBadge 4.2s ease-in-out infinite; }
-      .pulse-led { animation: pulseGlow 2.6s ease-in-out infinite; }
+      @keyframes pulseBeacon {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+      .iso-layer-1 { animation: layerFloat1 3.6s ease-in-out infinite; }
+      .iso-layer-2 { animation: layerFloat2 3.6s ease-in-out infinite; }
+      .beacon-dot { animation: pulseBeacon 2s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Outer Ambient Base & Frosted Frame -->
-  <rect width="1000" height="450" rx="16" fill="url(#dnaBase)"/>
-  <rect width="1000" height="450" rx="16" fill="url(#dnaOrb1)"/>
-  <rect width="1000" height="450" rx="16" fill="url(#dnaOrb2)"/>
-  <rect x="1" y="1" width="998" height="448" rx="15" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+  <!-- Base Canvas -->
+  <rect width="1000" height="460" rx="14" fill="url(#didBg)"/>
+  <rect width="1000" height="460" rx="14" fill="url(#didGrid)"/>
+  <rect width="1000" height="460" rx="14" fill="url(#didOrb1)"/>
+  <rect width="1000" height="460" rx="14" fill="url(#didOrb2)"/>
 
-  <!-- Top Frosted Header Bar -->
-  <rect x="2" y="2" width="996" height="38" rx="14" fill="#ffffff" fill-opacity="0.035"/>
-  <line x1="2" y1="40" x2="998" y2="40" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
-  <line x1="24" y1="2" x2="420" y2="2" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
+  <!-- Outer Armored Frame & Corner Brackets -->
+  <rect x="1.5" y="1.5" width="997" height="457" rx="13" fill="none" stroke="url(#didBorder)" stroke-width="1.3"/>
+  <path d="M 14 2 L 2 2 L 2 16" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 986 2 L 998 2 L 998 16" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 14 458 L 2 458 L 2 444" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 986 458 L 998 458 L 998 444" fill="none" stroke="#00ff9d" stroke-width="2"/>
 
-  <circle cx="24" cy="21" r="4" fill="#6ee7b7" fill-opacity="0.85" class="pulse-led"/>
-  <text x="38" y="25" class="sans-hdr">Perfil de Ingeniería &amp; Distribución Real de Repositorios</text>
-  <text x="976" y="25" class="meta-sm" text-anchor="end" fill="#94a3b8">Medellín, Colombia · SENA ADSO · @Jhonmoreno000</text>
+  <!-- Top Header Bar -->
+  <rect x="2" y="2" width="996" height="36" rx="12" fill="#07131e" fill-opacity="0.9"/>
+  <line x1="2" y1="38" x2="998" y2="38" stroke="#00ff9d" stroke-opacity="0.22" stroke-width="1"/>
+  <circle cx="24" cy="20" r="3.5" fill="#00ff9d" class="beacon-dot"/>
+  <text x="38" y="24" class="mono-top" fill="#e2e8f0">
+    [ DEFENSE-IN-DEPTH // ARQUITECTURA DE SEGURIDAD &amp; TELEMETRIA DE CODIGO ]
+  </text>
+  <text x="978" y="24" text-anchor="end" class="mono-sub" fill="#00e5ff">
+    OWASP ASVS // ISO 25010 // @JHONMORENO000
+  </text>
 
   <!-- ======================================================================= -->
-  <!-- LEFT COLUMN: PERSONAL ENGINEERING DOSSIER & TRAJECTORY (x=22..478)      -->
+  <!-- LEFT COLUMN: DEFENSE-IN-DEPTH DOSSIER & 3 SECURITY LAYERS (x=20..480)   -->
   <!-- ======================================================================= -->
-  <rect x="22" y="54" width="456" height="376" rx="12" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1"/>
-  <line x1="38" y1="55" x2="240" y2="55" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+  <rect x="20" y="50" width="460" height="392" rx="10" fill="url(#didPanel)" stroke="url(#didBorder)" stroke-width="1"/>
+  <line x1="36" y1="51" x2="240" y2="51" stroke="#00ff9d" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <!-- Personal Identity Header Card -->
-  <rect x="36" y="68" width="428" height="86" rx="10" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
+  <!-- Top Operator Header Card -->
+  <rect x="34" y="64" width="432" height="86" rx="8" fill="url(#didSub)" stroke="#00e5ff" stroke-opacity="0.28"/>
 
-  <!-- Translucent Glass Isometric Cube on Left (Safely nested transform!) -->
-  <g transform="translate(80, 112)">
-    <g class="float-iso">
-      <polygon points="0,-28 28,-13 0,2 -28,-13" fill="#ffffff" fill-opacity="0.04" stroke="#93c5fd" stroke-opacity="0.35" stroke-width="1"/>
-      <polygon points="0,-26 20,-16 0,-6 -20,-16" fill="#93c5fd" fill-opacity="0.75"/>
-      <polygon points="-20,-16 0,-6 0,16 -20,6" fill="#6366f1" fill-opacity="0.65"/>
-      <polygon points="20,-16 0,-6 0,16 20,6" fill="#38bdf8" fill-opacity="0.55"/>
+  <!-- Animated 3D Isometric Layered Defense Stack Icon -->
+  <g transform="translate(76, 114)">
+    <!-- Base Layer (Data/Persistence) -->
+    <polygon points="0,-6 28,8 0,22 -28,8" fill="#061824" stroke="#00e5ff" stroke-width="1.2"/>
+    <!-- Middle Layer (API/Zero-Trust) -->
+    <g class="iso-layer-1">
+      <polygon points="0,-18 28,-4 0,10 -28,-4" fill="#082836" stroke="#00e5ff" stroke-width="1.2"/>
+    </g>
+    <!-- Top Crown Layer (WAF/SAST Shield) -->
+    <g class="iso-layer-2">
+      <polygon points="0,-30 28,-16 0,-2 -28,-16" fill="#00ff9d" fill-opacity="0.25" stroke="#00ff9d" stroke-width="1.4"/>
+      <circle cx="0" cy="-16" r="3" fill="#00ff9d"/>
     </g>
   </g>
 
-  <!-- Personal Bio & Credentials -->
-  <text x="124" y="91" class="name-h1">Jhon Anderson Moreno Posso</text>
-  <text x="124" y="110" class="role-sub">Ingeniero de Software Backend · Arquitectura &amp; DevSecOps</text>
+  <text x="120" y="88" class="disp-h1">JHON ANDERSON MORENO POSSO</text>
+  <text x="120" y="106" class="mono-sub" fill="#00ff9d">INGENIERO BACKEND // DEVSECOPS &amp; CIBERDEFENSA</text>
 
-  <rect x="124" y="120" width="150" height="22" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.09"/>
-  <text x="199" y="135" class="meta-sm" fill="#cbd5e1" text-anchor="middle">SENA · Tecnólogo ADSO</text>
+  <rect x="120" y="116" width="154" height="22" rx="4" fill="#040a10" stroke="#00ff9d" stroke-opacity="0.35"/>
+  <text x="197" y="131" class="mono-sub" font-size="9.5" fill="#cbd5e1" text-anchor="middle">SENA :: TECNOLOGO ADSO</text>
 
-  <rect x="282" y="120" width="166" height="22" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.09"/>
-  <text x="365" y="135" class="meta-sm" fill="#cbd5e1" text-anchor="middle">Medellín, Colombia (UTC-5)</text>
+  <rect x="282" y="116" width="170" height="22" rx="4" fill="#040a10" stroke="#00e5ff" stroke-opacity="0.35"/>
+  <text x="367" y="131" class="mono-sub" font-size="9.5" fill="#00e5ff" text-anchor="middle">ZERO-TRUST &amp; CLEAN ARCH</text>
 
-  <!-- Section Title: 3 Personal Pillars -->
-  <text x="38" y="176" class="meta-sm" fill="#93c5fd">Enfoque Técnico &amp; Trayectoria de Desarrollo</text>
+  <text x="36" y="172" class="mono-sub" fill="#00e5ff" letter-spacing="0.8">
+    &gt;&gt; CAPAS DE INGENIERIA Y SEGURIDAD APLICADA EN MIS SISTEMAS
+  </text>
 
-  <!-- Pillar 1 -->
-  <rect x="36" y="186" width="428" height="68" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
-  <rect x="36" y="198" width="3" height="44" rx="1.5" fill="#93c5fd" fill-opacity="0.8"/>
-  <text x="52" y="206" class="card-h">Formación ADSO (SENA) &amp; Arquitectura Limpia</text>
-  <text x="450" y="206" class="meta-sm" text-anchor="end" fill="#93c5fd">SOLID · DDD · TDD</text>
-  <text x="52" y="225" class="card-p">Diseño de software desacoplado por capas, contratos REST bien definidos,</text>
-  <text x="52" y="242" class="card-p">inversión de dependencias y validación continua con pruebas automatizadas.</text>
+  <!-- Pillar 1: Shift-Left & AI SAST -->
+  <rect x="34" y="182" width="432" height="74" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
+  <rect x="34" y="182" width="3.5" height="74" rx="1.5" fill="#00ff9d"/>
+  <text x="48" y="201" class="card-title">01 // AUDITORIA SAST CON IA LOCAL &amp; SHIFT-LEFT</text>
+  <text x="454" y="201" class="mono-sub" font-size="9.5" text-anchor="end" fill="#00ff9d">SECDEV · QWEN 2.5 7B</text>
+  <text x="48" y="221" class="card-desc">Estación nativa de ciberseguridad con inferencia LLM local (Qwen 2.5 Coder</text>
+  <text x="48" y="238" class="card-desc">7B / Ollama), análisis estático Semgrep/Bandit y deduplicación SHA-256.</text>
 
-  <!-- Pillar 2 -->
-  <rect x="36" y="264" width="428" height="68" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
-  <rect x="36" y="276" width="3" height="44" rx="1.5" fill="#a5b4fc" fill-opacity="0.8"/>
-  <text x="52" y="284" class="card-h">Desarrollo de Simuladores Técnicos Interactivos</text>
-  <text x="450" y="284" class="meta-sm" text-anchor="end" fill="#a5b4fc">NEXUS &amp; Architect-TD</text>
-  <text x="52" y="303" class="card-p">Creación de entornos prácticos: PostgreSQL 16 en memoria (pg-mem)</text>
-  <text x="52" y="320" class="card-p">para diagnóstico de incidentes SQL y simulación perimetral con IaC.</text>
+  <!-- Pillar 2: Cryptographic FinTech & Identity -->
+  <rect x="34" y="266" width="432" height="74" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
+  <rect x="34" y="266" width="3.5" height="74" rx="1.5" fill="#00e5ff"/>
+  <text x="48" y="285" class="card-title">02 // CRIPTOGRAFIA TRANSACCIONAL &amp; BLINDAJE API</text>
+  <text x="454" y="285" class="mono-sub" font-size="9.5" text-anchor="end" fill="#00e5ff">SHA-256 · OAUTH2 · ASVS</text>
+  <text x="48" y="305" class="card-desc">Verificación criptográfica SHA-256 en webhooks de pasarelas (Wompi),</text>
+  <text x="48" y="322" class="card-desc">SSO certificado directo con Google/Microsoft y Rate Limiting (1200 req/m).</text>
 
-  <!-- Pillar 3 -->
-  <rect x="36" y="342" width="428" height="72" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.06"/>
-  <rect x="36" y="354" width="3" height="48" rx="1.5" fill="#6ee7b7" fill-opacity="0.8"/>
-  <text x="52" y="362" class="card-h">Contenedores Multi-Stage, Seguridad SAST &amp; Sistemas .NET</text>
-  <text x="450" y="362" class="meta-sm" text-anchor="end" fill="#6ee7b7">Docker · .NET 10</text>
-  <text x="52" y="381" class="card-p">Orquestación con Docker Compose (Node, Mongo, Postgres), auditoría SAST</text>
-  <text x="52" y="398" class="card-p">asistida por modelos locales (Ollama) y sistemas POS nativos a 60 FPS.</text>
+  <!-- Pillar 3: Perimeter Defense & ACID Resilience -->
+  <rect x="34" y="350" width="432" height="76" rx="7" fill="url(#didSub)" stroke="#1e293b"/>
+  <rect x="34" y="350" width="3.5" height="76" rx="1.5" fill="#2dd4bf"/>
+  <text x="48" y="369" class="card-title">03 // DEFENSA PERIMETRAL 360 &amp; MOTORES SQL ACID</text>
+  <text x="454" y="369" class="mono-sub" font-size="9.5" text-anchor="end" fill="#2dd4bf">NEXUS · ARCHITECT-TD</text>
+  <text x="48" y="389" class="card-desc">Simulación de mitigación SYN Flood, SQLi y MITM con nodos WAF/Envoy, y</text>
+  <text x="48" y="406" class="card-desc">resolución de deadlocks transaccionales sobre PostgreSQL 16/17.</text>
 
   <!-- ======================================================================= -->
-  <!-- RIGHT COLUMN: REAL GITHUB REPOSITORY CODEBASE DNA (x=496..978)          -->
+  <!-- RIGHT COLUMN: ARSENAL CODEBASE DISTRIBUTION & TELEMETRY (x=496..980)    -->
   <!-- ======================================================================= -->
-  <rect x="496" y="54" width="482" height="376" rx="12" fill="url(#glassCard)" stroke="url(#glassBorder)" stroke-width="1"/>
-  <line x1="514" y1="55" x2="740" y2="55" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+  <rect x="496" y="50" width="484" height="392" rx="10" fill="url(#didPanel)" stroke="url(#didBorder)" stroke-width="1"/>
+  <line x1="514" y1="51" x2="760" y2="51" stroke="#00e5ff" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <text x="514" y="78" class="sans-hdr">Volumen de Código por Lenguaje y Proyecto</text>
-  <text x="960" y="78" class="meta-sm" text-anchor="end" fill="#6ee7b7">918.8 KB en GitHub</text>
-  <line x1="514" y1="88" x2="960" y2="88" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+  <text x="514" y="75" class="mono-top" fill="#f1f5f9">ARSENAL DE CODIGO POR ECOSISTEMA &amp; PROYECTO</text>
+  <text x="962" y="75" class="mono-sub" text-anchor="end" fill="#00ff9d">09 REPOSITORIOS ACTIVOS</text>
+  <line x1="514" y1="86" x2="962" y2="86" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Language 1: JavaScript ES6+ / Node.js 20 -->
-  <g transform="translate(514, 100)">
-    <text x="0" y="14" class="card-h">JavaScript ES6+ &amp; Node.js v20</text>
-    <text x="446" y="14" class="val-num" fill="#93c5fd" text-anchor="end">568.9 KB · 55.4%</text>
-    <text x="0" y="31" class="card-p">architect-td (318 KB · 56 Tests · Canvas 2D) · NEXUS · proyecto-todo-api</text>
-    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
-    <rect x="0" y="40" width="248" height="8" rx="4" fill="url(#bar1)" fill-opacity="0.9">
-      <animate attributeName="width" values="0;248" dur="1.4s" fill="freeze"/>
+  <!-- Bar 1: JavaScript ES6+ / React / Node.js -->
+  <g transform="translate(514, 98)">
+    <text x="0" y="14" class="card-title">JAVASCRIPT ES6+ // REACT 18 // NODE.JS 20</text>
+    <text x="448" y="14" class="mono-sub" fill="#00ff9d" text-anchor="end">46.5% // CORE STACK</text>
+    <text x="0" y="31" class="card-desc">D&amp;D Textil E-Commerce · architect-td (56 Tests · WAF Sim) · Todo-API</text>
+    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
+    <rect x="0" y="40" width="268" height="8" rx="3" fill="url(#cyberBar1)">
+      <animate attributeName="width" values="0;268" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
-  <!-- Language 2: TypeScript 5.3 / Fastify / React 18 -->
+  <!-- Bar 2: TypeScript 5.3 / Fastify / PostgreSQL 16 -->
   <g transform="translate(514, 162)">
-    <text x="0" y="14" class="card-h">TypeScript 5.3 · Fastify 4.26 · React 18</text>
-    <text x="446" y="14" class="val-num" fill="#7dd3fc" text-anchor="end">278.7 KB · 27.1%</text>
-    <text x="0" y="31" class="card-p">NEXUS (Monorepo SQL IDE · Monaco Editor · Motor PostgreSQL 16 pg-mem)</text>
-    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
-    <rect x="0" y="40" width="160" height="8" rx="4" fill="url(#bar2)" fill-opacity="0.9">
-      <animate attributeName="width" values="0;160" dur="1.4s" fill="freeze"/>
+    <text x="0" y="14" class="card-title">TYPESCRIPT 5.3 // FASTIFY 4.26 // SQL ENGINE</text>
+    <text x="448" y="14" class="mono-sub" fill="#00e5ff" text-anchor="end">24.8% // ACID &amp; IDE</text>
+    <text x="0" y="31" class="card-desc">NEXUS (Simulador SQL PostgreSQL 16 pg-mem · Deadlocks · EXPLAIN)</text>
+    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
+    <rect x="0" y="40" width="176" height="8" rx="3" fill="url(#cyberBar2)">
+      <animate attributeName="width" values="0;176" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
-  <!-- Language 3: C# 12 (.NET 10.0) & Java Spring Boot -->
-  <g transform="translate(514, 224)">
-    <text x="0" y="14" class="card-h">C# 12 (.NET 10.0 WinForms GDI+) &amp; Java Spring Boot</text>
-    <text x="446" y="14" class="val-num" fill="#c4b5fd" text-anchor="end">64.0 KB · 11.2%</text>
-    <text x="0" y="31" class="card-p">GCP-GESTION-DE-PRODUCTOS- (POS 60 FPS · FormVentas/Catalogo) · D&amp;D ERP</text>
-    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
-    <rect x="0" y="40" width="96" height="8" rx="4" fill="url(#bar3)" fill-opacity="0.9">
-      <animate attributeName="width" values="0;96" dur="1.4s" fill="freeze"/>
+  <!-- Bar 3: Java 21 & C# 12 (.NET 10 / Direct3D / GDI+) -->
+  <g transform="translate(514, 226)">
+    <text x="0" y="14" class="card-title">JAVA 21 &amp; C# 12 (.NET 10 // DIRECT3D &amp; GDI+)</text>
+    <text x="448" y="14" class="mono-sub" fill="#2dd4bf" text-anchor="end">18.4% // NATIVE &amp; API</text>
+    <text x="0" y="31" class="card-desc">secdev (Estación IA Ciberseguridad C#) · D&amp;D Backend JDBC · GCP POS</text>
+    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
+    <rect x="0" y="40" width="132" height="8" rx="3" fill="url(#cyberBar3)">
+      <animate attributeName="width" values="0;132" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
-  <!-- Language 4: Python 3, Docker Multi-Stage & HTML/Tailwind -->
-  <g transform="translate(514, 286)">
-    <text x="0" y="14" class="card-h">Python 3 · Docker Compose IaC · HTML5 &amp; Tailwind</text>
-    <text x="446" y="14" class="val-num" fill="#6ee7b7" text-anchor="end">57.8 KB · 6.3%</text>
-    <text x="0" y="31" class="card-p">I-work-in-python (ejercicio_1..8.py) · Dockerfiles en 4 repos · Ollama SAST</text>
-    <rect x="0" y="40" width="446" height="8" rx="4" fill="#090c12" fill-opacity="0.6" stroke="#ffffff" stroke-opacity="0.06"/>
-    <rect x="0" y="40" width="68" height="8" rx="4" fill="url(#bar4)" fill-opacity="0.9">
-      <animate attributeName="width" values="0;68" dur="1.4s" fill="freeze"/>
+  <!-- Bar 4: Python 3.12 / Docker / SAST Orchestration -->
+  <g transform="translate(514, 290)">
+    <text x="0" y="14" class="card-title">PYTHON 3.12 // DOCKER MULTI-STAGE // SAST IA</text>
+    <text x="448" y="14" class="mono-sub" fill="#38bdf8" text-anchor="end">10.3% // SEC-AUTOMATION</text>
+    <text x="0" y="31" class="card-desc">Orquestador SAST Ollama · I-work-in-python (Big-O) · Contenedores</text>
+    <rect x="0" y="40" width="448" height="8" rx="3" fill="#03070b" stroke="#1e293b"/>
+    <rect x="0" y="40" width="92" height="8" rx="3" fill="url(#cyberBar4)">
+      <animate attributeName="width" values="0;92" dur="1.4s" fill="freeze"/>
     </rect>
   </g>
 
-  <!-- Bottom Frosted Glass KPI Counters -->
-  <g transform="translate(514, 352)">
-    <rect x="0" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
-    <text x="52" y="27" class="kpi-num" fill="#93c5fd" text-anchor="middle">07</text>
-    <text x="52" y="43" class="kpi-lbl" text-anchor="middle">Repositorios</text>
-    <text x="52" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Open Source</text>
+  <!-- Bottom 4 Tactical HUD KPI Counters -->
+  <g transform="translate(514, 356)">
+    <rect x="0" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#00ff9d" stroke-opacity="0.35"/>
+    <text x="52" y="28" class="kpi-val" fill="#00ff9d" text-anchor="middle">09</text>
+    <text x="52" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">REPOSITORIOS</text>
+    <text x="52" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">OPEN SOURCE</text>
 
-    <rect x="114" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
-    <text x="166" y="27" class="kpi-num" fill="#e2e8f0" text-anchor="middle">918 KB</text>
-    <text x="166" y="43" class="kpi-lbl" text-anchor="middle">Código Fuente</text>
-    <text x="166" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">TS · JS · C# · PY</text>
+    <rect x="114" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#00e5ff" stroke-opacity="0.35"/>
+    <text x="166" y="28" class="kpi-val" fill="#00e5ff" text-anchor="middle">SHA-256</text>
+    <text x="166" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">CRIPTOGRAFIA</text>
+    <text x="166" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">JWT · OAUTH2</text>
 
-    <rect x="228" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
-    <text x="280" y="27" class="kpi-num" fill="#a5b4fc" text-anchor="middle">56 Tests</text>
-    <text x="280" y="43" class="kpi-lbl" text-anchor="middle">Suite Activa</text>
-    <text x="280" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Architect-TD</text>
+    <rect x="228" y="0" width="104" height="68" rx="6" fill="url(#didSub)" stroke="#2dd4bf" stroke-opacity="0.35"/>
+    <text x="280" y="28" class="kpi-val" fill="#2dd4bf" text-anchor="middle">56+ TESTS</text>
+    <text x="280" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">SUITE ACTIVA</text>
+    <text x="280" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">OWASP ASVS</text>
 
-    <rect x="342" y="0" width="104" height="62" rx="9" fill="url(#glassInner)" stroke="#ffffff" stroke-opacity="0.07"/>
-    <text x="394" y="27" class="kpi-num" fill="#6ee7b7" text-anchor="middle">04 Stacks</text>
-    <text x="394" y="43" class="kpi-lbl" text-anchor="middle">Dockerizados</text>
-    <text x="394" y="55" class="meta-sm" font-size="9.5" fill="#64748b" text-anchor="middle">Multi-Container</text>
+    <rect x="342" y="0" width="106" height="68" rx="6" fill="url(#didSub)" stroke="#38bdf8" stroke-opacity="0.35"/>
+    <text x="395" y="28" class="kpi-val" fill="#38bdf8" text-anchor="middle">05 STACKS</text>
+    <text x="395" y="45" class="mono-sub" font-size="9" fill="#e2e8f0" text-anchor="middle">DOCKERIZADOS</text>
+    <text x="395" y="58" class="mono-sub" font-size="8.5" fill="#64748b" text-anchor="middle">NON-ROOT UID</text>
   </g>
 </svg>

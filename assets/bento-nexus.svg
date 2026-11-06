@@ -1,63 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 215" width="100%" height="215">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
   <defs>
     <linearGradient id="bgBase" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1017"/>
-      <stop offset="100%" stop-color="#111622"/>
+      <stop offset="0%" stop-color="#03070b"/>
+      <stop offset="100%" stop-color="#07121c"/>
     </linearGradient>
     <radialGradient id="orbGlow" cx="85%" cy="22%" r="48%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#0d1017" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#03070b" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="glassSurf" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.015"/>
+    <linearGradient id="hudRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.50"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.08"/>
     </linearGradient>
-    <linearGradient id="glassRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
-      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.025"/>
-    </linearGradient>
+    <pattern id="cardGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00e5ff" stroke-width="0.4" stroke-opacity="0.06"/>
+    </pattern>
     <style>
+      .mono { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; }
+      .disp { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; }
       .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      @keyframes railPulse { to { stroke-dashoffset: -24; } }
+      .rail-anim { stroke-dasharray: 6 6; animation: railPulse 1.5s linear infinite; }
     </style>
   </defs>
 
-  <rect width="490" height="215" rx="14" fill="url(#bgBase)"/>
-  <rect width="490" height="215" rx="14" fill="url(#orbGlow)"/>
-  <rect x="1" y="1" width="488" height="213" rx="13" fill="url(#glassSurf)" stroke="url(#glassRim)" stroke-width="1.2"/>
-  <line x1="22" y1="2" x2="220" y2="2" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
+  <rect width="490" height="220" rx="12" fill="url(#bgBase)"/>
+  <rect width="490" height="220" rx="12" fill="url(#cardGrid)"/>
+  <rect width="490" height="220" rx="12" fill="url(#orbGlow)"/>
+  <rect x="1.5" y="1.5" width="487" height="217" rx="11" fill="none" stroke="url(#hudRim)" stroke-width="1.3"/>
 
-  <g transform="translate(24, 25)" class="sans">
-    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z" fill="#93c5fd" fill-opacity="0.85" transform="translate(0, 2) scale(1.05)"/>
-    <text x="24" y="15" font-size="16" font-weight="600" letter-spacing="-0.2" fill="#f1f5f9">NEXUS</text>
+  <path d="M 12 2 L 2 2 L 2 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 478 2 L 488 2 L 488 14" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 12 218 L 2 218 L 2 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 478 218 L 488 218 L 488 206" fill="none" stroke="#00ff9d" stroke-width="2"/>
+
+  <line x1="24" y1="2" x2="240" y2="2" stroke="#00ff9d" stroke-opacity="0.75" stroke-width="1.5" class="rail-anim"/>
+
+  <g transform="translate(22, 22)">
+    <text x="0" y="0" class="mono" font-size="8.5" font-weight="700" fill="#00ff9d" letter-spacing="0.8">
+      [ MOD-01 // ACID ENGINE ]
+    </text>
+    <polygon points="0,12 7,8 14,12 14,20 7,25 0,20" fill="#061622" stroke="#00ff9d" stroke-width="1.3"/>
+    <circle cx="7" cy="16.5" r="2" fill="#00ff9d"/>
+    <text x="22" y="22" class="disp" font-size="15.5" font-weight="800" letter-spacing="0.4" fill="#f8fafc">NEXUS</text>
   </g>
 
-  <g transform="translate(342, 22)" class="sans">
-    <rect x="0" y="0" width="124" height="22" rx="11" fill="#ffffff" fill-opacity="0.04" stroke="#93c5fd" stroke-opacity="0.32" stroke-width="1"/>
-    <text x="62" y="14.5" text-anchor="middle" font-size="9.5" font-weight="500" fill="#93c5fd">PostgreSQL 16 · IDE</text>
+  <g transform="translate(332, 24)" class="mono">
+    <rect x="0" y="0" width="136" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="68" y="14.5" text-anchor="middle" font-size="9" font-weight="700" fill="#00ff9d">PG16 · MONACO IDE</text>
   </g>
 
-  <g class="sans" font-size="12" fill="#94a3b8">
-    <text x="24" y="75">Simulador interactivo de ingeniería de bases de datos con</text>
-    <text x="24" y="95">editor Monaco, motor PostgreSQL 16 en memoria (pg-mem),</text>
-    <text x="24" y="115">resolución de deadlocks y planes de ejecución EXPLAIN.</text>
+  <g class="sans" font-size="11.8" fill="#94a3b8">
+    <text x="22" y="76">Simulador interactivo de ingeniería SQL y resiliencia ACID con</text>
+    <text x="22" y="96">editor Monaco, motor PostgreSQL 16 en memoria (pg-mem),</text>
+    <text x="22" y="116">mitigación de deadlocks concurrentes y auditoría EXPLAIN.</text>
   </g>
 
-  <g transform="translate(24, 136)" class="sans" font-size="10" font-weight="500">
-    <rect x="0" y="0" width="110" height="23" rx="6" fill="#ffffff" fill-opacity="0.035" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="54.8" y="15" text-anchor="middle" fill="#cbd5e1">TypeScript 5.3</text>
-    <rect x="118" y="0" width="97" height="23" rx="6" fill="#ffffff" fill-opacity="0.035" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="166.0" y="15" text-anchor="middle" fill="#cbd5e1">Fastify 4.26</text>
-    <rect x="222" y="0" width="71" height="23" rx="6" fill="#ffffff" fill-opacity="0.035" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="258.0" y="15" text-anchor="middle" fill="#cbd5e1">React 18</text>
-    <rect x="302" y="0" width="103" height="23" rx="6" fill="#ffffff" fill-opacity="0.035" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="353.2" y="15" text-anchor="middle" fill="#cbd5e1">PostgreSQL 16</text>
+  <g transform="translate(22, 136)" class="mono" font-size="9.2" font-weight="600">
+    <rect x="0" y="0" width="110" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="55" y="14.5" text-anchor="middle" fill="#cbd5e1">TypeScript 5.3</text>
+    <rect x="118" y="0" width="96" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="166" y="14.5" text-anchor="middle" fill="#cbd5e1">Fastify 4.26</text>
+    <rect x="222" y="0" width="74" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="259" y="14.5" text-anchor="middle" fill="#cbd5e1">React 18</text>
+    <rect x="304" y="0" width="104" height="22" rx="4" fill="#040c14" stroke="#00ff9d" stroke-opacity="0.32"/>
+    <text x="356" y="14.5" text-anchor="middle" fill="#cbd5e1">PostgreSQL 16</text>
   </g>
 
-  <line x1="24" y1="172" x2="466" y2="172" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
-  <g transform="translate(24, 193)" class="sans" font-size="11" font-weight="500">
-    <circle cx="5" cy="-4" r="4" fill="#60a5fa" fill-opacity="0.85"/>
-    <text x="16" y="0" fill="#cbd5e1">TypeScript</text>
-    <text x="442" y="0" text-anchor="end" fill="#93c5fd">github.com/Jhonmoreno000/NEXUS ↗</text>
+  <line x1="22" y1="174" x2="468" y2="174" stroke="#1e293b" stroke-width="1"/>
+  <g transform="translate(22, 196)" class="mono" font-size="10" font-weight="700">
+    <circle cx="5" cy="-3.5" r="3.5" fill="#00ff9d">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="15" y="0" fill="#e2e8f0">TypeScript // SQL Engine</text>
+    <text x="446" y="0" text-anchor="end" fill="#00ff9d">REPO // NEXUS &gt;&gt;</text>
   </g>
 </svg>

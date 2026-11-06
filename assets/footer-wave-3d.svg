@@ -1,46 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 140" width="100%" height="140">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 145" width="100%" height="145">
   <defs>
-    <linearGradient id="fwBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0d14"/>
-      <stop offset="100%" stop-color="#111522"/>
+    <linearGradient id="fwCyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03070b"/>
+      <stop offset="50%" stop-color="#061019"/>
+      <stop offset="100%" stop-color="#020508"/>
     </linearGradient>
 
-    <linearGradient id="w1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.22"/>
-      <stop offset="50%" stop-color="#a5b4fc" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#6ee7b7" stop-opacity="0.22"/>
+    <linearGradient id="cyberWave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.22"/>
     </linearGradient>
 
-    <linearGradient id="w2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6ee7b7" stop-opacity="0.16"/>
-      <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.24"/>
-      <stop offset="100%" stop-color="#a5b4fc" stop-opacity="0.16"/>
+    <linearGradient id="cyberWave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#00ff9d" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.16"/>
     </linearGradient>
+
+    <linearGradient id="fwBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <pattern id="fwGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-opacity="0.06"/>
+    </pattern>
+
+    <style>
+      .mono-ft { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; }
+      .disp-ft { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; }
+      @keyframes railFlow { to { stroke-dashoffset: -32; } }
+      .rail-dash { stroke-dasharray: 8 8; animation: railFlow 1.6s linear infinite; }
+    </style>
   </defs>
 
-  <rect width="1000" height="140" rx="14" fill="url(#fwBg)"/>
+  <rect width="1000" height="145" rx="14" fill="url(#fwCyberBg)"/>
+  <rect width="1000" height="145" rx="14" fill="url(#fwGrid)"/>
 
-  <path fill="url(#w1)" stroke="#93c5fd" stroke-width="1" stroke-opacity="0.4">
-    <animate attributeName="d" dur="7s" repeatCount="indefinite"
-             values="M 0 88 Q 250 58, 500 88 T 1000 84 L 1000 140 L 0 140 Z;
-                     M 0 84 Q 250 112, 500 80 T 1000 94 L 1000 140 L 0 140 Z;
-                     M 0 88 Q 250 58, 500 88 T 1000 84 L 1000 140 L 0 140 Z"/>
+  <!-- Animated Cyber Frequency Wave 1 -->
+  <path fill="url(#cyberWave1)" stroke="#00ff9d" stroke-width="1.2" stroke-opacity="0.55">
+    <animate attributeName="d" dur="6.5s" repeatCount="indefinite"
+             values="M 0 92 Q 250 60, 500 92 T 1000 86 L 1000 145 L 0 145 Z;
+                     M 0 86 Q 250 116, 500 82 T 1000 96 L 1000 145 L 0 145 Z;
+                     M 0 92 Q 250 60, 500 92 T 1000 86 L 1000 145 L 0 145 Z"/>
   </path>
 
-  <path fill="url(#w2)" stroke="#6ee7b7" stroke-width="1" stroke-opacity="0.35">
-    <animate attributeName="d" dur="5.5s" repeatCount="indefinite"
-             values="M 0 104 Q 250 126, 500 98 T 1000 108 L 1000 140 L 0 140 Z;
-                     M 0 98 Q 250 76, 500 108 T 1000 96 L 1000 140 L 0 140 Z;
-                     M 0 104 Q 250 126, 500 98 T 1000 108 L 1000 140 L 0 140 Z"/>
+  <!-- Animated Cyber Frequency Wave 2 -->
+  <path fill="url(#cyberWave2)" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.45">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite"
+             values="M 0 108 Q 250 130, 500 100 T 1000 112 L 1000 145 L 0 145 Z;
+                     M 0 100 Q 250 78, 500 112 T 1000 98 L 1000 145 L 0 145 Z;
+                     M 0 108 Q 250 130, 500 100 T 1000 112 L 1000 145 L 0 145 Z"/>
   </path>
 
-  <rect x="1" y="1" width="998" height="138" rx="13" fill="none" stroke="#22293a" stroke-width="1.5"/>
+  <!-- Animated Data Rail -->
+  <line x1="60" y1="70" x2="940" y2="70" stroke="#00e5ff" stroke-opacity="0.22" stroke-width="1" class="rail-dash"/>
 
-  <text x="500" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="14" font-style="italic" fill="#c0caf5">
-    &quot;Controlling complexity is the essence of computer programming.&quot; — Brian W. Kernighan
+  <!-- Outer Armored Frame & Corner Brackets -->
+  <rect x="1.5" y="1.5" width="997" height="142" rx="13" fill="none" stroke="url(#fwBorder)" stroke-width="1.3"/>
+  <path d="M 14 2 L 2 2 L 2 16" fill="none" stroke="#00ff9d" stroke-width="2"/>
+  <path d="M 986 2 L 998 2 L 998 16" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 14 143 L 2 143 L 2 129" fill="none" stroke="#00e5ff" stroke-width="2"/>
+  <path d="M 986 143 L 998 143 L 998 129" fill="none" stroke="#00ff9d" stroke-width="2"/>
+
+  <text x="500" y="36" text-anchor="middle" class="mono-ft" font-size="11.5" font-weight="600" fill="#e2e8f0" letter-spacing="0.4">
+    &quot;Security is a process, not a product. Complexity is the worst enemy of security.&quot; — Bruce Schneier
   </text>
 
-  <text x="500" y="118" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#9aa5ce" letter-spacing="1">
-    Jhon Anderson Moreno Posso · Medellín, Colombia · Backend &amp; DevSecOps
+  <text x="500" y="56" text-anchor="middle" class="mono-ft" font-size="9.5" fill="#00ff9d" letter-spacing="1.2">
+    [ ZERO-TRUST ARCHITECTURE // SHIFT-LEFT SAST // CLEAN CODE &amp; ACID RESILIENCE ]
+  </text>
+
+  <text x="500" y="124" text-anchor="middle" class="disp-ft" font-size="10.5" font-weight="700" fill="#cbd5e1" letter-spacing="1.4">
+    JHON ANDERSON MORENO POSSO // MEDELLIN, COLOMBIA // CIBERSEGURIDAD, BACKEND &amp; DEVSECOPS
   </text>
 </svg>
