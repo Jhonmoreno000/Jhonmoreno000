@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="320">
+  <defs>
+    <linearGradient id="telBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#0e0e12"/>
+    </linearGradient>
+    <clipPath id="barClip">
+      <rect x="0" y="0" width="436" height="10" rx="5"/>
+    </clipPath>
+    <style>
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="320" rx="12" fill="url(#telBg)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="318.5" rx="11.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+
+  <!-- Top Header Bar -->
+  <rect x="1.5" y="1.5" width="997" height="38" rx="10.5" fill="#0d0d11"/>
+  <line x1="1" y1="40" x2="999" y2="40" stroke="#1f1f25" stroke-width="1"/>
+  <text x="26" y="25" class="mono" font-size="10.5" font-weight="600" fill="#d4d4d8" letter-spacing="0.5">CODEBASE TELEMETRY // REAL BYTE DISTRIBUTION &amp; SYSTEM FOOTPRINT</text>
+  <text x="974" y="25" text-anchor="end" class="mono" font-size="10" fill="#10b981">TOTAL VERIFIED SOURCE: 3.48 MB</text>
+
+  <!-- LEFT PANEL: LANGUAGE DISTRIBUTION -->
+  <text x="26" y="64" class="mono" font-size="9.5" font-weight="600" fill="#71717a" letter-spacing="0.6">01 // LANGUAGE DISTRIBUTION BY SOURCE BYTES (GITHUB REST API)</text>
+  <g transform="translate(26, 76)" clip-path="url(#barClip)">
+    <rect x="0.0" y="0" width="258.4" height="10" fill="#10b981"/><rect x="258.4" y="0" width="91.0" height="10" fill="#f59e0b"/><rect x="349.4" y="0" width="34.9" height="10" fill="#6366f1"/><rect x="384.3" y="0" width="31.0" height="10" fill="#38bdf8"/><rect x="415.3" y="0" width="13.8" height="10" fill="#a78bfa"/><rect x="429.1" y="0" width="6.9" height="10" fill="#ec4899"/>
+  </g>
+    <g transform="translate(26, 112)">
+      <circle cx="5" cy="-4" r="4" fill="#10b981"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">JavaScript (ES6+ / React / Node)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">59.3% <tspan fill="#71717a" font-weight="400">(2.06 MB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">D&amp;D Textil · architect-td · Todo-API</text>
+    </g>
+    <g transform="translate(26, 144)">
+      <circle cx="5" cy="-4" r="4" fill="#f59e0b"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">Java 21 LTS (JDBC / Servlets / Security)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">20.9% <tspan fill="#71717a" font-weight="400">(727.0 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">D&amp;D Textil Enterprise Backend</text>
+    </g>
+    <g transform="translate(26, 176)">
+      <circle cx="5" cy="-4" r="4" fill="#6366f1"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">TypeScript 5.3 (Fastify / pg-mem / IDE)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">8.0% <tspan fill="#71717a" font-weight="400">(278.7 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">NEXUS SQL Engine &amp; Monaco Workspace</text>
+    </g>
+    <g transform="translate(26, 208)">
+      <circle cx="5" cy="-4" r="4" fill="#38bdf8"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">C# 12 (.NET 10 Direct3D / WinForms GDI+)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">7.1% <tspan fill="#71717a" font-weight="400">(247.6 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">secdev Workstation · GCP POS Engine</text>
+    </g>
+    <g transform="translate(26, 240)">
+      <circle cx="5" cy="-4" r="4" fill="#a78bfa"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">HTML5 / CSS3 / Canvas Vector UI</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">3.2% <tspan fill="#71717a" font-weight="400">(110.3 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">Interfaces &amp; Interactive Simulators</text>
+    </g>
+    <g transform="translate(26, 272)">
+      <circle cx="5" cy="-4" r="4" fill="#ec4899"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">Python 3.12 · C++ · Shell · Dockerfile</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">1.6% <tspan fill="#71717a" font-weight="400">(55.4 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">DevSecOps Automation · Native · DSA</text>
+    </g>
+
+  <!-- Center Divider -->
+  <line x1="494" y1="52" x2="494" y2="302" stroke="#1f1f25" stroke-width="1"/>
+
+  <!-- RIGHT PANEL: REPOSITORY FOOTPRINT -->
+  <text x="524" y="64" class="mono" font-size="9.5" font-weight="600" fill="#71717a" letter-spacing="0.6">02 // ORIGINAL REPOSITORIES BY SOURCE VOLUME &amp; LATEST PUSH</text>
+    <g transform="translate(524, 86)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">D&amp;D-TEXTIL-ERP</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">Java 21 · React · PG17</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="140.0" height="7" rx="3.5" fill="#10b981"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">2.25 MB</tspan>  ·  commit <tspan fill="#10b981">910d42f</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-11-08</text>
+    </g>
+    <g transform="translate(524, 122)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">NEXUS</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">TypeScript 5.3 · Fastify</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="80.9" height="7" rx="3.5" fill="#6366f1"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">531.5 KB</tspan>  ·  commit <tspan fill="#6366f1">85e4866</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-09</text>
+    </g>
+    <g transform="translate(524, 158)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">architect-td</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">JS ES6+ · WAF · Docker</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="70.1" height="7" rx="3.5" fill="#38bdf8"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">365.3 KB</tspan>  ·  commit <tspan fill="#38bdf8">d06cf84</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-06</text>
+    </g>
+    <g transform="translate(524, 194)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">secdev</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">C# .NET · C++ · Qwen 7B</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="57.3" height="7" rx="3.5" fill="#f59e0b"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">214.3 KB</tspan>  ·  commit <tspan fill="#f59e0b">f88999c</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-11-02</text>
+    </g>
+    <g transform="translate(524, 230)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">GCP-POS-NET10</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">C# 12 · .NET 10 GDI+</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="36.2" height="7" rx="3.5" fill="#a78bfa"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">64.0 KB</tspan>  ·  commit <tspan fill="#a78bfa">21d640c</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-27</text>
+    </g>
+    <g transform="translate(524, 266)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">proyecto-todo-api</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">Node 20 · Mongo · Docker</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="33.0" height="7" rx="3.5" fill="#34d399"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">50.1 KB</tspan>  ·  commit <tspan fill="#34d399">14d2ea3</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-10-18</text>
+    </g>
+</svg>

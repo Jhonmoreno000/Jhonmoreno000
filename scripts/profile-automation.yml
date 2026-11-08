@@ -1,4 +1,4 @@
-name: Cyber SOC Telemetry & 3D Profile Engine
+name: Senior Profile Telemetry & Live GitHub API Sync
 
 on:
   schedule:
@@ -8,16 +8,13 @@ on:
     branches:
       - main
     paths-ignore:
-      - "assets/github-3d-contrib.svg"
-      - "assets/snake-dark.svg"
-      - "assets/activity-streak-telemetry.svg"
-      - "profile-3d-contrib/**"
+      - "assets/**"
 
 permissions:
   contents: write
 
 jobs:
-  update-cyber-soc-telemetry:
+  sync-senior-profile-telemetry:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -28,10 +25,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run Live Cyber SOC 3D Isometric & Telemetry SVG Generator
+      - name: Generate Senior Linear/Vercel SVGs from Real GitHub API Telemetry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/update_profile_data.py
 
-      - name: Commit & Push Updated Cyber SVGs
+      - name: Commit & Push Updated Telemetry SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,6 +38,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No telemetry changes to commit"
           else
-            git commit -m "chore(soc-telemetry): auto-update 3D cyber terrain & live metrics [skip ci]"
+            git commit -m "chore(telemetry): sync live GitHub API codebase & commit metrics [skip ci]"
             git push
           fi

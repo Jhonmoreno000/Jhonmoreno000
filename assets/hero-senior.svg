@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="350">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="50%" stop-color="#0c0c10"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <radialGradient id="subtleGlowL" cx="18%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="subtleGlowR" cx="82%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27272a" stop-opacity="0.2"/>
+      <stop offset="30%" stop-color="#71717a" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#52525b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#27272a" stop-opacity="0.2"/>
+    </linearGradient>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#3f3f46" opacity="0.32"/>
+    </pattern>
+    <style>
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
+      @keyframes flowDash { to { stroke-dashoffset: -20; } }
+      .flow-line { stroke-dasharray: 4 6; animation: flowDash 2.2s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Outer Frame -->
+  <rect width="1000" height="350" rx="12" fill="url(#heroBg)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#dotGrid)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#subtleGlowL)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#subtleGlowR)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="348.5" rx="11.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="24" y1="1" x2="976" y2="1" stroke="url(#topHighlight)" stroke-width="1.2"/>
+
+  <!-- Minimalist Window Header Bar -->
+  <rect x="1.5" y="1.5" width="997" height="38" rx="10.5" fill="#0d0d11" fill-opacity="0.85"/>
+  <line x1="1" y1="40" x2="999" y2="40" stroke="#1f1f25" stroke-width="1"/>
+
+  <g transform="translate(22, 20)">
+    <circle cx="0" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <circle cx="14" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <circle cx="28" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="48" y="4" class="mono" font-size="11" fill="#71717a">jhonmoreno000 <tspan fill="#3f3f46">/</tspan> <tspan fill="#d4d4d8">architecture-manifest.md</tspan></text>
+  </g>
+
+  <g transform="translate(978, 20)" text-anchor="end" class="mono" font-size="10.5">
+    <text x="0" y="4" fill="#71717a">Medellín, CO (UTC-5)  <tspan fill="#3f3f46">·</tspan>  <tspan fill="#10b981">●</tspan> <tspan fill="#a1a1aa">SYNC 2026-11-08 20:58 UTC</tspan></text>
+  </g>
+
+  <!-- LEFT COLUMN: EXECUTIVE IDENTITY & TELEMETRY PILLS -->
+  <g transform="translate(36, 68)">
+    <!-- Role Tag Pill -->
+    <rect x="0" y="0" width="328" height="24" rx="12" fill="#131318" stroke="#27272a" stroke-width="1"/>
+    <circle cx="13" cy="12" r="3.5" fill="#10b981"/>
+    <text x="24" y="15.5" class="mono" font-size="10" font-weight="600" fill="#d4d4d8" letter-spacing="0.4">BACKEND, DATA ARCHITECTURE &amp; DEVSECOPS</text>
+
+    <!-- Primary Name & Title -->
+    <text x="0" y="62" class="sans" font-size="31" font-weight="700" fill="#fafafa" letter-spacing="-0.6">Jhon Anderson Moreno</text>
+    <text x="0" y="86" class="mono" font-size="12" font-weight="500" fill="#818cf8">Software Engineer  ·  Java 21 · TypeScript · C# .NET 10 · PostgreSQL ACID</text>
+
+    <!-- Executive Summary -->
+    <text x="0" y="116" class="sans" font-size="13" fill="#a1a1aa">Diseño e implementación de servicios backend resilientes, motores SQL</text>
+    <text x="0" y="135" class="sans" font-size="13" fill="#a1a1aa">con aislamiento transaccional <tspan class="mono" font-size="11.5" fill="#e4e4e7">SERIALIZABLE</tspan> y estaciones de auditoría</text>
+    <text x="0" y="154" class="sans" font-size="13" fill="#a1a1aa">SAST asistidas por IA local (<tspan class="mono" font-size="11.5" fill="#e4e4e7">Qwen 2.5 Coder 7B</tspan>) bajo estándares <tspan class="mono" font-size="11.5" fill="#e4e4e7">OWASP ASVS</tspan>.</text>
+
+    <!-- 4 Clean Linear-Style Metric Cards -->
+    <g transform="translate(0, 182)">
+      <g transform="translate(0, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">SOURCE CODE</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">3.48 MB</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#10b981">GitHub API Verified</text>
+      </g>
+
+      <g transform="translate(132, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">SYSTEMS</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">07 Repos</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#818cf8">Original Architecture</text>
+      </g>
+
+      <g transform="translate(264, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">DATA LAYER</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">PG 16 / 17</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#38bdf8">ACID · MySQL · Mongo</text>
+      </g>
+
+      <g transform="translate(396, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">APPSEC GATE</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">ASVS L2</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#f59e0b">SHA-256 · Local SAST</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vertical Hairline Divider -->
+  <line x1="576" y1="56" x2="576" y2="326" stroke="#1f1f25" stroke-width="1"/>
+
+  <!-- RIGHT COLUMN: ARCHITECTURAL TOPOLOGY BLUEPRINT -->
+  <g transform="translate(600, 62)">
+    <text x="0" y="14" class="mono" font-size="10" font-weight="600" fill="#71717a" letter-spacing="0.8">SYSTEMS TOPOLOGY // PRODUCTION ARCHITECTURE</text>
+
+    <!-- Node 1: Edge & API Gateway -->
+    <g transform="translate(0, 28)">
+      <rect width="364" height="54" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="12" width="3" height="30" rx="1.5" fill="#38bdf8"/>
+      <text x="16" y="23" class="sans" font-size="12" font-weight="600" fill="#f4f4f5">01. Edge Perimeter &amp; API Gateway</text>
+      <text x="348" y="23" text-anchor="end" class="mono" font-size="9.5" fill="#38bdf8">WAF L7 · Envoy</text>
+      <text x="16" y="41" class="mono" font-size="10" fill="#71717a">Rate Limit 1,200 req/min/IP · OAuth2/OIDC · TLS Termination</text>
+    </g>
+
+    <!-- Connector 1 -> 2 -->
+    <line x1="182" y1="82" x2="182" y2="104" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <circle cx="182" cy="93" r="2.5" fill="#38bdf8"/>
+
+    <!-- Node 2: Core Domain Services & Local AI SAST (Split 2 Columns) -->
+    <g transform="translate(0, 104)">
+      <rect width="176" height="68" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="14" width="3" height="40" rx="1.5" fill="#818cf8"/>
+      <text x="14" y="24" class="sans" font-size="11.5" font-weight="600" fill="#f4f4f5">02. Service Runtimes</text>
+      <text x="14" y="42" class="mono" font-size="9.5" fill="#a1a1aa">Java 21 · Fastify 4.26</text>
+      <text x="14" y="56" class="mono" font-size="9.5" fill="#71717a">.NET 10 · Clean DDD</text>
+
+      <rect x="188" y="0" width="176" height="68" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="188" y="14" width="3" height="40" rx="1.5" fill="#f59e0b"/>
+      <text x="202" y="24" class="sans" font-size="11.5" font-weight="600" fill="#f4f4f5">03. Shift-Left SAST</text>
+      <text x="202" y="42" class="mono" font-size="9.5" fill="#a1a1aa">Qwen 2.5 Coder 7B</text>
+      <text x="202" y="56" class="mono" font-size="9.5" fill="#71717a">AST · Semgrep · SARIF</text>
+    </g>
+
+    <!-- Connector 2 -> 3 -->
+    <line x1="88" y1="172" x2="88" y2="194" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <line x1="276" y1="172" x2="276" y2="194" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <circle cx="88" cy="183" r="2.5" fill="#818cf8"/>
+    <circle cx="276" cy="183" r="2.5" fill="#f59e0b"/>
+
+    <!-- Node 3: ACID Data & Cryptographic Verification -->
+    <g transform="translate(0, 194)">
+      <rect width="364" height="62" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="14" width="3" height="34" rx="1.5" fill="#10b981"/>
+      <text x="16" y="24" class="sans" font-size="12" font-weight="600" fill="#f4f4f5">04. Transactional Persistence &amp; Integrity</text>
+      <text x="348" y="24" text-anchor="end" class="mono" font-size="9.5" fill="#10b981">SERIALIZABLE</text>
+      <text x="16" y="41" class="mono" font-size="10" fill="#a1a1aa">PostgreSQL 16/17 · FOR UPDATE NOWAIT · HMAC-SHA256 Webhooks</text>
+      <text x="16" y="54" class="mono" font-size="9.5" fill="#71717a">Docker Multi-Stage (Non-Root UID 10001) · 56+ Automated Tests</text>
+    </g>
+  </g>
+</svg>

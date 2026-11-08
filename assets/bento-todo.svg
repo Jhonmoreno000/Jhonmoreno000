@@ -1,80 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 212" width="100%" height="212">
   <defs>
-    <linearGradient id="bgTd" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05080c"/>
-      <stop offset="100%" stop-color="#171006"/>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0d"/>
+      <stop offset="100%" stop-color="#101015"/>
     </linearGradient>
-    <pattern id="dotsTd" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#ffaa00" fill-opacity="0.14"/>
-    </pattern>
+    <radialGradient id="cardGlow" cx="90%" cy="12%" r="55%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0a0a0d" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railTd { to { stroke-dashoffset: -26; } }
-      @keyframes floatTd { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
-      .rail { stroke-dasharray: 8 5; animation: railTd 1.6s linear infinite; }
-      .float3d { animation: floatTd 3.5s ease-in-out infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="6" fill="#030508"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#bgTd)" stroke="#1e293b" stroke-width="1.5"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#dotsTd)"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="none" stroke="#ffaa00" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardBg)"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardGlow)"/>
+  <rect x="0.75" y="0.75" width="488.5" height="210.5" rx="9.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="20" y1="1" x2="180" y2="1" stroke="#10b981" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <rect x="24" y="5" width="90" height="3" fill="#ffaa00"/>
-  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#ffaa00" letter-spacing="2">SYS_04 // FINTECH &amp; ERP</text>
+  <!-- Top Repo Slug & Badge -->
+  <text x="24" y="27" class="mono" font-size="9.5" fill="#71717a">Jhonmoreno000 / PROYECTO-SENA-TIENDA-TEXTIL-</text>
+  <rect x="307.2" y="13" width="158.8" height="20" rx="10" fill="#141419" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="386.6" y="26.5" text-anchor="middle" class="mono" font-size="8.8" font-weight="600" fill="#10b981">JAVA 21 · PG 17 · ASVS</text>
 
-  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#ffaa00" fill-opacity="0.35" letter-spacing="2">D&amp;D TEXTIL</text>
-  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">D&amp;D TEXTIL</text>
-  <text x="166" y="51" class="mono" font-size="10" font-weight="700" fill="#00ff66" letter-spacing="1">// SHA-256 CHECKOUT</text>
+  <!-- Project Title -->
+  <text x="24" y="52" class="sans" font-size="15" font-weight="700" fill="#fafafa" letter-spacing="-0.2">D&amp;D Textil — Enterprise E-Commerce &amp; ERP</text>
 
-  <g class="sans" font-size="11.2" fill="#94a3b8">
-    <text x="24" y="78">Ecosistema E-Commerce &amp; ERP (50 rutas, 25 tablas PG17)</text>
-    <text x="24" y="96">con verificacion criptografica SHA-256 Wompi, SSO</text>
-    <text x="24" y="114">Google/Microsoft, Rate Limit 1200/min y OWASP ASVS.</text>
+  <!-- 3-Line Architectural Summary -->
+  <g class="sans" font-size="11.5" fill="#a1a1aa">
+    <text x="24" y="76">Plataforma transaccional con 50 rutas React, backend Java 21 JDBC</text>
+    <text x="24" y="95">y PostgreSQL 17 (25 tablas, 20 FKs). Firma criptográfica HMAC-SHA256</text>
+    <text x="24" y="114">para webhooks Wompi, SSO Google/Microsoft y Rate Limit 1,200/min.</text>
   </g>
 
-  <!-- 3D ISOMETRIC SCULPTURE: 3D ARMORED CRYPTO VAULT & TOKEN CARD -->
-  <g transform="translate(418, 86)">
-    <polygon points="0,10 44,28 0,46 -44,28" fill="#080603" stroke="#ffaa00" stroke-opacity="0.45" stroke-width="1"/>
-    <g class="float3d">
-      <!-- 3D Tilted Payment Crypto Slab -->
-      <polygon points="-28,-22 24,-34 28,6 -24,18" fill="#1c1306" stroke="#ffaa00" stroke-width="1.5"/>
-      <polygon points="-20,-14 -6,-17 -6,-6 -20,-3" fill="#ffaa00" fill-opacity="0.8"/>
-      <line x1="-20" y1="6" x2="18" y2="-2" stroke="#00ff66" stroke-width="1.6" stroke-dasharray="4 2"/>
-      <!-- Floating 3D Shield Emblem -->
-      <polygon points="12,-24 26,-18 26,-2 12,8 -2,-2 -2,-18" fill="#052118" stroke="#00ff66" stroke-width="1.4"/>
-      <text x="12" y="-6" text-anchor="middle" class="mono" font-size="7" font-weight="900" fill="#00ff66">SHA</text>
-    </g>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
+    <rect x="0" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="46.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Java 21 LTS</text>
+    <rect x="100" y="0" width="118" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="159.0" y="14.5" text-anchor="middle" fill="#d4d4d8">React 18 + Vite</text>
+    <rect x="226" y="0" width="105" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="278.5" y="14.5" text-anchor="middle" fill="#d4d4d8">PostgreSQL 17</text>
+    <rect x="339" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="385.0" y="14.5" text-anchor="middle" fill="#d4d4d8">HMAC-SHA256</text>
   </g>
 
-  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
-    <g transform="translate(0, 0)">
-      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#1c1204" stroke="#ffaa00" stroke-width="1"/>
-      <text x="48" y="14.5" text-anchor="middle" fill="#ffaa00">SHA-256 HMAC</text>
-    </g>
-    <g transform="translate(100, 0)">
-      <path d="M 6,0 L 88,0 L 82,22 L 0,22 Z" fill="#051a14" stroke="#00ff66" stroke-width="1"/>
-      <text x="44" y="14.5" text-anchor="middle" fill="#00ff66">JAVA JDBC</text>
-    </g>
-    <g transform="translate(192, 0)">
-      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
-      <text x="48" y="14.5" text-anchor="middle" fill="#00e5ff">POSTGRES 17</text>
-    </g>
-    <g transform="translate(292, 0)">
-      <path d="M 6,0 L 90,0 L 84,22 L 0,22 Z" fill="#170d2a" stroke="#c084fc" stroke-width="1"/>
-      <text x="45" y="14.5" text-anchor="middle" fill="#e9d5ff">OWASP ASVS</text>
-    </g>
-  </g>
-
-  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
-    <rect x="0" y="-9" width="7" height="7" fill="#ffaa00"/>
-    <text x="14" y="-2" fill="#cbd5e1">3 ROLES // DOCKER MULTI-CONTAINER</text>
-    <text x="442" y="-2" text-anchor="end" fill="#ffaa00">OPEN_REPO // D&amp;D TEXTIL &gt;&gt;</text>
-  </g>
+  <!-- Footer Divider & Live Metadata -->
+  <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
+  <circle cx="29" cy="190" r="3.5" fill="#10b981"/>
+  <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">Java · JavaScript · SQL</text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">56,520 KB · commit 910d42f · 2026-11-08  <tspan fill="#10b981">→</tspan></text>
 </svg>

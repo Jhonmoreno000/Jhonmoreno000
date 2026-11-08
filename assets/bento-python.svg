@@ -1,79 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 212" width="100%" height="212">
   <defs>
-    <linearGradient id="bgPy" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05080c"/>
-      <stop offset="100%" stop-color="#071520"/>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0d"/>
+      <stop offset="100%" stop-color="#101015"/>
     </linearGradient>
-    <pattern id="dotsPy" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#00ff66" fill-opacity="0.12"/>
-    </pattern>
+    <radialGradient id="cardGlow" cx="90%" cy="12%" r="55%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0a0a0d" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railPy { to { stroke-dashoffset: -26; } }
-      @keyframes floatPy { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
-      .rail { stroke-dasharray: 8 5; animation: railPy 1.6s linear infinite; }
-      .float3d { animation: floatPy 3.5s ease-in-out infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="6" fill="#030508"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#bgPy)" stroke="#1e293b" stroke-width="1.5"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#dotsPy)"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="none" stroke="#00ff66" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardBg)"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardGlow)"/>
+  <rect x="0.75" y="0.75" width="488.5" height="210.5" rx="9.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="20" y1="1" x2="180" y2="1" stroke="#34d399" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <rect x="24" y="5" width="90" height="3" fill="#00ff66"/>
-  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#00ff66" letter-spacing="2">SYS_06 // DOCKER &amp; DSA</text>
+  <!-- Top Repo Slug & Badge -->
+  <text x="24" y="27" class="mono" font-size="9.5" fill="#71717a">Jhonmoreno000 / proyecto-todo-api</text>
+  <rect x="281.6" y="13" width="184.4" height="20" rx="10" fill="#141419" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="373.8" y="26.5" text-anchor="middle" class="mono" font-size="8.8" font-weight="600" fill="#34d399">DOCKER · NODE 20 · PY 3.12</text>
 
-  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#00e5ff" fill-opacity="0.35" letter-spacing="2">TODO-API &amp; PYTHON</text>
-  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">TODO-API &amp; PYTHON</text>
-  <text x="254" y="51" class="mono" font-size="10" font-weight="700" fill="#ffaa00" letter-spacing="1">// NODE + PY3.12</text>
+  <!-- Project Title -->
+  <text x="24" y="52" class="sans" font-size="15" font-weight="700" fill="#fafafa" letter-spacing="-0.2">Todo-API &amp; Python Algorithmic Complexity Lab</text>
 
-  <g class="sans" font-size="11.2" fill="#94a3b8">
-    <text x="24" y="78">Microservicios RESTful en Node.js 20 + Express + Mongo</text>
-    <text x="24" y="96">orquestados en Docker Multi-Stage, junto con algoritmos</text>
-    <text x="24" y="114">y optimizacion de complejidad Big-O en Python 3.12.</text>
+  <!-- 3-Line Architectural Summary -->
+  <g class="sans" font-size="11.5" fill="#a1a1aa">
+    <text x="24" y="76">Microservicio RESTful contenerizado en Node.js 20, Express y</text>
+    <text x="24" y="95">MongoDB v6 con reconexión automática, health probes y Docker</text>
+    <text x="24" y="114">Multi-Stage, junto a laboratorio de estructuras y Big-O en Python.</text>
   </g>
 
-  <!-- 3D ISOMETRIC SCULPTURE: 3D RIBBED DOCKER CONTAINER VAULT -->
-  <g transform="translate(418, 86)">
-    <polygon points="0,10 44,28 0,46 -44,28" fill="#04080e" stroke="#00e5ff" stroke-opacity="0.45" stroke-width="1"/>
-    <g class="float3d">
-      <polygon points="0,-28 30,-14 0,0 -30,-14" fill="#0a283e" stroke="#00e5ff" stroke-width="1.2"/>
-      <polygon points="-30,-14 0,0 0,24 -30,10" fill="#071d2e" stroke="#00e5ff" stroke-width="1.2"/>
-      <polygon points="0,0 30,-14 30,10 0,24" fill="#04121d" stroke="#00ff66" stroke-width="1.2"/>
-      <line x1="-20" y1="-9" x2="-20" y2="15" stroke="#00e5ff" stroke-opacity="0.6" stroke-width="1.5"/>
-      <line x1="-10" y1="-4" x2="-10" y2="20" stroke="#00e5ff" stroke-opacity="0.6" stroke-width="1.5"/>
-      <circle cx="15" cy="5" r="5" fill="#052e22" stroke="#00ff66" stroke-width="1.3"/>
-    </g>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
+    <rect x="0" y="0" width="85" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="42.5" y="14.5" text-anchor="middle" fill="#d4d4d8">Node.js 20</text>
+    <rect x="93" y="0" width="85" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="135.5" y="14.5" text-anchor="middle" fill="#d4d4d8">MongoDB v6</text>
+    <rect x="186" y="0" width="111" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="241.5" y="14.5" text-anchor="middle" fill="#d4d4d8">Docker Compose</text>
+    <rect x="305" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="351.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Python 3.12</text>
   </g>
 
-  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
-    <g transform="translate(0, 0)">
-      <path d="M 6,0 L 92,0 L 86,22 L 0,22 Z" fill="#051a14" stroke="#00ff66" stroke-width="1"/>
-      <text x="46" y="14.5" text-anchor="middle" fill="#00ff66">NODE.JS 20</text>
-    </g>
-    <g transform="translate(96, 0)">
-      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
-      <text x="48" y="14.5" text-anchor="middle" fill="#00e5ff">MONGODB V6</text>
-    </g>
-    <g transform="translate(196, 0)">
-      <path d="M 6,0 L 92,0 L 86,22 L 0,22 Z" fill="#1a1205" stroke="#ffaa00" stroke-width="1"/>
-      <text x="46" y="14.5" text-anchor="middle" fill="#ffaa00">DOCKER</text>
-    </g>
-    <g transform="translate(292, 0)">
-      <path d="M 6,0 L 94,0 L 88,22 L 0,22 Z" fill="#170d2a" stroke="#c084fc" stroke-width="1"/>
-      <text x="47" y="14.5" text-anchor="middle" fill="#e9d5ff">PYTHON 3.12</text>
-    </g>
-  </g>
-
-  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
-    <rect x="0" y="-9" width="7" height="7" fill="#00ff66"/>
-    <text x="14" y="-2" fill="#cbd5e1">NON-ROOT UID 10001 // BIG-O LAB</text>
-    <text x="442" y="-2" text-anchor="end" fill="#00ff66">OPEN_REPO // TODO-API &gt;&gt;</text>
-  </g>
+  <!-- Footer Divider & Live Metadata -->
+  <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
+  <circle cx="29" cy="190" r="3.5" fill="#34d399"/>
+  <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">JavaScript · Python · Docker</text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">48 KB · commit 14d2ea3 · 2026-10-18  <tspan fill="#34d399">→</tspan></text>
 </svg>

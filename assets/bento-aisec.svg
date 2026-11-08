@@ -1,85 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 212" width="100%" height="212">
   <defs>
-    <linearGradient id="bgAi" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05080c"/>
-      <stop offset="100%" stop-color="#130d21"/>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0d"/>
+      <stop offset="100%" stop-color="#101015"/>
     </linearGradient>
-    <pattern id="dotsAi" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#c084fc" fill-opacity="0.14"/>
-    </pattern>
+    <radialGradient id="cardGlow" cx="90%" cy="12%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0a0a0d" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railAi { to { stroke-dashoffset: -26; } }
-      @keyframes floatAi { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
-      @keyframes scanAi { 0%, 100% { transform: translateY(-18px); } 50% { transform: translateY(14px); } }
-      .rail { stroke-dasharray: 8 5; animation: railAi 1.6s linear infinite; }
-      .float3d { animation: floatAi 3.5s ease-in-out infinite; }
-      .laser-ring { animation: scanAi 2.6s ease-in-out infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="6" fill="#030508"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#bgAi)" stroke="#1e293b" stroke-width="1.5"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#dotsAi)"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="none" stroke="#c084fc" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardBg)"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardGlow)"/>
+  <rect x="0.75" y="0.75" width="488.5" height="210.5" rx="9.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="20" y1="1" x2="180" y2="1" stroke="#f59e0b" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <rect x="24" y="5" width="90" height="3" fill="#c084fc"/>
-  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#c084fc" letter-spacing="2">SYS_03 // LOCAL AI SAST</text>
+  <!-- Top Repo Slug & Badge -->
+  <text x="24" y="27" class="mono" font-size="9.5" fill="#71717a">Jhonmoreno000 / secdev</text>
+  <rect x="294.4" y="13" width="171.6" height="20" rx="10" fill="#141419" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="380.2" y="26.5" text-anchor="middle" class="mono" font-size="8.8" font-weight="600" fill="#f59e0b">C# .NET · DIRECT3D · LLM</text>
 
-  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#c084fc" fill-opacity="0.35" letter-spacing="2">SECDEV</text>
-  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">SECDEV</text>
-  <text x="114" y="51" class="mono" font-size="10" font-weight="700" fill="#00ff66" letter-spacing="1">// QWEN 2.5 7B + D3D</text>
+  <!-- Project Title -->
+  <text x="24" y="52" class="sans" font-size="15" font-weight="700" fill="#fafafa" letter-spacing="-0.2">SECDEV — Local AI Security &amp; SAST Station</text>
 
-  <g class="sans" font-size="11.2" fill="#94a3b8">
-    <text x="24" y="78">Estacion nativa de ingenieria y ciberseguridad con</text>
-    <text x="24" y="96">aceleracion Direct3D, auditoria SAST mediante IA local</text>
-    <text x="24" y="114">(Qwen 2.5 Coder 7B) y deduplicacion SHA-256 sin nube.</text>
+  <!-- 3-Line Architectural Summary -->
+  <g class="sans" font-size="11.5" fill="#a1a1aa">
+    <text x="24" y="76">Estación nativa de ingeniería y ciberseguridad acelerada por GPU</text>
+    <text x="24" y="95">(Direct3D) con motor RAG, auditoría SAST offline mediante Qwen 2.5</text>
+    <text x="24" y="114">Coder 7B y deduplicación determinista de hallazgos con SHA-256.</text>
   </g>
 
-  <!-- 3D ISOMETRIC SCULPTURE: 3D OCTAHEDRON AI CORE & LASER SCANNER -->
-  <g transform="translate(418, 86)">
-    <ellipse cx="0" cy="30" rx="42" ry="16" fill="#05040a" stroke="#c084fc" stroke-opacity="0.45" stroke-width="1"/>
-    <g class="float3d">
-      <!-- Top Pyramid of Octahedron -->
-      <polygon points="0,-32 -24,-4 0,8" fill="#c084fc" fill-opacity="0.5" stroke="#e9d5ff" stroke-width="1.2"/>
-      <polygon points="0,-32 24,-4 0,8" fill="#9333ea" fill-opacity="0.55" stroke="#c084fc" stroke-width="1.2"/>
-      <!-- Bottom Pyramid of Octahedron -->
-      <polygon points="0,26 -24,-4 0,8" fill="#581c87" fill-opacity="0.7" stroke="#c084fc" stroke-width="1"/>
-      <polygon points="0,26 24,-4 0,8" fill="#3b0764" fill-opacity="0.85" stroke="#a855f7" stroke-width="1"/>
-      <!-- Scanning Laser Ring -->
-      <g class="laser-ring">
-        <ellipse cx="0" cy="-2" rx="34" ry="11" fill="none" stroke="#00ff66" stroke-width="1.6"/>
-      </g>
-    </g>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
+    <rect x="0" y="0" width="72" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="36.0" y="14.5" text-anchor="middle" fill="#d4d4d8">C# / C++</text>
+    <rect x="80" y="0" width="72" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="116.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Direct3D</text>
+    <rect x="160" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="206.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Qwen 2.5 7B</text>
+    <rect x="260" y="0" width="98" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="309.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Offline SAST</text>
   </g>
 
-  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
-    <g transform="translate(0, 0)">
-      <path d="M 6,0 L 88,0 L 82,22 L 0,22 Z" fill="#170d2a" stroke="#c084fc" stroke-width="1"/>
-      <text x="44" y="14.5" text-anchor="middle" fill="#e9d5ff">C# NATIVE</text>
-    </g>
-    <g transform="translate(92, 0)">
-      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#051a14" stroke="#00ff66" stroke-width="1"/>
-      <text x="48" y="14.5" text-anchor="middle" fill="#00ff66">QWEN 2.5 7B</text>
-    </g>
-    <g transform="translate(192, 0)">
-      <path d="M 6,0 L 92,0 L 86,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
-      <text x="46" y="14.5" text-anchor="middle" fill="#00e5ff">DIRECT3D</text>
-    </g>
-    <g transform="translate(288, 0)">
-      <path d="M 6,0 L 94,0 L 88,22 L 0,22 Z" fill="#1a1205" stroke="#ffaa00" stroke-width="1"/>
-      <text x="47" y="14.5" text-anchor="middle" fill="#ffaa00">SAST SARIF</text>
-    </g>
-  </g>
-
-  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
-    <rect x="0" y="-9" width="7" height="7" fill="#c084fc"/>
-    <text x="14" y="-2" fill="#cbd5e1">100% OFFLINE LLM // ZERO CODE LEAK</text>
-    <text x="442" y="-2" text-anchor="end" fill="#c084fc">OPEN_REPO // SECDEV &gt;&gt;</text>
-  </g>
+  <!-- Footer Divider & Live Metadata -->
+  <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
+  <circle cx="29" cy="190" r="3.5" fill="#f59e0b"/>
+  <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">C# · C++ · PowerShell</text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">238 KB · commit f88999c · 2026-11-02  <tspan fill="#f59e0b">→</tspan></text>
 </svg>

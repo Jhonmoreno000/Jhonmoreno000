@@ -1,79 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 145" width="100%" height="145">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 72" width="100%" height="72">
   <defs>
-    <linearGradient id="fwCyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#03070b"/>
-      <stop offset="50%" stop-color="#061019"/>
-      <stop offset="100%" stop-color="#020508"/>
+    <linearGradient id="ftBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="50%" stop-color="#0d0d12"/>
+      <stop offset="100%" stop-color="#09090b"/>
     </linearGradient>
-
-    <linearGradient id="cyberWave1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.22"/>
-      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.22"/>
-    </linearGradient>
-
-    <linearGradient id="cyberWave2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16"/>
-      <stop offset="50%" stop-color="#00ff9d" stop-opacity="0.24"/>
-      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.16"/>
-    </linearGradient>
-
-    <linearGradient id="fwBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#00ff9d" stop-opacity="0.1"/>
-    </linearGradient>
-
-    <pattern id="fwGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-opacity="0.06"/>
-    </pattern>
-
     <style>
-      .mono-ft { font-family: 'JetBrains Mono', 'Share Tech Mono', 'Fira Code', Consolas, monospace; }
-      .disp-ft { font-family: 'Orbitron', 'Rajdhani', 'Space Grotesk', 'Inter', sans-serif; }
-      @keyframes railFlow { to { stroke-dashoffset: -32; } }
-      .rail-dash { stroke-dasharray: 8 8; animation: railFlow 1.6s linear infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
-
-  <rect width="1000" height="145" rx="14" fill="url(#fwCyberBg)"/>
-  <rect width="1000" height="145" rx="14" fill="url(#fwGrid)"/>
-
-  <!-- Animated Cyber Frequency Wave 1 -->
-  <path fill="url(#cyberWave1)" stroke="#00ff9d" stroke-width="1.2" stroke-opacity="0.55">
-    <animate attributeName="d" dur="6.5s" repeatCount="indefinite"
-             values="M 0 92 Q 250 60, 500 92 T 1000 86 L 1000 145 L 0 145 Z;
-                     M 0 86 Q 250 116, 500 82 T 1000 96 L 1000 145 L 0 145 Z;
-                     M 0 92 Q 250 60, 500 92 T 1000 86 L 1000 145 L 0 145 Z"/>
-  </path>
-
-  <!-- Animated Cyber Frequency Wave 2 -->
-  <path fill="url(#cyberWave2)" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.45">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite"
-             values="M 0 108 Q 250 130, 500 100 T 1000 112 L 1000 145 L 0 145 Z;
-                     M 0 100 Q 250 78, 500 112 T 1000 98 L 1000 145 L 0 145 Z;
-                     M 0 108 Q 250 130, 500 100 T 1000 112 L 1000 145 L 0 145 Z"/>
-  </path>
-
-  <!-- Animated Data Rail -->
-  <line x1="60" y1="70" x2="940" y2="70" stroke="#00e5ff" stroke-opacity="0.22" stroke-width="1" class="rail-dash"/>
-
-  <!-- Outer Armored Frame & Corner Brackets -->
-  <rect x="1.5" y="1.5" width="997" height="142" rx="13" fill="none" stroke="url(#fwBorder)" stroke-width="1.3"/>
-  <path d="M 14 2 L 2 2 L 2 16" fill="none" stroke="#00ff9d" stroke-width="2"/>
-  <path d="M 986 2 L 998 2 L 998 16" fill="none" stroke="#00e5ff" stroke-width="2"/>
-  <path d="M 14 143 L 2 143 L 2 129" fill="none" stroke="#00e5ff" stroke-width="2"/>
-  <path d="M 986 143 L 998 143 L 998 129" fill="none" stroke="#00ff9d" stroke-width="2"/>
-
-  <text x="500" y="36" text-anchor="middle" class="mono-ft" font-size="11.5" font-weight="600" fill="#e2e8f0" letter-spacing="0.4">
-    &quot;Security is a process, not a product. Complexity is the worst enemy of security.&quot; — Bruce Schneier
-  </text>
-
-  <text x="500" y="56" text-anchor="middle" class="mono-ft" font-size="9.5" fill="#00ff9d" letter-spacing="1.2">
-    [ ZERO-TRUST ARCHITECTURE // SHIFT-LEFT SAST // CLEAN CODE &amp; ACID RESILIENCE ]
-  </text>
-
-  <text x="500" y="124" text-anchor="middle" class="disp-ft" font-size="10.5" font-weight="700" fill="#cbd5e1" letter-spacing="1.4">
-    JHON ANDERSON MORENO POSSO // MEDELLIN, COLOMBIA // CIBERSEGURIDAD, BACKEND &amp; DEVSECOPS
-  </text>
+  <rect width="1000" height="72" rx="10" fill="url(#ftBg)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="70.5" rx="9.25" fill="none" stroke="#27272a" stroke-width="1"/>
+  <circle cx="28" cy="36" r="3.5" fill="#10b981"/>
+  <text x="42" y="39.5" class="mono" font-size="10.5" font-weight="600" fill="#d4d4d8">JHON ANDERSON MORENO POSSO  <tspan fill="#3f3f46">·</tspan>  <tspan fill="#71717a" font-weight="400">Clarity over cleverness · Deterministic data layers · Security by design</tspan></text>
+  <text x="972" y="39.5" text-anchor="end" class="mono" font-size="10" fill="#71717a">Medellín, CO  ·  <tspan fill="#a1a1aa">2026-11-08 UTC</tspan></text>
 </svg>

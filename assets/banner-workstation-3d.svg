@@ -1,457 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="100%" height="430">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="350">
   <defs>
-    <!-- Deep Obsidian Void Base -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04060a"/>
-      <stop offset="55%" stop-color="#070c14"/>
-      <stop offset="100%" stop-color="#020306"/>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="50%" stop-color="#0c0c10"/>
+      <stop offset="100%" stop-color="#09090b"/>
     </linearGradient>
-
-    <!-- Multi-Tone Ambient 3D Lighting -->
-    <radialGradient id="rigGlow" cx="73%" cy="52%" r="40%">
-      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.16"/>
-      <stop offset="45%" stop-color="#00e5ff" stop-opacity="0.09"/>
-      <stop offset="80%" stop-color="#a855f7" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
+    <radialGradient id="subtleGlowL" cx="18%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
     </radialGradient>
-
-    <radialGradient id="leftGlow" cx="24%" cy="28%" r="36%">
-      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.09"/>
-      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
+    <radialGradient id="subtleGlowR" cx="82%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- 3D Hardware & Screen Gradients -->
-    <linearGradient id="platTop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c1522"/>
-      <stop offset="50%" stop-color="#08101a"/>
-      <stop offset="100%" stop-color="#04080e"/>
+    <linearGradient id="topHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27272a" stop-opacity="0.2"/>
+      <stop offset="30%" stop-color="#71717a" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#52525b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#27272a" stop-opacity="0.2"/>
     </linearGradient>
-
-    <linearGradient id="deskTop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#162234"/>
-      <stop offset="100%" stop-color="#0a111c"/>
-    </linearGradient>
-
-    <linearGradient id="screenMain" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#071926"/>
-      <stop offset="100%" stop-color="#030b12"/>
-    </linearGradient>
-
-    <linearGradient id="screenSide" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#081e22"/>
-      <stop offset="100%" stop-color="#030c10"/>
-    </linearGradient>
-
-    <linearGradient id="rackBody" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#111b2a"/>
-      <stop offset="100%" stop-color="#060a10"/>
-    </linearGradient>
-
-    <linearGradient id="radarBeam" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.0"/>
-    </linearGradient>
-
-    <!-- Micro Dot Grid Pattern (inspired by thewhiteh4t) -->
-    <pattern id="dotGrid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="3" cy="3" r="0.65" fill="#00ff66" opacity="0.08"/>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#3f3f46" opacity="0.32"/>
     </pattern>
-
-    <filter id="neonGlow" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="3.2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- 3D Fiber Optic Motion Paths -->
-    <path id="fiberBus1" d="M 672 268 Q 735 295, 808 256"/>
-    <path id="fiberBus2" d="M 684 276 Q 745 304, 818 264"/>
-    <path id="attackArc" d="M 520 120 Q 595 95, 650 148"/>
-
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', 'Fira Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
-
-      .marquee-rail {
-        stroke-dasharray: 8, 5;
-        animation: dashRail 24s linear infinite;
-      }
-      @keyframes dashRail {
-        to { stroke-dashoffset: -1200; }
-      }
-      @keyframes floatHoloA {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
-      }
-      @keyframes floatHoloB {
-        0%, 100% { transform: translateY(-5px); }
-        50% { transform: translateY(3px); }
-      }
-      @keyframes pulseBeacon {
-        0%, 100% { opacity: 0.25; r: 2.5; }
-        50% { opacity: 1; r: 4.5; }
-      }
-      @keyframes scanScreen {
-        0%, 100% { transform: translateY(0px); opacity: 0.25; }
-        50% { transform: translateY(42px); opacity: 0.9; }
-      }
-      @keyframes cableFlow {
-        to { stroke-dashoffset: -28; }
-      }
-      .holo-a { animation: floatHoloA 3.8s ease-in-out infinite; }
-      .holo-b { animation: floatHoloB 4.3s ease-in-out infinite; }
-      .beacon-ring { animation: pulseBeacon 2s ease-in-out infinite; }
-      .screen-laser { animation: scanScreen 2.6s ease-in-out infinite; }
-      .fiber-pulse { stroke-dasharray: 6 5; animation: cableFlow 1.1s linear infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
+      @keyframes flowDash { to { stroke-dashoffset: -20; } }
+      .flow-line { stroke-dasharray: 4 6; animation: flowDash 2.2s linear infinite; }
     </style>
   </defs>
 
-  <!-- ==================== DIE-CUT INDUSTRIAL CHASSIS & DOT MATRIX ==================== -->
-  <rect width="1000" height="430" rx="10" fill="url(#bgGrad)"/>
-  <rect width="1000" height="430" rx="10" fill="url(#dotGrid)"/>
-  <rect width="1000" height="430" rx="10" fill="url(#leftGlow)"/>
-  <rect width="1000" height="430" rx="10" fill="url(#rigGlow)"/>
+  <!-- Outer Frame -->
+  <rect width="1000" height="350" rx="12" fill="url(#heroBg)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#dotGrid)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#subtleGlowL)"/>
+  <rect width="1000" height="350" rx="12" fill="url(#subtleGlowR)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="348.5" rx="11.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="24" y1="1" x2="976" y2="1" stroke="url(#topHighlight)" stroke-width="1.2"/>
 
-  <!-- Die-Cut Armored Outer Frame -->
-  <path d="M 38,8 L 215,8 L 230,22 L 770,22 L 785,8 L 962,8 L 992,38 L 992,392 L 962,422 L 38,422 L 8,392 L 8,38 Z"
-        stroke="#162232" stroke-width="2" fill="none"/>
+  <!-- Minimalist Window Header Bar -->
+  <rect x="1.5" y="1.5" width="997" height="38" rx="10.5" fill="#0d0d11" fill-opacity="0.85"/>
+  <line x1="1" y1="40" x2="999" y2="40" stroke="#1f1f25" stroke-width="1"/>
 
-  <!-- Animated Perimeter Marquee Laser Rail -->
-  <path class="marquee-rail"
-        d="M 42,13 L 212,13 L 227,27 L 773,27 L 788,13 L 958,13 L 987,42 L 987,388 L 958,417 L 42,417 L 13,388 L 13,42 Z"
-        stroke="#00ff66" stroke-width="0.9" opacity="0.32" fill="none"/>
-
-  <!-- Corner Hardware Accents -->
-  <path d="M 8,52 L 8,38 L 38,8 L 52,8" fill="none" stroke="#00ff66" stroke-width="2.2"/>
-  <path d="M 948,8 L 962,8 L 992,38 L 992,52" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
-  <path d="M 8,378 L 8,392 L 38,422 L 52,422" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
-  <path d="M 948,422 L 962,422 L 992,392 L 992,378" fill="none" stroke="#00ff66" stroke-width="2.2"/>
-
-  <!-- Top Center Notched Telemetry Bridge -->
-  <text x="500" y="16" class="mono" font-size="8.5" font-weight="bold" fill="#64748b" letter-spacing="2.5" text-anchor="middle">
-    OP_RIG_V4.2 // ZERO-TRUST CYBERSECURITY &amp; BACKEND WORKSTATION
-  </text>
-
-  <!-- ==================== LEFT DECK: BESPOKE IDENTITY & INDUSTRIAL TELEMETRY ==================== -->
-  <!-- Top HUD Status Module -->
-  <g transform="translate(38, 34)">
-    <rect width="118" height="20" fill="#04070c" stroke="#162232" stroke-width="1"/>
-    <circle cx="13" cy="10" r="2.5" fill="#00ff66"/>
-    <circle class="beacon-ring" cx="13" cy="10" r="2.5" fill="none" stroke="#00ff66" stroke-width="1"/>
-    <text x="24" y="13.5" class="mono" font-size="8" font-weight="bold" fill="#00ff66" letter-spacing="1">SOC_ONLINE</text>
-
-    <rect x="128" y="0" width="224" height="20" fill="#04070c" stroke="#162232" stroke-width="1"/>
-    <text x="240" y="13.5" class="mono" font-size="8" fill="#94a3b8" letter-spacing="1.2" text-anchor="middle">MEDELLIN, CO // UTC-5</text>
+  <g transform="translate(22, 20)">
+    <circle cx="0" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <circle cx="14" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <circle cx="28" cy="0" r="4.5" fill="#27272a" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="48" y="4" class="mono" font-size="11" fill="#71717a">jhonmoreno000 <tspan fill="#3f3f46">/</tspan> <tspan fill="#d4d4d8">architecture-manifest.md</tspan></text>
   </g>
 
-  <!-- Custom 3D Extruded Callsign & High-Tracking Typography -->
-  <g transform="translate(38, 98)">
-    <!-- 3D Depth Shadow Layer -->
-    <text x="3" y="3" class="mono" font-size="40" font-weight="bold" fill="#003319" letter-spacing="3.5">JHON MORENO</text>
-    <!-- Primary Phosphor/White Callsign -->
-    <text x="0" y="0" class="mono" font-size="40" font-weight="bold" fill="#f8fafc" letter-spacing="3.5">JHON <tspan fill="#00ff66">MORENO</tspan></text>
-    <text x="2" y="22" class="mono" font-size="9.5" font-weight="bold" fill="#00e5ff" letter-spacing="4.8">
-      JHON ANDERSON MORENO POSSO
-    </text>
-    <text x="2" y="42" class="sans" font-size="12.5" fill="#94a3b8">
-      Ingeniería de Software Backend, Arquitectura de Datos ACID y Ciberseguridad DevSecOps.
-    </text>
+  <g transform="translate(978, 20)" text-anchor="end" class="mono" font-size="10.5">
+    <text x="0" y="4" fill="#71717a">Medellín, CO (UTC-5)  <tspan fill="#3f3f46">·</tspan>  <tspan fill="#10b981">●</tspan> <tspan fill="#a1a1aa">SYNC 2026-11-08 20:58 UTC</tspan></text>
   </g>
 
-  <line x1="38" y1="154" x2="478" y2="154" stroke="#162232" stroke-width="1"/>
+  <!-- LEFT COLUMN: EXECUTIVE IDENTITY & TELEMETRY PILLS -->
+  <g transform="translate(36, 68)">
+    <!-- Role Tag Pill -->
+    <rect x="0" y="0" width="328" height="24" rx="12" fill="#131318" stroke="#27272a" stroke-width="1"/>
+    <circle cx="13" cy="12" r="3.5" fill="#10b981"/>
+    <text x="24" y="15.5" class="mono" font-size="10" font-weight="600" fill="#d4d4d8" letter-spacing="0.4">BACKEND, DATA ARCHITECTURE &amp; DEVSECOPS</text>
 
-  <!-- 4 Industrial Color-Coded Telemetry Modules (inspired by thewhiteh4t) -->
-  <g transform="translate(38, 170)">
-    <!-- Module 1: Amber -->
-    <g transform="translate(0, 0)">
-      <rect width="102" height="72" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="102" height="3" fill="#ffaa00"/>
-      <text x="8" y="15" class="mono" font-size="7" font-weight="bold" fill="#ffaa00" letter-spacing="1">SYS_REPOS</text>
-      <text x="51" y="44" class="mono" font-size="23" font-weight="bold" fill="#ffffff" text-anchor="middle">09</text>
-      <text x="51" y="61" class="mono" font-size="7.5" font-weight="bold" fill="#8ca0ba" letter-spacing="0.8" text-anchor="middle">PUBLIC_OSS</text>
-    </g>
+    <!-- Primary Name & Title -->
+    <text x="0" y="62" class="sans" font-size="31" font-weight="700" fill="#fafafa" letter-spacing="-0.6">Jhon Anderson Moreno</text>
+    <text x="0" y="86" class="mono" font-size="12" font-weight="500" fill="#818cf8">Software Engineer  ·  Java 21 · TypeScript · C# .NET 10 · PostgreSQL ACID</text>
 
-    <!-- Module 2: Emerald -->
-    <g transform="translate(114, 0)">
-      <rect width="102" height="72" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="102" height="3" fill="#00ff66"/>
-      <text x="8" y="15" class="mono" font-size="7" font-weight="bold" fill="#00ff66" letter-spacing="1">SEC_SUITE</text>
-      <text x="51" y="44" class="mono" font-size="23" font-weight="bold" fill="#ffffff" text-anchor="middle">56+</text>
-      <text x="51" y="61" class="mono" font-size="7.5" font-weight="bold" fill="#8ca0ba" letter-spacing="0.8" text-anchor="middle">UNIT_TESTS</text>
-    </g>
+    <!-- Executive Summary -->
+    <text x="0" y="116" class="sans" font-size="13" fill="#a1a1aa">Diseño e implementación de servicios backend resilientes, motores SQL</text>
+    <text x="0" y="135" class="sans" font-size="13" fill="#a1a1aa">con aislamiento transaccional <tspan class="mono" font-size="11.5" fill="#e4e4e7">SERIALIZABLE</tspan> y estaciones de auditoría</text>
+    <text x="0" y="154" class="sans" font-size="13" fill="#a1a1aa">SAST asistidas por IA local (<tspan class="mono" font-size="11.5" fill="#e4e4e7">Qwen 2.5 Coder 7B</tspan>) bajo estándares <tspan class="mono" font-size="11.5" fill="#e4e4e7">OWASP ASVS</tspan>.</text>
 
-    <!-- Module 3: Crimson -->
-    <g transform="translate(228, 0)">
-      <rect width="102" height="72" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="102" height="3" fill="#ff2a5f"/>
-      <text x="8" y="15" class="mono" font-size="7" font-weight="bold" fill="#ff2a5f" letter-spacing="1">SAST_LLM</text>
-      <text x="51" y="44" class="mono" font-size="21" font-weight="bold" fill="#ffffff" text-anchor="middle">7B</text>
-      <text x="51" y="61" class="mono" font-size="7.5" font-weight="bold" fill="#8ca0ba" letter-spacing="0.8" text-anchor="middle">QWEN_LOCAL</text>
-    </g>
+    <!-- 4 Clean Linear-Style Metric Cards -->
+    <g transform="translate(0, 182)">
+      <g transform="translate(0, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">SOURCE CODE</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">3.48 MB</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#10b981">GitHub API Verified</text>
+      </g>
 
-    <!-- Module 4: Cyan Beveled -->
-    <g transform="translate(342, 0)">
-      <path d="M 0,0 L 102,0 L 102,58 L 88,72 L 0,72 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="102" height="3" fill="#00e5ff"/>
-      <text x="8" y="15" class="mono" font-size="7" font-weight="bold" fill="#00e5ff" letter-spacing="1">CRYPTO_STD</text>
-      <text x="51" y="43" class="mono" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">SHA-256</text>
-      <text x="51" y="61" class="mono" font-size="7.5" font-weight="bold" fill="#8ca0ba" letter-spacing="0.8" text-anchor="middle">OWASP_ASVS</text>
+      <g transform="translate(132, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">SYSTEMS</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">07 Repos</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#818cf8">Original Architecture</text>
+      </g>
+
+      <g transform="translate(264, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">DATA LAYER</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">PG 16 / 17</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#38bdf8">ACID · MySQL · Mongo</text>
+      </g>
+
+      <g transform="translate(396, 0)">
+        <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
+        <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">APPSEC GATE</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">ASVS L2</text>
+        <text x="12" y="59" class="mono" font-size="9" fill="#f59e0b">SHA-256 · Local SAST</text>
+      </g>
     </g>
   </g>
 
-  <!-- Active Engineering Stack Matrix Box -->
-  <g transform="translate(38, 258)">
-    <path d="M 0,0 L 430,0 L 444,14 L 444,64 L 0,64 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-    <rect x="0" y="0" width="3" height="64" fill="#00ff66"/>
-    <text x="16" y="19" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" letter-spacing="1.2">
-      ARSENAL_TECNICO // FULL-STACK &amp; SECURE INFRASTRUCTURE
-    </text>
-    <text x="16" y="38" class="mono" font-size="10.5" font-weight="bold" fill="#e2e8f0">
-      TypeScript 5.3 · Java 21 · C# 12 (.NET 10) · Python 3.12 · Node.js 20
-    </text>
-    <text x="16" y="54" class="mono" font-size="9.5" fill="#8ca0ba">
-      PostgreSQL 16/17 (ACID) · MongoDB v6 · Docker Multi-Stage · Direct3D · WAF L7
-    </text>
-  </g>
+  <!-- Vertical Hairline Divider -->
+  <line x1="576" y1="56" x2="576" y2="326" stroke="#1f1f25" stroke-width="1"/>
 
-  <!-- Angled Parallelogram Tactical Domain Tags -->
-  <g transform="translate(38, 338)">
-    <g transform="translate(0, 0)">
-      <path d="M 0,0 L 82,0 L 90,18 L 8,18 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <text x="45" y="12" class="mono" font-size="8" font-weight="bold" fill="#00ff66" text-anchor="middle">/ DEVSECOPS</text>
-    </g>
-    <g transform="translate(92, 0)">
-      <path d="M 0,0 L 78,0 L 86,18 L 8,18 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <text x="43" y="12" class="mono" font-size="8" font-weight="bold" fill="#ffaa00" text-anchor="middle">/ SAST_AI</text>
-    </g>
-    <g transform="translate(180, 0)">
-      <path d="M 0,0 L 92,0 L 100,18 L 8,18 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <text x="50" y="12" class="mono" font-size="8" font-weight="bold" fill="#00e5ff" text-anchor="middle">/ ZERO_TRUST</text>
-    </g>
-    <g transform="translate(282, 0)">
-      <path d="M 0,0 L 78,0 L 86,18 L 8,18 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <text x="43" y="12" class="mono" font-size="8" font-weight="bold" fill="#c084fc" text-anchor="middle">/ SQL_ACID</text>
-    </g>
-    <g transform="translate(362, 0)">
-      <path d="M 0,0 L 76,0 L 84,18 L 8,18 Z" fill="#04070c" stroke="#162232" stroke-width="1"/>
-      <text x="42" y="12" class="mono" font-size="8" font-weight="bold" fill="#ff2a5f" text-anchor="middle">/ RED_BLUE</text>
-    </g>
-  </g>
+  <!-- RIGHT COLUMN: ARCHITECTURAL TOPOLOGY BLUEPRINT -->
+  <g transform="translate(600, 62)">
+    <text x="0" y="14" class="mono" font-size="10" font-weight="600" fill="#71717a" letter-spacing="0.8">SYSTEMS TOPOLOGY // PRODUCTION ARCHITECTURE</text>
 
-  <text x="38" y="388" class="mono" font-size="7.5" fill="#475569" letter-spacing="1.2">
-    FORMACION: SENA ADSO // SHA256_FINGERPRINT: 0x9F86D081884C7D65...B0F00A08 // VERIFIED
-  </text>
-
-  <!-- Vertical Structural Divider -->
-  <line x1="502" y1="36" x2="502" y2="394" stroke="#162232" stroke-width="1" stroke-dasharray="4 4"/>
-
-  <!-- ==================== RIGHT DECK: TRUE 3D ISOMETRIC CYBER-RIG & HOLOGRAPHIC WORKSTATION ==================== -->
-  <g transform="translate(12, 8)">
-    <!-- 1. 3D Isometric Armored Floor Platform -->
-    <polygon points="738,118 960,226 738,334 516,226" fill="url(#platTop)" stroke="#00e5ff" stroke-opacity="0.38" stroke-width="1.4"/>
-    <!-- 3D Extruded Platform Skirt (Left & Right Depth) -->
-    <polygon points="516,226 738,334 738,350 516,242" fill="#050a12" stroke="#00ff66" stroke-opacity="0.25" stroke-width="1"/>
-    <polygon points="960,226 738,334 738,350 960,242" fill="#03060b" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="1"/>
-    <!-- Platform Side Telemetry Lights -->
-    <line x1="540" y1="244" x2="620" y2="283" stroke="#00ff66" stroke-width="2" stroke-linecap="round"/>
-    <line x1="850" y1="288" x2="935" y2="246" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
-
-    <!-- Isometric Floor Grid -->
-    <g stroke="#00e5ff" stroke-width="0.6" stroke-opacity="0.14">
-      <line x1="572" y1="199" x2="794" y2="307"/>
-      <line x1="627" y1="172" x2="849" y2="280"/>
-      <line x1="682" y1="145" x2="904" y2="253"/>
-      <line x1="794" y1="145" x2="572" y2="253"/>
-      <line x1="849" y1="172" x2="627" y2="280"/>
-      <line x1="904" y1="199" x2="682" y2="307"/>
+    <!-- Node 1: Edge & API Gateway -->
+    <g transform="translate(0, 28)">
+      <rect width="364" height="54" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="12" width="3" height="30" rx="1.5" fill="#38bdf8"/>
+      <text x="16" y="23" class="sans" font-size="12" font-weight="600" fill="#f4f4f5">01. Edge Perimeter &amp; API Gateway</text>
+      <text x="348" y="23" text-anchor="end" class="mono" font-size="9.5" fill="#38bdf8">WAF L7 · Envoy</text>
+      <text x="16" y="41" class="mono" font-size="10" fill="#71717a">Rate Limit 1,200 req/min/IP · OAuth2/OIDC · TLS Termination</text>
     </g>
 
-    <!-- 2. 3D Projected Floor Radar Sweep under Rig -->
-    <g transform="translate(738, 232) scale(1, 0.48)">
-      <circle cx="0" cy="0" r="142" fill="none" stroke="#00ff66" stroke-opacity="0.24" stroke-width="1.5" stroke-dasharray="8 5"/>
-      <circle cx="0" cy="0" r="98" fill="none" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="1.2"/>
-      <path d="M 0,0 L 142,0 A 142,142 0 0,1 100,100 Z" fill="url(#radarBeam)">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
-      </path>
+    <!-- Connector 1 -> 2 -->
+    <line x1="182" y1="82" x2="182" y2="104" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <circle cx="182" cy="93" r="2.5" fill="#38bdf8"/>
+
+    <!-- Node 2: Core Domain Services & Local AI SAST (Split 2 Columns) -->
+    <g transform="translate(0, 104)">
+      <rect width="176" height="68" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="14" width="3" height="40" rx="1.5" fill="#818cf8"/>
+      <text x="14" y="24" class="sans" font-size="11.5" font-weight="600" fill="#f4f4f5">02. Service Runtimes</text>
+      <text x="14" y="42" class="mono" font-size="9.5" fill="#a1a1aa">Java 21 · Fastify 4.26</text>
+      <text x="14" y="56" class="mono" font-size="9.5" fill="#71717a">.NET 10 · Clean DDD</text>
+
+      <rect x="188" y="0" width="176" height="68" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="188" y="14" width="3" height="40" rx="1.5" fill="#f59e0b"/>
+      <text x="202" y="24" class="sans" font-size="11.5" font-weight="600" fill="#f4f4f5">03. Shift-Left SAST</text>
+      <text x="202" y="42" class="mono" font-size="9.5" fill="#a1a1aa">Qwen 2.5 Coder 7B</text>
+      <text x="202" y="56" class="mono" font-size="9.5" fill="#71717a">AST · Semgrep · SARIF</text>
     </g>
 
-    <!-- Animated Fiber-Optic Data Buses Connecting Desk to Cryo-Server Tower -->
-    <use href="#fiberBus1" fill="none" stroke="#091522" stroke-width="4.5" stroke-linecap="round"/>
-    <use href="#fiberBus1" fill="none" stroke="#00ff66" stroke-width="1.8" class="fiber-pulse"/>
-    <use href="#fiberBus2" fill="none" stroke="#091522" stroke-width="4.5" stroke-linecap="round"/>
-    <use href="#fiberBus2" fill="none" stroke="#00e5ff" stroke-width="1.8" class="fiber-pulse"/>
+    <!-- Connector 2 -> 3 -->
+    <line x1="88" y1="172" x2="88" y2="194" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <line x1="276" y1="172" x2="276" y2="194" stroke="#3f3f46" stroke-width="1.2" class="flow-line"/>
+    <circle cx="88" cy="183" r="2.5" fill="#818cf8"/>
+    <circle cx="276" cy="183" r="2.5" fill="#f59e0b"/>
 
-    <!-- ==================== 3. 3D LIQUID-COOLED CRYO-SERVER TOWER (x=842, y=210) ==================== -->
-    <g transform="translate(842, 210)">
-      <!-- Base Shadow -->
-      <polygon points="0,16 50,40 0,64 -50,40" fill="#020408" fill-opacity="0.75"/>
-      <!-- Tower Top Face -->
-      <polygon points="0,-88 44,-66 0,-44 -44,-66" fill="#182638" stroke="#00e5ff" stroke-opacity="0.6" stroke-width="1.2"/>
-      <!-- Tower Top Vent Lines -->
-      <line x1="-18" y1="-66" x2="0" y2="-57" stroke="#00ff66" stroke-width="1.5"/>
-      <line x1="-10" y1="-70" x2="8" y2="-61" stroke="#00e5ff" stroke-width="1.5"/>
-      <!-- Tower Left Face (3D Cooling Turbines) -->
-      <polygon points="-44,-66 0,-44 0,52 -44,30" fill="url(#rackBody)" stroke="#1e293b" stroke-width="1"/>
-      <!-- Tower Right Face (Server Blades & Bus Bars) -->
-      <polygon points="44,-66 0,-44 0,52 44,30" fill="#070d16" stroke="#00e5ff" stroke-opacity="0.35" stroke-width="1"/>
-
-      <!-- 3 Isometric Glowing Cryo-Cooling Fans (Skewed in 3D Perspective!) -->
-      <g transform="translate(-22, -32) skewY(26)">
-        <circle cx="0" cy="0" r="9" fill="#040a10" stroke="#00ff66" stroke-width="1.6"/>
-        <circle cx="0" cy="0" r="3" fill="#00ff66"/>
-        <circle cx="0" cy="24" r="9" fill="#040a10" stroke="#00e5ff" stroke-width="1.6"/>
-        <circle cx="0" cy="24" r="3" fill="#00e5ff"/>
-        <circle cx="0" cy="48" r="9" fill="#040a10" stroke="#ffaa00" stroke-width="1.6"/>
-        <circle cx="0" cy="48" r="3" fill="#ffaa00"/>
-      </g>
-
-      <!-- Right Face High-Density Server Blades (Skewed in 3D Perspective!) -->
-      <g transform="translate(8, -34) skewY(-26)">
-        <rect x="0" y="0" width="28" height="6" rx="1" fill="#0d2232" stroke="#00ff66" stroke-width="0.8"/>
-        <rect x="2" y="2" width="14" height="2" fill="#00ff66"/>
-        <rect x="0" y="11" width="28" height="6" rx="1" fill="#0d2232" stroke="#00e5ff" stroke-width="0.8"/>
-        <rect x="2" y="13" width="20" height="2" fill="#00e5ff"/>
-        <rect x="0" y="22" width="28" height="6" rx="1" fill="#0d2232" stroke="#ffaa00" stroke-width="0.8"/>
-        <rect x="2" y="24" width="17" height="2" fill="#ffaa00"/>
-        <rect x="0" y="33" width="28" height="6" rx="1" fill="#0d2232" stroke="#00ff66" stroke-width="0.8"/>
-        <rect x="2" y="35" width="22" height="2" fill="#00ff66"/>
-        <text x="0" y="52" class="mono" font-size="6.5" font-weight="bold" fill="#00e5ff">PG17 // RAID</text>
-        <circle cx="24" cy="60" r="2.2" fill="#00ff66">
-          <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-
-      <!-- Floating 3D Holographic Cyber-Shield Above Tower -->
-      <g transform="translate(0, -112)">
-        <g class="holo-a">
-          <polygon points="0,-20 18,-12 18,4 0,18 -18,4 -18,-12" fill="#04141c" fill-opacity="0.88" stroke="#00ff66" stroke-width="1.5" filter="url(#neonGlow)"/>
-          <text x="0" y="3" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#00ff66">ASVS</text>
-        </g>
-      </g>
-    </g>
-
-    <!-- ==================== 4. 3D ISOMETRIC CYBER COMMAND DESK & TRIPLE MONITORS (x=660, y=206) ==================== -->
-    <g transform="translate(660, 206)">
-      <!-- Heavy Armored Desk Legs -->
-      <polygon points="-86,14 -76,19 -76,68 -86,63" fill="#0b121e" stroke="#1e293b" stroke-width="0.7"/>
-      <polygon points="0,56 10,61 10,110 0,105" fill="#0b121e" stroke="#1e293b" stroke-width="0.7"/>
-      <polygon points="86,14 76,19 76,68 86,63" fill="#070c14" stroke="#1e293b" stroke-width="0.7"/>
-
-      <!-- Underglow beneath Desk -->
-      <polygon points="0,-26 94,20 0,66 -94,20" fill="#00ff66" fill-opacity="0.12" filter="url(#neonGlow)"/>
-
-      <!-- 3D Isometric Desk Surface & Chamfered Edge -->
-      <polygon points="0,-30 92,16 0,62 -92,16" fill="url(#deskTop)" stroke="#00e5ff" stroke-opacity="0.45" stroke-width="1.2"/>
-      <polygon points="-92,16 0,62 0,70 -92,24" fill="#0c1524" stroke="#00ff66" stroke-opacity="0.25" stroke-width="0.9"/>
-      <polygon points="92,16 0,62 0,70 92,24" fill="#080e18" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="0.9"/>
-
-      <!-- 3D Mechanical Split Keyboard & Cyber Deck on Desk (Projected with skew!) -->
-      <polygon points="-14,14 22,32 10,39 -26,21" fill="#050a10" stroke="#00ff66" stroke-opacity="0.65" stroke-width="0.9"/>
-      <line x1="-18" y1="19" x2="14" y2="35" stroke="#00ff66" stroke-width="1.2" stroke-dasharray="2 2"/>
-      <line x1="-21" y1="22" x2="11" y2="38" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="2 2"/>
-
-      <!-- Touchpad / Biometric Scanner Pad -->
-      <polygon points="28,35 40,41 32,46 20,40" fill="#050a10" stroke="#00e5ff" stroke-opacity="0.7" stroke-width="0.8"/>
-
-      <!-- ===== CENTER ULTRA-WIDE 3D MONITOR (True 3D Perspective skewY(26)!) ===== -->
-      <g transform="translate(-26, -42)">
-        <!-- Monitor Stand -->
-        <polygon points="30,36 40,41 40,56 30,51" fill="#1e293b"/>
-        <!-- 3D Extruded Back Casing -->
-        <polygon points="-3,-32 77,8 77,54 -3,14" fill="#050a12"/>
-        <!-- Active 3D Screen Surface with skewY(26.5) -->
-        <g transform="skewY(26.5)">
-          <rect x="0" y="-30" width="78" height="46" rx="2" fill="url(#screenMain)" stroke="#00e5ff" stroke-width="1.3"/>
-          <!-- Top Screen Bar -->
-          <rect x="1" y="-29" width="76" height="6" fill="#0c2638"/>
-          <circle cx="5" cy="-26" r="1.3" fill="#ff2a5f"/>
-          <circle cx="9" cy="-26" r="1.3" fill="#ffaa00"/>
-          <circle cx="13" cy="-26" r="1.3" fill="#00ff66"/>
-          <text x="40" y="-24" class="mono" font-size="4.5" font-weight="bold" fill="#00e5ff" text-anchor="middle">SECDEV // SAST_AI</text>
-          <!-- Syntax-Highlighted 3D Code Lines -->
-          <rect x="5" y="-19" width="24" height="2.2" rx="1" fill="#00ff66"/>
-          <rect x="32" y="-19" width="34" height="2.2" rx="1" fill="#00e5ff" fill-opacity="0.8"/>
-          <rect x="9" y="-14" width="42" height="2.2" rx="1" fill="#cbd5e1" fill-opacity="0.7"/>
-          <rect x="9" y="-9" width="28" height="2.2" rx="1" fill="#ffaa00" fill-opacity="0.85"/>
-          <rect x="40" y="-9" width="22" height="2.2" rx="1" fill="#00ff66" fill-opacity="0.85"/>
-          <rect x="5" y="-4" width="36" height="2.2" rx="1" fill="#c084fc" fill-opacity="0.8"/>
-          <!-- Bottom Terminal Status inside 3D Monitor -->
-          <rect x="4" y="3" width="70" height="9" rx="1" fill="#03070b" stroke="#00ff66" stroke-opacity="0.5" stroke-width="0.6"/>
-          <text x="8" y="9.5" class="mono" font-size="5" font-weight="bold" fill="#00ff66">&gt; 0 CVEs [OK]</text>
-          <!-- Animated Laser Scanbar inside 3D Monitor -->
-          <line x1="2" y1="-26" x2="76" y2="-26" stroke="#00ff66" stroke-width="1.2" class="screen-laser"/>
-        </g>
-      </g>
-
-      <!-- ===== LEFT VERTICAL 3D SIEM/RADAR MONITOR (True 3D Perspective skewY(-22)!) ===== -->
-      <g transform="translate(-74, -22)">
-        <g transform="skewY(-22)">
-          <rect x="0" y="-24" width="42" height="44" rx="2" fill="url(#screenSide)" stroke="#00ff66" stroke-width="1.2"/>
-          <rect x="1" y="-23" width="40" height="5" fill="#092420"/>
-          <text x="21" y="-19" class="mono" font-size="4.2" font-weight="bold" fill="#00ff66" text-anchor="middle">SIEM_WAF</text>
-          <!-- Mini Radar inside Left 3D Screen -->
-          <circle cx="21" cy="-4" r="10" fill="none" stroke="#00ff66" stroke-opacity="0.45" stroke-width="0.8"/>
-          <circle cx="21" cy="-4" r="5" fill="none" stroke="#00e5ff" stroke-opacity="0.45" stroke-width="0.8"/>
-          <line x1="21" y1="-4" x2="29" y2="-10" stroke="#00ff66" stroke-width="1.2"/>
-          <circle cx="26" cy="-8" r="1.5" fill="#ff2a5f"/>
-          <!-- Telemetry Bars inside Left 3D Screen -->
-          <rect x="5" y="10" width="32" height="2" fill="#00ff66"/>
-          <rect x="5" y="14" width="24" height="2" fill="#00e5ff"/>
-        </g>
-      </g>
-
-      <!-- ===== FLOATING 3D HOLOGRAPHIC TELEMETRY PANEL ABOVE RIG ===== -->
-      <g transform="translate(8, -94)">
-        <g class="holo-b">
-          <g transform="skewY(14)">
-            <rect x="-56" y="-16" width="112" height="28" rx="3" fill="#04101a" fill-opacity="0.90" stroke="#00e5ff" stroke-width="1.2" filter="url(#neonGlow)"/>
-            <rect x="-56" y="-16" width="112" height="3" fill="#00e5ff"/>
-            <text x="0" y="-2" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#ffffff" letter-spacing="0.6">
-              QWEN 2.5 7B // SAST
-            </text>
-            <text x="0" y="8" text-anchor="middle" class="mono" font-size="6.5" font-weight="bold" fill="#00ff66">
-              DIRECT3D · SHA-256
-            </text>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <!-- ==================== 5. RED-TEAM ATTACK ARC & HOLOGRAPHIC SHIELD DEFLECTION ==================== -->
-    <use href="#attackArc" fill="none" stroke="#ff2a5f" stroke-opacity="0.4" stroke-width="1.4" stroke-dasharray="4 3"/>
-    <circle r="4" fill="#ff2a5f" filter="url(#neonGlow)">
-      <animateMotion dur="2.3s" repeatCount="indefinite">
-        <mpath href="#attackArc"/>
-      </animateMotion>
-      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.88;1" dur="2.3s" repeatCount="indefinite"/>
-    </circle>
-    <!-- 3D Hexagonal Deflection Ripples at Impact Point (x=650, y=148) -->
-    <circle cx="650" cy="148" r="3" fill="none" stroke="#ff2a5f" stroke-width="1.8">
-      <animate attributeName="r" values="2;15;18" keyTimes="0;0.85;1" dur="2.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.95;0" keyTimes="0;0.85;1" dur="2.3s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Top-Left Threat Intercept Readout -->
-    <g transform="translate(516, 46)">
-      <path d="M 0,0 L 182,0 L 192,10 L 192,28 L 0,28 Z" fill="#120509" stroke="#ff2a5f" stroke-width="1"/>
-      <rect x="0" y="0" width="4" height="28" fill="#ff2a5f"/>
-      <circle cx="14" cy="14" r="3" fill="#ff2a5f">
-        <animate attributeName="opacity" values="1;0.2;1" dur="0.9s" repeatCount="indefinite"/>
-      </circle>
-      <text x="24" y="17.5" class="mono" font-size="8" font-weight="bold" fill="#fda4af" letter-spacing="0.6">
-        WAF_L7 // SQLi_BLOCKED
-      </text>
-    </g>
-
-    <!-- Bottom-Right 3D Rig Status Readout -->
-    <g transform="translate(592, 362)">
-      <path d="M 0,0 L 292,0 L 302,10 L 302,26 L 10,26 L 0,16 Z" fill="#040810" stroke="#162232" stroke-width="1.2"/>
-      <rect x="0" y="0" width="302" height="2.5" fill="#00ff66"/>
-      <text x="151" y="17" text-anchor="middle" class="mono" font-size="8.5" font-weight="bold" fill="#cbd5e1" letter-spacing="1">
-        3D_RIG_STATUS: <tspan fill="#00ff66">HARDENED</tspan> // TLS_1.3 // <tspan fill="#00e5ff">1200_REQ_MIN</tspan>
-      </text>
+    <!-- Node 3: ACID Data & Cryptographic Verification -->
+    <g transform="translate(0, 194)">
+      <rect width="364" height="62" rx="8" fill="#111116" stroke="#27272a" stroke-width="1"/>
+      <rect x="0" y="14" width="3" height="34" rx="1.5" fill="#10b981"/>
+      <text x="16" y="24" class="sans" font-size="12" font-weight="600" fill="#f4f4f5">04. Transactional Persistence &amp; Integrity</text>
+      <text x="348" y="24" text-anchor="end" class="mono" font-size="9.5" fill="#10b981">SERIALIZABLE</text>
+      <text x="16" y="41" class="mono" font-size="10" fill="#a1a1aa">PostgreSQL 16/17 · FOR UPDATE NOWAIT · HMAC-SHA256 Webhooks</text>
+      <text x="16" y="54" class="mono" font-size="9.5" fill="#71717a">Docker Multi-Stage (Non-Root UID 10001) · 56+ Automated Tests</text>
     </g>
   </g>
 </svg>

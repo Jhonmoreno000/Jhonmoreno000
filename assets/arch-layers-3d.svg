@@ -1,262 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="320">
   <defs>
-    <linearGradient id="alBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04060a"/>
-      <stop offset="55%" stop-color="#070c14"/>
-      <stop offset="100%" stop-color="#020306"/>
+    <linearGradient id="telBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#0e0e12"/>
     </linearGradient>
-
-    <radialGradient id="alGlowL" cx="24%" cy="48%" r="40%">
-      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.11"/>
-      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="alGlowR" cx="76%" cy="52%" r="42%">
-      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.11"/>
-      <stop offset="100%" stop-color="#020306" stop-opacity="0"/>
-    </radialGradient>
-
-    <pattern id="alDots" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="3" cy="3" r="0.65" fill="#00ff66" opacity="0.07"/>
-    </pattern>
-
+    <clipPath id="barClip">
+      <rect x="0" y="0" width="436" height="10" rx="5"/>
+    </clipPath>
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', 'Fira Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
-      .marquee-rail {
-        stroke-dasharray: 8, 5;
-        animation: dashAl 24s linear infinite;
-      }
-      @keyframes dashAl {
-        to { stroke-dashoffset: -1200; }
-      }
-      @keyframes floatSlabA {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-      }
-      @keyframes floatSlabB {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-3px); }
-      }
-      .slab-top { animation: floatSlabA 3.6s ease-in-out infinite; }
-      .slab-mid { animation: floatSlabB 3.6s ease-in-out infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
 
-  <!-- Die-Cut Industrial Chassis & Dot Matrix -->
-  <rect width="1000" height="450" rx="10" fill="url(#alBg)"/>
-  <rect width="1000" height="450" rx="10" fill="url(#alDots)"/>
-  <rect width="1000" height="450" rx="10" fill="url(#alGlowL)"/>
-  <rect width="1000" height="450" rx="10" fill="url(#alGlowR)"/>
+  <rect width="1000" height="320" rx="12" fill="url(#telBg)"/>
+  <rect x="0.75" y="0.75" width="998.5" height="318.5" rx="11.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
 
-  <path d="M 36,8 L 210,8 L 224,20 L 776,20 L 790,8 L 964,8 L 992,36 L 992,414 L 964,442 L 36,442 L 8,414 L 8,36 Z"
-        stroke="#162232" stroke-width="2" fill="none"/>
+  <!-- Top Header Bar -->
+  <rect x="1.5" y="1.5" width="997" height="38" rx="10.5" fill="#0d0d11"/>
+  <line x1="1" y1="40" x2="999" y2="40" stroke="#1f1f25" stroke-width="1"/>
+  <text x="26" y="25" class="mono" font-size="10.5" font-weight="600" fill="#d4d4d8" letter-spacing="0.5">CODEBASE TELEMETRY // REAL BYTE DISTRIBUTION &amp; SYSTEM FOOTPRINT</text>
+  <text x="974" y="25" text-anchor="end" class="mono" font-size="10" fill="#10b981">TOTAL VERIFIED SOURCE: 3.48 MB</text>
 
-  <path class="marquee-rail"
-        d="M 40,13 L 207,13 L 221,25 L 779,25 L 793,13 L 960,13 L 987,40 L 987,410 L 960,437 L 40,437 L 13,410 L 13,40 Z"
-        stroke="#00ff66" stroke-width="0.9" opacity="0.28" fill="none"/>
-
-  <path d="M 8,50 L 8,36 L 36,8 L 50,8" fill="none" stroke="#00ff66" stroke-width="2.2"/>
-  <path d="M 950,8 L 964,8 L 992,36 L 992,50" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
-  <path d="M 8,400 L 8,414 L 36,442 L 50,442" fill="none" stroke="#00e5ff" stroke-width="2.2"/>
-  <path d="M 950,442 L 964,442 L 992,414 L 992,400" fill="none" stroke="#00ff66" stroke-width="2.2"/>
-
-  <text x="500" y="15" class="mono" font-size="8.5" font-weight="bold" fill="#64748b" letter-spacing="2.5" text-anchor="middle">
-    ARCH_DNA_V4 // 3D EXPLODED DEFENSE STACK &amp; CODEBASE TELEMETRY
-  </text>
-
-  <!-- ======================================================================= -->
-  <!-- LEFT MODULE: 3D EXPLODED ARCHITECTURE STACK & ENGINEERING PILLARS       -->
-  <!-- ======================================================================= -->
-  <g transform="translate(28, 34)">
-    <path d="M 0,0 L 440,0 L 454,14 L 454,384 L 14,384 L 0,370 Z" fill="#04070c" stroke="#162232" stroke-width="1.2"/>
-    <rect x="0" y="0" width="440" height="3" fill="#00ff66"/>
-    <text x="16" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" letter-spacing="1.4">
-      EXPLODED_3D_STACK // CAPAS DE DEFENSA Y ARQUITECTURA
-    </text>
-
-    <!-- 3D Exploded Isometric Stack Diagram (Left Side x=94, y=132) -->
-    <g transform="translate(94, 142)">
-      <!-- Vertical Alignment Axis Lines -->
-      <line x1="-54" y1="-56" x2="-54" y2="54" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3"/>
-      <line x1="54" y1="-56" x2="54" y2="54" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3"/>
-
-      <!-- Layer 3 (Bottom): Persistence & Crypto Vault -->
-      <g transform="translate(0, 38)">
-        <polygon points="0,-24 54,2 0,28 -54,2" fill="#140c29" stroke="#c084fc" stroke-width="1.3"/>
-        <polygon points="-54,2 0,28 0,38 -54,12" fill="#0d081c" stroke="#c084fc" stroke-opacity="0.6"/>
-        <polygon points="54,2 0,28 0,38 54,12" fill="#080512" stroke="#c084fc" stroke-opacity="0.6"/>
-        <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#c084fc">PG17 // ACID</text>
-      </g>
-
-      <!-- Layer 2 (Middle): Backend Services & SAST AI -->
-      <g class="slab-mid">
-        <polygon points="0,-24 54,2 0,28 -54,2" fill="#061d2b" stroke="#00e5ff" stroke-width="1.3"/>
-        <polygon points="-54,2 0,28 0,38 -54,12" fill="#04131d" stroke="#00e5ff" stroke-opacity="0.6"/>
-        <polygon points="54,2 0,28 0,38 54,12" fill="#020b12" stroke="#00e5ff" stroke-opacity="0.6"/>
-        <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#00e5ff">SAST // API</text>
-      </g>
-
-      <!-- Layer 1 (Top): WAF L7 & Zero-Trust Shield -->
-      <g transform="translate(0, -40)">
-        <g class="slab-top">
-          <polygon points="0,-24 54,2 0,28 -54,2" fill="#06291c" stroke="#00ff66" stroke-width="1.4"/>
-          <polygon points="-54,2 0,28 0,38 -54,12" fill="#041c13" stroke="#00ff66" stroke-opacity="0.6"/>
-          <polygon points="54,2 0,28 0,38 54,12" fill="#02100b" stroke="#00ff66" stroke-opacity="0.6"/>
-          <text x="0" y="6" text-anchor="middle" class="mono" font-size="7.5" font-weight="bold" fill="#00ff66">WAF // ZERO-TRUST</text>
-        </g>
-      </g>
-    </g>
-
-    <!-- 3 Callout Specification Cards Connected to the 3D Exploded Layers -->
-    <g transform="translate(172, 42)">
-      <!-- Callout 1 (Top Layer) -->
-      <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="3" height="58" fill="#00ff66"/>
-      <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66">PERIMETRO // WAF L7 &amp; RATE LIMIT</text>
-      <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Mitigación SYN Flood, SQLi y MITM con nodos</text>
-      <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">Envoy/Redis y límite de 1200 req/min por IP.</text>
-
-      <!-- Callout 2 (Middle Layer) -->
-      <g transform="translate(0, 68)">
-        <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
-        <rect x="0" y="0" width="3" height="58" fill="#00e5ff"/>
-        <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff">SAST IA // QWEN 2.5 7B &amp; CLEAN ARCH</text>
-        <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Auditoría estática local en C# Direct3D y Python</text>
-        <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">con deduplicación SHA-256 y arquitectura DDD.</text>
-      </g>
-
-      <!-- Callout 3 (Bottom Layer) -->
-      <g transform="translate(0, 136)">
-        <rect width="264" height="58" fill="#060b12" stroke="#162232" stroke-width="1"/>
-        <rect x="0" y="0" width="3" height="58" fill="#c084fc"/>
-        <text x="12" y="17" class="mono" font-size="8.5" font-weight="bold" fill="#c084fc">PERSISTENCIA ACID // PG 16/17 &amp; CRYPTO</text>
-        <text x="12" y="33" class="sans" font-size="11" fill="#cbd5e1">Aislamiento SERIALIZABLE, prevención de</text>
-        <text x="12" y="48" class="sans" font-size="11" fill="#8ca0ba">deadlocks y webhooks firmados con HMAC-SHA256.</text>
-      </g>
-    </g>
-
-    <!-- Bottom Operator Summary Strip -->
-    <g transform="translate(16, 252)">
-      <path d="M 0,0 L 410,0 L 420,10 L 420,114 L 0,114 Z" fill="#060a10" stroke="#162232" stroke-width="1"/>
-      <rect x="0" y="0" width="410" height="2.5" fill="#ffaa00"/>
-      <text x="14" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#ffaa00" letter-spacing="1">
-        PERFIL_DE_INGENIERIA // JHON ANDERSON MORENO POSSO
-      </text>
-      <text x="14" y="40" class="sans" font-size="11.5" fill="#e2e8f0">
-        Tecnólogo en Análisis y Desarrollo de Software (SENA ADSO) especializado en
-      </text>
-      <text x="14" y="57" class="sans" font-size="11.5" fill="#e2e8f0">
-        el diseño de motores backend resilientes, simuladores interactivos de arquitectura
-      </text>
-      <text x="14" y="74" class="sans" font-size="11.5" fill="#e2e8f0">
-        y herramientas de seguridad ofensiva/defensiva aceleradas por hardware.
-      </text>
-      <text x="14" y="98" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" letter-spacing="0.8">
-        ESTANDARES: ISO/IEC 25010 · OWASP ASVS L2 · SOLID · TDD · DOCKER IAC
-      </text>
-    </g>
+  <!-- LEFT PANEL: LANGUAGE DISTRIBUTION -->
+  <text x="26" y="64" class="mono" font-size="9.5" font-weight="600" fill="#71717a" letter-spacing="0.6">01 // LANGUAGE DISTRIBUTION BY SOURCE BYTES (GITHUB REST API)</text>
+  <g transform="translate(26, 76)" clip-path="url(#barClip)">
+    <rect x="0.0" y="0" width="258.4" height="10" fill="#10b981"/><rect x="258.4" y="0" width="91.0" height="10" fill="#f59e0b"/><rect x="349.4" y="0" width="34.9" height="10" fill="#6366f1"/><rect x="384.3" y="0" width="31.0" height="10" fill="#38bdf8"/><rect x="415.3" y="0" width="13.8" height="10" fill="#a78bfa"/><rect x="429.1" y="0" width="6.9" height="10" fill="#ec4899"/>
   </g>
-
-  <!-- ======================================================================= -->
-  <!-- RIGHT MODULE: 3D RING DISTRIBUTION & REPOSITORY TELEMETRY               -->
-  <!-- ======================================================================= -->
-  <g transform="translate(498, 34)">
-    <path d="M 0,0 L 460,0 L 474,14 L 474,384 L 0,384 Z" fill="#04070c" stroke="#162232" stroke-width="1.2"/>
-    <rect x="0" y="0" width="460" height="3" fill="#00e5ff"/>
-    <text x="18" y="20" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff" letter-spacing="1.4">
-      CODEBASE_METRICS // DISTRIBUCION REAL POR LENGUAJE Y MOTOR
-    </text>
-
-    <!-- Top Multi-Segment Donut Chart (inspired by yoshi389111) + Legend -->
-    <g transform="translate(86, 98)">
-      <!-- 3D Shadow Ring -->
-      <circle cx="2" cy="4" r="46" fill="none" stroke="#020306" stroke-width="14"/>
-      <circle cx="0" cy="0" r="46" fill="none" stroke="#0d1624" stroke-width="13"/>
-      <!-- Segment 1: JS/Node/React (46% -> 133 of 289) -->
-      <circle cx="0" cy="0" r="46" fill="none" stroke="#00ff66" stroke-width="13"
-              stroke-dasharray="133 289" transform="rotate(-90)"/>
-      <!-- Segment 2: TypeScript/Fastify (25% -> 72 of 289) -->
-      <circle cx="0" cy="0" r="46" fill="none" stroke="#00e5ff" stroke-width="13"
-              stroke-dasharray="72 289" stroke-dashoffset="-133" transform="rotate(-90)"/>
-      <!-- Segment 3: Java & C# .NET 10 (18% -> 52 of 289) -->
-      <circle cx="0" cy="0" r="46" fill="none" stroke="#ffaa00" stroke-width="13"
-              stroke-dasharray="52 289" stroke-dashoffset="-205" transform="rotate(-90)"/>
-      <!-- Segment 4: Python & Docker (11% -> 32 of 289) -->
-      <circle cx="0" cy="0" r="46" fill="none" stroke="#c084fc" stroke-width="13"
-              stroke-dasharray="32 289" stroke-dashoffset="-257" transform="rotate(-90)"/>
-      <text x="0" y="-2" text-anchor="middle" class="mono" font-size="14" font-weight="bold" fill="#ffffff">09</text>
-      <text x="0" y="11" text-anchor="middle" class="mono" font-size="7" font-weight="bold" fill="#00ff66">REPOS</text>
+    <g transform="translate(26, 112)">
+      <circle cx="5" cy="-4" r="4" fill="#10b981"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">JavaScript (ES6+ / React / Node)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">59.3% <tspan fill="#71717a" font-weight="400">(2.06 MB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">D&amp;D Textil · architect-td · Todo-API</text>
+    </g>
+    <g transform="translate(26, 144)">
+      <circle cx="5" cy="-4" r="4" fill="#f59e0b"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">Java 21 LTS (JDBC / Servlets / Security)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">20.9% <tspan fill="#71717a" font-weight="400">(727.0 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">D&amp;D Textil Enterprise Backend</text>
+    </g>
+    <g transform="translate(26, 176)">
+      <circle cx="5" cy="-4" r="4" fill="#6366f1"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">TypeScript 5.3 (Fastify / pg-mem / IDE)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">8.0% <tspan fill="#71717a" font-weight="400">(278.7 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">NEXUS SQL Engine &amp; Monaco Workspace</text>
+    </g>
+    <g transform="translate(26, 208)">
+      <circle cx="5" cy="-4" r="4" fill="#38bdf8"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">C# 12 (.NET 10 Direct3D / WinForms GDI+)</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">7.1% <tspan fill="#71717a" font-weight="400">(247.6 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">secdev Workstation · GCP POS Engine</text>
+    </g>
+    <g transform="translate(26, 240)">
+      <circle cx="5" cy="-4" r="4" fill="#a78bfa"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">HTML5 / CSS3 / Canvas Vector UI</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">3.2% <tspan fill="#71717a" font-weight="400">(110.3 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">Interfaces &amp; Interactive Simulators</text>
+    </g>
+    <g transform="translate(26, 272)">
+      <circle cx="5" cy="-4" r="4" fill="#ec4899"/>
+      <text x="16" y="0" class="sans" font-size="11.5" font-weight="600" fill="#e4e4e7">Python 3.12 · C++ · Shell · Dockerfile</text>
+      <text x="436" y="0" text-anchor="end" class="mono" font-size="10.5" font-weight="600" fill="#fafafa">1.6% <tspan fill="#71717a" font-weight="400">(55.4 KB)</tspan></text>
+      <text x="16" y="14" class="mono" font-size="9" fill="#71717a">DevSecOps Automation · Native · DSA</text>
     </g>
 
-    <!-- Right of Donut: 4 High-Contrast Telemetry Cards -->
-    <g transform="translate(162, 42)" class="mono">
-      <rect x="0" y="0" width="142" height="50" fill="#060b12" stroke="#162232"/>
-      <rect x="0" y="0" width="142" height="2.5" fill="#00ff66"/>
-      <text x="10" y="16" font-size="7.5" font-weight="bold" fill="#00ff66">JS_NODE_REACT</text>
-      <text x="10" y="36" font-size="15" font-weight="bold" fill="#ffffff">46.5%</text>
-      <text x="132" y="36" font-size="8" fill="#8ca0ba" text-anchor="end">3 REPOS</text>
+  <!-- Center Divider -->
+  <line x1="494" y1="52" x2="494" y2="302" stroke="#1f1f25" stroke-width="1"/>
 
-      <rect x="152" y="0" width="142" height="50" fill="#060b12" stroke="#162232"/>
-      <rect x="152" y="0" width="142" height="2.5" fill="#00e5ff"/>
-      <text x="162" y="16" font-size="7.5" font-weight="bold" fill="#00e5ff">TS_FASTIFY_SQL</text>
-      <text x="162" y="36" font-size="15" font-weight="bold" fill="#ffffff">24.8%</text>
-      <text x="284" y="36" font-size="8" fill="#8ca0ba" text-anchor="end">NEXUS</text>
-
-      <rect x="0" y="60" width="142" height="50" fill="#060b12" stroke="#162232"/>
-      <rect x="0" y="60" width="142" height="2.5" fill="#ffaa00"/>
-      <text x="10" y="76" font-size="7.5" font-weight="bold" fill="#ffaa00">CSHARP_JAVA</text>
-      <text x="10" y="96" font-size="15" font-weight="bold" fill="#ffffff">18.4%</text>
-      <text x="132" y="96" font-size="8" fill="#8ca0ba" text-anchor="end">SECDEV/POS</text>
-
-      <rect x="152" y="60" width="142" height="50" fill="#060b12" stroke="#162232"/>
-      <rect x="152" y="60" width="142" height="2.5" fill="#c084fc"/>
-      <text x="162" y="76" font-size="7.5" font-weight="bold" fill="#c084fc">PYTHON_DOCKER</text>
-      <text x="162" y="96" font-size="15" font-weight="bold" fill="#ffffff">10.3%</text>
-      <text x="284" y="96" font-size="8" fill="#8ca0ba" text-anchor="end">SAST/DSA</text>
+  <!-- RIGHT PANEL: REPOSITORY FOOTPRINT -->
+  <text x="524" y="64" class="mono" font-size="9.5" font-weight="600" fill="#71717a" letter-spacing="0.6">02 // ORIGINAL REPOSITORIES BY SOURCE VOLUME &amp; LATEST PUSH</text>
+    <g transform="translate(524, 86)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">D&amp;D-TEXTIL-ERP</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">Java 21 · React · PG17</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="140.0" height="7" rx="3.5" fill="#10b981"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">2.25 MB</tspan>  ·  commit <tspan fill="#10b981">910d42f</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-11-08</text>
     </g>
-
-    <line x1="18" y1="168" x2="456" y2="168" stroke="#162232" stroke-width="1"/>
-
-    <!-- Detailed Breakdown Bars -->
-    <g transform="translate(18, 182)">
-      <!-- Bar 1 -->
-      <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">JavaScript ES6+ · React 18 · Node.js 20</text>
-      <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#00ff66" text-anchor="end">D&amp;D Textil · architect-td · Todo-API</text>
-      <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
-      <rect x="0" y="20" width="290" height="7" fill="#00ff66">
-        <animate attributeName="width" values="0;290" dur="1.4s" fill="freeze"/>
-      </rect>
-
-      <!-- Bar 2 -->
-      <g transform="translate(0, 46)">
-        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">TypeScript 5.3 · Fastify 4.26 · PostgreSQL 16</text>
-        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#00e5ff" text-anchor="end">NEXUS SQL Engine · Monaco IDE</text>
-        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
-        <rect x="0" y="20" width="210" height="7" fill="#00e5ff">
-          <animate attributeName="width" values="0;210" dur="1.4s" fill="freeze"/>
-        </rect>
-      </g>
-
-      <!-- Bar 3 -->
-      <g transform="translate(0, 92)">
-        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">C# 12 (.NET 10 Direct3D / GDI+) &amp; Java 21 JDBC</text>
-        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#ffaa00" text-anchor="end">secdev IA · GCP POS · ERP Backend</text>
-        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
-        <rect x="0" y="20" width="156" height="7" fill="#ffaa00">
-          <animate attributeName="width" values="0;156" dur="1.4s" fill="freeze"/>
-        </rect>
-      </g>
-
-      <!-- Bar 4 -->
-      <g transform="translate(0, 138)">
-        <text x="0" y="12" class="mono" font-size="9.5" font-weight="bold" fill="#ffffff">Python 3.12 · Ollama SAST · Docker Compose IaC</text>
-        <text x="438" y="12" class="mono" font-size="8.5" font-weight="bold" fill="#c084fc" text-anchor="end">I-work-in-python · Multi-Stage</text>
-        <rect x="0" y="20" width="438" height="7" fill="#08101a" stroke="#162232"/>
-        <rect x="0" y="20" width="108" height="7" fill="#c084fc">
-          <animate attributeName="width" values="0;108" dur="1.4s" fill="freeze"/>
-        </rect>
-      </g>
+    <g transform="translate(524, 122)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">NEXUS</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">TypeScript 5.3 · Fastify</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="80.9" height="7" rx="3.5" fill="#6366f1"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">531.5 KB</tspan>  ·  commit <tspan fill="#6366f1">85e4866</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-09</text>
     </g>
-  </g>
+    <g transform="translate(524, 158)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">architect-td</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">JS ES6+ · WAF · Docker</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="70.1" height="7" rx="3.5" fill="#38bdf8"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">365.3 KB</tspan>  ·  commit <tspan fill="#38bdf8">d06cf84</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-06</text>
+    </g>
+    <g transform="translate(524, 194)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">secdev</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">C# .NET · C++ · Qwen 7B</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="57.3" height="7" rx="3.5" fill="#f59e0b"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">214.3 KB</tspan>  ·  commit <tspan fill="#f59e0b">f88999c</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-11-02</text>
+    </g>
+    <g transform="translate(524, 230)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">GCP-POS-NET10</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">C# 12 · .NET 10 GDI+</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="36.2" height="7" rx="3.5" fill="#a78bfa"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">64.0 KB</tspan>  ·  commit <tspan fill="#a78bfa">21d640c</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-27</text>
+    </g>
+    <g transform="translate(524, 266)">
+      <text x="0" y="0" class="mono" font-size="11" font-weight="600" fill="#fafafa">proyecto-todo-api</text>
+      <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">Node 20 · Mongo · Docker</text>
+      <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
+      <rect x="306" y="-9" width="33.0" height="7" rx="3.5" fill="#34d399"/>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">50.1 KB</tspan>  ·  commit <tspan fill="#34d399">14d2ea3</tspan></text>
+      <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-10-18</text>
+    </g>
 </svg>

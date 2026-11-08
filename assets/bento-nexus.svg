@@ -1,87 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 212" width="100%" height="212">
   <defs>
-    <linearGradient id="bgNx" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05080c"/>
-      <stop offset="100%" stop-color="#08131e"/>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0d"/>
+      <stop offset="100%" stop-color="#101015"/>
     </linearGradient>
-    <pattern id="dotsNx" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#00e5ff" fill-opacity="0.12"/>
-    </pattern>
+    <radialGradient id="cardGlow" cx="90%" cy="12%" r="55%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0a0a0d" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      @keyframes railNx { to { stroke-dashoffset: -26; } }
-      @keyframes floatNx { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
-      .rail { stroke-dasharray: 8 5; animation: railNx 1.6s linear infinite; }
-      .float3d { animation: floatNx 3.4s ease-in-out infinite; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', 'Geist Mono', 'SFMono-Regular', Consolas, monospace; }
     </style>
   </defs>
 
-  <rect width="490" height="220" rx="6" fill="#030508"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#bgNx)" stroke="#1e293b" stroke-width="1.5"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="url(#dotsNx)"/>
-  <path d="M 22,6 L 160,6 L 170,13 L 360,13 L 370,6 L 474,6 L 484,16 L 484,204 L 472,214 L 18,214 L 6,202 L 6,22 Z"
-        fill="none" stroke="#00e5ff" stroke-width="1.4" stroke-opacity="0.7" class="rail"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardBg)"/>
+  <rect width="490" height="212" rx="10" fill="url(#cardGlow)"/>
+  <rect x="0.75" y="0.75" width="488.5" height="210.5" rx="9.25" fill="none" stroke="#27272a" stroke-width="1.2"/>
+  <line x1="20" y1="1" x2="180" y2="1" stroke="#818cf8" stroke-opacity="0.65" stroke-width="1.5"/>
 
-  <!-- Top Left Cutout Accent -->
-  <rect x="24" y="5" width="90" height="3" fill="#00e5ff"/>
-  <text x="24" y="28" class="mono" font-size="9" font-weight="800" fill="#00e5ff" letter-spacing="2">SYS_01 // SQL ENGINE</text>
+  <!-- Top Repo Slug & Badge -->
+  <text x="24" y="27" class="mono" font-size="9.5" fill="#71717a">Jhonmoreno000 / NEXUS</text>
+  <rect x="294.4" y="13" width="171.6" height="20" rx="10" fill="#141419" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="380.2" y="26.5" text-anchor="middle" class="mono" font-size="8.8" font-weight="600" fill="#818cf8">TS 5.3 · PG-MEM · MONACO</text>
 
-  <!-- Title with 3D Extruded Shadow -->
-  <text x="25.5" y="53.5" class="mono" font-size="20" font-weight="900" fill="#00ff66" fill-opacity="0.35" letter-spacing="2">NEXUS</text>
-  <text x="24" y="52" class="mono" font-size="20" font-weight="900" fill="#f8fafc" letter-spacing="2">NEXUS</text>
-  <text x="108" y="51" class="mono" font-size="10" font-weight="700" fill="#00ff66" letter-spacing="1">// PG16 IN-MEMORY IDE</text>
+  <!-- Project Title -->
+  <text x="24" y="52" class="sans" font-size="15" font-weight="700" fill="#fafafa" letter-spacing="-0.2">NEXUS — SQL Engine &amp; ACID Resilience Lab</text>
 
-  <!-- Description -->
-  <g class="sans" font-size="11.2" fill="#94a3b8">
-    <text x="24" y="78">Simulador interactivo de ingenieria SQL y resiliencia</text>
-    <text x="24" y="96">ACID con Monaco IDE, motor PostgreSQL 16 (pg-mem),</text>
-    <text x="24" y="114">resolucion de deadlocks y auditoria EXPLAIN ANALYZE.</text>
+  <!-- 3-Line Architectural Summary -->
+  <g class="sans" font-size="11.5" fill="#a1a1aa">
+    <text x="24" y="76">Entorno interactivo de ingeniería SQL y resiliencia transaccional</text>
+    <text x="24" y="95">con Monaco IDE, motor PostgreSQL 16 en memoria (pg-mem), resolución</text>
+    <text x="24" y="114">de deadlocks concurrentes y análisis de planes EXPLAIN.</text>
   </g>
 
-  <!-- 3D ISOMETRIC SCULPTURE: 3-TIER CYLINDRICAL SQL SILO -->
-  <g transform="translate(418, 86)">
-    <ellipse cx="0" cy="30" rx="44" ry="18" fill="#03080e" stroke="#00e5ff" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="4 3"/>
-    <g class="float3d">
-      <!-- Bottom Silo Ring -->
-      <path d="M -28,4 L -28,18 A 28,11 0 0,0 28,18 L 28,4 Z" fill="#072235" stroke="#00e5ff" stroke-width="1.2"/>
-      <ellipse cx="0" cy="4" rx="28" ry="11" fill="#0b3149" stroke="#00e5ff" stroke-width="1.2"/>
-      <!-- Middle Silo Ring -->
-      <path d="M -28,-12 L -28,0 A 28,11 0 0,0 28,0 L 28,-12 Z" fill="#092c42" stroke="#00ff66" stroke-width="1.2"/>
-      <ellipse cx="0" cy="-12" rx="28" ry="11" fill="#0f3d59" stroke="#00ff66" stroke-width="1.2"/>
-      <!-- Top Silo Ring -->
-      <path d="M -28,-28 L -28,-16 A 28,11 0 0,0 28,-16 L 28,-28 Z" fill="#06332e" stroke="#00e5ff" stroke-width="1.2"/>
-      <ellipse cx="0" cy="-28" rx="28" ry="11" fill="#0a4a42" stroke="#00ff66" stroke-width="1.4"/>
-      <text x="0" y="-25" text-anchor="middle" class="mono" font-size="7.5" font-weight="900" fill="#f8fafc">ACID</text>
-    </g>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
+    <rect x="0" y="0" width="111" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="55.5" y="14.5" text-anchor="middle" fill="#d4d4d8">TypeScript 5.3</text>
+    <rect x="119" y="0" width="98" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="168.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Fastify 4.26</text>
+    <rect x="225" y="0" width="105" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="277.5" y="14.5" text-anchor="middle" fill="#d4d4d8">PostgreSQL 16</text>
+    <rect x="338" y="0" width="105" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="390.5" y="14.5" text-anchor="middle" fill="#d4d4d8">Monaco Editor</text>
   </g>
 
-  <!-- Angled Parallelogram Tech Tags -->
-  <g transform="translate(24, 136)" class="mono" font-size="9" font-weight="800">
-    <g transform="translate(0, 0)">
-      <path d="M 6,0 L 106,0 L 100,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
-      <text x="53" y="14.5" text-anchor="middle" fill="#e2e8f0">TYPESCRIPT 5</text>
-    </g>
-    <g transform="translate(110, 0)">
-      <path d="M 6,0 L 96,0 L 90,22 L 0,22 Z" fill="#061523" stroke="#00ff66" stroke-width="1"/>
-      <text x="48" y="14.5" text-anchor="middle" fill="#00ff66">FASTIFY 4</text>
-    </g>
-    <g transform="translate(210, 0)">
-      <path d="M 6,0 L 84,0 L 78,22 L 0,22 Z" fill="#061523" stroke="#00e5ff" stroke-width="1"/>
-      <text x="42" y="14.5" text-anchor="middle" fill="#e2e8f0">REACT 18</text>
-    </g>
-    <g transform="translate(298, 0)">
-      <path d="M 6,0 L 92,0 L 86,22 L 0,22 Z" fill="#061523" stroke="#ffaa00" stroke-width="1"/>
-      <text x="46" y="14.5" text-anchor="middle" fill="#ffaa00">PG-MEM 16</text>
-    </g>
-  </g>
-
-  <line x1="24" y1="174" x2="466" y2="174" stroke="#1e293b" stroke-width="1"/>
-  <g transform="translate(24, 196)" class="mono" font-size="9.5" font-weight="800" letter-spacing="1">
-    <rect x="0" y="-9" width="7" height="7" fill="#00e5ff"/>
-    <text x="14" y="-2" fill="#cbd5e1">LATENCY: 0.24ms // B-TREE INDEX</text>
-    <text x="442" y="-2" text-anchor="end" fill="#00e5ff">OPEN_REPO // NEXUS &gt;&gt;</text>
-  </g>
+  <!-- Footer Divider & Live Metadata -->
+  <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
+  <circle cx="29" cy="190" r="3.5" fill="#818cf8"/>
+  <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">TypeScript · Fastify</text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">1,366 KB · commit 85e4866 · 2026-09-09  <tspan fill="#818cf8">→</tspan></text>
 </svg>
