@@ -74,7 +74,7 @@
       <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">Java 21 · React · PG17</text>
       <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
       <rect x="306" y="-9" width="140.0" height="7" rx="3.5" fill="#10b981"/>
-      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">2.25 MB</tspan>  ·  commit <tspan fill="#10b981">910d42f</tspan></text>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">2.25 MB</tspan>  ·  commit <tspan fill="#10b981">ef9112e</tspan></text>
       <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-11-08</text>
     </g>
     <g transform="translate(524, 122)">
@@ -106,7 +106,7 @@
       <text x="150" y="0" class="mono" font-size="9.5" fill="#a1a1aa">C# 12 · .NET 10 GDI+</text>
       <rect x="306" y="-9" width="140" height="7" rx="3.5" fill="#18181f"/>
       <rect x="306" y="-9" width="36.2" height="7" rx="3.5" fill="#a78bfa"/>
-      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">64.0 KB</tspan>  ·  commit <tspan fill="#a78bfa">21d640c</tspan></text>
+      <text x="0" y="14" class="mono" font-size="9" fill="#71717a">Source: <tspan fill="#d4d4d8">64.0 KB</tspan>  ·  commit <tspan fill="#a78bfa">ac8bd04</tspan></text>
       <text x="446" y="14" text-anchor="end" class="mono" font-size="9" fill="#71717a">pushed 2026-09-27</text>
     </g>
     <g transform="translate(524, 266)">

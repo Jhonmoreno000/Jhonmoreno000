@@ -37,18 +37,18 @@
   <!-- Tech Stack Pills -->
   <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
     <rect x="0" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="46.0" y="14.5" text-anchor="middle" fill="#d4d4d8">Java 21 LTS</text>
+    <text x="45.8" y="14.5" text-anchor="middle" fill="#d4d4d8">Java 21 LTS</text>
     <rect x="100" y="0" width="118" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="159.0" y="14.5" text-anchor="middle" fill="#d4d4d8">React 18 + Vite</text>
-    <rect x="226" y="0" width="105" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="278.5" y="14.5" text-anchor="middle" fill="#d4d4d8">PostgreSQL 17</text>
-    <rect x="339" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="385.0" y="14.5" text-anchor="middle" fill="#d4d4d8">HMAC-SHA256</text>
+    <text x="158.2" y="14.5" text-anchor="middle" fill="#d4d4d8">React 18 + Vite</text>
+    <rect x="225" y="0" width="104" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="277.2" y="14.5" text-anchor="middle" fill="#d4d4d8">PostgreSQL 17</text>
+    <rect x="338" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="383.2" y="14.5" text-anchor="middle" fill="#d4d4d8">HMAC-SHA256</text>
   </g>
 
   <!-- Footer Divider & Live Metadata -->
   <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
   <circle cx="29" cy="190" r="3.5" fill="#10b981"/>
   <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">Java · JavaScript · SQL</text>
-  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">56,520 KB · commit 910d42f · 2026-11-08  <tspan fill="#10b981">→</tspan></text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">48,471 KB · commit ef9112e · 2026-11-08  <tspan fill="#10b981">→</tspan></text>
 </svg>

@@ -37,13 +37,13 @@
   <!-- Tech Stack Pills -->
   <g transform="translate(24, 132)" class="mono" font-size="9.2" font-weight="500">
     <rect x="0" y="0" width="118" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="59.0" y="14.5" text-anchor="middle" fill="#d4d4d8">JavaScript ES6+</text>
+    <text x="58.8" y="14.5" text-anchor="middle" fill="#d4d4d8">JavaScript ES6+</text>
     <rect x="126" y="0" width="92" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="172.0" y="14.5" text-anchor="middle" fill="#d4d4d8">WAF &amp; Envoy</text>
-    <rect x="226" y="0" width="111" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="281.5" y="14.5" text-anchor="middle" fill="#d4d4d8">Docker + Nginx</text>
-    <rect x="345" y="0" width="105" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
-    <text x="397.5" y="14.5" text-anchor="middle" fill="#d4d4d8">56 Unit Tests</text>
+    <text x="171.2" y="14.5" text-anchor="middle" fill="#d4d4d8">WAF &amp; Envoy</text>
+    <rect x="225" y="0" width="111" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="280.5" y="14.5" text-anchor="middle" fill="#d4d4d8">Docker + Nginx</text>
+    <rect x="344" y="0" width="104" height="22" rx="5" fill="#141419" stroke="#27272a" stroke-width="1"/>
+    <text x="396.2" y="14.5" text-anchor="middle" fill="#d4d4d8">56 Unit Tests</text>
   </g>
 
   <!-- Footer Divider & Live Metadata -->
