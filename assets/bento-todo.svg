@@ -50,5 +50,5 @@
   <line x1="24" y1="170" x2="466" y2="170" stroke="#1f1f25" stroke-width="1"/>
   <circle cx="29" cy="190" r="3.5" fill="#10b981"/>
   <text x="40" y="193.5" class="mono" font-size="9.8" font-weight="600" fill="#e4e4e7">Java · JavaScript · SQL</text>
-  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">48,692 KB · commit 3c8b44c · 2026-11-11  <tspan fill="#10b981">→</tspan></text>
+  <text x="466" y="193.5" text-anchor="end" class="mono" font-size="9.2" fill="#71717a">48,670 KB · commit 3c8b44c · 2026-11-11  <tspan fill="#10b981">→</tspan></text>
 </svg>
