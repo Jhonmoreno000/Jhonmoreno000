@@ -50,7 +50,7 @@
   </g>
 
   <g transform="translate(978, 20)" text-anchor="end" class="mono" font-size="10.5">
-    <text x="0" y="4" fill="#71717a">Medellín, CO (UTC-5)  <tspan fill="#3f3f46">·</tspan>  <tspan fill="#10b981">●</tspan> <tspan fill="#a1a1aa">SYNC 2026-11-12 04:33 UTC</tspan></text>
+    <text x="0" y="4" fill="#71717a">Medellín, CO (UTC-5)  <tspan fill="#3f3f46">·</tspan>  <tspan fill="#10b981">●</tspan> <tspan fill="#a1a1aa">SYNC 2026-11-12 19:14 UTC</tspan></text>
   </g>
 
   <!-- LEFT COLUMN: EXECUTIVE IDENTITY & TELEMETRY PILLS -->
@@ -74,7 +74,7 @@
       <g transform="translate(0, 0)">
         <rect width="122" height="68" rx="8" fill="#111115" stroke="#27272a" stroke-width="1"/>
         <text x="12" y="21" class="mono" font-size="9.5" fill="#71717a">SOURCE CODE</text>
-        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">3.55 MB</text>
+        <text x="12" y="45" class="sans" font-size="19" font-weight="700" fill="#fafafa">3.68 MB</text>
         <text x="12" y="59" class="mono" font-size="9" fill="#10b981">GitHub API Verified</text>
       </g>
 
