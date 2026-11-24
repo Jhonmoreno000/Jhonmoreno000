@@ -25,7 +25,7 @@
   <!-- Top Mini Bar -->
   <rect x="26" y="18" width="7" height="7" fill="#00ff88" class="led"/>
   <text x="40" y="25" class="mono" font-size="9.5" font-weight="800" fill="#f8fafc" letter-spacing="1.6">LIVE_TELEMETRY // DATOS REALES DE GITHUB API + FEED CISA KEV</text>
-  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="#64748b">ACTUALIZADO: <tspan fill="#00ff88">2026-11-24 21:44 UTC</tspan></text>
+  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="#64748b">ACTUALIZADO: <tspan fill="#00ff88">2026-11-24 21:46 UTC</tspan></text>
   <line x1="26" y1="34" x2="1074" y2="34" stroke="#162433" stroke-width="1"/>
 
   <!-- 4 Live Telemetry Modules -->
@@ -34,7 +34,7 @@
     <path d="M 0,0 L 238,0 L 248,10 L 248,62 L 0,62 Z" fill="#071019" stroke="#1b2a3b" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="#00ff88"/>
     <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.1">01 // MEDELLIN, CO [UTC-5]</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">16:44 COT <tspan font-size="10" fill="#00ff88">DAY_OPS</tspan></text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">16:46 COT <tspan font-size="10" fill="#00ff88">DAY_OPS</tspan></text>
     <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">FECHA: 2026-11-24 · SENA ADSO</text>
   </g>
 
