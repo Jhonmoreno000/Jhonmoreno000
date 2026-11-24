@@ -2,16 +2,16 @@
 
   <!-- ==================== 00 // 3D WEBGL LINUX WORKSTATION HERO (DUAL DARK / LIGHT) ==================== -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-3d-dark.png" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-3d-light.png" />
-    <img src="./assets/hero-3d-dark.png" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Desarrollo Backend, Linux y Ciberseguridad" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-3d-dark.png?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-3d-light.png?v=4" />
+    <img src="./assets/hero-3d-dark.png?v=4" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Desarrollo Backend, Linux y Ciberseguridad" />
   </picture>
 
   <!-- ==================== LIVE TELEMETRY RIBBON (MEDELLIN TIME + CISA KEV + GITHUB API) ==================== -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/live-telemetry-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/live-telemetry-light.svg" />
-    <img src="./assets/live-telemetry-dark.svg" width="100%" alt="Telemetria en vivo desde GitHub API y feed de seguridad CISA KEV" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/live-telemetry-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/live-telemetry-light.svg?v=4" />
+    <img src="./assets/live-telemetry-dark.svg?v=4" width="100%" alt="Telemetria en vivo desde GitHub API y feed de seguridad CISA KEV" />
   </picture>
 
   <br><br>
@@ -41,13 +41,13 @@
 
 <div align="center">
   <p>
-    <a href="https://github.com/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-textil-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-textil-light.svg" /><img src="./assets/bento-textil-dark.svg" width="49.2%" alt="D&D Textil ERP — Proyecto Formativo SENA ADSO en Java 21, React y PostgreSQL 17" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/NEXUS"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-nexus-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-nexus-light.svg" /><img src="./assets/bento-nexus-dark.svg" width="49.2%" alt="NEXUS SQL Lab — Practica interactiva de SQL y TypeScript" /></picture></a>
+    <a href="https://github.com/Jhonmoreno000/PROYECTO-SENA-TIENDA-TEXTIL-"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-textil-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-textil-light.svg?v=4" /><img src="./assets/bento-textil-dark.svg?v=4" width="49.2%" alt="D&D Textil ERP — Proyecto Formativo SENA ADSO en Java 21, React y PostgreSQL 17" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/NEXUS"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-nexus-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-nexus-light.svg?v=4" /><img src="./assets/bento-nexus-dark.svg?v=4" width="49.2%" alt="NEXUS SQL Lab — Practica interactiva de SQL y TypeScript" /></picture></a>
   </p>
   <p>
-    <a href="https://github.com/Jhonmoreno000/secdev"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-secdev-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-secdev-light.svg" /><img src="./assets/bento-secdev-dark.svg" width="49.2%" alt="SECDEV Station — Laboratorio de ciberseguridad y SAST local" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/architect-td"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-architect-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-architect-light.svg" /><img src="./assets/bento-architect-dark.svg" width="49.2%" alt="ARCHITECT-TD — Simulador de redes y defensa perimetral" /></picture></a>
+    <a href="https://github.com/Jhonmoreno000/secdev"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-secdev-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-secdev-light.svg?v=4" /><img src="./assets/bento-secdev-dark.svg?v=4" width="49.2%" alt="SECDEV Station — Laboratorio de ciberseguridad y SAST local" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/architect-td"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-architect-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-architect-light.svg?v=4" /><img src="./assets/bento-architect-dark.svg?v=4" width="49.2%" alt="ARCHITECT-TD — Simulador de redes y defensa perimetral" /></picture></a>
   </p>
   <p>
-    <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-gcp-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-gcp-light.svg" /><img src="./assets/bento-gcp-dark.svg" width="49.2%" alt="GCP POS — Aplicacion de punto de venta e inventario en C# y .NET 10" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/proyecto-todo-api"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-todo-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-todo-light.svg" /><img src="./assets/bento-todo-dark.svg" width="49.2%" alt="Todo-API & Python — API REST con Node, MongoDB, Docker y practicas en Python" /></picture></a>
+    <a href="https://github.com/Jhonmoreno000/GCP-GESTION-DE-PRODUCTOS-"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-gcp-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-gcp-light.svg?v=4" /><img src="./assets/bento-gcp-dark.svg?v=4" width="49.2%" alt="GCP POS — Aplicacion de punto de venta e inventario en C# y .NET 10" /></picture></a>&nbsp;<a href="https://github.com/Jhonmoreno000/proyecto-todo-api"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/bento-todo-dark.svg?v=4" /><source media="(prefers-color-scheme: light)" srcset="./assets/bento-todo-light.svg?v=4" /><img src="./assets/bento-todo-dark.svg?v=4" width="49.2%" alt="Todo-API & Python — API REST con Node, MongoDB, Docker y practicas en Python" /></picture></a>
   </p>
 </div>
 
@@ -99,9 +99,9 @@ flowchart LR
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/skyline-3d-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/skyline-3d-light.svg" />
-    <img src="./assets/skyline-3d-dark.svg" width="100%" alt="Skyline 3D con contribuciones reales de GitHub y distribucion de lenguajes" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/skyline-3d-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/skyline-3d-light.svg?v=4" />
+    <img src="./assets/skyline-3d-dark.svg?v=4" width="100%" alt="Skyline 3D con contribuciones reales de GitHub y distribucion de lenguajes" />
   </picture>
 </div>
 
@@ -111,9 +111,9 @@ flowchart LR
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/ops-console-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/ops-console-light.svg" />
-    <img src="./assets/ops-console-dark.svg" width="100%" alt="Historial real de commits recientes y linea de tiempo formativa en SENA ADSO" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/ops-console-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/ops-console-light.svg?v=4" />
+    <img src="./assets/ops-console-dark.svg?v=4" width="100%" alt="Historial real de commits recientes y linea de tiempo formativa en SENA ADSO" />
   </picture>
 </div>
 
@@ -125,9 +125,9 @@ flowchart LR
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/ctf-perimeter-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/ctf-perimeter-light.svg" />
-    <img src="./assets/ctf-perimeter-dark.svg" width="100%" alt="Laboratorio interactivo Linux y registro de visitantes con GitHub Actions" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/ctf-perimeter-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/ctf-perimeter-light.svg?v=4" />
+    <img src="./assets/ctf-perimeter-dark.svg?v=4" width="100%" alt="Laboratorio interactivo Linux y registro de visitantes con GitHub Actions" />
   </picture>
 
   <br><br>
@@ -161,8 +161,8 @@ flowchart LR
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-3d-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/footer-3d-light.svg" />
-    <img src="./assets/footer-3d-dark.svg" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Linux y Desarrollo de Software" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-3d-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/footer-3d-light.svg?v=4" />
+    <img src="./assets/footer-3d-dark.svg?v=4" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Linux y Desarrollo de Software" />
   </picture>
 </div>
