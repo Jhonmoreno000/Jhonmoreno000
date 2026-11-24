@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 96" width="100%" height="96">
+  <defs>
+    <linearGradient id="bgFt_light" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#edf3f8"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="96" fill="#eef2f6"/>
+  <path d="M 16,6 L 242,6 L 254,14 L 846,14 L 858,6 L 1084,6 L 1094,16 L 1094,80 L 1084,90 L 16,90 L 6,80 L 6,16 Z" fill="url(#bgFt_light)" stroke="#cbd5e1" stroke-width="1.4"/>
+
+  <path fill="#059669" fill-opacity="0.10" stroke="#059669" stroke-opacity="0.45" stroke-width="1.1">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="M 16,74 Q 280,52 550,74 T 1084,68 L 1084,90 L 16,90 Z;
+              M 16,68 Q 280,86 550,64 T 1084,76 L 1084,90 L 16,90 Z;
+              M 16,74 Q 280,52 550,74 T 1084,68 L 1084,90 L 16,90 Z"/>
+  </path>
+
+  <text x="550" y="34" text-anchor="middle" class="mono" font-size="10.5" font-weight="700" fill="#0f172a" letter-spacing="0.4">
+    &quot;Security is a process, not a product. Complexity is the worst enemy of security.&quot; — Bruce Schneier
+  </text>
+  <text x="550" y="54" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="#059669" letter-spacing="1.6">
+    JHON ANDERSON MORENO POSSO // MEDELLIN, CO // ZERO-TRUST · ACID · LOCAL SAST · 2026-11-24
+  </text>
+</svg>

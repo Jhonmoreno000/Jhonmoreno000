@@ -1,36 +1,37 @@
-name: Senior Profile Telemetry & Live GitHub API Sync
+name: Live 3D SOC Telemetry & CISA KEV Sync
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
     paths-ignore:
       - "assets/**"
+      - "data/.last_receipt.md"
 
 permissions:
   contents: write
 
 jobs:
-  sync-senior-profile-telemetry:
+  sync-3d-soc-telemetry:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "22"
 
-      - name: Generate Senior Linear/Vercel SVGs from Real GitHub API Telemetry
+      - name: Generate Dual Dark/Light 3D Telemetry & CISA KEV SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_profile_data.py
+        run: node scripts/update_profile_data.mjs
 
-      - name: Commit & Push Updated Telemetry SVGs
+      - name: Commit & Push Live Telemetry SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,6 +39,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No telemetry changes to commit"
           else
-            git commit -m "chore(telemetry): sync live GitHub API codebase & commit metrics [skip ci]"
+            git commit -m "chore(telemetry): sync live GitHub API, 3D skyline & CISA KEV feed [skip ci]"
             git push
           fi

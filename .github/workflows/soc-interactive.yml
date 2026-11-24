@@ -1,0 +1,67 @@
+name: Interactive Zero-Trust Perimeter // Mini-CTF Engine
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  execute-soc-command:
+    runs-on: ubuntu-latest
+    if: >-
+      contains(github.event.issue.title, 'SOC_CMD:') ||
+      contains(github.event.issue.title, 'PROBE_WAF_L7') ||
+      contains(github.event.issue.title, 'AUDIT_SQL_DEADLOCK') ||
+      contains(github.event.issue.title, 'RUN_SAST_QWEN_SCAN') ||
+      contains(github.event.issue.title, 'SIGN_OPERATOR_LOG')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Process Interactive SOC Command & Regenerate Perimeter HUD
+        id: soc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: node scripts/process_soc_action.mjs
+
+      - name: Commit Updated Perimeter State, Ledger & SVGs
+        if: steps.soc.outputs.processed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/soc_state.json README.md assets/*.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(soc-ctf): log verified vector ${{ steps.soc.outputs.action_code }} [skip ci]"
+            git push
+          fi
+
+      - name: Post Cryptographic Verification Receipt & Close Issue
+        if: steps.soc.outputs.processed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('data/.last_receipt.md', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+            });
