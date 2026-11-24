@@ -21,9 +21,9 @@
   </path>
 
   <text x="550" y="34" text-anchor="middle" class="mono" font-size="10.5" font-weight="700" fill="#f8fafc" letter-spacing="0.4">
-    &quot;Security is a process, not a product. Complexity is the worst enemy of security.&quot; — Bruce Schneier
+    &quot;Talk is cheap. Show me the code.&quot; — Linus Torvalds
   </text>
-  <text x="550" y="54" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="#00ff88" letter-spacing="1.6">
-    JHON ANDERSON MORENO POSSO // MEDELLIN, CO // ZERO-TRUST · ACID · LOCAL SAST · 2026-11-24
+  <text x="550" y="54" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="#00ff88" letter-spacing="1.4">
+    JHON ANDERSON MORENO POSSO // ESTUDIANTE SENA ADSO // MEDELLIN, CO // LINUX · BACKEND · 2026-11-24
   </text>
 </svg>

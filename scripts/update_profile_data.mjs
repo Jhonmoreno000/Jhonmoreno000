@@ -304,20 +304,19 @@ function loadSocState() {
     console.warn(`[warn] soc_state load fallback: ${err.message}`);
   }
   return {
-    perimeter_status: "HARDENED",
-    shield_integrity_pct: 99.98,
-    probes_intercepted: 128,
-    waf_blocks: 54,
-    sql_audits: 38,
-    sast_scans: 36,
-    last_action: "INIT_ZERO_TRUST_BOOT",
+    perimeter_status: "ONLINE",
+    events_logged: 1,
+    waf_runs: 0,
+    sql_runs: 0,
+    sast_runs: 0,
+    last_action: "INIT_LINUX_LAB",
     last_operator: "Jhonmoreno000",
     last_updated_utc: new Date().toISOString().slice(0, 19) + "Z",
     verified_operators: [
       {
         username: "Jhonmoreno000",
-        action: "BOOT_ZERO_TRUST_CORE",
-        result: "SHIELD_ARMED_ASVS_L2",
+        action: "INIT_LINUX_LAB",
+        result: "LAB_INITIALIZED",
         signature: "9f86d081884c7d65",
         date: new Date().toISOString().slice(0, 10),
       },
@@ -394,8 +393,8 @@ function renderLiveTelemetrySvg(mode, { langTotals, ownRepos, commits, contribs,
 
   <!-- Top Mini Bar -->
   <rect x="26" y="18" width="7" height="7" fill="${t.emerald}" class="led"/>
-  <text x="40" y="25" class="mono" font-size="9.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.8">LIVE_SOC_TELEMETRY // AUTO-SYNC GITHUB API + CISA KEV FEED</text>
-  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="${t.textMuted}">LAST SYNC: <tspan fill="${t.emerald}">${esc(medellin.utcStr)}</tspan></text>
+  <text x="40" y="25" class="mono" font-size="9.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.6">LIVE_TELEMETRY // DATOS REALES DE GITHUB API + FEED CISA KEV</text>
+  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="${t.textMuted}">ACTUALIZADO: <tspan fill="${t.emerald}">${esc(medellin.utcStr)}</tspan></text>
   <line x1="26" y1="34" x2="1074" y2="34" stroke="${t.divider}" stroke-width="1"/>
 
   <!-- 4 Live Telemetry Modules -->
@@ -403,16 +402,16 @@ function renderLiveTelemetrySvg(mode, { langTotals, ownRepos, commits, contribs,
   <g transform="translate(26, 44)">
     <path d="M 0,0 L 238,0 L 248,10 L 248,62 L 0,62 Z" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="${shiftColor}"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">01 // MEDELLIN NODE [UTC-5]</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${esc(medellin.shift)} <tspan font-size="10.5" fill="${shiftColor}">${esc(medellin.timeStr)}</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">LOCAL DATE: ${esc(medellin.dateStr)} · ONLINE</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.1">01 // MEDELLIN, CO [UTC-5]</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${esc(medellin.timeStr)} <tspan font-size="10" fill="${shiftColor}">${esc(medellin.shift)}</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">FECHA: ${esc(medellin.dateStr)} · SENA ADSO</text>
   </g>
 
   <!-- Module 2: Live CISA KEV Threat Intel -->
   <g transform="translate(286, 44)">
     <path d="M 0,0 L 274,0 L 284,10 L 284,62 L 0,62 Z" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="${t.crimson}"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.crimson}" letter-spacing="1.2">02 // CISA KEV LIVE THREAT FEED</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.crimson}" letter-spacing="1.1">02 // RADAR CISA KEV (SEGURIDAD)</text>
     <text x="14" y="40" class="mono" font-size="14.5" font-weight="900" fill="${t.textMain}">${esc(kev.latest.cveID)} <tspan font-size="9.5" fill="${t.crimson}">[${kev.count} KEVs]</tspan></text>
     <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textBody}">${esc(cveText)} · ${esc(kev.latest.dateAdded)}</text>
   </g>
@@ -421,18 +420,18 @@ function renderLiveTelemetrySvg(mode, { langTotals, ownRepos, commits, contribs,
   <g transform="translate(582, 44)">
     <path d="M 0,0 L 234,0 L 244,10 L 244,62 L 0,62 Z" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="${t.cyan}"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">03 // VERIFIED SOURCE CODE</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${esc(fmtBytes(totalBytes))} <tspan font-size="10.5" fill="${t.cyan}">0${codeRepos} SYSTEMS</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">JAVA 21 · TS 5.3 · C# 12 · PG17</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.1">03 // CODIGO PROPIO EN GITHUB</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${esc(fmtBytes(totalBytes))} <tspan font-size="10.5" fill="${t.cyan}">0${codeRepos} REPOS</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">JAVA · JS/TS · C# · PYTHON · SQL</text>
   </g>
 
   <!-- Module 4: 365D Activity Pulse -->
   <g transform="translate(838, 44)">
     <path d="M 0,0 L 226,0 L 236,10 L 236,62 L 0,62 Z" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="${t.emerald}"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">04 // 365D COMMIT PULSE</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${activeDays} DAYS <tspan font-size="10.5" fill="${t.emerald}">#${esc(latestSha)}</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">LATEST: ${esc(latestRepo)} · CI PASS</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="${t.textMuted}" letter-spacing="1.1">04 // ACTIVIDAD REAL (365 DIAS)</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="${t.textMain}">${activeDays} DIAS <tspan font-size="10.5" fill="${t.emerald}">#${esc(latestSha)}</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="${t.textMuted}">ULTIMO: ${esc(latestRepo)}</text>
   </g>
 </svg>
 `;
@@ -783,7 +782,7 @@ function renderSkylineTelemetrySvg(mode, { contribs, langTotals, repoMap }) {
 }
 
 // ============================================================================
-// 4. OPS CONSOLE: LIVE COMMIT AUDIT STREAM + 6-AXIS 3D HEXAGONAL RADAR (1100x345)
+// 4. OPS CONSOLE: LIVE COMMIT LOG + REAL STUDENT TRAJECTORY (1100x345)
 // ============================================================================
 function renderOpsConsoleSvg(mode, { commits }) {
   const t = getTheme(mode);
@@ -814,42 +813,45 @@ function renderOpsConsoleSvg(mode, { commits }) {
     })
     .join("\n  ");
 
-  // 6-Axis Hexagonal Capability Radar geometry centered at (866, 188), radius = 92
-  const cx = 866, cy = 192, R = 90;
-  const axes = [
-    { label: "BACKEND_API", score: 0.96, angle: -90, col: t.emerald, lx: 0, ly: -104, anchor: "middle" },
-    { label: "SQL_ACID", score: 0.95, angle: -30, col: t.cyan, lx: 96, ly: -52, anchor: "start" },
-    { label: "WAF_DMZ", score: 0.94, angle: 30, col: t.amber, lx: 96, ly: 58, anchor: "start" },
-    { label: "CLEAN_DDD", score: 0.93, angle: 90, col: t.violet, lx: 0, ly: 112, anchor: "middle" },
-    { label: "SAST_LLM", score: 0.92, angle: 150, col: t.crimson, lx: -96, ly: 58, anchor: "end" },
-    { label: "DOCKER_IAC", score: 0.90, angle: 210, col: t.teal, lx: -96, ly: -52, anchor: "end" },
+  // 100% REAL STUDENT TRAJECTORY TIMELINE (NO INVENTED PERCENTAGES)
+  const milestones = [
+    {
+      date: "2024 // INICIO EN GITHUB",
+      title: "Fundamentos de Programacion & Bases de Datos",
+      desc: "Logica, POO en Java y Python, modelado relacional y consultas SQL.",
+      col: t.cyan,
+    },
+    {
+      date: "ENE 2026 // PROYECTO FORMATIVO SENA ADSO",
+      title: "D&D Textil — Aplicacion Full-Stack & ERP",
+      desc: "React + Vite, backend Java 21, PostgreSQL 17, Docker y pagos Wompi.",
+      col: t.emerald,
+    },
+    {
+      date: "JUL - SEP 2026 // PRACTICAS MULTI-STACK",
+      title: "Labs en TypeScript, C# (.NET), Node & Python",
+      desc: "NEXUS (SQL/pg-mem), architect-td (WAF/redes), Todo-API y GCP POS.",
+      col: t.amber,
+    },
+    {
+      date: "NOV 2026 - PRESENTE // LINUX & SEGURIDAD",
+      title: "Entornos Linux, Docker & Ciberseguridad Practica",
+      desc: "Automatizacion con GitHub Actions, Bash y laboratorio SAST (secdev).",
+      col: t.violet,
+    },
   ];
-  const hexRing = (scale) =>
-    axes
-      .map((a) => {
-        const rad = (a.angle * Math.PI) / 180;
-        return `${(cx + Math.cos(rad) * R * scale).toFixed(1)},${(cy + Math.sin(rad) * R * scale).toFixed(1)}`;
-      })
-      .join(" ");
 
-  const dataPoly = axes
-    .map((a) => {
-      const rad = (a.angle * Math.PI) / 180;
-      return `${(cx + Math.cos(rad) * R * a.score).toFixed(1)},${(cy + Math.sin(rad) * R * a.score).toFixed(1)}`;
-    })
-    .join(" ");
-
-  const axisLines = axes
-    .map((a) => {
-      const rad = (a.angle * Math.PI) / 180;
-      const x2 = (cx + Math.cos(rad) * R).toFixed(1);
-      const y2 = (cy + Math.sin(rad) * R).toFixed(1);
-      const px = (cx + Math.cos(rad) * R * a.score).toFixed(1);
-      const py = (cy + Math.sin(rad) * R * a.score).toFixed(1);
-      return `<line x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}" stroke="${t.border}" stroke-width="1"/>
-      <circle cx="${px}" cy="${py}" r="4" fill="${a.col}" stroke="${t.bg1}" stroke-width="1.5"/>
-      <text x="${cx + a.lx}" y="${cy + a.ly}" text-anchor="${a.anchor}" class="mono" font-size="8.8" font-weight="800" fill="${a.col}">${a.label}</text>
-      <text x="${cx + a.lx}" y="${cy + a.ly + 11}" text-anchor="${a.anchor}" class="mono" font-size="8.2" font-weight="700" fill="${t.textMuted}">${Math.round(a.score * 100)}%</text>`;
+  const timelineSvg = milestones
+    .map((m, i) => {
+      const y = 84 + i * 62;
+      return `<g transform="translate(662, ${y})">
+        <circle cx="8" cy="4" r="5" fill="${m.col}" stroke="${t.bg1}" stroke-width="2"/>
+        <rect x="24" y="-12" width="388" height="50" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+        <rect x="24" y="-12" width="3" height="50" fill="${m.col}"/>
+        <text x="36" y="2" class="mono" font-size="8.4" font-weight="800" fill="${m.col}" letter-spacing="0.8">${esc(m.date)}</text>
+        <text x="36" y="17" class="sans" font-size="11.2" font-weight="700" fill="${t.textMain}">${esc(m.title)}</text>
+        <text x="36" y="31" class="sans" font-size="10" fill="${t.textBody}">${esc(m.desc)}</text>
+      </g>`;
     })
     .join("\n  ");
 
@@ -858,10 +860,6 @@ function renderOpsConsoleSvg(mode, { commits }) {
     <linearGradient id="bgOp_${mode}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${t.bg1}"/>
       <stop offset="100%" stop-color="${t.bg2}"/>
-    </linearGradient>
-    <linearGradient id="radFill_${mode}" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="${t.emerald}" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="${t.cyan}" stop-opacity="0.20"/>
     </linearGradient>
     <pattern id="dotsOp_${mode}" width="18" height="18" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="0.8" fill="${t.dot}" fill-opacity="${t.dotOpacity}"/>
@@ -880,47 +878,34 @@ function renderOpsConsoleSvg(mode, { commits }) {
 
   <!-- Header -->
   <rect x="28" y="21" width="8" height="8" fill="${t.cyan}"/>
-  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.8">OPS_AUDIT_CONSOLE // VERIFIED COMMIT STREAM &amp; 6-AXIS CAPABILITY RADAR</text>
-  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="700" fill="${t.emerald}">POSTURE: HARDENED [ASVS-L2]</text>
+  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.6">DEV_LOG // COMMITS REALES &amp; TRAYECTORIA COMO ESTUDIANTE SENA ADSO</text>
+  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="700" fill="${t.emerald}">MEDELLIN, CO · 2024 - 2026</text>
   <line x1="26" y1="42" x2="1074" y2="42" stroke="${t.divider}" stroke-width="1"/>
 
   <!-- LEFT: LIVE COMMIT AUDIT LOG -->
-  <text x="28" y="62" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.4">01 // RECENT VERIFIED PRODUCTION COMMITS (GITHUB API)</text>
+  <text x="28" y="62" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">01 // ULTIMOS COMMITS VERIFICADOS (GITHUB REST API)</text>
   ${rows}
 
-  <!-- Animated Terminal Prompt at bottom-left -->
+  <!-- Animated Linux Terminal Prompt -->
   <g transform="translate(28, 304)">
     <rect x="0" y="0" width="582" height="24" rx="3" fill="${t.panelBg2}" stroke="${t.border}" stroke-width="1"/>
-    <text x="10" y="15.5" class="mono" font-size="9.2" font-weight="700" fill="${t.emerald}">secdev@medellin:~# <tspan fill="${t.textMain}">audit --sast-llm qwen2.5:7b --policy owasp-asvs-l2 --verify</tspan></text>
+    <text x="10" y="15.5" class="mono" font-size="9.2" font-weight="700" fill="${t.emerald}">jhon@linux-adso:~/repos$ <tspan fill="${t.textMain}">git log --oneline -n 6 &amp;&amp; docker compose ps</tspan></text>
     <rect x="564" y="6" width="7" height="12" fill="${t.emerald}" class="cur"/>
   </g>
 
   <!-- Center Divider -->
   <line x1="636" y1="54" x2="636" y2="328" stroke="${t.divider}" stroke-width="1.2"/>
 
-  <!-- RIGHT: 6-AXIS HEXAGONAL CAPABILITY RADAR -->
-  <text x="662" y="62" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.4">02 // 6-AXIS SECURITY &amp; SYSTEMS MATRIX</text>
-
-  <polygon points="${hexRing(1.0)}" fill="none" stroke="${t.border}" stroke-width="1.2"/>
-  <polygon points="${hexRing(0.72)}" fill="none" stroke="${t.border}" stroke-opacity="0.7" stroke-dasharray="3 3"/>
-  <polygon points="${hexRing(0.44)}" fill="none" stroke="${t.border}" stroke-opacity="0.5"/>
-  <polygon points="${dataPoly}" fill="url(#radFill_${mode})" stroke="${t.emerald}" stroke-width="2"/>
-
-  <!-- Rotating Radar Sweep Wedge -->
-  <g transform="translate(${cx}, ${cy})">
-    <path d="M 0,0 L 88,0 A 88,88 0 0,1 62,62 Z" fill="${t.cyan}" fill-opacity="0.16">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5.5s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  ${axisLines}
-  <circle cx="${cx}" cy="${cy}" r="3.5" fill="${t.emerald}"/>
+  <!-- RIGHT: REAL STUDENT TRAJECTORY TIMELINE -->
+  <text x="662" y="62" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">02 // TRAYECTORIA REAL DE FORMACION (SENA ADSO)</text>
+  <line x1="670" y1="88" x2="670" y2="282" stroke="${t.border}" stroke-width="2" stroke-dasharray="4 3"/>
+  ${timelineSvg}
 </svg>
 `;
 }
 
 // ============================================================================
-// 5. LIVE INTERACTIVE ZERO-TRUST PERIMETER & MINI-CTF HUD (1100 x 268)
+// 5. LIVE INTERACTIVE LINUX & SECURITY LAB HUD (1100 x 268)
 // ============================================================================
 function renderCtfPerimeterSvg(mode, state) {
   const t = getTheme(mode);
@@ -943,8 +928,8 @@ function renderCtfPerimeterSvg(mode, state) {
     }
     return `<g transform="translate(556, ${y})">
       <rect x="0" y="-14" width="514" height="26" fill="none" stroke="${t.border}" stroke-opacity="0.7" stroke-dasharray="4 4" stroke-width="1"/>
-      <text x="14" y="2.5" class="mono" font-size="8.6" font-weight="700" fill="${t.textMuted}">SLOT_0${i + 1} // AWAITING NEXT VERIFIED OPERATOR SIGNATURE...</text>
-      <text x="504" y="2.5" text-anchor="end" class="mono" font-size="8.2" fill="${t.cyan}">[ READY ]</text>
+      <text x="14" y="2.5" class="mono" font-size="8.6" font-weight="700" fill="${t.textMuted}">SLOT_0${i + 1} // ESPERANDO SIGUIENTE VISITANTE (FIRMA SHA-256)...</text>
+      <text x="504" y="2.5" text-anchor="end" class="mono" font-size="8.2" fill="${t.cyan}">[ LIBRE ]</text>
     </g>`;
   }).join("\n  ");
 
@@ -961,7 +946,7 @@ function renderCtfPerimeterSvg(mode, state) {
       .mono { font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       @keyframes railCtf { to { stroke-dashoffset: -36; } }
-      @keyframes pktHit { 0% { opacity: 0; transform: translate(-28px, -12px); } 50% { opacity: 1; } 100% { opacity: 0; transform: translate(0px, 0px); } }
+      @keyframes pktHit { 0% { opacity: 0; transform: translate(-24px, -10px); } 50% { opacity: 1; } 100% { opacity: 0; transform: translate(0px, 0px); } }
       .rail { stroke-dasharray: 10 8; animation: railCtf 2s linear infinite; }
       .pkt { animation: pktHit 1.8s ease-out infinite; }
     </style>
@@ -973,59 +958,57 @@ function renderCtfPerimeterSvg(mode, state) {
   <path d="${pathD}" fill="none" stroke="${t.emerald}" stroke-width="1.4" stroke-opacity="0.55" class="rail"/>
 
   <!-- Header -->
-  <rect x="28" y="21" width="8" height="8" fill="${t.crimson}"/>
-  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.8">INTERACTIVE_SOC_PERIMETER // LIVE MINI-CTF &amp; VERIFIED OPERATORS LEDGER</text>
-  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="800" fill="${t.emerald}">INTEGRITY: ${Number(state.shield_integrity_pct || 99.98).toFixed(2)}% [${esc(state.perimeter_status || "HARDENED")}]</text>
+  <rect x="28" y="21" width="8" height="8" fill="${t.emerald}"/>
+  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="${t.textMain}" letter-spacing="1.6">INTERACTIVE_LINUX_LAB // TERMINAL DE VISITANTES &amp; GITHUB ACTIONS</text>
+  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="800" fill="${t.emerald}">WORKFLOW: ${esc(state.perimeter_status || "ONLINE")} [REAL STATE]</text>
   <line x1="26" y1="42" x2="1074" y2="42" stroke="${t.divider}" stroke-width="1"/>
 
-  <!-- LEFT: 3D HOLOGRAPHIC PERIMETER SHIELD + LIVE COUNTERS -->
+  <!-- LEFT: 3D LINUX TERMINAL / SHIELD NODE -->
   <g transform="translate(128, 152)">
     <polygon points="0,24 88,58 0,92 -88,58" fill="${t.sculptDeep}" stroke="${t.emerald}" stroke-opacity="0.45" stroke-width="1.2"/>
     <ellipse cx="0" cy="58" rx="58" ry="22" fill="none" stroke="${t.cyan}" stroke-opacity="0.5" stroke-dasharray="4 3"/>
-    <!-- 3D Hex Shield Dome -->
     <polygon points="0,-54 48,-28 48,22 0,48 -48,22 -48,-28" fill="${t.emerald}" fill-opacity="0.14" stroke="${t.emerald}" stroke-width="1.8"/>
     <polygon points="0,-36 30,-18 30,14 0,32 -30,14 -30,-18" fill="${t.panelBg}" stroke="${t.cyan}" stroke-width="1.4"/>
-    <text x="0" y="-2" text-anchor="middle" class="mono" font-size="9.5" font-weight="900" fill="${t.emerald}">AEGIS L7</text>
-    <text x="0" y="12" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="${t.cyan}">ARMED</text>
-    <!-- Red Team Probe Deflected -->
-    <line x1="-88" y1="-34" x2="-48" y2="-16" stroke="${t.crimson}" stroke-width="1.8" stroke-dasharray="4 3"/>
-    <circle cx="-48" cy="-16" r="4.5" fill="${t.crimson}" class="pkt"/>
+    <text x="0" y="-2" text-anchor="middle" class="mono" font-size="9" font-weight="900" fill="${t.emerald}">LINUX CI</text>
+    <text x="0" y="12" text-anchor="middle" class="mono" font-size="7.8" font-weight="700" fill="${t.cyan}">ACTIONS</text>
+    <line x1="-88" y1="-34" x2="-48" y2="-16" stroke="${t.cyan}" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <circle cx="-48" cy="-16" r="4.5" fill="${t.emerald}" class="pkt"/>
   </g>
 
-  <!-- Center-Left Live Metrics Grid -->
+  <!-- Center-Left Honest Real Counters -->
   <g transform="translate(242, 62)">
-    <text x="0" y="8" class="mono" font-size="9" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">PERIMETER TELEMETRY (LIVE STATE)</text>
+    <text x="0" y="8" class="mono" font-size="9" font-weight="800" fill="${t.textMuted}" letter-spacing="1.1">CONTADORES REALES (DATA/SOC_STATE.JSON)</text>
 
     <g transform="translate(0, 20)">
       <rect width="134" height="58" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
-      <rect width="3" height="58" fill="${t.crimson}"/>
-      <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">PROBES BLOCKED</text>
-      <text x="12" y="45" class="mono" font-size="21" font-weight="900" fill="${t.textMain}">${Number(state.probes_intercepted || 128)}</text>
+      <rect width="3" height="58" fill="${t.emerald}"/>
+      <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">EVENTOS REALES</text>
+      <text x="12" y="45" class="mono" font-size="21" font-weight="900" fill="${t.textMain}">${Number(state.events_logged ?? 1)}</text>
     </g>
 
     <g transform="translate(144, 20)">
       <rect width="136" height="58" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
-      <rect width="3" height="58" fill="${t.emerald}"/>
-      <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">WAF L7 / SQL / SAST</text>
-      <text x="12" y="44" class="mono" font-size="14" font-weight="900" fill="${t.emerald}">${Number(state.waf_blocks || 54)}<tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.cyan}">${Number(state.sql_audits || 38)}</tspan><tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.amber}">${Number(state.sast_scans || 36)}</tspan></text>
+      <rect width="3" height="58" fill="${t.cyan}"/>
+      <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">WAF / SQL / SAST</text>
+      <text x="12" y="44" class="mono" font-size="14" font-weight="900" fill="${t.emerald}">${Number(state.waf_runs ?? 0)}<tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.cyan}">${Number(state.sql_runs ?? 0)}</tspan><tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.amber}">${Number(state.sast_runs ?? 0)}</tspan></text>
     </g>
 
     <g transform="translate(0, 88)">
       <rect width="280" height="74" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
       <rect width="3" height="74" fill="${t.cyan}"/>
-      <text x="12" y="20" class="mono" font-size="8.5" font-weight="800" fill="${t.cyan}">LAST INTERACTIVE EVENT</text>
-      <text x="12" y="40" class="mono" font-size="11" font-weight="800" fill="${t.textMain}">${esc(trunc(state.last_action || "BOOT_ZERO_TRUST_CORE", 26))}</text>
-      <text x="12" y="59" class="mono" font-size="8.8" fill="${t.textMuted}">OPERATOR: <tspan fill="${t.emerald}">@${esc(trunc(state.last_operator || "Jhonmoreno000", 18))}</tspan></text>
+      <text x="12" y="20" class="mono" font-size="8.5" font-weight="800" fill="${t.cyan}">ULTIMO COMANDO EJECUTADO</text>
+      <text x="12" y="40" class="mono" font-size="11" font-weight="800" fill="${t.textMain}">${esc(trunc(state.last_action || "INIT_LINUX_LAB", 26))}</text>
+      <text x="12" y="59" class="mono" font-size="8.8" fill="${t.textMuted}">USUARIO: <tspan fill="${t.emerald}">@${esc(trunc(state.last_operator || "Jhonmoreno000", 18))}</tspan></text>
     </g>
   </g>
 
   <!-- Vertical Divider -->
   <line x1="538" y1="54" x2="538" y2="246" stroke="${t.divider}" stroke-width="1.2"/>
 
-  <!-- RIGHT: VERIFIED OPERATORS CRYPTOGRAPHIC LEDGER -->
-  <text x="556" y="70" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.4">VERIFIED OPERATORS LEDGER (SHA-256 SIGNED VIA GITHUB ACTIONS)</text>
+  <!-- RIGHT: VERIFIED VISITORS LEDGER -->
+  <text x="556" y="70" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">REGISTRO DE VISITANTES (FIRMADO CON SHA-256 POR GITHUB ACTIONS)</text>
   ${opRows}
-  <text x="556" y="242" class="mono" font-size="8.8" font-weight="700" fill="${t.cyan}">&gt;&gt; CLICK ANY COMMAND VECTOR BELOW TO EXECUTE A LIVE AUDIT &amp; SIGN THE LEDGER</text>
+  <text x="556" y="242" class="mono" font-size="8.8" font-weight="700" fill="${t.cyan}">&gt;&gt; HAZ CLIC EN CUALQUIER COMANDO ABAJO PARA PROBAR EL WORKFLOW EN VIVO</text>
 </svg>
 `;
 }
@@ -1059,10 +1042,10 @@ function renderFooterSvg(mode, medellin) {
   </path>
 
   <text x="550" y="34" text-anchor="middle" class="mono" font-size="10.5" font-weight="700" fill="${t.textMain}" letter-spacing="0.4">
-    &quot;Security is a process, not a product. Complexity is the worst enemy of security.&quot; — Bruce Schneier
+    &quot;Talk is cheap. Show me the code.&quot; — Linus Torvalds
   </text>
-  <text x="550" y="54" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="${t.emerald}" letter-spacing="1.6">
-    JHON ANDERSON MORENO POSSO // MEDELLIN, CO // ZERO-TRUST · ACID · LOCAL SAST · ${esc(medellin.dateStr)}
+  <text x="550" y="54" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="${t.emerald}" letter-spacing="1.4">
+    JHON ANDERSON MORENO POSSO // ESTUDIANTE SENA ADSO // MEDELLIN, CO // LINUX · BACKEND · ${esc(medellin.dateStr)}
   </text>
 </svg>
 `;
@@ -1090,104 +1073,104 @@ export async function generateAllProfileAssets() {
     {
       id: "textil",
       filePrefix: "bento-textil",
-      code: "SYS_01 // FINTECH & ENTERPRISE ERP",
+      code: "01 // PROYECTO FORMATIVO SENA ADSO",
       title: "D&D TEXTIL ERP",
-      subtitle: "JAVA 21 · PG17 · HMAC-SHA256",
+      subtitle: "JAVA 21 · REACT · POSTGRESQL 17",
       accentKey: "amber",
       sculpture: "crypto",
       lines: [
-        "E-Commerce & ERP (50 rutas, 25 tablas PG17, 20 FKs)",
-        "con verificacion criptografica SHA-256 Wompi, SSO",
-        "Google/Microsoft, Rate Limit 1200/min y OWASP ASVS.",
+        "Proyecto principal del SENA: tienda web y panel de",
+        "administracion con React, backend Java 21, PostgreSQL 17,",
+        "Docker y validacion SHA-256 para eventos de pago Wompi.",
       ],
-      tags: ["JAVA 21", "POSTGRES 17", "SHA-256", "OWASP ASVS"],
+      tags: ["JAVA 21", "POSTGRES 17", "REACT 18", "DOCKER"],
       meta: meta("PROYECTO-SENA-TIENDA-TEXTIL-", 56520, "2026-11-08", "910d42f"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
     {
       id: "nexus",
       filePrefix: "bento-nexus",
-      code: "SYS_02 // SQL ACID ENGINE",
+      code: "02 // LABORATORIO SQL & CONCURRENCIA",
       title: "NEXUS SQL LAB",
-      subtitle: "TS 5.3 · FASTIFY 4 · PG-MEM",
+      subtitle: "TYPESCRIPT 5 · FASTIFY · PG-MEM",
       accentKey: "cyan",
       sculpture: "silo",
       lines: [
-        "Simulador interactivo de ingenieria SQL y resiliencia",
-        "ACID con Monaco IDE, motor PostgreSQL 16 en memoria,",
-        "resolucion de deadlocks y planes EXPLAIN ANALYZE.",
+        "Proyecto personal para practicar ingenieria SQL,",
+        "bloqueos concurrentes y planes EXPLAIN ANALYZE usando",
+        "Monaco Editor, Fastify y PostgreSQL 16 en memoria.",
       ],
-      tags: ["TYPESCRIPT 5", "FASTIFY 4", "REACT 18", "PG-MEM 16"],
+      tags: ["TYPESCRIPT", "FASTIFY 4", "REACT 18", "PG-MEM 16"],
       meta: meta("NEXUS", 1366, "2026-09-09", "85e4866"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
     {
       id: "secdev",
       filePrefix: "bento-secdev",
-      code: "SYS_03 // LOCAL AI SAST WORKSTATION",
+      code: "03 // LAB DE SEGURIDAD & IA LOCAL",
       title: "SECDEV STATION",
       subtitle: "C# · DIRECT3D · QWEN 2.5 7B",
       accentKey: "violet",
       sculpture: "crystal",
       lines: [
-        "Estacion nativa acelerada por GPU Direct3D con motor",
-        "RAG, auditoria SAST 100% offline mediante Qwen 2.5",
-        "Coder 7B y deduplicacion determinista SHA-256.",
+        "Proyecto experimental de escritorio en C# y Direct3D",
+        "enfocado en aprender analisis estatico de codigo (SAST)",
+        "con modelos locales (Qwen 2.5 Coder 7B) y flujo DevSecOps.",
       ],
-      tags: ["C# / C++", "DIRECT3D", "QWEN 2.5 7B", "OFFLINE SAST"],
+      tags: ["C# / C++", "DIRECT3D", "QWEN 7B", "SAST LAB"],
       meta: meta("secdev", 238, "2026-11-02", "f88999c"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
     {
       id: "architect",
       filePrefix: "bento-architect",
-      code: "SYS_04 // 360 PERIMETER DEFENSE",
+      code: "04 // SIMULADOR DE REDES Y DEFENSA",
       title: "ARCHITECT-TD",
-      subtitle: "WAF L7 · ENVOY · 56 UNIT TESTS",
+      subtitle: "JS CANVAS · DOCKER · 56 TESTS",
       accentKey: "emerald",
       sculpture: "waf",
       lines: [
-        "Simulador de defensa perimetral en HTML5 Canvas:",
-        "mitigacion activa de SYN Flood, SQLi, MITM y Spectre",
-        "con WAF L7, Envoy, Redis, Hotfix IDE y export IaC.",
+        "Simulador interactivo en HTML5 Canvas para estudiar",
+        "conceptos de defensa perimetral (WAF, Envoy, Redis,",
+        "ataques SYN Flood y SQLi) con 56 pruebas unitarias.",
       ],
-      tags: ["56 TESTS", "WAF & ENVOY", "ANTI-DDOS", "DOCKER IAC"],
+      tags: ["56 TESTS", "WAF / ENVOY", "CANVAS 2D", "DOCKER"],
       meta: meta("architect-td", 273, "2026-09-06", "d06cf84"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
     {
       id: "gcp",
       filePrefix: "bento-gcp",
-      code: "SYS_05 // HIGH-FREQUENCY .NET 10",
+      code: "05 // APLICACION DE ESCRITORIO .NET",
       title: "GCP POS .NET 10",
-      subtitle: "C# 12 · WINFORMS GDI+ 60 FPS",
+      subtitle: "C# 12 · WINFORMS GDI+",
       accentKey: "crimson",
       sculpture: "bars",
       lines: [
-        "Sistema nativo de Punto de Venta e inventario en C# 12",
-        "(.NET 10.0) con renderizado vectorial GDI+ a 60 FPS,",
-        "doble bufer sin parpadeo y alertas criticas de stock.",
+        "Aplicacion de punto de venta y gestion de productos",
+        "creada en C# 12 sobre .NET 10 con graficas vectoriales",
+        "GDI+, control de inventario y alertas de bajo stock.",
       ],
-      tags: ["C# 12", ".NET 10.0", "GDI+ 60FPS", "REALTIME POS"],
+      tags: ["C# 12", ".NET 10.0", "WINFORMS", "GDI+"],
       meta: meta("GCP-GESTION-DE-PRODUCTOS-", 55, "2026-09-27", "21d640c"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
     {
       id: "todo",
       filePrefix: "bento-todo",
-      code: "SYS_06 // DOCKER & BIG-O LAB",
+      code: "06 // API REST DOCKER & PYTHON",
       title: "TODO-API & PY",
-      subtitle: "NODE 20 · MONGO V6 · PYTHON 3.12",
+      subtitle: "NODE 20 · MONGODB · PYTHON 3.12",
       accentKey: "teal",
       sculpture: "container",
       lines: [
-        "Microservicio RESTful contenerizado en Node.js 20,",
-        "Express y MongoDB v6 (Docker Multi-Stage Non-Root),",
-        "junto a laboratorio de algoritmos y Big-O en Python.",
+        "API RESTful en Node.js 20, Express y MongoDB v6",
+        "orquestada con Docker Compose Multi-Stage, junto a mi",
+        "repositorio de practicas y algoritmos en Python 3.12.",
       ],
-      tags: ["NODE.JS 20", "MONGODB V6", "DOCKER", "PYTHON 3.12"],
+      tags: ["NODE.JS 20", "MONGODB", "DOCKER", "PYTHON 3"],
       meta: meta("proyecto-todo-api", 48, "2026-10-18", "14d2ea3"),
-      cta: "OPEN REPO",
+      cta: "VER REPO",
     },
   ];
 

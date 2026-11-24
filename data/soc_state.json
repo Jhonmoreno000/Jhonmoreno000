@@ -1,18 +1,17 @@
 {
-  "perimeter_status": "HARDENED",
-  "shield_integrity_pct": 99.98,
-  "probes_intercepted": 128,
-  "waf_blocks": 54,
-  "sql_audits": 38,
-  "sast_scans": 36,
-  "last_action": "INIT_ZERO_TRUST_BOOT",
+  "perimeter_status": "ONLINE",
+  "events_logged": 1,
+  "waf_runs": 0,
+  "sql_runs": 0,
+  "sast_runs": 0,
+  "last_action": "INIT_LINUX_LAB",
   "last_operator": "Jhonmoreno000",
-  "last_updated_utc": "2026-11-24T21:30:00Z",
+  "last_updated_utc": "2026-11-24T21:40:00Z",
   "verified_operators": [
     {
       "username": "Jhonmoreno000",
-      "action": "BOOT_ZERO_TRUST_CORE",
-      "result": "SHIELD_ARMED_ASVS_L2",
+      "action": "INIT_LINUX_LAB",
+      "result": "LAB_INITIALIZED",
       "signature": "9f86d081884c7d65",
       "date": "2026-11-24"
     }

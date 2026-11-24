@@ -28,18 +28,18 @@
   <rect x="22" y="5" width="96" height="3" fill="#2dd4bf"/>
 
   <!-- Module Code -->
-  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="#2dd4bf" letter-spacing="1.8">SYS_06 // DOCKER &amp; BIG-O LAB</text>
+  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="#2dd4bf" letter-spacing="1.8">06 // API REST DOCKER &amp; PYTHON</text>
 
   <!-- Extruded 3D Title -->
   <text x="25.5" y="56.5" class="mono" font-size="19.5" font-weight="900" fill="#2dd4bf" fill-opacity="0.28" letter-spacing="1.4">TODO-API &amp; PY</text>
   <text x="24" y="55" class="mono" font-size="19.5" font-weight="900" fill="#f8fafc" letter-spacing="1.4">TODO-API &amp; PY</text>
-  <text x="24" y="72" class="mono" font-size="9.5" font-weight="700" fill="#2dd4bf" letter-spacing="0.9">// NODE 20 · MONGO V6 · PYTHON 3.12</text>
+  <text x="24" y="72" class="mono" font-size="9.5" font-weight="700" fill="#2dd4bf" letter-spacing="0.9">// NODE 20 · MONGODB · PYTHON 3.12</text>
 
   <!-- 3-Line Architectural Summary (kept cleanly within x: 24..376) -->
   <g class="sans" font-size="11.2" fill="#cbd5e1">
-    <text x="24" y="95">Microservicio RESTful contenerizado en Node.js 20,</text>
-    <text x="24" y="112">Express y MongoDB v6 (Docker Multi-Stage Non-Root),</text>
-    <text x="24" y="129">junto a laboratorio de algoritmos y Big-O en Python.</text>
+    <text x="24" y="95">API RESTful en Node.js 20, Express y MongoDB v6</text>
+    <text x="24" y="112">orquestada con Docker Compose Multi-Stage, junto a mi</text>
+    <text x="24" y="129">repositorio de practicas y algoritmos en Python 3.12.</text>
   </g>
 
   <!-- Unique 3D Isometric Hardware Sculpture (right zone x: 400..510) -->
@@ -63,16 +63,16 @@
         <text x="43" y="14.5" text-anchor="middle" fill="#f8fafc">NODE.JS 20</text>
       </g>
     <g transform="translate(92, 0)">
-        <path d="M 6,0 L 86,0 L 80,22 L 0,22 Z" fill="#06121e" stroke="#00e5ff" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="43" y="14.5" text-anchor="middle" fill="#f8fafc">MONGODB V6</text>
+        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#00e5ff" stroke-opacity="0.7" stroke-width="1"/>
+        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">MONGODB</text>
       </g>
-    <g transform="translate(184, 0)">
+    <g transform="translate(172, 0)">
         <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#00ff88" stroke-opacity="0.7" stroke-width="1"/>
         <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">DOCKER</text>
       </g>
-    <g transform="translate(264, 0)">
-        <path d="M 6,0 L 92.8,0 L 86.8,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="46.4" y="14.5" text-anchor="middle" fill="#f8fafc">PYTHON 3.12</text>
+    <g transform="translate(252, 0)">
+        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1"/>
+        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">PYTHON 3</text>
       </g>
   </g>
 
@@ -81,6 +81,6 @@
   <g transform="translate(24, 206)" class="mono" font-size="9.2" font-weight="700" letter-spacing="0.6">
     <rect x="0" y="-8.5" width="7" height="7" fill="#2dd4bf"/>
     <text x="14" y="-1.5" fill="#64748b">48 KB · #14d2ea3 · 2026-10-18</text>
-    <text x="492" y="-1.5" text-anchor="end" fill="#2dd4bf">OPEN REPO &gt;&gt;</text>
+    <text x="492" y="-1.5" text-anchor="end" fill="#2dd4bf">VER REPO &gt;&gt;</text>
   </g>
 </svg>

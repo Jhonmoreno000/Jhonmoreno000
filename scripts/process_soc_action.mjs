@@ -13,31 +13,31 @@ const README_PATH = path.join(ROOT, "README.md");
 const ACTIONS = {
   PROBE_WAF_L7: {
     code: "PROBE_WAF_L7",
-    field: "waf_blocks",
-    result: "BLOCKED_BY_WAF_L7",
+    field: "waf_runs",
+    result: "DEMO_WAF_VERIFIED",
     report:
-      "Vector Layer-7 (SQLi / SYN Flood) interceptado por regla OWASP CRS + Rate Limiter (1,200 req/min/IP). Respuesta HTTP 403 emitida y firma de evento almacenada.",
+      "Ejecucion de prueba sobre el flujo interactivo de GitHub Actions (simulacion de regla WAF L7 / Rate Limiting). Firma SHA-256 registrada correctamente.",
   },
   AUDIT_SQL_DEADLOCK: {
     code: "AUDIT_SQL_DEADLOCK",
-    field: "sql_audits",
-    result: "ACID_LOCK_VERIFIED",
+    field: "sql_runs",
+    result: "DEMO_SQL_VERIFIED",
     report:
-      "Auditoria de concurrencia sobre PostgreSQL 16/17 (`SERIALIZABLE` + `FOR UPDATE NOWAIT`). 0 deadlocks detectados; plan de ejecucion resuelto mediante Index Scan en 0.24 ms.",
+      "Ejecucion de prueba de laboratorio SQL (referencia a practicas de PostgreSQL SERIALIZABLE y FOR UPDATE NOWAIT en NEXUS). Firma SHA-256 registrada.",
   },
   RUN_SAST_QWEN_SCAN: {
     code: "RUN_SAST_QWEN_SCAN",
-    field: "sast_scans",
-    result: "ZERO_CRITICAL_CVES",
+    field: "sast_runs",
+    result: "DEMO_SAST_VERIFIED",
     report:
-      "Auditoria estatica SAST offline completada bajo politica OWASP ASVS L2 (AST + deduplicacion determinista SHA-256). 0 vulnerabilidades criticas encontradas.",
+      "Ejecucion de prueba del flujo automatizado SAST / CI (referencia al laboratorio secdev). Firma SHA-256 generada y almacenada en el registro.",
   },
   SIGN_OPERATOR_LOG: {
     code: "SIGN_OPERATOR_LOG",
     field: null,
-    result: "OPERATOR_VERIFIED",
+    result: "VISITOR_SIGNED",
     report:
-      "Identidad del operador registrada y firmada criptograficamente en el Verified Operators Ledger del perfil mediante GitHub Actions.",
+      "Tu visita ha sido registrada y firmada con SHA-256 automaticamente en el perfil de Jhonmoreno000 mediante GitHub Actions.",
   },
 };
 
@@ -101,12 +101,11 @@ async function main() {
   const state = fs.existsSync(STATE_PATH)
     ? JSON.parse(fs.readFileSync(STATE_PATH, "utf-8"))
     : {
-        perimeter_status: "HARDENED",
-        shield_integrity_pct: 99.98,
-        probes_intercepted: 128,
-        waf_blocks: 54,
-        sql_audits: 38,
-        sast_scans: 36,
+        perimeter_status: "ONLINE",
+        events_logged: 1,
+        waf_runs: 0,
+        sql_runs: 0,
+        sast_runs: 0,
         verified_operators: [],
       };
 
@@ -119,9 +118,9 @@ async function main() {
     .digest("hex")
     .slice(0, 16);
 
-  state.probes_intercepted = Number(state.probes_intercepted || 128) + 1;
+  state.events_logged = Number(state.events_logged ?? 0) + 1;
   if (action.field) {
-    state[action.field] = Number(state[action.field] || 0) + 1;
+    state[action.field] = Number(state[action.field] ?? 0) + 1;
   }
   state.last_action = action.code;
   state.last_operator = actor;
@@ -146,17 +145,17 @@ async function main() {
   await generateAllProfileAssets();
 
   const replyLines = [
-    `### [ SOC-OS // TELEMETRY EXECUTION RECEIPT ]`,
+    `### [ LINUX LAB // GITHUB ACTIONS RECEIPT ]`,
     ``,
-    `- **Operator:** \`@${actor}\``,
-    `- **Command Vector:** \`${action.code}\``,
-    `- **Status:** \`${action.result}\``,
-    `- **Cryptographic Signature (SHA-256):** \`${signature}\``,
-    `- **Total Perimeter Events Logged:** \`${state.probes_intercepted}\``,
+    `- **Usuario:** \`@${actor}\``,
+    `- **Comando:** \`${action.code}\``,
+    `- **Estado:** \`${action.result}\``,
+    `- **Firma SHA-256:** \`${signature}\``,
+    `- **Eventos Reales Registrados:** \`${state.events_logged}\``,
     ``,
     `> ${action.report}`,
     ``,
-    `Tu firma ha sido registrada automaticamente en el **Verified Operators Ledger** del perfil \`Jhonmoreno000\`.`,
+    `Tu firma ha sido agregada automaticamente al **Registro de Visitantes** del perfil \`Jhonmoreno000\`.`,
   ].join("\n");
 
   const receiptPath = path.join(ROOT, "data", ".last_receipt.md");

@@ -28,7 +28,7 @@
   <rect x="22" y="5" width="96" height="3" fill="#a855f7"/>
 
   <!-- Module Code -->
-  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="#a855f7" letter-spacing="1.8">SYS_03 // LOCAL AI SAST WORKSTATION</text>
+  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="#a855f7" letter-spacing="1.8">03 // LAB DE SEGURIDAD &amp; IA LOCAL</text>
 
   <!-- Extruded 3D Title -->
   <text x="25.5" y="56.5" class="mono" font-size="19.5" font-weight="900" fill="#a855f7" fill-opacity="0.28" letter-spacing="1.4">SECDEV STATION</text>
@@ -37,9 +37,9 @@
 
   <!-- 3-Line Architectural Summary (kept cleanly within x: 24..376) -->
   <g class="sans" font-size="11.2" fill="#cbd5e1">
-    <text x="24" y="95">Estacion nativa acelerada por GPU Direct3D con motor</text>
-    <text x="24" y="112">RAG, auditoria SAST 100% offline mediante Qwen 2.5</text>
-    <text x="24" y="129">Coder 7B y deduplicacion determinista SHA-256.</text>
+    <text x="24" y="95">Proyecto experimental de escritorio en C# y Direct3D</text>
+    <text x="24" y="112">enfocado en aprender analisis estatico de codigo (SAST)</text>
+    <text x="24" y="129">con modelos locales (Qwen 2.5 Coder 7B) y flujo DevSecOps.</text>
   </g>
 
   <!-- Unique 3D Isometric Hardware Sculpture (right zone x: 400..510) -->
@@ -68,12 +68,12 @@
         <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">DIRECT3D</text>
       </g>
     <g transform="translate(160, 0)">
-        <path d="M 6,0 L 92.8,0 L 86.8,22 L 0,22 Z" fill="#06121e" stroke="#00ff88" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="46.4" y="14.5" text-anchor="middle" fill="#f8fafc">QWEN 2.5 7B</text>
+        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#00ff88" stroke-opacity="0.7" stroke-width="1"/>
+        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">QWEN 7B</text>
       </g>
-    <g transform="translate(258.8, 0)">
-        <path d="M 6,0 L 99.6,0 L 93.6,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="49.8" y="14.5" text-anchor="middle" fill="#f8fafc">OFFLINE SAST</text>
+    <g transform="translate(240, 0)">
+        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1"/>
+        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">SAST LAB</text>
       </g>
   </g>
 
@@ -82,6 +82,6 @@
   <g transform="translate(24, 206)" class="mono" font-size="9.2" font-weight="700" letter-spacing="0.6">
     <rect x="0" y="-8.5" width="7" height="7" fill="#a855f7"/>
     <text x="14" y="-1.5" fill="#64748b">238 KB · #f88999c · 2026-11-02</text>
-    <text x="492" y="-1.5" text-anchor="end" fill="#a855f7">OPEN REPO &gt;&gt;</text>
+    <text x="492" y="-1.5" text-anchor="end" fill="#a855f7">VER REPO &gt;&gt;</text>
   </g>
 </svg>

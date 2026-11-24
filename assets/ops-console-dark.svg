@@ -4,10 +4,6 @@
       <stop offset="0%" stop-color="#050a10"/>
       <stop offset="100%" stop-color="#08121d"/>
     </linearGradient>
-    <linearGradient id="radFill_dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.20"/>
-    </linearGradient>
     <pattern id="dotsOp_dark" width="18" height="18" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="0.8" fill="#00e5ff" fill-opacity="0.13"/>
     </pattern>
@@ -25,12 +21,12 @@
 
   <!-- Header -->
   <rect x="28" y="21" width="8" height="8" fill="#00e5ff"/>
-  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="#f8fafc" letter-spacing="1.8">OPS_AUDIT_CONSOLE // VERIFIED COMMIT STREAM &amp; 6-AXIS CAPABILITY RADAR</text>
-  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="700" fill="#00ff88">POSTURE: HARDENED [ASVS-L2]</text>
+  <text x="44" y="29" class="mono" font-size="10.5" font-weight="800" fill="#f8fafc" letter-spacing="1.6">DEV_LOG // COMMITS REALES &amp; TRAYECTORIA COMO ESTUDIANTE SENA ADSO</text>
+  <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="700" fill="#00ff88">MEDELLIN, CO · 2024 - 2026</text>
   <line x1="26" y1="42" x2="1074" y2="42" stroke="#162433" stroke-width="1"/>
 
   <!-- LEFT: LIVE COMMIT AUDIT LOG -->
-  <text x="28" y="62" class="mono" font-size="9.2" font-weight="800" fill="#64748b" letter-spacing="1.4">01 // RECENT VERIFIED PRODUCTION COMMITS (GITHUB API)</text>
+  <text x="28" y="62" class="mono" font-size="9.2" font-weight="800" fill="#64748b" letter-spacing="1.2">01 // ULTIMOS COMMITS VERIFICADOS (GITHUB REST API)</text>
   <g transform="translate(28, 84)">
         <path d="M 5,-13 L 66,-13 L 61,6 L 0,6 Z" fill="#06121e" stroke="#00ff88" stroke-width="1.1"/>
         <text x="33" y="0" text-anchor="middle" class="mono" font-size="9" font-weight="800" fill="#00ff88">12a0b15</text>
@@ -74,54 +70,49 @@
         <text x="76" y="15" class="sans" font-size="11" fill="#cbd5e1">Fix formatting and spacing in README.md</text>
       </g>
 
-  <!-- Animated Terminal Prompt at bottom-left -->
+  <!-- Animated Linux Terminal Prompt -->
   <g transform="translate(28, 304)">
     <rect x="0" y="0" width="582" height="24" rx="3" fill="#040a10" stroke="#1b2a3b" stroke-width="1"/>
-    <text x="10" y="15.5" class="mono" font-size="9.2" font-weight="700" fill="#00ff88">secdev@medellin:~# <tspan fill="#f8fafc">audit --sast-llm qwen2.5:7b --policy owasp-asvs-l2 --verify</tspan></text>
+    <text x="10" y="15.5" class="mono" font-size="9.2" font-weight="700" fill="#00ff88">jhon@linux-adso:~/repos$ <tspan fill="#f8fafc">git log --oneline -n 6 &amp;&amp; docker compose ps</tspan></text>
     <rect x="564" y="6" width="7" height="12" fill="#00ff88" class="cur"/>
   </g>
 
   <!-- Center Divider -->
   <line x1="636" y1="54" x2="636" y2="328" stroke="#162433" stroke-width="1.2"/>
 
-  <!-- RIGHT: 6-AXIS HEXAGONAL CAPABILITY RADAR -->
-  <text x="662" y="62" class="mono" font-size="9.2" font-weight="800" fill="#64748b" letter-spacing="1.4">02 // 6-AXIS SECURITY &amp; SYSTEMS MATRIX</text>
-
-  <polygon points="866.0,102.0 943.9,147.0 943.9,237.0 866.0,282.0 788.1,237.0 788.1,147.0" fill="none" stroke="#1b2a3b" stroke-width="1.2"/>
-  <polygon points="866.0,127.2 922.1,159.6 922.1,224.4 866.0,256.8 809.9,224.4 809.9,159.6" fill="none" stroke="#1b2a3b" stroke-opacity="0.7" stroke-dasharray="3 3"/>
-  <polygon points="866.0,152.4 900.3,172.2 900.3,211.8 866.0,231.6 831.7,211.8 831.7,172.2" fill="none" stroke="#1b2a3b" stroke-opacity="0.5"/>
-  <polygon points="866.0,105.6 940.0,149.3 939.3,234.3 866.0,275.7 794.3,233.4 795.9,151.5" fill="url(#radFill_dark)" stroke="#00ff88" stroke-width="2"/>
-
-  <!-- Rotating Radar Sweep Wedge -->
-  <g transform="translate(866, 192)">
-    <path d="M 0,0 L 88,0 A 88,88 0 0,1 62,62 Z" fill="#00e5ff" fill-opacity="0.16">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5.5s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <line x1="866" y1="192" x2="866.0" y2="102.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="866.0" cy="105.6" r="4" fill="#00ff88" stroke="#050a10" stroke-width="1.5"/>
-      <text x="866" y="88" text-anchor="middle" class="mono" font-size="8.8" font-weight="800" fill="#00ff88">BACKEND_API</text>
-      <text x="866" y="99" text-anchor="middle" class="mono" font-size="8.2" font-weight="700" fill="#64748b">96%</text>
-  <line x1="866" y1="192" x2="943.9" y2="147.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="940.0" cy="149.3" r="4" fill="#00e5ff" stroke="#050a10" stroke-width="1.5"/>
-      <text x="962" y="140" text-anchor="start" class="mono" font-size="8.8" font-weight="800" fill="#00e5ff">SQL_ACID</text>
-      <text x="962" y="151" text-anchor="start" class="mono" font-size="8.2" font-weight="700" fill="#64748b">95%</text>
-  <line x1="866" y1="192" x2="943.9" y2="237.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="939.3" cy="234.3" r="4" fill="#f59e0b" stroke="#050a10" stroke-width="1.5"/>
-      <text x="962" y="250" text-anchor="start" class="mono" font-size="8.8" font-weight="800" fill="#f59e0b">WAF_DMZ</text>
-      <text x="962" y="261" text-anchor="start" class="mono" font-size="8.2" font-weight="700" fill="#64748b">94%</text>
-  <line x1="866" y1="192" x2="866.0" y2="282.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="866.0" cy="275.7" r="4" fill="#a855f7" stroke="#050a10" stroke-width="1.5"/>
-      <text x="866" y="304" text-anchor="middle" class="mono" font-size="8.8" font-weight="800" fill="#a855f7">CLEAN_DDD</text>
-      <text x="866" y="315" text-anchor="middle" class="mono" font-size="8.2" font-weight="700" fill="#64748b">93%</text>
-  <line x1="866" y1="192" x2="788.1" y2="237.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="794.3" cy="233.4" r="4" fill="#ff3366" stroke="#050a10" stroke-width="1.5"/>
-      <text x="770" y="250" text-anchor="end" class="mono" font-size="8.8" font-weight="800" fill="#ff3366">SAST_LLM</text>
-      <text x="770" y="261" text-anchor="end" class="mono" font-size="8.2" font-weight="700" fill="#64748b">92%</text>
-  <line x1="866" y1="192" x2="788.1" y2="147.0" stroke="#1b2a3b" stroke-width="1"/>
-      <circle cx="795.9" cy="151.5" r="4" fill="#2dd4bf" stroke="#050a10" stroke-width="1.5"/>
-      <text x="770" y="140" text-anchor="end" class="mono" font-size="8.8" font-weight="800" fill="#2dd4bf">DOCKER_IAC</text>
-      <text x="770" y="151" text-anchor="end" class="mono" font-size="8.2" font-weight="700" fill="#64748b">90%</text>
-  <circle cx="866" cy="192" r="3.5" fill="#00ff88"/>
+  <!-- RIGHT: REAL STUDENT TRAJECTORY TIMELINE -->
+  <text x="662" y="62" class="mono" font-size="9.2" font-weight="800" fill="#64748b" letter-spacing="1.2">02 // TRAYECTORIA REAL DE FORMACION (SENA ADSO)</text>
+  <line x1="670" y1="88" x2="670" y2="282" stroke="#1b2a3b" stroke-width="2" stroke-dasharray="4 3"/>
+  <g transform="translate(662, 84)">
+        <circle cx="8" cy="4" r="5" fill="#00e5ff" stroke="#050a10" stroke-width="2"/>
+        <rect x="24" y="-12" width="388" height="50" fill="#071019" stroke="#1b2a3b" stroke-width="1"/>
+        <rect x="24" y="-12" width="3" height="50" fill="#00e5ff"/>
+        <text x="36" y="2" class="mono" font-size="8.4" font-weight="800" fill="#00e5ff" letter-spacing="0.8">2024 // INICIO EN GITHUB</text>
+        <text x="36" y="17" class="sans" font-size="11.2" font-weight="700" fill="#f8fafc">Fundamentos de Programacion &amp; Bases de Datos</text>
+        <text x="36" y="31" class="sans" font-size="10" fill="#cbd5e1">Logica, POO en Java y Python, modelado relacional y consultas SQL.</text>
+      </g>
+  <g transform="translate(662, 146)">
+        <circle cx="8" cy="4" r="5" fill="#00ff88" stroke="#050a10" stroke-width="2"/>
+        <rect x="24" y="-12" width="388" height="50" fill="#071019" stroke="#1b2a3b" stroke-width="1"/>
+        <rect x="24" y="-12" width="3" height="50" fill="#00ff88"/>
+        <text x="36" y="2" class="mono" font-size="8.4" font-weight="800" fill="#00ff88" letter-spacing="0.8">ENE 2026 // PROYECTO FORMATIVO SENA ADSO</text>
+        <text x="36" y="17" class="sans" font-size="11.2" font-weight="700" fill="#f8fafc">D&amp;D Textil — Aplicacion Full-Stack &amp; ERP</text>
+        <text x="36" y="31" class="sans" font-size="10" fill="#cbd5e1">React + Vite, backend Java 21, PostgreSQL 17, Docker y pagos Wompi.</text>
+      </g>
+  <g transform="translate(662, 208)">
+        <circle cx="8" cy="4" r="5" fill="#f59e0b" stroke="#050a10" stroke-width="2"/>
+        <rect x="24" y="-12" width="388" height="50" fill="#071019" stroke="#1b2a3b" stroke-width="1"/>
+        <rect x="24" y="-12" width="3" height="50" fill="#f59e0b"/>
+        <text x="36" y="2" class="mono" font-size="8.4" font-weight="800" fill="#f59e0b" letter-spacing="0.8">JUL - SEP 2026 // PRACTICAS MULTI-STACK</text>
+        <text x="36" y="17" class="sans" font-size="11.2" font-weight="700" fill="#f8fafc">Labs en TypeScript, C# (.NET), Node &amp; Python</text>
+        <text x="36" y="31" class="sans" font-size="10" fill="#cbd5e1">NEXUS (SQL/pg-mem), architect-td (WAF/redes), Todo-API y GCP POS.</text>
+      </g>
+  <g transform="translate(662, 270)">
+        <circle cx="8" cy="4" r="5" fill="#a855f7" stroke="#050a10" stroke-width="2"/>
+        <rect x="24" y="-12" width="388" height="50" fill="#071019" stroke="#1b2a3b" stroke-width="1"/>
+        <rect x="24" y="-12" width="3" height="50" fill="#a855f7"/>
+        <text x="36" y="2" class="mono" font-size="8.4" font-weight="800" fill="#a855f7" letter-spacing="0.8">NOV 2026 - PRESENTE // LINUX &amp; SEGURIDAD</text>
+        <text x="36" y="17" class="sans" font-size="11.2" font-weight="700" fill="#f8fafc">Entornos Linux, Docker &amp; Ciberseguridad Practica</text>
+        <text x="36" y="31" class="sans" font-size="10" fill="#cbd5e1">Automatizacion con GitHub Actions, Bash y laboratorio SAST (secdev).</text>
+      </g>
 </svg>

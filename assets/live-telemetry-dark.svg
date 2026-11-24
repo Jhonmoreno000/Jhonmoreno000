@@ -24,8 +24,8 @@
 
   <!-- Top Mini Bar -->
   <rect x="26" y="18" width="7" height="7" fill="#00ff88" class="led"/>
-  <text x="40" y="25" class="mono" font-size="9.5" font-weight="800" fill="#f8fafc" letter-spacing="1.8">LIVE_SOC_TELEMETRY // AUTO-SYNC GITHUB API + CISA KEV FEED</text>
-  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="#64748b">LAST SYNC: <tspan fill="#00ff88">2026-11-24 21:37 UTC</tspan></text>
+  <text x="40" y="25" class="mono" font-size="9.5" font-weight="800" fill="#f8fafc" letter-spacing="1.6">LIVE_TELEMETRY // DATOS REALES DE GITHUB API + FEED CISA KEV</text>
+  <text x="1074" y="25" text-anchor="end" class="mono" font-size="9.2" font-weight="700" fill="#64748b">ACTUALIZADO: <tspan fill="#00ff88">2026-11-24 21:44 UTC</tspan></text>
   <line x1="26" y1="34" x2="1074" y2="34" stroke="#162433" stroke-width="1"/>
 
   <!-- 4 Live Telemetry Modules -->
@@ -33,16 +33,16 @@
   <g transform="translate(26, 44)">
     <path d="M 0,0 L 238,0 L 248,10 L 248,62 L 0,62 Z" fill="#071019" stroke="#1b2a3b" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="#00ff88"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.2">01 // MEDELLIN NODE [UTC-5]</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">DAY_OPS <tspan font-size="10.5" fill="#00ff88">16:37 COT</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">LOCAL DATE: 2026-11-24 · ONLINE</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.1">01 // MEDELLIN, CO [UTC-5]</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">16:44 COT <tspan font-size="10" fill="#00ff88">DAY_OPS</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">FECHA: 2026-11-24 · SENA ADSO</text>
   </g>
 
   <!-- Module 2: Live CISA KEV Threat Intel -->
   <g transform="translate(286, 44)">
     <path d="M 0,0 L 274,0 L 284,10 L 284,62 L 0,62 Z" fill="#071019" stroke="#1b2a3b" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="#ff3366"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#ff3366" letter-spacing="1.2">02 // CISA KEV LIVE THREAT FEED</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#ff3366" letter-spacing="1.1">02 // RADAR CISA KEV (SEGURIDAD)</text>
     <text x="14" y="40" class="mono" font-size="14.5" font-weight="900" fill="#f8fafc">CVE-2026-132224 <tspan font-size="9.5" fill="#ff3366">[1795 KEVs]</tspan></text>
     <text x="14" y="54" class="mono" font-size="8.8" fill="#cbd5e1">Optimizely · Web Experimen... · 2026-11-24</text>
   </g>
@@ -51,17 +51,17 @@
   <g transform="translate(582, 44)">
     <path d="M 0,0 L 234,0 L 244,10 L 244,62 L 0,62 Z" fill="#071019" stroke="#1b2a3b" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="#00e5ff"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.2">03 // VERIFIED SOURCE CODE</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">4.03 MB <tspan font-size="10.5" fill="#00e5ff">08 SYSTEMS</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">JAVA 21 · TS 5.3 · C# 12 · PG17</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.1">03 // CODIGO PROPIO EN GITHUB</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">4.03 MB <tspan font-size="10.5" fill="#00e5ff">08 REPOS</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">JAVA · JS/TS · C# · PYTHON · SQL</text>
   </g>
 
   <!-- Module 4: 365D Activity Pulse -->
   <g transform="translate(838, 44)">
     <path d="M 0,0 L 226,0 L 236,10 L 236,62 L 0,62 Z" fill="#071019" stroke="#1b2a3b" stroke-width="1.1"/>
     <rect x="0" y="0" width="3.5" height="62" fill="#00ff88"/>
-    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.2">04 // 365D COMMIT PULSE</text>
-    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">66 DAYS <tspan font-size="10.5" fill="#00ff88">#12a0b15</tspan></text>
-    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">LATEST: D&amp;D-TEXTIL · CI PASS</text>
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="800" fill="#64748b" letter-spacing="1.1">04 // ACTIVIDAD REAL (365 DIAS)</text>
+    <text x="14" y="40" class="mono" font-size="16" font-weight="900" fill="#f8fafc">66 DIAS <tspan font-size="10.5" fill="#00ff88">#12a0b15</tspan></text>
+    <text x="14" y="54" class="mono" font-size="8.8" fill="#64748b">ULTIMO: D&amp;D-TEXTIL</text>
   </g>
 </svg>
