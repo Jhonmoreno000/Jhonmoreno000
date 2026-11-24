@@ -438,172 +438,79 @@ function renderLiveTelemetrySvg(mode, { langTotals, ownRepos, commits, contribs,
 }
 
 // ============================================================================
-// 2. SIX BESPOKE 3D INDUSTRIAL SCULPTURAL BENTO CARDS (540 x 232)
+// 2. SIX CLEAN INDUSTRIAL PRECISION BENTO CARDS (540 x 214, NO CLIPART ICONS)
 // ============================================================================
-function bentoSculpture(kind, t, accent) {
-  if (kind === "crypto") {
-    return `
-    <g transform="translate(454, 92)">
-      <polygon points="0,10 48,29 0,48 -48,29" fill="${t.sculptDeep}" stroke="${accent}" stroke-opacity="0.45" stroke-width="1"/>
-      <g class="float3d">
-        <polygon points="-30,-24 26,-36 30,8 -26,20" fill="${t.sculptDark}" stroke="${accent}" stroke-width="1.5"/>
-        <polygon points="-22,-15 -6,-18 -6,-6 -22,-3" fill="${accent}" fill-opacity="0.85"/>
-        <line x1="-22" y1="7" x2="20" y2="-2" stroke="${t.emerald}" stroke-width="1.6" stroke-dasharray="4 2"/>
-        <polygon points="14,-25 29,-18 29,-2 14,9 -1,-2 -1,-18" fill="${t.panelBg}" stroke="${t.emerald}" stroke-width="1.5"/>
-        <text x="14" y="-6" text-anchor="middle" class="mono" font-size="7.5" font-weight="900" fill="${t.emerald}">SHA</text>
-      </g>
-    </g>`;
-  }
-  if (kind === "silo") {
-    return `
-    <g transform="translate(454, 92)">
-      <ellipse cx="0" cy="32" rx="46" ry="18" fill="${t.sculptDeep}" stroke="${accent}" stroke-opacity="0.42" stroke-width="1" stroke-dasharray="4 3"/>
-      <g class="float3d">
-        <path d="M -30,4 L -30,19 A 30,12 0 0,0 30,19 L 30,4 Z" fill="${t.sculptDark}" stroke="${accent}" stroke-width="1.2"/>
-        <ellipse cx="0" cy="4" rx="30" ry="12" fill="${t.sculptMid}" stroke="${accent}" stroke-width="1.2"/>
-        <path d="M -30,-13 L -30,0 A 30,12 0 0,0 30,0 L 30,-13 Z" fill="${t.sculptDark}" stroke="${t.emerald}" stroke-width="1.2"/>
-        <ellipse cx="0" cy="-13" rx="30" ry="12" fill="${t.sculptMid}" stroke="${t.emerald}" stroke-width="1.2"/>
-        <path d="M -30,-30 L -30,-17 A 30,12 0 0,0 30,-17 L 30,-30 Z" fill="${t.panelBg}" stroke="${accent}" stroke-width="1.3"/>
-        <ellipse cx="0" cy="-30" rx="30" ry="12" fill="${t.sculptMid}" stroke="${t.emerald}" stroke-width="1.4"/>
-        <text x="0" y="-27" text-anchor="middle" class="mono" font-size="7.5" font-weight="900" fill="${t.textMain}">ACID</text>
-      </g>
-    </g>`;
-  }
-  if (kind === "crystal") {
-    return `
-    <g transform="translate(454, 92)">
-      <ellipse cx="0" cy="32" rx="44" ry="16" fill="${t.sculptDeep}" stroke="${accent}" stroke-opacity="0.45" stroke-width="1"/>
-      <g class="float3d">
-        <polygon points="0,-34 -26,-4 0,9" fill="${accent}" fill-opacity="0.32" stroke="${accent}" stroke-width="1.3"/>
-        <polygon points="0,-34 26,-4 0,9" fill="${accent}" fill-opacity="0.52" stroke="${accent}" stroke-width="1.3"/>
-        <polygon points="0,28 -26,-4 0,9" fill="${t.sculptDark}" stroke="${accent}" stroke-width="1.1"/>
-        <polygon points="0,28 26,-4 0,9" fill="${t.sculptDeep}" stroke="${accent}" stroke-width="1.1"/>
-        <g class="laser">
-          <ellipse cx="0" cy="-2" rx="36" ry="11" fill="none" stroke="${t.emerald}" stroke-width="1.6"/>
-        </g>
-      </g>
-    </g>`;
-  }
-  if (kind === "waf") {
-    return `
-    <g transform="translate(454, 92)">
-      <polygon points="0,8 48,28 0,48 -48,28" fill="${t.sculptDeep}" stroke="${accent}" stroke-opacity="0.45" stroke-width="1"/>
-      <ellipse cx="0" cy="28" rx="31" ry="12" fill="none" stroke="${t.cyan}" stroke-opacity="0.45" stroke-dasharray="3 2"/>
-      <g class="float3d">
-        <polygon points="0,-35 28,-20 28,11 0,26 -28,11 -28,-20" fill="${accent}" fill-opacity="0.16" stroke="${accent}" stroke-width="1.6"/>
-        <polygon points="0,-24 17,-14 17,5 0,15 -17,5 -17,-14" fill="${t.panelBg}" stroke="${t.cyan}" stroke-width="1.3"/>
-        <text x="0" y="-2" text-anchor="middle" class="mono" font-size="7.5" font-weight="900" fill="${accent}">WAF L7</text>
-        <line x1="-44" y1="-18" x2="-24" y2="-8" stroke="${t.crimson}" stroke-width="1.6" stroke-dasharray="3 2"/>
-        <circle cx="-24" cy="-8" r="3.5" fill="${t.crimson}" class="led"/>
-      </g>
-    </g>`;
-  }
-  if (kind === "bars") {
-    return `
-    <g transform="translate(454, 94)">
-      <polygon points="0,8 46,26 0,44 -46,26" fill="${t.sculptDeep}" stroke="${accent}" stroke-opacity="0.45" stroke-width="1"/>
-      <g class="float3d">
-        <polygon points="-28,-4 -19,-8 -10,-4 -19,0" fill="${t.cyan}"/>
-        <polygon points="-28,-4 -19,0 -19,22 -28,18" fill="${t.cyan}" fill-opacity="0.55"/>
-        <polygon points="-19,0 -10,-4 -10,18 -19,22" fill="${t.cyan}" fill-opacity="0.35"/>
-        <polygon points="-9,-19 0,-23 9,-19 0,-15" fill="${t.emerald}"/>
-        <polygon points="-9,-19 0,-15 0,24 -9,20" fill="${t.emerald}" fill-opacity="0.55"/>
-        <polygon points="0,-15 9,-19 9,20 0,24" fill="${t.emerald}" fill-opacity="0.35"/>
-        <polygon points="10,-33 19,-37 28,-33 19,-29" fill="${accent}"/>
-        <polygon points="10,-33 19,-29 19,22 10,18" fill="${accent}" fill-opacity="0.6"/>
-        <polygon points="19,-29 28,-33 28,18 19,22" fill="${accent}" fill-opacity="0.38"/>
-      </g>
-    </g>`;
-  }
-  // container
-  return `
-  <g transform="translate(454, 92)">
-    <polygon points="0,10 46,28 0,46 -46,28" fill="${t.sculptDeep}" stroke="${t.cyan}" stroke-opacity="0.45" stroke-width="1"/>
-    <g class="float3d">
-      <polygon points="0,-30 32,-15 0,0 -32,-15" fill="${t.sculptMid}" stroke="${t.cyan}" stroke-width="1.3"/>
-      <polygon points="-32,-15 0,0 0,25 -32,10" fill="${t.sculptDark}" stroke="${t.cyan}" stroke-width="1.3"/>
-      <polygon points="0,0 32,-15 32,10 0,25" fill="${t.sculptDeep}" stroke="${accent}" stroke-width="1.3"/>
-      <line x1="-21" y1="-9" x2="-21" y2="15" stroke="${t.cyan}" stroke-opacity="0.6" stroke-width="1.5"/>
-      <line x1="-10" y1="-4" x2="-10" y2="20" stroke="${t.cyan}" stroke-opacity="0.6" stroke-width="1.5"/>
-      <circle cx="16" cy="5" r="5.5" fill="${t.panelBg}" stroke="${accent}" stroke-width="1.4"/>
-    </g>
-  </g>`;
-}
-
 function renderBentoCardSvg(mode, spec) {
   const t = getTheme(mode);
   const accent = t[spec.accentKey];
-  const pathD = chassisPath(540, 232, 18);
+  const pathD = chassisPath(540, 214, 18);
 
   let tagX = 0;
   const tagNodes = spec.tags
     .map((label, idx) => {
-      const w = Math.max(label.length * 6.8 + 18, 74);
+      const w = Math.max(label.length * 7.2 + 22, 82);
       const tc = idx === 0 ? accent : idx === 1 ? t.cyan : idx === 2 ? t.emerald : t.amber;
       const g = `<g transform="translate(${tagX}, 0)">
-        <path d="M 6,0 L ${w},0 L ${w - 6},22 L 0,22 Z" fill="${t.tagBg}" stroke="${tc}" stroke-opacity="0.7" stroke-width="1"/>
+        <path d="M 6,0 L ${w},0 L ${w - 6},22 L 0,22 Z" fill="${t.tagBg}" stroke="${tc}" stroke-opacity="0.72" stroke-width="1"/>
         <text x="${w / 2}" y="14.5" text-anchor="middle" fill="${t.textMain}">${esc(label)}</text>
       </g>`;
-      tagX += w + 6;
+      tagX += w + 8;
       return g;
     })
     .join("\n    ");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 232" width="100%" height="232">
+  const badgeW = Math.max(spec.badge.length * 6.5 + 22, 132);
+  const badgeX = 516 - badgeW;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 214" width="100%" height="214">
   <defs>
     <linearGradient id="bgB_${spec.id}_${mode}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${t.bg1}"/>
       <stop offset="100%" stop-color="${t.bg2}"/>
     </linearGradient>
-    <pattern id="dotsB_${spec.id}_${mode}" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="${accent}" fill-opacity="0.13"/>
+    <pattern id="dotsB_${spec.id}_${mode}" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="${accent}" fill-opacity="0.12"/>
     </pattern>
     <style>
       .mono { font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       @keyframes railB { to { stroke-dashoffset: -26; } }
-      @keyframes floatB { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
-      @keyframes scanB { 0%, 100% { transform: translateY(-16px); } 50% { transform: translateY(14px); } }
-      @keyframes ledB { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
       .rail { stroke-dasharray: 8 5; animation: railB 1.8s linear infinite; }
-      .float3d { animation: floatB 3.6s ease-in-out infinite; }
-      .laser { animation: scanB 2.5s ease-in-out infinite; }
-      .led { animation: ledB 1.6s ease-in-out infinite; }
     </style>
   </defs>
 
-  <rect width="540" height="232" fill="${t.outerBg}"/>
+  <rect width="540" height="214" fill="${t.outerBg}"/>
   <path d="${pathD}" fill="url(#bgB_${spec.id}_${mode})" stroke="${t.border}" stroke-width="1.5"/>
   <path d="${pathD}" fill="url(#dotsB_${spec.id}_${mode})"/>
-  <path d="${pathD}" fill="none" stroke="${accent}" stroke-width="1.4" stroke-opacity="0.65" class="rail"/>
+  <path d="${pathD}" fill="none" stroke="${accent}" stroke-width="1.4" stroke-opacity="0.62" class="rail"/>
   <rect x="22" y="5" width="96" height="3" fill="${accent}"/>
 
-  <!-- Module Code -->
-  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="${accent}" letter-spacing="1.8">${esc(spec.code)}</text>
-
-  <!-- Extruded 3D Title -->
-  <text x="25.5" y="56.5" class="mono" font-size="19.5" font-weight="900" fill="${accent}" fill-opacity="0.28" letter-spacing="1.4">${esc(spec.title)}</text>
-  <text x="24" y="55" class="mono" font-size="19.5" font-weight="900" fill="${t.textMain}" letter-spacing="1.4">${esc(spec.title)}</text>
-  <text x="24" y="72" class="mono" font-size="9.5" font-weight="700" fill="${accent}" letter-spacing="0.9">// ${esc(spec.subtitle)}</text>
-
-  <!-- 3-Line Architectural Summary (kept cleanly within x: 24..376) -->
-  <g class="sans" font-size="11.2" fill="${t.textBody}">
-    <text x="24" y="95">${esc(spec.lines[0])}</text>
-    <text x="24" y="112">${esc(spec.lines[1])}</text>
-    <text x="24" y="129">${esc(spec.lines[2])}</text>
+  <!-- Module Code & Top-Right Stack Badge -->
+  <text x="24" y="30" class="mono" font-size="9" font-weight="800" fill="${accent}" letter-spacing="1.6">${esc(spec.code)}</text>
+  <g transform="translate(${badgeX.toFixed(0)}, 18)">
+    <rect x="0" y="0" width="${badgeW.toFixed(0)}" height="20" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+    <rect x="0" y="0" width="3" height="20" fill="${accent}"/>
+    <text x="${(badgeW / 2 + 1.5).toFixed(1)}" y="13.5" text-anchor="middle" class="mono" font-size="8.6" font-weight="800" fill="${accent}" letter-spacing="0.6">${esc(spec.badge)}</text>
   </g>
 
-  <!-- Unique 3D Isometric Hardware Sculpture (right zone x: 400..510) -->
-  ${bentoSculpture(spec.sculpture, t, accent)}
+  <!-- Crisp Extruded Title -->
+  <text x="25.5" y="60.5" class="mono" font-size="20.5" font-weight="900" fill="${accent}" fill-opacity="0.25" letter-spacing="1.4">${esc(spec.title)}</text>
+  <text x="24" y="59" class="mono" font-size="20.5" font-weight="900" fill="${t.textMain}" letter-spacing="1.4">${esc(spec.title)}</text>
+
+  <!-- Full-Width Clean Architectural Summary (2 crisp lines, zero clutter) -->
+  <g class="sans" font-size="12" fill="${t.textBody}">
+    <text x="24" y="88">${esc(spec.lines[0])}</text>
+    <text x="24" y="108">${esc(spec.lines[1])}</text>
+  </g>
 
   <!-- Angled Parallelogram Tech Tags -->
-  <g transform="translate(24, 148)" class="mono" font-size="8.8" font-weight="800">
+  <g transform="translate(24, 130)" class="mono" font-size="9" font-weight="800">
     ${tagNodes}
   </g>
 
   <!-- Live GitHub API Metadata Footer -->
-  <line x1="24" y1="184" x2="516" y2="184" stroke="${t.divider}" stroke-width="1"/>
-  <g transform="translate(24, 206)" class="mono" font-size="9.2" font-weight="700" letter-spacing="0.6">
+  <line x1="24" y1="168" x2="516" y2="168" stroke="${t.divider}" stroke-width="1"/>
+  <g transform="translate(24, 190)" class="mono" font-size="9.4" font-weight="700" letter-spacing="0.6">
     <rect x="0" y="-8.5" width="7" height="7" fill="${accent}"/>
     <text x="14" y="-1.5" fill="${t.textMuted}">${esc(spec.meta)}</text>
     <text x="492" y="-1.5" text-anchor="end" fill="${accent}">${esc(spec.cta)} &gt;&gt;</text>
@@ -905,15 +812,15 @@ function renderOpsConsoleSvg(mode, { commits }) {
 }
 
 // ============================================================================
-// 5. LIVE INTERACTIVE LINUX & SECURITY LAB HUD (1100 x 268)
+// 5. LIVE INTERACTIVE LINUX & GITHUB ACTIONS LAB HUD (1100 x 252, CLEAN CONSOLE)
 // ============================================================================
 function renderCtfPerimeterSvg(mode, state) {
   const t = getTheme(mode);
-  const pathD = chassisPath(1100, 268, 20);
+  const pathD = chassisPath(1100, 252, 20);
   const ops = (state.verified_operators || []).slice(0, 4);
 
   const opRows = Array.from({ length: 4 }, (_, i) => {
-    const y = 104 + i * 33;
+    const y = 94 + i * 33;
     const op = ops[i];
     if (op) {
       const col = i === 0 ? t.emerald : i === 1 ? t.cyan : i === 2 ? t.amber : t.violet;
@@ -933,7 +840,7 @@ function renderCtfPerimeterSvg(mode, state) {
     </g>`;
   }).join("\n  ");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 268" width="100%" height="268">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 252" width="100%" height="252">
   <defs>
     <linearGradient id="bgCtf_${mode}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${t.bg1}"/>
@@ -946,13 +853,13 @@ function renderCtfPerimeterSvg(mode, state) {
       .mono { font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       @keyframes railCtf { to { stroke-dashoffset: -36; } }
-      @keyframes pktHit { 0% { opacity: 0; transform: translate(-24px, -10px); } 50% { opacity: 1; } 100% { opacity: 0; transform: translate(0px, 0px); } }
+      @keyframes blinkCtf { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0.15; } }
       .rail { stroke-dasharray: 10 8; animation: railCtf 2s linear infinite; }
-      .pkt { animation: pktHit 1.8s ease-out infinite; }
+      .cur { animation: blinkCtf 1s infinite; }
     </style>
   </defs>
 
-  <rect width="1100" height="268" fill="${t.outerBg}"/>
+  <rect width="1100" height="252" fill="${t.outerBg}"/>
   <path d="${pathD}" fill="url(#bgCtf_${mode})" stroke="${t.border}" stroke-width="1.5"/>
   <path d="${pathD}" fill="url(#dotsCtf_${mode})"/>
   <path d="${pathD}" fill="none" stroke="${t.emerald}" stroke-width="1.4" stroke-opacity="0.55" class="rail"/>
@@ -963,52 +870,50 @@ function renderCtfPerimeterSvg(mode, state) {
   <text x="1072" y="29" text-anchor="end" class="mono" font-size="9.5" font-weight="800" fill="${t.emerald}">WORKFLOW: ${esc(state.perimeter_status || "ONLINE")} [REAL STATE]</text>
   <line x1="26" y1="42" x2="1074" y2="42" stroke="${t.divider}" stroke-width="1"/>
 
-  <!-- LEFT: 3D LINUX TERMINAL / SHIELD NODE -->
-  <g transform="translate(128, 152)">
-    <polygon points="0,24 88,58 0,92 -88,58" fill="${t.sculptDeep}" stroke="${t.emerald}" stroke-opacity="0.45" stroke-width="1.2"/>
-    <ellipse cx="0" cy="58" rx="58" ry="22" fill="none" stroke="${t.cyan}" stroke-opacity="0.5" stroke-dasharray="4 3"/>
-    <polygon points="0,-54 48,-28 48,22 0,48 -48,22 -48,-28" fill="${t.emerald}" fill-opacity="0.14" stroke="${t.emerald}" stroke-width="1.8"/>
-    <polygon points="0,-36 30,-18 30,14 0,32 -30,14 -30,-18" fill="${t.panelBg}" stroke="${t.cyan}" stroke-width="1.4"/>
-    <text x="0" y="-2" text-anchor="middle" class="mono" font-size="9" font-weight="900" fill="${t.emerald}">LINUX CI</text>
-    <text x="0" y="12" text-anchor="middle" class="mono" font-size="7.8" font-weight="700" fill="${t.cyan}">ACTIONS</text>
-    <line x1="-88" y1="-34" x2="-48" y2="-16" stroke="${t.cyan}" stroke-width="1.8" stroke-dasharray="4 3"/>
-    <circle cx="-48" cy="-16" r="4.5" fill="${t.emerald}" class="pkt"/>
-  </g>
+  <!-- LEFT: CLEAN FULL-WIDTH LINUX CI TELEMETRY & COMMAND TERMINAL -->
+  <g transform="translate(28, 60)">
+    <text x="0" y="6" class="mono" font-size="9" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">01 // CONTADORES REALES &amp; CONSOLA WORKFLOW (DATA/SOC_STATE.JSON)</text>
 
-  <!-- Center-Left Honest Real Counters -->
-  <g transform="translate(242, 62)">
-    <text x="0" y="8" class="mono" font-size="9" font-weight="800" fill="${t.textMuted}" letter-spacing="1.1">CONTADORES REALES (DATA/SOC_STATE.JSON)</text>
-
-    <g transform="translate(0, 20)">
-      <rect width="134" height="58" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
-      <rect width="3" height="58" fill="${t.emerald}"/>
+    <!-- 3 Clean Telemetry Cards -->
+    <g transform="translate(0, 18)">
+      <rect width="154" height="60" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+      <rect width="3" height="60" fill="${t.emerald}"/>
       <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">EVENTOS REALES</text>
-      <text x="12" y="45" class="mono" font-size="21" font-weight="900" fill="${t.textMain}">${Number(state.events_logged ?? 1)}</text>
+      <text x="12" y="47" class="mono" font-size="22" font-weight="900" fill="${t.textMain}">${Number(state.events_logged ?? 1)}</text>
+
+      <g transform="translate(166, 0)">
+        <rect width="160" height="60" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+        <rect width="3" height="60" fill="${t.cyan}"/>
+        <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">WAF / SQL / SAST</text>
+        <text x="12" y="46" class="mono" font-size="16" font-weight="900" fill="${t.emerald}">${Number(state.waf_runs ?? 0)}<tspan fill="${t.textMuted}"> / </tspan><tspan fill="${t.cyan}">${Number(state.sql_runs ?? 0)}</tspan><tspan fill="${t.textMuted}"> / </tspan><tspan fill="${t.amber}">${Number(state.sast_runs ?? 0)}</tspan></text>
+      </g>
+
+      <g transform="translate(338, 0)">
+        <rect width="154" height="60" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
+        <rect width="3" height="60" fill="${t.amber}"/>
+        <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">VISITANTES</text>
+        <text x="12" y="47" class="mono" font-size="22" font-weight="900" fill="${t.textMain}">${ops.length}</text>
+      </g>
     </g>
 
-    <g transform="translate(144, 20)">
-      <rect width="136" height="58" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
-      <rect width="3" height="58" fill="${t.cyan}"/>
-      <text x="12" y="20" class="mono" font-size="8.2" font-weight="800" fill="${t.textMuted}">WAF / SQL / SAST</text>
-      <text x="12" y="44" class="mono" font-size="14" font-weight="900" fill="${t.emerald}">${Number(state.waf_runs ?? 0)}<tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.cyan}">${Number(state.sql_runs ?? 0)}</tspan><tspan fill="${t.textMuted}">/</tspan><tspan fill="${t.amber}">${Number(state.sast_runs ?? 0)}</tspan></text>
-    </g>
-
-    <g transform="translate(0, 88)">
-      <rect width="280" height="74" fill="${t.panelBg}" stroke="${t.border}" stroke-width="1"/>
-      <rect width="3" height="74" fill="${t.cyan}"/>
-      <text x="12" y="20" class="mono" font-size="8.5" font-weight="800" fill="${t.cyan}">ULTIMO COMANDO EJECUTADO</text>
-      <text x="12" y="40" class="mono" font-size="11" font-weight="800" fill="${t.textMain}">${esc(trunc(state.last_action || "INIT_LINUX_LAB", 26))}</text>
-      <text x="12" y="59" class="mono" font-size="8.8" fill="${t.textMuted}">USUARIO: <tspan fill="${t.emerald}">@${esc(trunc(state.last_operator || "Jhonmoreno000", 18))}</tspan></text>
+    <!-- Authentic Linux CLI Output Block -->
+    <g transform="translate(0, 90)">
+      <rect width="492" height="80" fill="${t.panelBg2}" stroke="${t.border}" stroke-width="1"/>
+      <rect width="3" height="80" fill="${t.cyan}"/>
+      <text x="14" y="21" class="mono" font-size="9.2" font-weight="800" fill="${t.emerald}">jhon@linux-adso:~$ <tspan fill="${t.textMain}">gh workflow view soc-interactive.yml</tspan></text>
+      <text x="14" y="41" class="mono" font-size="9" fill="${t.textBody}">last_cmd : <tspan fill="${t.cyan}" font-weight="700">${esc(trunc(state.last_action || "INIT_LINUX_LAB", 30))}</tspan></text>
+      <text x="14" y="58" class="mono" font-size="9" fill="${t.textBody}">operator : <tspan fill="${t.emerald}" font-weight="700">@${esc(trunc(state.last_operator || "Jhonmoreno000", 22))}</tspan>  ·  hash: <tspan fill="${t.amber}">SHA-256</tspan></text>
+      <rect x="472" y="10" width="7" height="12" fill="${t.emerald}" class="cur"/>
     </g>
   </g>
 
   <!-- Vertical Divider -->
-  <line x1="538" y1="54" x2="538" y2="246" stroke="${t.divider}" stroke-width="1.2"/>
+  <line x1="538" y1="54" x2="538" y2="232" stroke="${t.divider}" stroke-width="1.2"/>
 
   <!-- RIGHT: VERIFIED VISITORS LEDGER -->
-  <text x="556" y="70" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">REGISTRO DE VISITANTES (FIRMADO CON SHA-256 POR GITHUB ACTIONS)</text>
+  <text x="556" y="66" class="mono" font-size="9.2" font-weight="800" fill="${t.textMuted}" letter-spacing="1.2">02 // REGISTRO DE VISITANTES (FIRMADO CON SHA-256 POR GITHUB ACTIONS)</text>
   ${opRows}
-  <text x="556" y="242" class="mono" font-size="8.8" font-weight="700" fill="${t.cyan}">&gt;&gt; HAZ CLIC EN CUALQUIER COMANDO ABAJO PARA PROBAR EL WORKFLOW EN VIVO</text>
+  <text x="556" y="228" class="mono" font-size="8.8" font-weight="700" fill="${t.cyan}">&gt;&gt; HAZ CLIC EN CUALQUIER COMANDO ABAJO PARA PROBAR EL WORKFLOW EN VIVO</text>
 </svg>
 `;
 }
@@ -1075,13 +980,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-textil",
       code: "01 // PROYECTO FORMATIVO SENA ADSO",
       title: "D&D TEXTIL ERP",
-      subtitle: "JAVA 21 · REACT · POSTGRESQL 17",
+      badge: "JAVA 21 · PG 17",
       accentKey: "amber",
-      sculpture: "crypto",
       lines: [
-        "Proyecto principal del SENA: tienda web y panel de",
-        "administracion con React, backend Java 21, PostgreSQL 17,",
-        "Docker y validacion SHA-256 para eventos de pago Wompi.",
+        "Proyecto principal del SENA: tienda web y panel de administracion con React,",
+        "backend Java 21, PostgreSQL 17, Docker y validacion SHA-256 en pagos Wompi.",
       ],
       tags: ["JAVA 21", "POSTGRES 17", "REACT 18", "DOCKER"],
       meta: meta("PROYECTO-SENA-TIENDA-TEXTIL-", 56520, "2026-11-08", "910d42f"),
@@ -1092,13 +995,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-nexus",
       code: "02 // LABORATORIO SQL & CONCURRENCIA",
       title: "NEXUS SQL LAB",
-      subtitle: "TYPESCRIPT 5 · FASTIFY · PG-MEM",
+      badge: "TS 5.3 · PG-MEM",
       accentKey: "cyan",
-      sculpture: "silo",
       lines: [
-        "Proyecto personal para practicar ingenieria SQL,",
-        "bloqueos concurrentes y planes EXPLAIN ANALYZE usando",
-        "Monaco Editor, Fastify y PostgreSQL 16 en memoria.",
+        "Proyecto personal para practicar consultas SQL, bloqueos concurrentes y planes",
+        "EXPLAIN ANALYZE usando Monaco Editor, Fastify 4 y PostgreSQL 16 en memoria.",
       ],
       tags: ["TYPESCRIPT", "FASTIFY 4", "REACT 18", "PG-MEM 16"],
       meta: meta("NEXUS", 1366, "2026-09-09", "85e4866"),
@@ -1109,13 +1010,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-secdev",
       code: "03 // LAB DE SEGURIDAD & IA LOCAL",
       title: "SECDEV STATION",
-      subtitle: "C# · DIRECT3D · QWEN 2.5 7B",
+      badge: "C# · QWEN 7B",
       accentKey: "violet",
-      sculpture: "crystal",
       lines: [
-        "Proyecto experimental de escritorio en C# y Direct3D",
-        "enfocado en aprender analisis estatico de codigo (SAST)",
-        "con modelos locales (Qwen 2.5 Coder 7B) y flujo DevSecOps.",
+        "Proyecto experimental de escritorio en C# y Direct3D enfocado en aprender",
+        "analisis estatico de codigo (SAST) con modelos locales (Qwen 2.5 Coder 7B).",
       ],
       tags: ["C# / C++", "DIRECT3D", "QWEN 7B", "SAST LAB"],
       meta: meta("secdev", 238, "2026-11-02", "f88999c"),
@@ -1126,13 +1025,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-architect",
       code: "04 // SIMULADOR DE REDES Y DEFENSA",
       title: "ARCHITECT-TD",
-      subtitle: "JS CANVAS · DOCKER · 56 TESTS",
+      badge: "56 TESTS · DOCKER",
       accentKey: "emerald",
-      sculpture: "waf",
       lines: [
-        "Simulador interactivo en HTML5 Canvas para estudiar",
-        "conceptos de defensa perimetral (WAF, Envoy, Redis,",
-        "ataques SYN Flood y SQLi) con 56 pruebas unitarias.",
+        "Simulador interactivo en HTML5 Canvas para estudiar defensa perimetral (WAF,",
+        "Envoy, Redis, mitigacion de SYN Flood y SQLi) con 56 pruebas unitarias.",
       ],
       tags: ["56 TESTS", "WAF / ENVOY", "CANVAS 2D", "DOCKER"],
       meta: meta("architect-td", 273, "2026-09-06", "d06cf84"),
@@ -1143,13 +1040,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-gcp",
       code: "05 // APLICACION DE ESCRITORIO .NET",
       title: "GCP POS .NET 10",
-      subtitle: "C# 12 · WINFORMS GDI+",
+      badge: "C# 12 · .NET 10",
       accentKey: "crimson",
-      sculpture: "bars",
       lines: [
-        "Aplicacion de punto de venta y gestion de productos",
-        "creada en C# 12 sobre .NET 10 con graficas vectoriales",
-        "GDI+, control de inventario y alertas de bajo stock.",
+        "Aplicacion de punto de venta y gestion de productos creada en C# 12 sobre",
+        ".NET 10 con graficas vectoriales GDI+, control de inventario y alertas de stock.",
       ],
       tags: ["C# 12", ".NET 10.0", "WINFORMS", "GDI+"],
       meta: meta("GCP-GESTION-DE-PRODUCTOS-", 55, "2026-09-27", "21d640c"),
@@ -1160,13 +1055,11 @@ export async function generateAllProfileAssets() {
       filePrefix: "bento-todo",
       code: "06 // API REST DOCKER & PYTHON",
       title: "TODO-API & PY",
-      subtitle: "NODE 20 · MONGODB · PYTHON 3.12",
+      badge: "NODE 20 · PY 3.12",
       accentKey: "teal",
-      sculpture: "container",
       lines: [
-        "API RESTful en Node.js 20, Express y MongoDB v6",
-        "orquestada con Docker Compose Multi-Stage, junto a mi",
-        "repositorio de practicas y algoritmos en Python 3.12.",
+        "API RESTful en Node.js 20, Express y MongoDB v6 orquestada con Docker Compose",
+        "Multi-Stage, junto a mi repositorio de practicas y algoritmos en Python 3.12.",
       ],
       tags: ["NODE.JS 20", "MONGODB", "DOCKER", "PYTHON 3"],
       meta: meta("proyecto-todo-api", 48, "2026-10-18", "14d2ea3"),

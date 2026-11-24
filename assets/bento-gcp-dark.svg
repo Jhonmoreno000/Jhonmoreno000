@@ -1,87 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 232" width="100%" height="232">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 214" width="100%" height="214">
   <defs>
     <linearGradient id="bgB_gcp_dark" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050a10"/>
       <stop offset="100%" stop-color="#08121d"/>
     </linearGradient>
-    <pattern id="dotsB_gcp_dark" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#ff3366" fill-opacity="0.13"/>
+    <pattern id="dotsB_gcp_dark" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#ff3366" fill-opacity="0.12"/>
     </pattern>
     <style>
       .mono { font-family: ui-monospace, 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
       @keyframes railB { to { stroke-dashoffset: -26; } }
-      @keyframes floatB { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
-      @keyframes scanB { 0%, 100% { transform: translateY(-16px); } 50% { transform: translateY(14px); } }
-      @keyframes ledB { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
       .rail { stroke-dasharray: 8 5; animation: railB 1.8s linear infinite; }
-      .float3d { animation: floatB 3.6s ease-in-out infinite; }
-      .laser { animation: scanB 2.5s ease-in-out infinite; }
-      .led { animation: ledB 1.6s ease-in-out infinite; }
     </style>
   </defs>
 
-  <rect width="540" height="232" fill="#030508"/>
-  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,214 L 522,226 L 18,226 L 6,214 L 6,18 Z" fill="url(#bgB_gcp_dark)" stroke="#1b2a3b" stroke-width="1.5"/>
-  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,214 L 522,226 L 18,226 L 6,214 L 6,18 Z" fill="url(#dotsB_gcp_dark)"/>
-  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,214 L 522,226 L 18,226 L 6,214 L 6,18 Z" fill="none" stroke="#ff3366" stroke-width="1.4" stroke-opacity="0.65" class="rail"/>
+  <rect width="540" height="214" fill="#030508"/>
+  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,196 L 522,208 L 18,208 L 6,196 L 6,18 Z" fill="url(#bgB_gcp_dark)" stroke="#1b2a3b" stroke-width="1.5"/>
+  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,196 L 522,208 L 18,208 L 6,196 L 6,18 Z" fill="url(#dotsB_gcp_dark)"/>
+  <path d="M 18,6 L 119,6 L 131,14 L 409,14 L 421,6 L 522,6 L 534,18 L 534,196 L 522,208 L 18,208 L 6,196 L 6,18 Z" fill="none" stroke="#ff3366" stroke-width="1.4" stroke-opacity="0.62" class="rail"/>
   <rect x="22" y="5" width="96" height="3" fill="#ff3366"/>
 
-  <!-- Module Code -->
-  <text x="24" y="29" class="mono" font-size="9" font-weight="800" fill="#ff3366" letter-spacing="1.8">05 // APLICACION DE ESCRITORIO .NET</text>
-
-  <!-- Extruded 3D Title -->
-  <text x="25.5" y="56.5" class="mono" font-size="19.5" font-weight="900" fill="#ff3366" fill-opacity="0.28" letter-spacing="1.4">GCP POS .NET 10</text>
-  <text x="24" y="55" class="mono" font-size="19.5" font-weight="900" fill="#f8fafc" letter-spacing="1.4">GCP POS .NET 10</text>
-  <text x="24" y="72" class="mono" font-size="9.5" font-weight="700" fill="#ff3366" letter-spacing="0.9">// C# 12 · WINFORMS GDI+</text>
-
-  <!-- 3-Line Architectural Summary (kept cleanly within x: 24..376) -->
-  <g class="sans" font-size="11.2" fill="#cbd5e1">
-    <text x="24" y="95">Aplicacion de punto de venta y gestion de productos</text>
-    <text x="24" y="112">creada en C# 12 sobre .NET 10 con graficas vectoriales</text>
-    <text x="24" y="129">GDI+, control de inventario y alertas de bajo stock.</text>
+  <!-- Module Code & Top-Right Stack Badge -->
+  <text x="24" y="30" class="mono" font-size="9" font-weight="800" fill="#ff3366" letter-spacing="1.6">05 // APLICACION DE ESCRITORIO .NET</text>
+  <g transform="translate(384, 18)">
+    <rect x="0" y="0" width="132" height="20" fill="#071019" stroke="#1b2a3b" stroke-width="1"/>
+    <rect x="0" y="0" width="3" height="20" fill="#ff3366"/>
+    <text x="67.5" y="13.5" text-anchor="middle" class="mono" font-size="8.6" font-weight="800" fill="#ff3366" letter-spacing="0.6">C# 12 · .NET 10</text>
   </g>
 
-  <!-- Unique 3D Isometric Hardware Sculpture (right zone x: 400..510) -->
-  
-    <g transform="translate(454, 94)">
-      <polygon points="0,8 46,26 0,44 -46,26" fill="#040c14" stroke="#ff3366" stroke-opacity="0.45" stroke-width="1"/>
-      <g class="float3d">
-        <polygon points="-28,-4 -19,-8 -10,-4 -19,0" fill="#00e5ff"/>
-        <polygon points="-28,-4 -19,0 -19,22 -28,18" fill="#00e5ff" fill-opacity="0.55"/>
-        <polygon points="-19,0 -10,-4 -10,18 -19,22" fill="#00e5ff" fill-opacity="0.35"/>
-        <polygon points="-9,-19 0,-23 9,-19 0,-15" fill="#00ff88"/>
-        <polygon points="-9,-19 0,-15 0,24 -9,20" fill="#00ff88" fill-opacity="0.55"/>
-        <polygon points="0,-15 9,-19 9,20 0,24" fill="#00ff88" fill-opacity="0.35"/>
-        <polygon points="10,-33 19,-37 28,-33 19,-29" fill="#ff3366"/>
-        <polygon points="10,-33 19,-29 19,22 10,18" fill="#ff3366" fill-opacity="0.6"/>
-        <polygon points="19,-29 28,-33 28,18 19,22" fill="#ff3366" fill-opacity="0.38"/>
-      </g>
-    </g>
+  <!-- Crisp Extruded Title -->
+  <text x="25.5" y="60.5" class="mono" font-size="20.5" font-weight="900" fill="#ff3366" fill-opacity="0.25" letter-spacing="1.4">GCP POS .NET 10</text>
+  <text x="24" y="59" class="mono" font-size="20.5" font-weight="900" fill="#f8fafc" letter-spacing="1.4">GCP POS .NET 10</text>
+
+  <!-- Full-Width Clean Architectural Summary (2 crisp lines, zero clutter) -->
+  <g class="sans" font-size="12" fill="#cbd5e1">
+    <text x="24" y="88">Aplicacion de punto de venta y gestion de productos creada en C# 12 sobre</text>
+    <text x="24" y="108">.NET 10 con graficas vectoriales GDI+, control de inventario y alertas de stock.</text>
+  </g>
 
   <!-- Angled Parallelogram Tech Tags -->
-  <g transform="translate(24, 148)" class="mono" font-size="8.8" font-weight="800">
+  <g transform="translate(24, 130)" class="mono" font-size="9" font-weight="800">
     <g transform="translate(0, 0)">
-        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#ff3366" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">C# 12</text>
+        <path d="M 6,0 L 82,0 L 76,22 L 0,22 Z" fill="#06121e" stroke="#ff3366" stroke-opacity="0.72" stroke-width="1"/>
+        <text x="41" y="14.5" text-anchor="middle" fill="#f8fafc">C# 12</text>
       </g>
-    <g transform="translate(80, 0)">
-        <path d="M 6,0 L 79.19999999999999,0 L 73.19999999999999,22 L 0,22 Z" fill="#06121e" stroke="#00e5ff" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="39.599999999999994" y="14.5" text-anchor="middle" fill="#f8fafc">.NET 10.0</text>
+    <g transform="translate(90, 0)">
+        <path d="M 6,0 L 86.8,0 L 80.8,22 L 0,22 Z" fill="#06121e" stroke="#00e5ff" stroke-opacity="0.72" stroke-width="1"/>
+        <text x="43.4" y="14.5" text-anchor="middle" fill="#f8fafc">.NET 10.0</text>
       </g>
-    <g transform="translate(165.2, 0)">
-        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#00ff88" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">WINFORMS</text>
+    <g transform="translate(184.8, 0)">
+        <path d="M 6,0 L 82,0 L 76,22 L 0,22 Z" fill="#06121e" stroke="#00ff88" stroke-opacity="0.72" stroke-width="1"/>
+        <text x="41" y="14.5" text-anchor="middle" fill="#f8fafc">WINFORMS</text>
       </g>
-    <g transform="translate(245.2, 0)">
-        <path d="M 6,0 L 74,0 L 68,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1"/>
-        <text x="37" y="14.5" text-anchor="middle" fill="#f8fafc">GDI+</text>
+    <g transform="translate(274.8, 0)">
+        <path d="M 6,0 L 82,0 L 76,22 L 0,22 Z" fill="#06121e" stroke="#f59e0b" stroke-opacity="0.72" stroke-width="1"/>
+        <text x="41" y="14.5" text-anchor="middle" fill="#f8fafc">GDI+</text>
       </g>
   </g>
 
   <!-- Live GitHub API Metadata Footer -->
-  <line x1="24" y1="184" x2="516" y2="184" stroke="#162433" stroke-width="1"/>
-  <g transform="translate(24, 206)" class="mono" font-size="9.2" font-weight="700" letter-spacing="0.6">
+  <line x1="24" y1="168" x2="516" y2="168" stroke="#162433" stroke-width="1"/>
+  <g transform="translate(24, 190)" class="mono" font-size="9.4" font-weight="700" letter-spacing="0.6">
     <rect x="0" y="-8.5" width="7" height="7" fill="#ff3366"/>
     <text x="14" y="-1.5" fill="#64748b">55 KB · #ac8bd04 · 2026-09-27</text>
     <text x="492" y="-1.5" text-anchor="end" fill="#ff3366">VER REPO &gt;&gt;</text>
