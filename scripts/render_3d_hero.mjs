@@ -16,8 +16,8 @@ const PREVIEW_DIR = process.env.PREVIEW_DIR || "";
 
 const WIDTH = 1100;
 const HEIGHT = 420;
-const FRAMES = 40;
-const FRAME_DELAY_MS = 60; // ~16.7 fps, 2.4s smooth seamless loop
+const FRAMES = 48;
+const FRAME_DELAY_MS = 85; // ~11.8 fps, 4.08s ultra-calm, smooth breathing loop
 
 function findChrome() {
   const candidates = [
@@ -49,41 +49,39 @@ function buildHtml(theme) {
         bgInner2: "#08121d",
         border: "#1b2838",
         accent1: "#00ff88",
-        accent2: "#00e5ff",
+        accent2: "#1793d1", // Authentic Arch Linux Blue
         accent3: "#f59e0b",
         accent4: "#38bdf8",
         textMain: "#f8fafc",
         textSub: "#94a3b8",
         textDim: "#64748b",
         pillBg: "rgba(6, 20, 32, 0.85)",
-        pillBorder: "rgba(0, 255, 136, 0.35)",
+        pillBorder: "rgba(23, 147, 209, 0.45)",
         cardBg: "rgba(7, 15, 24, 0.82)",
         cardBorder: "rgba(30, 48, 68, 0.9)",
-        dotColor: "rgba(0, 229, 255, 0.14)",
+        dotColor: "rgba(23, 147, 209, 0.14)",
         headerBg: "rgba(6, 12, 20, 0.88)",
-        glowA: "rgba(0, 255, 136, 0.11)",
-        glowB: "rgba(0, 229, 255, 0.14)",
-        nameGrad: "linear-gradient(92deg, #ffffff 0%, #e2e8f0 48%, #00ff88 82%, #00e5ff 100%)",
-        specLabelBg: "rgba(4, 12, 20, 0.88)",
-        // 3D materials
-        chassisColor: 0x16202c,
-        chassisTrim: 0x00ff88,
-        keyColor: 0x0d1520,
-        keyGlow: 0x00e5ff,
-        serverColor: 0x111a26,
-        gridColor1: 0x00e5ff,
-        gridColor2: 0x0f2538,
-        ringColor: 0x00ff88,
-        particleColor: 0x00ff88,
-        light1: 0x00ff88,
-        light2: 0x00e5ff,
-        lightAmb: 0x446688,
-        termBg: "#050c12",
-        termBorder: "#00ff88",
-        termText: "#e2e8f0",
-        termGreen: "#00ff88",
-        termCyan: "#00e5ff",
-        termAmber: "#fbbf24",
+        glowA: "rgba(0, 255, 136, 0.08)",
+        glowB: "rgba(23, 147, 209, 0.16)",
+        nameGrad: "linear-gradient(92deg, #ffffff 0%, #e2e8f0 48%, #38bdf8 80%, #00ff88 100%)",
+        specLabelBg: "rgba(4, 12, 20, 0.90)",
+        // 3D Laptop Materials (Matte Anodized Carbon / ThinkPad-inspired)
+        bodyColor: 0x1a232e,
+        bodyLidColor: 0x151d27,
+        wellColor: 0x0b1017,
+        keyColor: 0x121923,
+        keyHighlight: 0x1793d1,
+        hingeColor: 0x3b4a5e,
+        padColor: 0x131b26,
+        portColor: 0x05080d,
+        trimEdge: 0x1793d1,
+        gridMain: 0x1793d1,
+        gridSub: 0x0d1e2e,
+        shadowOp: 0.55,
+        lightAmb: 0x64748b,
+        lightKey: 0xe2f1ff,
+        lightRim: 0x1793d1,
+        lightFill: 0x00ff88,
       }
     : {
         bgOuter: "#eef2f6",
@@ -91,41 +89,39 @@ function buildHtml(theme) {
         bgInner2: "#eef4f9",
         border: "#cbd5e1",
         accent1: "#059669",
-        accent2: "#0284c7",
+        accent2: "#1793d1", // Authentic Arch Linux Blue
         accent3: "#d97706",
-        accent4: "#4f46e5",
+        accent4: "#0284c7",
         textMain: "#0f172a",
         textSub: "#475569",
         textDim: "#64748b",
         pillBg: "rgba(255, 255, 255, 0.94)",
-        pillBorder: "rgba(5, 150, 105, 0.35)",
-        cardBg: "rgba(255, 255, 255, 0.90)",
+        pillBorder: "rgba(23, 147, 209, 0.42)",
+        cardBg: "rgba(255, 255, 255, 0.92)",
         cardBorder: "rgba(203, 213, 225, 0.95)",
-        dotColor: "rgba(15, 23, 42, 0.09)",
+        dotColor: "rgba(15, 23, 42, 0.08)",
         headerBg: "rgba(241, 245, 249, 0.94)",
-        glowA: "rgba(5, 150, 105, 0.08)",
-        glowB: "rgba(2, 132, 199, 0.10)",
-        nameGrad: "linear-gradient(92deg, #0f172a 0%, #1e293b 52%, #059669 82%, #0284c7 100%)",
+        glowA: "rgba(5, 150, 105, 0.07)",
+        glowB: "rgba(23, 147, 209, 0.11)",
+        nameGrad: "linear-gradient(92deg, #0f172a 0%, #1e293b 52%, #1793d1 80%, #059669 100%)",
         specLabelBg: "rgba(255, 255, 255, 0.94)",
-        // 3D materials (brushed aluminum ThinkPad / studio look)
-        chassisColor: 0x334155,
-        chassisTrim: 0x059669,
+        // 3D Laptop Materials (Brushed Space-Gray Aluminum)
+        bodyColor: 0x94a3b8,
+        bodyLidColor: 0x64748b,
+        wellColor: 0x334155,
         keyColor: 0x1e293b,
-        keyGlow: 0x0284c7,
-        serverColor: 0x475569,
-        gridColor1: 0x0284c7,
-        gridColor2: 0xcbd5e1,
-        ringColor: 0x059669,
-        particleColor: 0x0284c7,
-        light1: 0x34d399,
-        light2: 0x38bdf8,
-        lightAmb: 0xe2e8f0,
-        termBg: "#0a111a",
-        termBorder: "#059669",
-        termText: "#f1f5f9",
-        termGreen: "#34d399",
-        termCyan: "#38bdf8",
-        termAmber: "#fbbf24",
+        keyHighlight: 0x1793d1,
+        hingeColor: 0x475569,
+        padColor: 0x7b8ba1,
+        portColor: 0x0f172a,
+        trimEdge: 0x475569,
+        gridMain: 0x1793d1,
+        gridSub: 0xcbd5e1,
+        shadowOp: 0.22,
+        lightAmb: 0xf1f5f9,
+        lightKey: 0xffffff,
+        lightRim: 0x38bdf8,
+        lightFill: 0x10b981,
       };
 
   return `<!DOCTYPE html>
@@ -182,11 +178,11 @@ function buildHtml(theme) {
   }
   .glow-r {
     position: absolute;
-    right: -30px;
+    right: -10px;
     top: 20px;
     width: 560px;
     height: 380px;
-    background: radial-gradient(circle, ${pal.glowB} 0%, transparent 68%);
+    background: radial-gradient(circle, ${pal.glowB} 0%, transparent 66%);
     pointer-events: none;
   }
   svg.chassis-outline {
@@ -217,13 +213,13 @@ function buildHtml(theme) {
     font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 1.6px;
-    color: ${pal.accent1};
+    color: ${pal.accent2};
   }
   .led {
     width: 8px;
     height: 8px;
-    background: ${pal.accent1};
-    box-shadow: 0 0 10px ${pal.accent1};
+    background: ${pal.accent2};
+    box-shadow: 0 0 8px ${pal.accent2};
   }
   .topbar-right {
     font-size: 10px;
@@ -232,14 +228,14 @@ function buildHtml(theme) {
     color: ${pal.textSub};
   }
   .topbar-right span {
-    color: ${pal.accent2};
+    color: ${pal.accent1};
   }
 
   .left-col {
     position: absolute;
     top: 54px;
     left: 34px;
-    width: 552px;
+    width: 546px;
     z-index: 10;
   }
   .role-badge {
@@ -249,11 +245,11 @@ function buildHtml(theme) {
     padding: 5px 13px;
     background: ${pal.pillBg};
     border: 1px solid ${pal.pillBorder};
-    border-left: 3px solid ${pal.accent1};
+    border-left: 3px solid ${pal.accent2};
     font-size: 9.8px;
     font-weight: 800;
-    letter-spacing: 1.4px;
-    color: ${pal.accent1};
+    letter-spacing: 1.3px;
+    color: ${pal.accent2};
     margin-bottom: 13px;
   }
   .role-dot {
@@ -283,7 +279,7 @@ function buildHtml(theme) {
     font-size: 13px;
     line-height: 1.52;
     color: ${pal.textSub};
-    max-width: 530px;
+    max-width: 528px;
     margin-bottom: 18px;
   }
   .hero-desc strong {
@@ -295,7 +291,7 @@ function buildHtml(theme) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    width: 542px;
+    width: 536px;
   }
   .spec-card {
     position: relative;
@@ -345,20 +341,20 @@ function buildHtml(theme) {
     z-index: 10;
   }
   .hero-coords b {
-    color: ${pal.accent1};
+    color: ${pal.accent2};
   }
 
-  /* Right WebGL 3D Linux Workstation Viewport */
+  /* Right WebGL 3D Laptop Viewport (dedicated space, centered cleanly) */
   #webgl-stage {
     position: absolute;
     top: 38px;
     right: 0;
-    width: 510px;
+    width: 525px;
     height: ${HEIGHT - 54}px;
     z-index: 5;
   }
   canvas#three-canvas {
-    width: 510px;
+    width: 525px;
     height: ${HEIGHT - 54}px;
     display: block;
   }
@@ -375,10 +371,10 @@ function buildHtml(theme) {
     color: var(--c);
     z-index: 15;
   }
-  .hud-tl { top: 50px; right: 342px; --c: ${pal.accent2}; }
+  .hud-tl { top: 50px; right: 364px; --c: ${pal.accent2}; }
   .hud-tr { top: 50px; right: 24px; --c: ${pal.accent1}; }
-  .hud-bl { bottom: 16px; right: 326px; --c: ${pal.accent3}; }
-  .hud-br { bottom: 16px; right: 24px; --c: ${pal.accent4}; }
+  .hud-bl { bottom: 16px; right: 342px; --c: ${pal.accent2}; }
+  .hud-br { bottom: 16px; right: 24px; --c: ${pal.accent3}; }
 </style>
 </head>
 <body>
@@ -391,7 +387,7 @@ function buildHtml(theme) {
       <div class="topbar">
         <div class="topbar-left mono">
           <div class="led" id="led-dot"></div>
-          <span>LINUX WORKSTATION // JHONMORENO000</span>
+          <span>ARCH LINUX WORKSTATION // JHONMORENO000</span>
         </div>
         <div class="topbar-right mono">
           FORMACION: <span>SENA ADSO</span> &nbsp;|&nbsp; MEDELLIN, ANTIOQUIA <span>[CO]</span> &nbsp;|&nbsp; GITHUB DESDE <span>2024</span>
@@ -401,14 +397,14 @@ function buildHtml(theme) {
       <div class="left-col">
         <div class="role-badge mono">
           <div class="role-dot"></div>
-          <span>ESTUDIANTE ADSO (SENA) · BACKEND · LINUX · CIBERSEGURIDAD</span>
+          <span>ESTUDIANTE ADSO (SENA) · BACKEND · ARCH LINUX · CIBERSEGURIDAD</span>
         </div>
         <div class="hero-name mono">JHON ANDERSON<br/>MORENO POSSO</div>
         <div class="hero-subline mono">// ANALISIS Y DESARROLLO DE SOFTWARE · BASES DE DATOS · REDES</div>
         <div class="hero-desc">
           Estudiante de Tecnologia en <strong>Analisis y Desarrollo de Software (ADSO)</strong> en el SENA.
           Construyo proyectos practicos en <strong>Java, TypeScript, C#, Python y SQL</strong>,
-          profundizando en entornos <strong>Linux</strong>, Docker y fundamentos de ciberseguridad.
+          profundizando en entornos <strong>Arch Linux</strong>, Docker y fundamentos de ciberseguridad.
         </div>
 
         <div class="spec-grid">
@@ -429,26 +425,26 @@ function buildHtml(theme) {
           </div>
           <div class="spec-card" style="--accent: ${pal.accent4}">
             <div class="spec-k mono">ENTORNO</div>
-            <div class="spec-v mono">LINUX·BASH</div>
+            <div class="spec-v mono">ARCH LINUX</div>
             <div class="spec-s mono">Docker · Git</div>
           </div>
         </div>
       </div>
 
       <div class="hero-coords mono">
-        <span>OS: <b>LINUX / BASH</b></span>
+        <span>DISTRO: <b>ARCH LINUX x86_64</b></span>
         <span>DB: <b>POSTGRES · MYSQL · MONGO</b></span>
         <span>MODO: <b>EN FORMACION</b></span>
       </div>
 
       <div id="webgl-stage">
-        <canvas id="three-canvas" width="510" height="${HEIGHT - 54}"></canvas>
+        <canvas id="three-canvas" width="525" height="${HEIGHT - 54}"></canvas>
       </div>
 
-      <div class="hud-tag hud-tl mono">TTY1 // FASTFETCH</div>
-      <div class="hud-tag hud-tr mono" id="hud-shell">BASH: ACTIVE</div>
-      <div class="hud-tag hud-bl mono">KERNEL: LINUX 6.x</div>
-      <div class="hud-tag hud-br mono">DOCKER · SSH · GIT</div>
+      <div class="hud-tag hud-tl mono">ARCH // FASTFETCH</div>
+      <div class="hud-tag hud-tr mono">KERNEL: 6.x-ARCH</div>
+      <div class="hud-tag hud-bl mono">ZSH · NEOVIM · GIT</div>
+      <div class="hud-tag hud-br mono">DOCKER · SSH</div>
     </div>
 
     <svg class="chassis-outline" viewBox="0 0 ${WIDTH - 16} ${HEIGHT - 16}" xmlns="http://www.w3.org/2000/svg">
@@ -456,434 +452,517 @@ function buildHtml(theme) {
             fill="none" stroke="${pal.border}" stroke-width="1.5"/>
       <path id="laser-rail"
             d="M 26,1 L 240,1 L 254,11 L 840,11 L 854,1 L ${WIDTH - 42},1 L ${WIDTH - 17},26 L ${WIDTH - 17},${HEIGHT - 42} L ${WIDTH - 42},${HEIGHT - 17} L 26,${HEIGHT - 17} L 1,${HEIGHT - 42} L 1,26 Z"
-            fill="none" stroke="${pal.accent1}" stroke-width="1.6" stroke-opacity="0.72"
-            stroke-dasharray="90 220" stroke-dashoffset="0"/>
-      <path d="M 26,1 L 78,1" stroke="${pal.accent1}" stroke-width="3"/>
-      <path d="M ${WIDTH - 94},1 L ${WIDTH - 42},1" stroke="${pal.accent2}" stroke-width="3"/>
+            fill="none" stroke="${pal.accent2}" stroke-width="1.5" stroke-opacity="0.65"
+            stroke-dasharray="85 240" stroke-dashoffset="0"/>
+      <path d="M 26,1 L 78,1" stroke="${pal.accent2}" stroke-width="3"/>
+      <path d="M ${WIDTH - 94},1 L ${WIDTH - 42},1" stroke="${pal.accent1}" stroke-width="3"/>
     </svg>
   </div>
 
   <script type="module">
     import * as THREE from "/three.module.js";
 
-    (function initLinux3D() {
-      const W = 510;
+    (function initArchLaptop3D() {
+      const W = 525;
       const H = ${HEIGHT - 54};
       const canvas = document.getElementById("three-canvas");
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
       renderer.setSize(W, H, false);
       renderer.setPixelRatio(1);
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = ${isDark ? "1.3" : "1.18"};
+      renderer.toneMappingExposure = ${isDark ? "1.26" : "1.12"};
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(34, W / H, 0.1, 100);
-      camera.position.set(-1.35, 2.25, 6.45);
-      camera.lookAt(0.1, 0.05, 0);
+      const camera = new THREE.PerspectiveCamera(30, W / H, 0.1, 100);
 
-      // Studio Lighting
-      scene.add(new THREE.AmbientLight(${pal.lightAmb}, ${isDark ? "1.4" : "2.4"}));
-      const keyLight = new THREE.DirectionalLight(${pal.light1}, ${isDark ? "2.4" : "2.1"});
-      keyLight.position.set(4, 7, 5);
+      // Clean Studio Three-Point Lighting (no harsh neon clutter)
+      scene.add(new THREE.AmbientLight(${pal.lightAmb}, ${isDark ? "1.55" : "2.35"}));
+
+      const keyLight = new THREE.DirectionalLight(${pal.lightKey}, ${isDark ? "2.1" : "2.0"});
+      keyLight.position.set(3.5, 6.5, 5.5);
       scene.add(keyLight);
 
-      const rimLight = new THREE.DirectionalLight(${pal.light2}, ${isDark ? "2.4" : "2.2"});
-      rimLight.position.set(-5, 3, -3);
+      const rimLight = new THREE.DirectionalLight(${pal.lightRim}, ${isDark ? "2.2" : "1.6"});
+      rimLight.position.set(-5.0, 3.5, -3.5);
       scene.add(rimLight);
 
-      const frontLight = new THREE.DirectionalLight(0xffffff, ${isDark ? "0.95" : "1.7"});
-      frontLight.position.set(0, 3, 6);
-      scene.add(frontLight);
+      const fillLight = new THREE.DirectionalLight(${pal.lightFill}, ${isDark ? "0.95" : "0.85"});
+      fillLight.position.set(4.0, 2.0, -2.5);
+      scene.add(fillLight);
 
-      const screenGlow = new THREE.PointLight(${pal.light1}, ${isDark ? "2.2" : "1.0"}, 6);
-      screenGlow.position.set(-0.3, 0.55, 1.0);
+      const screenGlow = new THREE.PointLight(0x1793d1, ${isDark ? "1.45" : "0.5"}, 5.5);
+      screenGlow.position.set(0, 0.85, 0.9);
       scene.add(screenGlow);
 
       // ================================================================
-      // LIVE CANVAS TEXTURE: AUTHENTIC LINUX TERMINAL WITH TUX PENGUIN
+      // HI-DPI 1280x800 ARCH LINUX OLED SCREEN TEXTURE (RAZOR-SHARP)
       // ================================================================
       const termCanvas = document.createElement("canvas");
-      termCanvas.width = 640;
-      termCanvas.height = 400;
+      termCanvas.width = 1280;
+      termCanvas.height = 800;
       const ctx = termCanvas.getContext("2d");
       const termTex = new THREE.CanvasTexture(termCanvas);
-      termTex.minFilter = THREE.LinearFilter;
+      termTex.minFilter = THREE.LinearMipmapLinearFilter;
       termTex.magFilter = THREE.LinearFilter;
+      termTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-      const cmds = [
-        "uname -sr && whoami",
-        "docker ps --format '{{.Names}}'",
-        "git log --oneline -n 3",
-        "systemctl status postgresql",
-      ];
-
-      function drawTux(c, x, y, scale) {
+      // Authentic Official Arch Linux Crystal/A Logo Path (Normalized to 200x200 box)
+      function drawArchLogo(c, cx, cy, size) {
         c.save();
-        c.translate(x, y);
-        c.scale(scale, scale);
+        c.translate(cx, cy);
+        const s = size / 200;
+        c.scale(s, s);
 
-        // Tux outer silhouette (clean geometric vector Tux penguin!)
-        c.fillStyle = "#0f172a";
-        c.strokeStyle = "${pal.termGreen}";
-        c.lineWidth = 3;
-        // Body
+        // Soft ambient glow behind Arch emblem
+        const grd = c.createRadialGradient(0, 10, 8, 0, 10, 118);
+        grd.addColorStop(0, "rgba(23, 147, 209, 0.32)");
+        grd.addColorStop(1, "rgba(23, 147, 209, 0)");
+        c.fillStyle = grd;
         c.beginPath();
-        c.ellipse(0, 26, 42, 52, 0, 0, Math.PI * 2);
+        c.arc(0, 10, 118, 0, Math.PI * 2);
         c.fill();
+
+        // Main Arch Linux geometric "A" shape (faithful silhouette with curved side notches + arched inner cutout)
+        const grad = c.createLinearGradient(-80, -95, 80, 95);
+        grad.addColorStop(0, "#38bdf8");
+        grad.addColorStop(0.45, "#1793d1");
+        grad.addColorStop(1, "#0d6fa3");
+
+        c.fillStyle = grad;
+        c.beginPath();
+        // Peak
+        c.moveTo(0, -96);
+        // Right upper edge curving into the signature right-hand notch
+        c.bezierCurveTo(10, -72, 20, -48, 30, -24);
+        c.quadraticCurveTo(14, -31, -2, -33);
+        c.quadraticCurveTo(18, -24, 34, -13);
+        // Outer right leg sweeping down to sharp point
+        c.bezierCurveTo(54, 28, 76, 66, 94, 92);
+        // Bottom right arch into inner rounded cavity
+        c.bezierCurveTo(64, 75, 42, 65, 22, 62);
+        c.bezierCurveTo(25, 48, 25, 34, 18, 20);
+        c.bezierCurveTo(12, 8, 5, 4, 0, 4);
+        c.bezierCurveTo(-5, 4, -12, 8, -18, 20);
+        c.bezierCurveTo(-25, 34, -25, 48, -22, 62);
+        // Bottom left arch sweeping to outer left point
+        c.bezierCurveTo(-42, 65, -64, 75, -94, 92);
+        // Outer left leg up to signature left-hand upper notch
+        c.bezierCurveTo(-72, 58, -50, 18, -32, -20);
+        c.quadraticCurveTo(-18, -12, -4, -9);
+        c.quadraticCurveTo(-20, -18, -28, -30);
+        c.bezierCurveTo(-18, -54, -9, -76, 0, -96);
+        c.closePath();
+        c.fill();
+
+        // Crisp subtle edge highlight on left facet (gives real 3D vector depth)
+        c.strokeStyle = "rgba(186, 230, 253, 0.55)";
+        c.lineWidth = 2.2;
         c.stroke();
-        // Head
-        c.beginPath();
-        c.arc(0, -34, 30, 0, Math.PI * 2);
-        c.fill();
-        c.stroke();
 
-        // White belly
-        c.fillStyle = "#f8fafc";
-        c.beginPath();
-        c.ellipse(0, 32, 27, 38, 0, 0, Math.PI * 2);
-        c.fill();
-
-        // Wings
-        c.fillStyle = "#0f172a";
-        c.strokeStyle = "${pal.termCyan}";
-        c.lineWidth = 2.4;
-        c.beginPath();
-        c.ellipse(-44, 18, 12, 30, 0.35, 0, Math.PI * 2);
-        c.fill(); c.stroke();
-        c.beginPath();
-        c.ellipse(44, 18, 12, 30, -0.35, 0, Math.PI * 2);
-        c.fill(); c.stroke();
-
-        // Eyes
-        c.fillStyle = "#ffffff";
-        c.beginPath(); c.ellipse(-10, -40, 7.5, 9.5, 0, 0, Math.PI * 2); c.fill();
-        c.beginPath(); c.ellipse(10, -40, 7.5, 9.5, 0, 0, Math.PI * 2); c.fill();
-        c.fillStyle = "#020617";
-        c.beginPath(); c.arc(-8, -39, 3.6, 0, Math.PI * 2); c.fill();
-        c.beginPath(); c.arc(8, -39, 3.6, 0, Math.PI * 2); c.fill();
-
-        // Beak (Amber Linux gold)
-        c.fillStyle = "${pal.termAmber}";
-        c.beginPath();
-        c.moveTo(-12, -26);
-        c.quadraticCurveTo(0, -33, 12, -26);
-        c.quadraticCurveTo(0, -14, -12, -26);
-        c.fill();
-
-        // Feet (Amber Linux gold)
-        c.fillStyle = "${pal.termAmber}";
-        c.beginPath(); c.ellipse(-20, 78, 17, 9, -0.15, 0, Math.PI * 2); c.fill();
-        c.beginPath(); c.ellipse(20, 78, 17, 9, 0.15, 0, Math.PI * 2); c.fill();
-
+        // Subtle label underneath Arch mark
+        c.font = "bold 24px Consolas, monospace";
+        c.fillStyle = "#38bdf8";
+        c.textAlign = "center";
+        c.fillText("ARCH LINUX", 0, 134);
         c.restore();
       }
 
-      function paintTerminal(frameIdx, totalFrames) {
+      const cmdText = "fastfetch && docker ps --format '{{.Names}}'";
+
+      function paintArchScreen(frameIdx, totalFrames) {
         const t = frameIdx / totalFrames;
-        ctx.fillStyle = "${pal.termBg}";
-        ctx.fillRect(0, 0, 640, 400);
 
-        // Subtle CRT scanline texture
-        ctx.fillStyle = "rgba(0, 229, 255, 0.035)";
-        for (let y = 0; y < 400; y += 6) {
-          ctx.fillRect(0, y, 640, 2);
-        }
+        // Deep Arch OLED background
+        const bgGrad = ctx.createLinearGradient(0, 0, 1280, 800);
+        bgGrad.addColorStop(0, "#070c12");
+        bgGrad.addColorStop(1, "#0b141f");
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, 1280, 800);
 
-        // Top Window Bar (Linux tiling WM style)
-        ctx.fillStyle = "#0c1926";
-        ctx.fillRect(0, 0, 640, 36);
-        ctx.strokeStyle = "${pal.termBorder}";
-        ctx.lineWidth = 2;
-        ctx.beginPath(); ctx.moveTo(0, 36); ctx.lineTo(640, 36); ctx.stroke();
+        // Minimalist Hyprland / Waybar Top Status Bar
+        ctx.fillStyle = "#0e1824";
+        ctx.fillRect(0, 0, 1280, 52);
+        ctx.fillStyle = "#1793d1";
+        ctx.fillRect(0, 50, 1280, 2);
 
-        // WM dots
-        const dots = ["#ef4444", "#f59e0b", "#10b981"];
-        dots.forEach((col, i) => {
-          ctx.fillStyle = col;
-          ctx.beginPath(); ctx.arc(20 + i * 18, 18, 5, 0, Math.PI * 2); ctx.fill();
+        // Workspaces pills on top-left
+        [1, 2, 3, 4].forEach((n, i) => {
+          const active = n === 1;
+          ctx.fillStyle = active ? "#1793d1" : "#152436";
+          ctx.fillRect(24 + i * 44, 12, 34, 28);
+          ctx.font = "bold 18px Consolas, monospace";
+          ctx.fillStyle = active ? "#040a10" : "#94a3b8";
+          ctx.textAlign = "center";
+          ctx.fillText(String(n), 41 + i * 44, 32);
         });
-        ctx.font = "bold 14px Consolas, monospace";
-        ctx.fillStyle = "${pal.termCyan}";
-        ctx.fillText("jhon@linux-adso: ~/proyectos [tty1]", 82, 23);
 
-        // Draw Vector Tux Penguin on Left
-        drawTux(ctx, 112, 172, 1.05);
-
-        // Fastfetch real student specs on Right
-        const sx = 220;
+        ctx.textAlign = "center";
         ctx.font = "bold 19px Consolas, monospace";
-        ctx.fillStyle = "${pal.termGreen}";
-        ctx.fillText("jhon@linux-adso", sx, 76);
+        ctx.fillStyle = "#e2e8f0";
+        ctx.fillText("jhon@archlinux — ~/proyectos [zsh]", 595, 33);
 
-        ctx.fillStyle = "#334155";
-        ctx.fillText("-------------------------", sx, 98);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#00ff88";
+        ctx.fillText("6.12-ARCH  |  BAT 100%", 1252, 33);
+        ctx.textAlign = "left";
+
+        // Kitty Terminal Window Frame inside Hyprland desktop
+        ctx.fillStyle = "rgba(8, 15, 24, 0.92)";
+        ctx.fillRect(28, 76, 1224, 696);
+        ctx.strokeStyle = "#1793d1";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(28, 76, 1224, 696);
+
+        // Draw Official Arch Linux Logo on Left Side
+        drawArchLogo(ctx, 250, 355, 270);
+
+        // Fastfetch System Output on Right Side (large crisp font for 100% readability!)
+        const sx = 468;
+        ctx.font = "bold 36px Consolas, monospace";
+        ctx.fillStyle = "#38bdf8";
+        ctx.fillText("jhon", sx, 158);
+        ctx.fillStyle = "#94a3b8";
+        ctx.fillText("@", sx + 86, 158);
+        ctx.fillStyle = "#00ff88";
+        ctx.fillText("archlinux", sx + 112, 158);
+
+        ctx.fillStyle = "#264059";
+        ctx.fillRect(sx, 178, 720, 3);
 
         const specs = [
-          ["OS     ", "GNU/Linux · Bash / Zsh", "${pal.termCyan}"],
-          ["Rol    ", "Estudiante SENA ADSO", "${pal.termText}"],
-          ["Ciudad ", "Medellin, Colombia", "${pal.termText}"],
-          ["Stack  ", "Java 21 · TS · C# · Py", "${pal.termGreen}"],
-          ["Datos  ", "PostgreSQL · MySQL · Mongo", "${pal.termCyan}"],
-          ["Tools  ", "Docker · Git · GitHub CI", "${pal.termAmber}"],
-          ["Enfoque", "Backend & Ciberseguridad", "${pal.termGreen}"],
+          ["OS     ", "Arch Linux x86_64", "#38bdf8"],
+          ["Kernel ", "6.12.x-arch1-1", "#e2e8f0"],
+          ["Rol    ", "Estudiante SENA ADSO", "#00ff88"],
+          ["Ciudad ", "Medellin, Colombia", "#e2e8f0"],
+          ["Shell  ", "zsh 5.9 / bash", "#38bdf8"],
+          ["Stack  ", "Java 21 · TS · C# · Python", "#00ff88"],
+          ["Datos  ", "PostgreSQL · MySQL · Mongo", "#38bdf8"],
+          ["Tools  ", "Docker · Git · Neovim", "#fbbf24"],
         ];
-        ctx.font = "bold 15px Consolas, monospace";
+
+        ctx.font = "bold 27px Consolas, monospace";
         specs.forEach(([k, v, col], idx) => {
-          const yy = 128 + idx * 27;
-          ctx.fillStyle = "${pal.termGreen}";
-          ctx.fillText(k + ":", sx, yy);
+          const yy = 228 + idx * 50;
+          ctx.fillStyle = "#1793d1";
+          ctx.fillText(k, sx, yy);
+          ctx.fillStyle = "#475569";
+          ctx.fillText(":", sx + 116, yy);
           ctx.fillStyle = col;
-          ctx.fillText(v, sx + 82, yy);
+          ctx.fillText(v, sx + 144, yy);
         });
 
-        // Color palette blocks (authentic neofetch/fastfetch touch)
-        const swatch = ["#0f172a", "#ef4444", "#00ff88", "#fbbf24", "#00e5ff", "#a855f7", "#38bdf8", "#f8fafc"];
-        swatch.forEach((c, i) => {
-          ctx.fillStyle = c;
-          ctx.fillRect(sx + i * 24, 316, 20, 12);
+        // Authentic fastfetch 8-color palette strip
+        const swatches = ["#1e293b", "#ef4444", "#00ff88", "#fbbf24", "#1793d1", "#a855f7", "#38bdf8", "#f8fafc"];
+        swatches.forEach((col, i) => {
+          ctx.fillStyle = col;
+          ctx.fillRect(sx + i * 54, 616, 46, 22);
         });
 
-        // Animated live shell prompt at bottom
-        const cmdIdx = Math.floor(t * cmds.length) % cmds.length;
-        const localPhase = (t * cmds.length) % 1;
-        const fullCmd = cmds[cmdIdx];
-        const shownChars = Math.min(fullCmd.length, Math.floor(localPhase * (fullCmd.length + 8)));
-        const typed = fullCmd.slice(0, shownChars);
-
-        ctx.fillStyle = "#08121b";
-        ctx.fillRect(18, 344, 604, 38);
+        // Calm Typing Command Bar at Bottom
+        ctx.fillStyle = "#060d15";
+        ctx.fillRect(58, 676, 1164, 68);
         ctx.strokeStyle = "#1e3a52";
-        ctx.lineWidth = 1.5;
-        ctx.strokeRect(18, 344, 604, 38);
+        ctx.lineWidth = 2;
+        ctx.strokeRect(58, 676, 1164, 68);
 
-        ctx.font = "bold 16px Consolas, monospace";
-        ctx.fillStyle = "${pal.termGreen}";
-        ctx.fillText("jhon@linux:~$", 30, 369);
-        ctx.fillStyle = "${pal.termText}";
-        ctx.fillText(typed, 166, 369);
+        // Smooth single-cycle typing then steady hold (no hectic blinking/jumping)
+        const shown = t < 0.55
+          ? Math.max(8, Math.floor((t / 0.55) * cmdText.length))
+          : cmdText.length;
+        const typed = cmdText.slice(0, shown);
 
-        // Blinking block cursor
-        if (Math.floor(frameIdx / 4) % 2 === 0) {
-          const cw = ctx.measureText(typed).width;
-          ctx.fillStyle = "${pal.termGreen}";
-          ctx.fillRect(170 + cw, 354, 10, 18);
-        }
+        ctx.font = "bold 27px Consolas, monospace";
+        ctx.fillStyle = "#1793d1";
+        ctx.fillText("[jhon@arch ~]$", 82, 720);
+        ctx.fillStyle = "#f1f5f9";
+        ctx.fillText(typed, 326, 720);
 
-        // Outer neon border
-        ctx.strokeStyle = "${pal.termBorder}";
-        ctx.lineWidth = 4;
-        ctx.strokeRect(2, 2, 636, 396);
+        // Calm smooth cursor pulse
+        const curAlpha = 0.25 + 0.75 * (0.5 + 0.5 * Math.cos(t * Math.PI * 6));
+        const cw = ctx.measureText(typed).width;
+        ctx.fillStyle = "rgba(0, 255, 136, " + curAlpha.toFixed(2) + ")";
+        ctx.fillRect(334 + cw, 694, 16, 32);
+
         termTex.needsUpdate = true;
       }
 
       // ================================================================
-      // 3D WORKSTATION SCENE
+      // DETAILED 3D LAPTOP HARDWARE MODEL (CENTERED, NO TOWER, NO PARTICLES)
       // ================================================================
-      const rig = new THREE.Group();
-      rig.position.set(0.08, -0.15, 0);
-      scene.add(rig);
+      const studioGroup = new THREE.Group();
+      studioGroup.position.set(0, -0.35, 0);
+      scene.add(studioGroup);
 
-      // 1. Isometric Floor Grid + Platform Ring
-      const floor = new THREE.Group();
-      floor.position.y = -1.25;
-      const grid = new THREE.GridHelper(6.6, 16, ${pal.gridColor1}, ${pal.gridColor2});
+      // Subtle Clean Minimalist Studio Base Grid + Realistic Contact Shadow
+      const grid = new THREE.GridHelper(6.4, 16, ${pal.gridMain}, ${pal.gridSub});
+      grid.position.y = -0.78;
       grid.material.transparent = true;
-      grid.material.opacity = ${isDark ? "0.38" : "0.45"};
-      floor.add(grid);
+      grid.material.opacity = ${isDark ? "0.28" : "0.38"};
+      studioGroup.add(grid);
 
-      const ringFloor = new THREE.Mesh(
-        new THREE.RingGeometry(2.15, 2.22, 64),
-        new THREE.MeshBasicMaterial({ color: ${pal.ringColor}, side: THREE.DoubleSide, transparent: true, opacity: ${isDark ? "0.48" : "0.42"} })
+      // Soft Contact Shadow Texture beneath Laptop
+      const shCanvas = document.createElement("canvas");
+      shCanvas.width = 256; shCanvas.height = 256;
+      const shCtx = shCanvas.getContext("2d");
+      const shGrad = shCtx.createRadialGradient(128, 128, 20, 128, 128, 120);
+      shGrad.addColorStop(0, "rgba(0,0,0,0.85)");
+      shGrad.addColorStop(0.65, "rgba(0,0,0,0.35)");
+      shGrad.addColorStop(1, "rgba(0,0,0,0)");
+      shCtx.fillStyle = shGrad;
+      shCtx.fillRect(0, 0, 256, 256);
+      const shadowPlane = new THREE.Mesh(
+        new THREE.PlaneGeometry(4.4, 3.0),
+        new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(shCanvas), transparent: true, opacity: ${pal.shadowOp} })
       );
-      ringFloor.rotation.x = -Math.PI / 2;
-      ringFloor.position.y = 0.02;
-      floor.add(ringFloor);
-      rig.add(floor);
+      shadowPlane.rotation.x = -Math.PI / 2;
+      shadowPlane.position.set(0, -0.77, 0.12);
+      studioGroup.add(shadowPlane);
 
-      // 2. 3D Linux Cyberdeck Laptop / Workstation
-      const deckGroup = new THREE.Group();
-      deckGroup.position.set(-0.35, -0.58, 0.2);
+      // Laptop Assembly Root (resting firmly on studio surface — zero vertical bobbing!)
+      const laptop = new THREE.Group();
+      laptop.position.set(0, -0.68, 0.12);
+      studioGroup.add(laptop);
 
-      const chassisMat = new THREE.MeshPhysicalMaterial({
-        color: ${pal.chassisColor},
-        metalness: 0.72,
-        roughness: 0.25,
-        clearcoat: 0.6,
+      const bodyMat = new THREE.MeshPhysicalMaterial({
+        color: ${pal.bodyColor},
+        metalness: 0.78,
+        roughness: 0.28,
+        clearcoat: 0.45,
+        clearcoatRoughness: 0.25,
       });
-      const trimMat = new THREE.LineBasicMaterial({ color: ${pal.chassisTrim}, transparent: true, opacity: 0.85 });
+      const lidMat = new THREE.MeshPhysicalMaterial({
+        color: ${pal.bodyLidColor},
+        metalness: 0.80,
+        roughness: 0.26,
+        clearcoat: 0.55,
+      });
+      const wellMat = new THREE.MeshStandardMaterial({
+        color: ${pal.wellColor},
+        metalness: 0.4,
+        roughness: 0.55,
+      });
+      const hingeMat = new THREE.MeshStandardMaterial({
+        color: ${pal.hingeColor},
+        metalness: 0.9,
+        roughness: 0.2,
+      });
+      const edgeLineMat = new THREE.LineBasicMaterial({
+        color: ${pal.trimEdge},
+        transparent: true,
+        opacity: ${isDark ? "0.48" : "0.35"},
+      });
 
-      // Laptop base deck
-      const baseGeo = new THREE.BoxGeometry(2.85, 0.14, 1.92);
-      const baseMesh = new THREE.Mesh(baseGeo, chassisMat);
-      baseMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(baseGeo), trimMat));
-      deckGroup.add(baseMesh);
+      // 1. Machined Unibody Lower Deck (2-tier tapered chassis + rubber feet)
+      const deckW = 3.36, deckD = 2.22, deckH = 0.115;
+      const mainBaseGeo = new THREE.BoxGeometry(deckW, deckH, deckD);
+      const mainBase = new THREE.Mesh(mainBaseGeo, bodyMat);
+      mainBase.add(new THREE.LineSegments(new THREE.EdgesGeometry(mainBaseGeo), edgeLineMat));
+      laptop.add(mainBase);
 
-      // Trackpad
-      const padGeo = new THREE.BoxGeometry(0.76, 0.02, 0.42);
-      const padMesh = new THREE.Mesh(
-        padGeo,
-        new THREE.MeshStandardMaterial({ color: ${pal.keyColor}, metalness: 0.4, roughness: 0.3 })
+      // Tapered slim bottom sub-belly plate
+      const bellyMesh = new THREE.Mesh(
+        new THREE.BoxGeometry(deckW - 0.14, 0.04, deckD - 0.14),
+        wellMat
       );
-      padMesh.position.set(0, 0.075, 0.62);
-      padMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(padGeo), new THREE.LineBasicMaterial({ color: ${pal.keyGlow}, transparent: true, opacity: 0.6 })));
-      deckGroup.add(padMesh);
+      bellyMesh.position.set(0, -0.072, 0);
+      laptop.add(bellyMesh);
 
-      // 3D Mechanical Keycaps Grid (5 rows x 12 cols)
-      const keyMat = new THREE.MeshStandardMaterial({ color: ${pal.keyColor}, metalness: 0.35, roughness: 0.35 });
-      const keyGlowMat = new THREE.MeshBasicMaterial({ color: ${pal.keyGlow}, transparent: true, opacity: 0.32 });
-      const keyGeo = new THREE.BoxGeometry(0.16, 0.05, 0.14);
-      const keyPlate = new THREE.Mesh(new THREE.PlaneGeometry(2.44, 0.96), keyGlowMat);
-      keyPlate.rotation.x = -Math.PI / 2;
-      keyPlate.position.set(0, 0.073, -0.18);
-      deckGroup.add(keyPlate);
+      // 4 subtle rubber anti-slip feet
+      const footGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.02, 16);
+      [[-1.38, -0.86], [1.38, -0.86], [-1.38, 0.86], [1.38, 0.86]].forEach(([fx, fz]) => {
+        const foot = new THREE.Mesh(footGeo, wellMat);
+        foot.position.set(fx, -0.095, fz);
+        laptop.add(foot);
+      });
 
-      for (let r = 0; r < 5; r++) {
-        for (let c = 0; c < 12; c++) {
-          const km = new THREE.Mesh(keyGeo, keyMat);
-          km.position.set(-1.08 + c * 0.196, 0.092, -0.56 + r * 0.185);
-          deckGroup.add(km);
+      // Front center thumb-opening notch + tiny front status LED
+      const notch = new THREE.Mesh(new THREE.BoxGeometry(0.46, 0.045, 0.04), wellMat);
+      notch.position.set(0, 0.02, deckD / 2 + 0.002);
+      laptop.add(notch);
+
+      const frontLed = new THREE.Mesh(
+        new THREE.BoxGeometry(0.06, 0.016, 0.02),
+        new THREE.MeshBasicMaterial({ color: 0x00ff88 })
+      );
+      frontLed.position.set(1.22, 0.0, deckD / 2 + 0.005);
+      laptop.add(frontLed);
+
+      // Side I/O Ports (USB-C / HDMI / Audio Jack along left & right edges)
+      const portMat = new THREE.MeshStandardMaterial({ color: ${pal.portColor}, metalness: 0.3, roughness: 0.6 });
+      // Left edge: 2x USB-C + HDMI + 3.5mm
+      [-0.68, -0.44].forEach((pz) => {
+        const usbc = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.032, 0.11), portMat);
+        usbc.position.set(-deckW / 2 - 0.003, -0.005, pz);
+        laptop.add(usbc);
+      });
+      const hdmi = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.04, 0.17), portMat);
+      hdmi.position.set(-deckW / 2 - 0.003, -0.005, -0.14);
+      laptop.add(hdmi);
+      const jack = new THREE.Mesh(new THREE.CylinderGeometry(0.022, 0.022, 0.025, 12), portMat);
+      jack.rotation.z = Math.PI / 2;
+      jack.position.set(-deckW / 2 - 0.003, -0.005, 0.14);
+      laptop.add(jack);
+      // Right edge: USB-A + USB-C + Kensington lock slot
+      const usba = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.044, 0.17), portMat);
+      usba.position.set(deckW / 2 + 0.003, -0.005, -0.52);
+      laptop.add(usba);
+      const usbcR = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.032, 0.11), portMat);
+      usbcR.position.set(deckW / 2 + 0.003, -0.005, -0.26);
+      laptop.add(usbcR);
+
+      // 2. Recessed Keyboard Well + Side Micro-Perforated Speaker Grilles
+      const wellMesh = new THREE.Mesh(new THREE.BoxGeometry(2.68, 0.02, 1.06), wellMat);
+      wellMesh.position.set(0, deckH / 2 + 0.001, -0.22);
+      laptop.add(wellMesh);
+
+      // Subtle cool Arch-Blue keyboard backlight glow plane
+      const kbBacklight = new THREE.Mesh(
+        new THREE.PlaneGeometry(2.62, 1.0),
+        new THREE.MeshBasicMaterial({ color: ${pal.keyHighlight}, transparent: true, opacity: ${isDark ? "0.26" : "0.14"} })
+      );
+      kbBacklight.rotation.x = -Math.PI / 2;
+      kbBacklight.position.set(0, deckH / 2 + 0.012, -0.22);
+      laptop.add(kbBacklight);
+
+      // Left & Right Stereo Speaker Grilles
+      [-1.50, 1.50].forEach((sx) => {
+        for (let i = 0; i < 11; i++) {
+          const slit = new THREE.Mesh(new THREE.BoxGeometry(0.14, 0.008, 0.022), wellMat);
+          slit.position.set(sx, deckH / 2 + 0.003, -0.66 + i * 0.088);
+          laptop.add(slit);
+        }
+      });
+
+      // 3. Realistic Staggered QWERTY Mechanical Keycap Layout (Variable Key Widths!)
+      const keyMat = new THREE.MeshStandardMaterial({ color: ${pal.keyColor}, metalness: 0.25, roughness: 0.42 });
+      const keyTopAccentMat = new THREE.MeshStandardMaterial({ color: 0x1793d1, metalness: 0.4, roughness: 0.3 });
+
+      function addKeyRow(zPos, rowH, widths, startX = -1.27) {
+        let cx = startX;
+        const gap = 0.026;
+        for (const item of widths) {
+          const w = typeof item === "number" ? item : item.w;
+          const special = typeof item === "object" && item.accent;
+          const mesh = new THREE.Mesh(
+            new THREE.BoxGeometry(w, 0.036, rowH),
+            special ? keyTopAccentMat : keyMat
+          );
+          mesh.position.set(cx + w / 2, deckH / 2 + 0.024, zPos);
+          laptop.add(mesh);
+          cx += w + gap;
         }
       }
 
-      // Hinged OLED Display Lid (angled ~104 degrees open)
-      const lidPivot = new THREE.Group();
-      lidPivot.position.set(0, 0.07, -0.92);
-      lidPivot.rotation.x = -0.22; // tilted slightly back for ergonomic 3D angle
+      // Row 0: Slim Function Row (Esc + F1..F12 + Power Button)
+      addKeyRow(-0.67, 0.095, [
+        { w: 0.16, accent: true },
+        0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.155, 0.19
+      ]);
+      // Row 1: Number Row + wide Backspace
+      addKeyRow(-0.515, 0.135, [0.145, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.295]);
+      // Row 2: Tab + QWERTY + Slash
+      addKeyRow(-0.345, 0.135, [0.23, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.21]);
+      // Row 3: Caps + ASDFGHJKL + Wide Enter (Arch Blue accent!)
+      addKeyRow(-0.175, 0.135, [0.275, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, { w: 0.34, accent: true }]);
+      // Row 4: Left Shift + ZXCVBNM + Right Shift
+      addKeyRow(-0.005, 0.135, [0.355, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.44]);
+      // Row 5: Ctrl + Super + Alt + Wide Spacebar + Alt + Arrow cluster
+      addKeyRow(0.165, 0.135, [0.21, 0.17, 0.19, 1.05, 0.18, 0.18, 0.145, 0.145, 0.145]);
 
-      const lidGeo = new THREE.BoxGeometry(2.85, 1.82, 0.09);
-      const lidMesh = new THREE.Mesh(lidGeo, chassisMat);
-      lidMesh.position.set(0, 0.93, 0);
-      lidMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(lidGeo), trimMat));
+      // Iconic subtle ThinkPad-style Arch-Cyan TrackPoint nub centered between G-H-B
+      const trackpoint = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.036, 0.04, 0.042, 16),
+        new THREE.MeshStandardMaterial({ color: 0x1793d1, emissive: 0x0d5c85, emissiveIntensity: 0.6, roughness: 0.35 })
+      );
+      trackpoint.position.set(-0.08, deckH / 2 + 0.032, -0.10);
+      laptop.add(trackpoint);
+
+      // 4. Precision Glass Trackpad with Machined Bevel Rim
+      const padGeo = new THREE.BoxGeometry(1.06, 0.016, 0.60);
+      const padMesh = new THREE.Mesh(
+        padGeo,
+        new THREE.MeshPhysicalMaterial({ color: ${pal.padColor}, metalness: 0.55, roughness: 0.15, clearcoat: 0.9 })
+      );
+      padMesh.position.set(0, deckH / 2 + 0.005, 0.67);
+      padMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(padGeo), edgeLineMat));
+      laptop.add(padMesh);
+
+      // 5. Dual Machined Metallic Barrel Hinges
+      const hingeGeo = new THREE.CylinderGeometry(0.052, 0.052, 0.48, 20);
+      [-1.02, 1.02].forEach((hx) => {
+        const hMesh = new THREE.Mesh(hingeGeo, hingeMat);
+        hMesh.rotation.z = Math.PI / 2;
+        hMesh.position.set(hx, deckH / 2 + 0.035, -deckD / 2 + 0.06);
+        laptop.add(hMesh);
+      });
+
+      // 6. Ultra-Thin Display Lid + Top Webcam Array + HiDPI Arch OLED Screen
+      const lidPivot = new THREE.Group();
+      lidPivot.position.set(0, deckH / 2 + 0.035, -deckD / 2 + 0.06);
+      lidPivot.rotation.x = -0.17; // Clean ergonomic ~100 deg open angle
+
+      const lidW = 3.36, lidH = 2.16, lidT = 0.075;
+      const lidGeo = new THREE.BoxGeometry(lidW, lidH, lidT);
+      const lidMesh = new THREE.Mesh(lidGeo, lidMat);
+      lidMesh.position.set(0, lidH / 2 + 0.02, 0);
+      lidMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(lidGeo), edgeLineMat));
       lidPivot.add(lidMesh);
 
-      // Live Linux Terminal OLED Screen Plane
+      // Glossy Dark Inner Screen Glass Bezel
+      const bezelMesh = new THREE.Mesh(
+        new THREE.BoxGeometry(lidW - 0.08, lidH - 0.08, 0.014),
+        new THREE.MeshStandardMaterial({ color: 0x05080d, metalness: 0.3, roughness: 0.2 })
+      );
+      bezelMesh.position.set(0, lidH / 2 + 0.02, lidT / 2 + 0.004);
+      lidPivot.add(bezelMesh);
+
+      // Top Center Webcam Lens + Tiny Privacy Indicator LED
+      const camLens = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.022, 0.022, 0.01, 16),
+        new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.9, roughness: 0.1 })
+      );
+      camLens.rotation.x = Math.PI / 2;
+      camLens.position.set(0, lidH - 0.035, lidT / 2 + 0.012);
+      lidPivot.add(camLens);
+
+      const camLed = new THREE.Mesh(
+        new THREE.CircleGeometry(0.009, 12),
+        new THREE.MeshBasicMaterial({ color: 0x00ff88 })
+      );
+      camLed.position.set(0.065, lidH - 0.035, lidT / 2 + 0.016);
+      lidPivot.add(camLed);
+
+      // HiDPI 1280x800 Arch Linux OLED Display Plane
       const screenMesh = new THREE.Mesh(
-        new THREE.PlaneGeometry(2.68, 1.66),
+        new THREE.PlaneGeometry(lidW - 0.22, lidH - 0.24),
         new THREE.MeshBasicMaterial({ map: termTex })
       );
-      screenMesh.position.set(0, 0.93, 0.052);
+      screenMesh.position.set(0, lidH / 2 + 0.01, lidT / 2 + 0.014);
       lidPivot.add(screenMesh);
-      deckGroup.add(lidPivot);
-      rig.add(deckGroup);
 
-      // 3. Companion 3D Linux Docker Server Tower (Right-Back)
-      const tower = new THREE.Group();
-      tower.position.set(1.78, 0.06, -0.58);
-
-      const towerGeo = new THREE.BoxGeometry(0.86, 1.98, 1.08);
-      const towerMat = new THREE.MeshPhysicalMaterial({
-        color: ${pal.serverColor},
-        metalness: 0.78,
-        roughness: 0.24,
-        clearcoat: 0.5,
-      });
-      const towerMesh = new THREE.Mesh(towerGeo, towerMat);
-      towerMesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(towerGeo), new THREE.LineBasicMaterial({ color: ${pal.keyGlow}, transparent: true, opacity: 0.75 })));
-      tower.add(towerMesh);
-
-      // 4 Glowing Server Blade Slots + Activity LEDs
-      const ledMeshes = [];
-      const ledCols = [0x00ff88, 0x00e5ff, 0xf59e0b, 0x00ff88];
-      for (let i = 0; i < 4; i++) {
-        const slot = new THREE.Mesh(
-          new THREE.BoxGeometry(0.68, 0.26, 0.04),
-          new THREE.MeshStandardMaterial({ color: 0x070d14, metalness: 0.5, roughness: 0.4 })
-        );
-        slot.position.set(0, 0.62 - i * 0.42, 0.54);
-        tower.add(slot);
-
-        const strip = new THREE.Mesh(
-          new THREE.BoxGeometry(0.42, 0.03, 0.05),
-          new THREE.MeshBasicMaterial({ color: ledCols[i] })
-        );
-        strip.position.set(-0.08, 0.62 - i * 0.42, 0.555);
-        tower.add(strip);
-
-        const dot = new THREE.Mesh(
-          new THREE.BoxGeometry(0.07, 0.07, 0.06),
-          new THREE.MeshBasicMaterial({ color: ledCols[i] })
-        );
-        dot.position.set(0.24, 0.62 - i * 0.42, 0.555);
-        tower.add(dot);
-        ledMeshes.push(dot);
-      }
-      rig.add(tower);
-
-      // 4. Subtle Orbiting Linux Kernel Data Halo Ring around the Workstation
-      const halo = new THREE.Mesh(
-        new THREE.TorusGeometry(2.55, 0.014, 10, 96),
-        new THREE.MeshBasicMaterial({ color: ${pal.keyGlow}, transparent: true, opacity: ${isDark ? "0.35" : "0.28"} })
-      );
-      halo.rotation.x = Math.PI * 0.46;
-      halo.position.y = -0.35;
-      rig.add(halo);
-
-      // 5. Floating Ambient Terminal Particles
-      const pCount = 70;
-      const pPos = new Float32Array(pCount * 3);
-      const pMeta = [];
-      let seed = 133799;
-      const rand = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
-      for (let i = 0; i < pCount; i++) {
-        const r = 1.9 + rand() * 1.4;
-        const a = rand() * Math.PI * 2;
-        const y = -0.9 + rand() * 2.4;
-        pMeta.push({ r, a, y, sp: rand() > 0.5 ? 1 : -1 });
-        pPos[i * 3] = Math.cos(a) * r;
-        pPos[i * 3 + 1] = y;
-        pPos[i * 3 + 2] = Math.sin(a) * r;
-      }
-      const pGeo = new THREE.BufferGeometry();
-      pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
-      const particles = new THREE.Points(
-        pGeo,
-        new THREE.PointsMaterial({ color: ${pal.particleColor}, size: 0.048, transparent: true, opacity: ${isDark ? "0.75" : "0.65"} })
-      );
-      rig.add(particles);
+      laptop.add(lidPivot);
 
       const laserRail = document.getElementById("laser-rail");
       const ledDot = document.getElementById("led-dot");
-      const hudShell = document.getElementById("hud-shell");
-      const shellStates = ["BASH: UNAME -SR", "DOCKER: PS -A", "GIT: LOG -3", "PG17: ACTIVE"];
 
+      // ================================================================
+      // ULTRA-CALM STUDIO MOTION (NO PARTICLES, NO JERKY SWING, NO BOBBING)
+      // ================================================================
       window.renderFrame = function (frameIndex, totalFrames) {
         const t = frameIndex / totalFrames;
         const tau = Math.PI * 2 * t;
 
-        // Paint live Linux terminal screen with animated typing & cursor
-        paintTerminal(frameIndex, totalFrames);
+        paintArchScreen(frameIndex, totalFrames);
 
-        // Smooth cinematic 3D parallax camera orbit (keeps OLED screen crisp & front-facing!)
-        camera.position.x = -1.15 + Math.sin(tau) * 0.85;
-        camera.position.y = 2.05 + Math.cos(tau) * 0.22;
-        camera.position.z = 6.25 + Math.cos(tau) * 0.28;
-        camera.lookAt(0.18, 0.08, -0.05);
+        // Gentle, calm studio showcase parallax showing FULL sculpted laptop (palmrest, trackpad, ports & shadow!)
+        camera.position.x = -0.68 + Math.sin(tau) * 0.24;
+        camera.position.y = 2.38 + Math.cos(tau) * 0.03;
+        camera.position.z = 6.95 + Math.cos(tau) * 0.06;
+        camera.lookAt(0.0, 0.02, -0.02);
 
-        // Gentle hover on workstation & server tower
-        deckGroup.position.y = -0.58 + Math.sin(tau) * 0.08;
-        tower.position.y = 0.06 + Math.cos(tau) * 0.06;
-        halo.rotation.z = tau;
-
-        // Blinking server LEDs
-        ledMeshes.forEach((m, idx) => {
-          const on = Math.sin(tau * 2 + idx * 1.5) > -0.2;
-          m.scale.setScalar(on ? 1.0 : 0.45);
-        });
-
-        // Orbiting particles
-        const arr = pGeo.attributes.position.array;
-        for (let i = 0; i < pCount; i++) {
-          const m = pMeta[i];
-          const a = m.a + tau * m.sp;
-          arr[i * 3] = Math.cos(a) * m.r;
-          arr[i * 3 + 1] = m.y + Math.sin(tau + i) * 0.08;
-          arr[i * 3 + 2] = Math.sin(a) * m.r;
-        }
-        pGeo.attributes.position.needsUpdate = true;
-
-        hudShell.textContent = shellStates[Math.floor(t * shellStates.length) % shellStates.length];
-        laserRail.setAttribute("stroke-dashoffset", String(-Math.round(t * 310)));
-        ledDot.style.opacity = String(0.55 + 0.45 * Math.abs(Math.cos(tau)));
+        // Subtle perimeter rail & top LED breathing
+        laserRail.setAttribute("stroke-dashoffset", String(-Math.round(t * 325)));
+        ledDot.style.opacity = String(0.68 + 0.32 * Math.cos(tau));
 
         renderer.render(scene, camera);
       };
@@ -932,8 +1011,8 @@ async function renderTheme(browser, baseUrl, theme) {
   for (let i = 0; i < FRAMES; i++) {
     await page.evaluate((idx, total) => window.renderFrame(idx, total), i, FRAMES);
     const pngBuf = await page.screenshot({ type: "png" });
-    if (i === 8 && PREVIEW_DIR) {
-      fs.writeFileSync(path.join(PREVIEW_DIR, `hero-linux-${theme}.png`), pngBuf);
+    if (i === 18 && PREVIEW_DIR) {
+      fs.writeFileSync(path.join(PREVIEW_DIR, `hero-arch-${theme}.png`), pngBuf);
     }
     const decoded = UPNG.decode(pngBuf);
     rgbaFrames.push(UPNG.toRGBA8(decoded)[0]);

@@ -1,10 +1,10 @@
 <div align="center">
 
-  <!-- ==================== 00 // 3D WEBGL LINUX WORKSTATION HERO (DUAL DARK / LIGHT) ==================== -->
+  <!-- ==================== 00 // 3D WEBGL ARCH LINUX WORKSTATION HERO (DUAL DARK / LIGHT) ==================== -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-3d-dark.png?v=4" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-3d-light.png?v=4" />
-    <img src="./assets/hero-3d-dark.png?v=4" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Desarrollo Backend, Linux y Ciberseguridad" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-3d-dark.png?v=5" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-3d-light.png?v=5" />
+    <img src="./assets/hero-3d-dark.png?v=5" width="100%" alt="Jhon Anderson Moreno Posso — Estudiante SENA ADSO, Desarrollo Backend, Arch Linux y Ciberseguridad" />
   </picture>
 
   <!-- ==================== LIVE TELEMETRY RIBBON (MEDELLIN TIME + CISA KEV + GITHUB API) ==================== -->
